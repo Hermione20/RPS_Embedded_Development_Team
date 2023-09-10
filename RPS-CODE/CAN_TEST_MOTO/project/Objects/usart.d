@@ -1,7 +1,7 @@
 .\objects\usart.o: ..\HARDWARE\usart.c
 .\objects\usart.o: ..\USER\stm32f4xx.h
 .\objects\usart.o: ..\CORE\core_cm4.h
-.\objects\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart.o: ..\CORE\core_cmInstr.h
 .\objects\usart.o: ..\CORE\core_cmFunc.h
 .\objects\usart.o: ..\CORE\core_cm4_simd.h
@@ -34,7 +34,7 @@
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\usart.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
-.\objects\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usart.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\string.h
 .\objects\usart.o: ..\SYSTEM\delay.h
 .\objects\usart.o: ..\SYSTEM\sys.h
 .\objects\usart.o: ..\HARDWARE\usart.h

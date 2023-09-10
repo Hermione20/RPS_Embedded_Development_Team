@@ -1,7 +1,7 @@
 .\objects\can.o: ..\HARDWARE\can.c
 .\objects\can.o: ..\USER\stm32f4xx.h
 .\objects\can.o: ..\CORE\core_cm4.h
-.\objects\can.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\can.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\can.o: ..\CORE\core_cmInstr.h
 .\objects\can.o: ..\CORE\core_cmFunc.h
 .\objects\can.o: ..\CORE\core_cm4_simd.h
