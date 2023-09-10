@@ -1,5 +1,5 @@
-# CAN_MOTOR_TEST
- CAN_MOTOR_TEST
+# ATTENTION
+ README
 
 项目拖入时加入.gitignore文件，内容如下
 {
