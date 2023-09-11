@@ -67,3 +67,4 @@
 ..\obj\main.o: ..\HEADFILE\public.h
 ..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\main.o: ..\APP\BAL\Ins\oldpid.h
+..\obj\main.o: ..\USER\BSP.h
