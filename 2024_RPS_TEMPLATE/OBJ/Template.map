@@ -904,7 +904,7 @@ Image Symbol Table
     ../mathlib/tanhf.c                       0x00000000   Number         0  tanhf_x.o ABSOLUTE
     ../mathlib/tanhf.c                       0x00000000   Number         0  tanhf.o ABSOLUTE
     ..\APP\BAL\Src\oldpid.c                  0x00000000   Number         0  oldpid.o ABSOLUTE
-    ..\BSP\src\delay.c                       0x00000000   Number         0  delay.o ABSOLUTE
+    ..\BSP\Src\delay.c                       0x00000000   Number         0  delay.o ABSOLUTE
     ..\CORE\startup_stm32f40_41xxx.s         0x00000000   Number         0  startup_stm32f40_41xxx.o ABSOLUTE
     ..\STLIB\src\misc.c                      0x00000000   Number         0  misc.o ABSOLUTE
     ..\STLIB\src\stm32f4xx_adc.c             0x00000000   Number         0  stm32f4xx_adc.o ABSOLUTE
@@ -942,7 +942,7 @@ Image Symbol Table
     ..\STLIB\src\stm32f4xx_usart.c           0x00000000   Number         0  stm32f4xx_usart.o ABSOLUTE
     ..\STLIB\src\stm32f4xx_wwdg.c            0x00000000   Number         0  stm32f4xx_wwdg.o ABSOLUTE
     ..\\APP\\BAL\\Src\\oldpid.c              0x00000000   Number         0  oldpid.o ABSOLUTE
-    ..\\BSP\\src\\delay.c                    0x00000000   Number         0  delay.o ABSOLUTE
+    ..\\BSP\\Src\\delay.c                    0x00000000   Number         0  delay.o ABSOLUTE
     ..\\STLIB\\src\\misc.c                   0x00000000   Number         0  misc.o ABSOLUTE
     ..\\STLIB\\src\\stm32f4xx_adc.c          0x00000000   Number         0  stm32f4xx_adc.o ABSOLUTE
     ..\\STLIB\\src\\stm32f4xx_can.c          0x00000000   Number         0  stm32f4xx_can.o ABSOLUTE
@@ -1415,14 +1415,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         2          0          0          0          0        415   bsp.o
-         8          0          0          0          0       4991   main.o
-        64         26        392          0       1536        844   startup_stm32f40_41xxx.o
-        26          0          0          0          0       1230   stm32f4xx_it.o
-       528         46          0         20          0       1807   system_stm32f4xx.o
+         2          0          0          0          0        391   bsp.o
+         8          0          0          0          0       4967   main.o
+        64         26        392          0       1536        820   startup_stm32f40_41xxx.o
+        26          0          0          0          0       1210   stm32f4xx_it.o
+       528         46          0         20          0       1735   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       630         72        424         20       1536       9287   Object Totals
+       630         72        424         20       1536       9123   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          0          0   (incl. Padding)
 
@@ -1473,8 +1473,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       920         88        424         20       1636       9631   Grand Totals
-       920         88        424         20       1636       9631   ELF Image Totals
+       920         88        424         20       1636       9467   Grand Totals
+       920         88        424         20       1636       9467   ELF Image Totals
        920         88        424         20          0          0   ROM Totals
 
 ==============================================================================
