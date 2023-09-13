@@ -66,5 +66,7 @@
 ..\obj\delay.o: ..\BSP\Ins\delay.h
 ..\obj\delay.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\delay.o: ..\APP\BAL\Ins\oldpid.h
-..\obj\delay.o: ..\USER\BSP.h
+..\obj\delay.o: ..\EMBEDDED\Ins\senior.h
 ..\obj\delay.o: ..\HEADFILE\public.h
+..\obj\delay.o: ..\USER\BSP.h
+..\obj\delay.o: ..\BSP\Ins\crclib.h

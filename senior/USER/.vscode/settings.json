@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "public.h": "c",
+        "senior.h": "c",
+        "main.h": "c"
+    }
+}
