@@ -115,6 +115,7 @@ typedef struct {
 					float Euler_Angle_Roll_s16_2_f;
 					float Euler_Angle_Yaw_s16_2_f;	
 } HI220_Stucture;
+
 typedef struct
 {
 	union
@@ -182,13 +183,41 @@ typedef struct
 	
 }ddtEncoder_t;
 
+/********************general chassis encoder********************************/
 
+typedef struct 
+{
+	volatile Encoder right_front_GM6020;
+	volatile Encoder left_front_GM6020;
+	volatile Encoder left_behind_GM6020;
+	volatile Encoder right_behind_GM6020;
+
+	volatile Encoder right_front_motor;
+	volatile Encoder left_front_motor;
+	volatile Encoder left_behind_motor;
+	volatile Encoder right_behind_motor;
+}steering_wheel_t;
+
+typedef struct
+{
+	volatile Encoder right_front_motor;
+	volatile Encoder left_front_motor;
+	volatile Encoder left_behind_motor;
+	volatile Encoder right_behind_motor;
+}Mecanum_wheel_t;
+
+/***************************senior function*************************************/
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
-
+static void crc16_update(uint16_t *currectCrc, const uint8_t *src, uint32_t lengthInBytes);
+void HI220_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO,uint8_t length);
+void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg);
+void EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
+void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;
-
+extern steering_wheel_t steering_wheel_chassis;
+extern Mecanum_wheel_t Mecanum_chassis;
 
 #endif
 

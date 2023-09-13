@@ -419,6 +419,13 @@
         </Group>
         <Group>
           <GroupName>EMBEDDED</GroupName>
+          <Files>
+            <File>
+              <FileName>senior.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\Src\senior.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>BSP</GroupName>
@@ -427,6 +434,11 @@
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>crcLib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\crcLib.c</FilePath>
             </File>
           </Files>
         </Group>

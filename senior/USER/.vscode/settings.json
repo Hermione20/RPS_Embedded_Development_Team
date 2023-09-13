@@ -4,5 +4,6 @@
         "public.h": "c",
         "senior.h": "c",
         "main.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

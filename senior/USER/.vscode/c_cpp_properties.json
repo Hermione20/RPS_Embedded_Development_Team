@@ -19,6 +19,7 @@
                 "E:\\Keil_v5\\ARM\\ARMCC\\include",
                 "E:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "c:\\Users\\HP\\Desktop\\RPS-embedded\\senior\\APP\\BAL\\Src",
+                "c:\\Users\\HP\\Desktop\\RPS-embedded\\senior\\EMBEDDED\\Src",
                 "c:\\Users\\HP\\Desktop\\RPS-embedded\\senior\\BSP\\Src",
                 "c:\\Users\\HP\\Desktop\\RPS-embedded\\senior"
             ],
@@ -102,7 +103,9 @@
                 "__yield()=",
                 "__vfp_status(x,y)=0"
             ],
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "${default}",
+            "compilerPath": "C:/Cliontools/mingw32/bin/gcc.exe",
+            "cStandard": "c99"
         }
     ],
     "version": 4
