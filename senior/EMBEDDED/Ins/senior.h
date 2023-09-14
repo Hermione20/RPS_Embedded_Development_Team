@@ -223,11 +223,15 @@ void EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
 void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//‘∆Ã®yaw£¨pitchπ≤”√
+void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;
 extern steering_wheel_t steering_wheel_chassis;
 extern Mecanum_wheel_t Mecanum_chassis;
-
+extern volatile Encoder Pitch_Encoder;
+extern volatile Encoder yaw_Encoder;
 #endif
 
