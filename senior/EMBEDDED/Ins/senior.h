@@ -2,7 +2,14 @@
 #define __SENIOR_H
 #include "public.h"
 
-
+#define  GMPitchEncoder_Offset 0
+//yaw轴电机初始位置
+#define  GMYawEncoder_Offset   4758
+//底盘航向轴电机初始位置
+#define  GM1Encoder_Offset   1437
+#define  GM2Encoder_Offset   8042
+#define  GM3Encoder_Offset   4141
+#define  GM4Encoder_Offset   6732
 
 /********************DJI Encoder******************************/
 #define RATE_BUF_SIZE 6
@@ -21,6 +28,7 @@ typedef struct{
 	double ecd_angle;											//角度
 	u32 temperature;
 	int16_t rate_rpm;
+	
 }Encoder;
 
 /***************************CH100********************************/
@@ -213,6 +221,8 @@ void HI220_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO,uint8_t length);
 void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg);
 void EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
+void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
+void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;
