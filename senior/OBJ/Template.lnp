@@ -5,6 +5,7 @@
 "..\obj\bsp.o"
 "..\obj\oldpid.o"
 "..\obj\senior.o"
+"..\obj\canbus.o"
 "..\obj\delay.o"
 "..\obj\crclib.o"
 "..\obj\misc.o"

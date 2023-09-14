@@ -1,7 +1,7 @@
 Dependencies for Project 'Template', Target 'Template': (DO NOT MODIFY !)
 F (.\main.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HEADFILE\main.h)(0x6502C06C)
-I (..\HEADFILE\public.h)(0x6502C06C)
+I (..\HEADFILE\public.h)(0x65034F06)
 I (..\USER\stm32f4xx.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -66,7 +66,8 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\Ins\delay.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6502C06C)
-I (..\EMBEDDED\Ins\senior.h)(0x6502CCBD)
+I (..\EMBEDDED\Ins\senior.h)(0x65034ECD)
+I (..\EMBEDDED\Ins\CanBus.h)(0x650352E9)
 I (..\USER\BSP.h)(0x6502C06C)
 I (..\BSP\Ins\crclib.h)(0x6502C06C)
 F (.\stm32f4xx_it.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
@@ -146,7 +147,7 @@ I (..\STLIB\inc\stm32f4xx_dcmi.h)(0x6502C06C)
 I (..\STLIB\inc\stm32f4xx_fsmc.h)(0x6502C06C)
 F (.\BSP.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\bsp.o --omf_browse ..\obj\bsp.crf --depend ..\obj\bsp.d)
 I (BSP.h)(0x6502C06C)
-I (..\HEADFILE\public.h)(0x6502C06C)
+I (..\HEADFILE\public.h)(0x65034F06)
 I (..\USER\stm32f4xx.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -211,7 +212,8 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\Ins\delay.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6502C06C)
-I (..\EMBEDDED\Ins\senior.h)(0x6502CCBD)
+I (..\EMBEDDED\Ins\senior.h)(0x65034ECD)
+I (..\EMBEDDED\Ins\CanBus.h)(0x650352E9)
 I (..\USER\BSP.h)(0x6502C06C)
 I (..\BSP\Ins\crclib.h)(0x6502C06C)
 F (..\APP\BAL\Src\oldpid.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\oldpid.o --omf_browse ..\obj\oldpid.crf --depend ..\obj\oldpid.d)
@@ -252,9 +254,9 @@ I (..\STLIB\inc\stm32f4xx_dac.h)(0x6502C06C)
 I (..\STLIB\inc\stm32f4xx_dcmi.h)(0x6502C06C)
 I (..\STLIB\inc\stm32f4xx_fsmc.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (..\EMBEDDED\Src\senior.c)(0x6502CCBB)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\senior.o --omf_browse ..\obj\senior.crf --depend ..\obj\senior.d)
-I (..\EMBEDDED\Ins\senior.h)(0x6502CCBD)
-I (..\HEADFILE\public.h)(0x6502C06C)
+F (..\EMBEDDED\Src\senior.c)(0x65034EC9)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\senior.o --omf_browse ..\obj\senior.crf --depend ..\obj\senior.d)
+I (..\EMBEDDED\Ins\senior.h)(0x65034ECD)
+I (..\HEADFILE\public.h)(0x65034F06)
 I (..\USER\stm32f4xx.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -319,11 +321,82 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\Ins\delay.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6502C06C)
+I (..\EMBEDDED\Ins\CanBus.h)(0x650352E9)
+I (..\USER\BSP.h)(0x6502C06C)
+I (..\BSP\Ins\crclib.h)(0x6502C06C)
+F (..\EMBEDDED\Src\CanBus.c)(0x650352EB)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\canbus.o --omf_browse ..\obj\canbus.crf --depend ..\obj\canbus.d)
+I (..\EMBEDDED\Ins\CanBus.h)(0x650352E9)
+I (..\HEADFILE\public.h)(0x65034F06)
+I (..\USER\stm32f4xx.h)(0x6502C06C)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F4ADE)
+I (..\USER\system_stm32f4xx.h)(0x6502C06C)
+I (..\USER\stm32f4xx_conf.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_adc.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_crc.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_dbgmcu.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_dma.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_exti.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_flash.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_gpio.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_i2c.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_iwdg.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_pwr.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_rcc.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_rtc.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_sdio.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_spi.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_syscfg.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_tim.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_usart.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_wwdg.h)(0x6502C06C)
+I (..\STLIB\inc\misc.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_cryp.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_hash.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_rng.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_can.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_dac.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_dcmi.h)(0x6502C06C)
+I (..\STLIB\inc\stm32f4xx_fsmc.h)(0x6502C06C)
+I (..\USER\stm32f4xx_it.h)(0x6502C06C)
+I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\arm_math.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\arm_math_types.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (E:\Keil_v5\ARM\ARMCC\include\float.h)(0x57F606B6)
+I (E:\Keil_v5\ARM\ARMCC\include\limits.h)(0x57F606B6)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\arm_math_memory.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\none.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\utils.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\basic_math_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\interpolation_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\bayes_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\statistics_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\fast_math_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\matrix_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\complex_math_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\controller_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\support_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\distance_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\svm_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\svm_defines.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\transform_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\filtering_functions.h)(0x626F4ADE)
+I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_functions.h)(0x626F4ADE)
+I (..\BSP\Ins\delay.h)(0x6502C06C)
+I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
+I (..\APP\BAL\Ins\oldpid.h)(0x6502C06C)
+I (..\EMBEDDED\Ins\senior.h)(0x65034ECD)
 I (..\USER\BSP.h)(0x6502C06C)
 I (..\BSP\Ins\crclib.h)(0x6502C06C)
 F (..\BSP\Src\delay.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
 I (..\BSP\Ins\delay.h)(0x6502C06C)
-I (..\HEADFILE\public.h)(0x6502C06C)
+I (..\HEADFILE\public.h)(0x65034F06)
 I (..\USER\stm32f4xx.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -387,14 +460,15 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\filtering_functions
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_functions.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6502C06C)
-I (..\EMBEDDED\Ins\senior.h)(0x6502CCBD)
+I (..\EMBEDDED\Ins\senior.h)(0x65034ECD)
+I (..\EMBEDDED\Ins\CanBus.h)(0x650352E9)
 I (..\USER\BSP.h)(0x6502C06C)
 I (..\BSP\Ins\crclib.h)(0x6502C06C)
 F (..\BSP\Src\crcLib.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\crclib.o --omf_browse ..\obj\crclib.crf --depend ..\obj\crclib.d)
 I (..\BSP\Ins\crcLib.h)(0x6502C06C)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 F (..\HEADFILE\main.h)(0x6502C06C)()
-F (..\HEADFILE\public.h)(0x6502C06C)()
+F (..\HEADFILE\public.h)(0x65034F06)()
 F (..\STLIB\src\misc.c)(0x6502C06C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Ins -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\Ins -I ..\EMBEDDED\Ins-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
 I (..\STLIB\inc\misc.h)(0x6502C06C)
 I (..\USER\stm32f4xx.h)(0x6502C06C)

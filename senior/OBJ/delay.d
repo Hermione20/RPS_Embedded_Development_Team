@@ -68,5 +68,6 @@
 ..\obj\delay.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\senior.h
 ..\obj\delay.o: ..\HEADFILE\public.h
+..\obj\delay.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\delay.o: ..\USER\BSP.h
 ..\obj\delay.o: ..\BSP\Ins\crclib.h

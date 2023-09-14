@@ -9,6 +9,10 @@ Mecanum_wheel_t Mecanum_chassis  = {0};
 /*************************general_gimbal_define****************************************/
 volatile Encoder Pitch_Encoder = {0};
 volatile Encoder yaw_Encoder = {0};
+/********************************HT430_define*****************************************/
+HT430_J10_t HT430_J10;
+/******************************capacitance_define*************************************/
+volatile capacitance_message_t capacitance_message;
 /************************ch100******************************/
 
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO)
@@ -389,6 +393,107 @@ void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int o
 		{
 				v->ecd_bias = offset - 65536;
 		}
+	}
+}
+
+/********************************HT430_J10************************************/
+
+void HT_430_Information_Receive(CanRxMsg * msg,HT430_J10_t *HT430_J10_t,volatile Encoder *v)
+{
+  switch ((msg->StdId&0xfffe)>>4)
+	{
+		case 0x2f:
+		{
+			HT430_J10_t->Angle=(msg->Data[1]<<8|msg->Data[0])*(360/16384.0f);
+			HT430_J10_t->Total_Angle=(msg->Data[5]<<24|msg->Data[4]<<16|msg->Data[3]<<8|msg->Data[2])*(360/16384.0f)*0.1f;
+			HT430_J10_t->V=msg->Data[7]<<8|msg->Data[6];
+		}break;
+		
+		case 0x40:
+		{
+			HT430_J10_t->Voltage=msg->Data[0]*0.2;
+			HT430_J10_t->Currents=msg->Data[1]*0.03;
+			HT430_J10_t->Temperature=msg->Data[2]*0.4;
+			HT430_J10_t->DTC=msg->Data[3];
+			HT430_J10_t->Operating_State=msg->Data[4];
+		}break;
+		
+		case 0x53:
+		{
+			HT430_J10_t->Angle=(msg->Data[1]<<8|msg->Data[0])*(360/16384.0f);
+			HT430_J10_t->Total_Angle=(msg->Data[5]<<24|msg->Data[4]<<16|msg->Data[3]<<8|msg->Data[2])*(360/16384.0f)*0.1f;
+			HT430_J10_t->V=msg->Data[7]<<8|msg->Data[6];
+		}break;
+		
+		case 0x54:
+		{
+			HT430_J10_t->Angle=(msg->Data[1]<<8|msg->Data[0])*(360/16384.0f);
+			HT430_J10_t->Total_Angle=(msg->Data[5]<<24|msg->Data[4]<<16|msg->Data[3]<<8|msg->Data[2])*(360/16384.0f)*0.1f;
+			HT430_J10_t->V=(msg->Data[7]<<8|msg->Data[6]);
+		}break;
+		
+		case 0x55:
+		{
+			HT430_J10_t->Angle=(msg->Data[1]<<8|msg->Data[0])*(360/16384.0f);
+			HT430_J10_t->Total_Angle=(msg->Data[5]<<24|msg->Data[4]<<16|msg->Data[3]<<8|msg->Data[2])*(360/16384.0f)*0.1f;
+			HT430_J10_t->V=msg->Data[7]<<8|msg->Data[6];
+		}break;
+		
+		case 0x56:
+		{
+			HT430_J10_t->Angle=(msg->Data[1]<<8|msg->Data[0])*(360/16384.0f);
+			HT430_J10_t->Total_Angle=(msg->Data[5]<<24|msg->Data[4]<<16|msg->Data[3]<<8|msg->Data[2])*(360/16384.0f)*0.1f;
+			HT430_J10_t->V=msg->Data[7]<<8|msg->Data[6];
+		}break;
+		
+		case 0x57:
+		{
+//			HT430_J10_t->V=(msg->Data[1]<<8|msg->Data[0])*0.1;
+		}break;
+		
+		default:
+		{
+		}break;
+	}
+	HT430_J10_t->V=HT430_J10_t->V*360/16384/6;
+	v->ecd_angle = HT430_J10_t->Total_Angle;
+	v->filter_rate = HT430_J10_t->V;
+}
+/*******************************capacitance*****************************************/
+
+void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg)
+{
+	switch (msg->StdId)
+	{
+	case 0x610:
+	{
+		v->mode = (msg->Data[0] << 8) | msg->Data[1];
+		v->mode_sure = (msg->Data[2] << 8) | msg->Data[3];
+	}
+	break;
+	case 0x611:
+	{
+		v->in_power = (msg->Data[0] << 8) | msg->Data[1];
+		v->in_v = (msg->Data[2] << 8) | msg->Data[3];
+		v->in_i = (msg->Data[4] << 8) | msg->Data[5];
+	}
+	break;
+	case 0x612:
+	{
+		v->out_power = (msg->Data[0] << 8) | msg->Data[1];
+		v->out_v = (msg->Data[2] << 8) | msg->Data[3];
+		v->out_i = (msg->Data[4] << 8) | msg->Data[5];
+	}
+	break;
+	case 0x613:
+	{
+		v->tempureture=(msg->Data[0]<<8)|msg->Data[1];
+		v->time=(msg->Data[2]<<8)|msg->Data[3];
+        v->this_time=(msg->Data[4]<<8)|msg->Data[5];
+	}break;
+
+	default:
+		break;
 	}
 }
 

@@ -425,6 +425,11 @@
               <FileType>1</FileType>
               <FilePath>..\EMBEDDED\Src\senior.c</FilePath>
             </File>
+            <File>
+              <FileName>CanBus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\Src\CanBus.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -32,7 +32,7 @@
 
 /**************senior**********************/
 #include "senior.h"
-
+#include "CanBus.h"
 
 
 

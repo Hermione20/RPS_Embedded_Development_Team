@@ -68,5 +68,6 @@
 ..\obj\senior.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\senior.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\senior.o: ..\EMBEDDED\Ins\senior.h
+..\obj\senior.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\senior.o: ..\USER\BSP.h
 ..\obj\senior.o: ..\BSP\Ins\crclib.h

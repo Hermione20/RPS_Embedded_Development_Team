@@ -31,6 +31,17 @@ typedef struct{
 	
 }Encoder;
 
+typedef struct{
+	
+	uint8_t anglekp;
+	uint8_t angleki;
+	uint8_t speedkp;
+	uint8_t speedki;
+	uint8_t torquekp;
+	uint8_t torqueki;
+	
+}PID9015Typedefine;
+
 /***************************CH100********************************/
 
 __packed typedef struct
@@ -214,6 +225,47 @@ typedef struct
 	volatile Encoder right_behind_motor;
 }Mecanum_wheel_t;
 
+/*******************超级电容控制模块*********************************/
+typedef struct
+{
+
+	uint16_t mode;
+	uint16_t mode_sure;
+	
+	uint16_t in_power;
+	uint16_t in_v;
+	uint16_t in_i;
+	
+	uint16_t out_power;
+	uint16_t out_v;
+	uint16_t out_i;
+
+	uint16_t tempureture;
+	uint16_t time;
+	uint16_t this_time;
+	
+	uint16_t  cap_voltage_filte;
+}capacitance_message_t;
+/**********************************HT430**********************************/
+typedef enum
+{
+    OFF_STATE=0,
+    OPEN_LOOP=1,
+    SPEED_MODE=3,
+    ANGLE_MODE=5,
+} Operating_State_t;
+typedef struct{
+	uint16_t Angle;//单圈绝对值角度
+	int32_t Total_Angle;//多圈绝对值角度
+	int16_t V;//电机转速
+	Operating_State_t Operating_State;//运行状态
+	uint8_t Voltage;//电源电压
+	uint8_t Currents;//电流
+	uint8_t Temperature;//温度
+	uint8_t DTC;//故障码
+}HT430_J10_t;
+
+
 /***************************senior function*************************************/
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
 static void crc16_update(uint16_t *currectCrc, const uint8_t *src, uint32_t lengthInBytes);
@@ -225,7 +277,8 @@ void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * 
 void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
 void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//云台yaw，pitch共用
 void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
-
+void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
+void HT_430_Information_Receive(CanRxMsg * msg,HT430_J10_t *HT430_J10_t,volatile Encoder *v);
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;
@@ -233,5 +286,6 @@ extern steering_wheel_t steering_wheel_chassis;
 extern Mecanum_wheel_t Mecanum_chassis;
 extern volatile Encoder Pitch_Encoder;
 extern volatile Encoder yaw_Encoder;
+extern volatile capacitance_message_t capacitance_message;
 #endif
 
