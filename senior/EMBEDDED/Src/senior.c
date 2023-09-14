@@ -343,7 +343,7 @@ void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,in
 	}
 }
 
-/*******************************领空电机***********************************/
+/*******************************LK_Tech电机***********************************/
 
 void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg)//云台yaw，pitch共用
 {
