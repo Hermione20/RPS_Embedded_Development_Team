@@ -316,10 +316,29 @@ void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 }
 
 
+void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg)
+{
+	(can_count<=50)?GetEncoderBias(v,msg):EncoderProcess(v,msg);
+}
 
 
+void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset)
+{
 
+	GM6020EncoderProcess(v, msg);
+	// 码盘中间值设定也需要修改
+	if (can_count <= 100)
+	{
+		if ((v->ecd_bias - v->ecd_value) < -4000)
+		{
+				v->ecd_bias = offset + 8192;
+		}
+		else if ((v->ecd_bias - v->ecd_value) > 4000)
+		{
+				v->ecd_bias = offset - 8192;
+		}
+	}
+}
 
-
-
+/*******************************领空电机***********************************/
 

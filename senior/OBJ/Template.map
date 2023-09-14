@@ -545,7 +545,7 @@ Removing Unused input sections from the image.
     Removing senior.o(.rev16_text), (4 bytes).
     Removing senior.o(.revsh_text), (4 bytes).
     Removing senior.o(.rrx_text), (6 bytes).
-    Removing senior.o(.text), (2072 bytes).
+    Removing senior.o(.text), (2172 bytes).
     Removing senior.o(.bss), (1180 bytes).
     Removing senior.o(.data), (56 bytes).
     Removing delay.o(.rev16_text), (4 bytes).
@@ -799,7 +799,7 @@ Removing Unused input sections from the image.
     Removing retarget_io.o(.constdata), (23 bytes).
     Removing retarget_io.o(.data), (4 bytes).
 
-273 unused section(s) (total 1093231 bytes) removed from the image.
+273 unused section(s) (total 1093331 bytes) removed from the image.
 
 ==============================================================================
 
