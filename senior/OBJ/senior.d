@@ -1,5 +1,6 @@
 ..\obj\senior.o: ..\EMBEDDED\Src\senior.c
 ..\obj\senior.o: ..\EMBEDDED\Ins\senior.h
+..\obj\senior.o: ..\HEADFILE\main.h
 ..\obj\senior.o: ..\HEADFILE\public.h
 ..\obj\senior.o: ..\USER\stm32f4xx.h
 ..\obj\senior.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h

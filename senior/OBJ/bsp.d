@@ -68,6 +68,7 @@
 ..\obj\bsp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\bsp.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\bsp.o: ..\EMBEDDED\Ins\senior.h
+..\obj\bsp.o: ..\HEADFILE\main.h
 ..\obj\bsp.o: ..\EMBEDDED\proto\send.pb-c.h
 ..\obj\bsp.o: ..\EMBEDDED\proto\protobuf-c.h
 ..\obj\bsp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

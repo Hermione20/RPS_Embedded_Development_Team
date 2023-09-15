@@ -1,6 +1,6 @@
 #ifndef __SENIOR_H
 #define __SENIOR_H
-#include "public.h"
+#include "main.h"
 #include "send.pb-c.h"
 #include "Recieve.pb-c.h"
 
@@ -227,6 +227,29 @@ typedef struct
 	volatile Encoder right_behind_motor;
 }Mecanum_wheel_t;
 
+/***************************general friction encoder********************************************/
+typedef struct 
+{
+	volatile Encoder right_motor1;
+	volatile Encoder left_motor1;
+	volatile Encoder left_motor2;
+	volatile Encoder right_motor2;
+}friction_t;
+
+/************************************general poke encoder******************************************************/
+
+typedef struct 
+{
+	volatile Encoder right_poke;
+	volatile Encoder left_poke;
+}poke_t;
+
+/****************************************hero small gimbal encoder*****************************************************************/
+typedef struct 
+{
+	volatile Encoder scope_encoder;
+	volatile Encoder small_gimbal_encoder;
+}hero_small_gimbal_t;
 /*******************³¬¼¶µçÈÝ¿ØÖÆÄ£¿é*********************************/
 typedef struct
 {
@@ -644,6 +667,48 @@ typedef struct
 
 /***********************************Ò£¿ØÆ÷*********************************************/
 
+typedef __packed struct
+{
+	int16_t ch0;
+	int16_t ch1;
+	int16_t ch2;
+	int16_t ch3;
+	int16_t ch4;
+	int8_t s1;
+	int8_t s2;
+}Remote;
+
+typedef __packed struct
+{
+	int16_t x;
+	int16_t y;
+	int16_t z;
+	uint8_t last_press_l;
+	uint8_t last_press_r;
+	uint8_t press_l;
+	uint8_t press_r;
+}Mouse;	
+
+typedef	__packed struct
+{
+	uint16_t v;
+	uint16_t last_v;
+}Key;
+
+typedef enum
+{
+  KEY_R_UP=0,
+  KEY_R_DOWN=1,
+ 
+} key_state_t;
+
+typedef __packed struct
+{
+	Remote rc;
+	Mouse mouse;
+	Key key;
+}RC_Ctl_t;
+
 /***************************senior function*************************************/
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
 
@@ -673,6 +738,7 @@ unsigned char get_crc8(unsigned char* data, unsigned int length);
 void judgement_data_handle(uint8_t *p_frame,u16 rec_len);
 
 void vision_process_general_message(unsigned char* address, unsigned int length);
+void send_protocol(float x, float y, float r, int id, float ammo_speed, int gimbal_mode, u8 *data);
 
 void RemoteDataPrcess(uint8_t *pData);
 /**************general_gyro define**********************/
@@ -682,8 +748,12 @@ extern steering_wheel_t steering_wheel_chassis;
 extern Mecanum_wheel_t Mecanum_chassis;
 extern volatile Encoder Pitch_Encoder;
 extern volatile Encoder yaw_Encoder;
+extern hero_small_gimbal_t hero_small_gimbal;
+extern friction_t general_friction;
+extern poke_t general_poke;
 extern volatile capacitance_message_t capacitance_message;
 extern receive_judge_t judge_rece_mesg;
 extern location new_location;
+extern RC_Ctl_t RC_CtrlData;
 #endif
 

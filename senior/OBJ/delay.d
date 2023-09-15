@@ -67,6 +67,7 @@
 ..\obj\delay.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\delay.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\senior.h
+..\obj\delay.o: ..\HEADFILE\main.h
 ..\obj\delay.o: ..\HEADFILE\public.h
 ..\obj\delay.o: ..\EMBEDDED\proto\send.pb-c.h
 ..\obj\delay.o: ..\EMBEDDED\proto\protobuf-c.h

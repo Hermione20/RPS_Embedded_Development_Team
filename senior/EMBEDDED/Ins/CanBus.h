@@ -1,6 +1,6 @@
 #ifndef __CANBUS_H
 #define __CANBUS_H
-#include "public.h"
+#include "main.h"
 
 /*********************麦轮底盘电机id**************************/
 #define M_RIGHT_FRONT_MOTOR 0x00
@@ -17,14 +17,18 @@
 #define S_LEFT_FRONT_MOTOR 0x00
 #define S_LEFT_BEHIND_MOTOR 0x00
 #define S_RIGHT_BEHIND_MOTOR 0x00
-/*******************************************************/
-
-
-
-
-
-
-
+/*************************云台电机id******************************/
+#define GIMBAL_YAW_MOTOR 0X00
+#define GIMBAL_PITCH_MOTOR 0X00
+/****************************英雄小云台电机id***********************************/
+#define SMALL_GIMBAL_MOTOR 0X00
+#define SCOPE_MOTOR 0X00
+/*********************************摩擦轮电机id**************************************/
+#define LEFT_FRICTION1 0X00
+#define RIGHT_FRICTION1 0X00
+#define LEFT_FRIICTION2 0X00
+#define RIGHT_FRICTION2 0X00
+/************************************************************************/
 
 
 #endif

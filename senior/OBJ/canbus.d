@@ -68,6 +68,7 @@
 ..\obj\canbus.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\canbus.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\canbus.o: ..\EMBEDDED\Ins\senior.h
+..\obj\canbus.o: ..\HEADFILE\main.h
 ..\obj\canbus.o: ..\EMBEDDED\proto\send.pb-c.h
 ..\obj\canbus.o: ..\EMBEDDED\proto\protobuf-c.h
 ..\obj\canbus.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

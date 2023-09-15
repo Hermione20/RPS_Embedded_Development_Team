@@ -9,6 +9,11 @@ Mecanum_wheel_t Mecanum_chassis  = {0};
 /*************************general_gimbal_define****************************************/
 volatile Encoder Pitch_Encoder = {0};
 volatile Encoder yaw_Encoder = {0};
+hero_small_gimbal_t hero_small_gimbal = {0};
+/***********************************friction_encoder*****************************************************/
+friction_t general_friction = {0};
+/************************************poke_encoder*********************************************/
+poke_t general_poke = {0};
 /********************************HT430_define*****************************************/
 HT430_J10_t HT430_J10;
 /******************************capacitance_define*************************************/
@@ -18,6 +23,8 @@ receive_judge_t judge_rece_mesg;
 /******************************************auto_shoot_define***************************************/
 location new_location;
 HostToDevice__Frame *Uart4_Protobuf_Receive_Gimbal_Angle;
+/**********************************************remote_define***************************************/
+RC_Ctl_t RC_CtrlData;
 /************************ch100******************************/
 
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO)
@@ -871,9 +878,68 @@ void vision_process_general_message(unsigned char* address, unsigned int length)
 	host_to_device__frame__free_unpacked(Uart4_Protobuf_Receive_Gimbal_Angle, NULL);
 }
 
+DeviceToHost__Frame msg;
+u8 DateLength;
+#define GIMBAL_AUTO_SMALL_BUFF 11
+#define GIMBAL_AUTO_BIG_BUFF 12
+void send_protocol(float x, float y, float r, int id, float ammo_speed, int gimbal_mode, u8 *data)
+{
+	device_to_host__frame__init(&msg);
 
+	if (gimbal_mode == GIMBAL_AUTO_SMALL_BUFF)
+	{
+		msg.mode_ = 2;
+	}
+	else if (gimbal_mode == GIMBAL_AUTO_BIG_BUFF)
+	{
+		msg.mode_ = 1;
+	}
+	else
+	{
+		msg.mode_ = 0;
+	}
+	//	msg.mode_= 1;
+
+	msg.current_pitch_ = y;
+	msg.current_yaw_ = x;
+	msg.current_color_ = id;
+	msg.bullet_speed_ = ammo_speed;
+	msg.current_roll_ = r;
+
+	device_to_host__frame__pack(&msg, data + 2);
+	DateLength = device_to_host__frame__get_packed_size(&msg);
+	data[0] = 0xBE;
+	data[1] = DateLength;
+	Append_CRC8_Check_Sum(&data[2], DateLength + 1);
+	data[DateLength + 3] = 0xED;
+	Uart4SendBytesInfoProc(data, DateLength + 4);
+}
 /***********************************遥控器接收*************************************************************/
 void RemoteDataPrcess(uint8_t *pData)
 {
-  
+	if (pData == NULL)
+	{
+		return;
+	}
+	// 遥控器部分
+	RC_CtrlData.rc.ch0 = ((int16_t)pData[0] | ((int16_t)pData[1] << 8)) & 0x07FF;
+	RC_CtrlData.rc.ch1 = (((int16_t)pData[1] >> 3) | ((int16_t)pData[2] << 5)) & 0x07FF;
+	RC_CtrlData.rc.ch2 = (((int16_t)pData[2] >> 6) | ((int16_t)pData[3] << 2) |
+						  ((int16_t)pData[4] << 10)) &
+						 0x07FF;
+	RC_CtrlData.rc.ch3 = (((int16_t)pData[4] >> 1) | ((int16_t)pData[5] << 7)) & 0x07FF;
+	RC_CtrlData.rc.ch4 = ((int16_t)pData[16] | ((int16_t)pData[17] << 8)) & 0x07FF;
+	RC_CtrlData.rc.s1 = ((pData[5] >> 4) & 0x000C) >> 2;
+	RC_CtrlData.rc.s2 = ((pData[5] >> 4) & 0x0003); // 模式切换
+	// 鼠标部分
+	RC_CtrlData.mouse.x = ((int16_t)pData[6]) | ((int16_t)pData[7] << 8);
+	RC_CtrlData.mouse.y = ((int16_t)pData[8]) | ((int16_t)pData[9] << 8);
+	RC_CtrlData.mouse.z = ((int16_t)pData[10]) | ((int16_t)pData[11] << 8);
+	RC_CtrlData.mouse.press_l = pData[12];
+	RC_CtrlData.mouse.press_r = pData[13];
+	RC_CtrlData.key.v = ((int16_t)pData[14]) | ((int16_t)pData[15] << 8);
+
+	/***********************remote_task*****************************/
+
+	/*****************************************************************/
 }
