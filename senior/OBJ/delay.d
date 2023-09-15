@@ -68,6 +68,11 @@
 ..\obj\delay.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\senior.h
 ..\obj\delay.o: ..\HEADFILE\public.h
+..\obj\delay.o: ..\EMBEDDED\proto\send.pb-c.h
+..\obj\delay.o: ..\EMBEDDED\proto\protobuf-c.h
+..\obj\delay.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+..\obj\delay.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\delay.o: ..\EMBEDDED\proto\Recieve.pb-c.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\delay.o: ..\USER\BSP.h
 ..\obj\delay.o: ..\BSP\Ins\crclib.h

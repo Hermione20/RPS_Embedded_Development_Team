@@ -71,3 +71,8 @@
 ..\obj\senior.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\senior.o: ..\USER\BSP.h
 ..\obj\senior.o: ..\BSP\Ins\crclib.h
+..\obj\senior.o: ..\EMBEDDED\proto\send.pb-c.h
+..\obj\senior.o: ..\EMBEDDED\proto\protobuf-c.h
+..\obj\senior.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+..\obj\senior.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\senior.o: ..\EMBEDDED\proto\Recieve.pb-c.h

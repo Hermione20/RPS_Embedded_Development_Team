@@ -68,6 +68,11 @@
 ..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\main.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\main.o: ..\EMBEDDED\Ins\senior.h
+..\obj\main.o: ..\EMBEDDED\proto\send.pb-c.h
+..\obj\main.o: ..\EMBEDDED\proto\protobuf-c.h
+..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\main.o: ..\EMBEDDED\proto\Recieve.pb-c.h
 ..\obj\main.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\main.o: ..\USER\BSP.h
 ..\obj\main.o: ..\BSP\Ins\crclib.h

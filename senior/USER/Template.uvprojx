@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,ARM_MATH_CM4, __FPU_PRESENT=1, __FPU_USED =1, __CC_ARM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Ins;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\BSP\Ins;..\EMBEDDED\Ins</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Ins;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\BSP\Ins;..\EMBEDDED\Ins;..\EMBEDDED\Protocol;..\EMBEDDED\proto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -429,6 +429,21 @@
               <FileName>CanBus.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\EMBEDDED\Src\CanBus.c</FilePath>
+            </File>
+            <File>
+              <FileName>Recieve.pb-c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\proto\Recieve.pb-c.c</FilePath>
+            </File>
+            <File>
+              <FileName>Send.pb-c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\proto\Send.pb-c.c</FilePath>
+            </File>
+            <File>
+              <FileName>protobuf-c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\proto\protobuf-c.c</FilePath>
             </File>
           </Files>
         </Group>
