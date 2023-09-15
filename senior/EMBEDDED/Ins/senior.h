@@ -642,6 +642,8 @@ typedef struct
   float pitch_speed;
 } location;
 
+/***********************************Ò£¿ØÆ÷*********************************************/
+
 /***************************senior function*************************************/
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
 
@@ -670,7 +672,9 @@ unsigned char get_crc8(unsigned char* data, unsigned int length);
 
 void judgement_data_handle(uint8_t *p_frame,u16 rec_len);
 
-void process_general_message(unsigned char* address, unsigned int length);
+void vision_process_general_message(unsigned char* address, unsigned int length);
+
+void RemoteDataPrcess(uint8_t *pData);
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;

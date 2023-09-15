@@ -795,7 +795,7 @@ void judgement_data_handle(uint8_t *p_frame, u16 rec_len)
 }
 
 /**********************************************auto_shoot_handle*****************************************/
-void process_general_message(unsigned char* address, unsigned int length)
+void vision_process_general_message(unsigned char* address, unsigned int length)
 {
 	int i = 0;
 	static u8 first_len[4];
@@ -869,4 +869,11 @@ void process_general_message(unsigned char* address, unsigned int length)
 		}
 	}
 	host_to_device__frame__free_unpacked(Uart4_Protobuf_Receive_Gimbal_Angle, NULL);
+}
+
+
+/***********************************Ò£¿ØÆ÷½ÓÊÕ*************************************************************/
+void RemoteDataPrcess(uint8_t *pData)
+{
+  
 }
