@@ -1,5 +1,5 @@
-..\obj\delay.o: ..\BSP\Src\delay.c
-..\obj\delay.o: ..\BSP\Ins\delay.h
+..\obj\delay.o: ..\BSP\delay\Src\delay.c
+..\obj\delay.o: ..\BSP\delay\Inc\delay.h
 ..\obj\delay.o: ..\HEADFILE\public.h
 ..\obj\delay.o: ..\USER\stm32f4xx.h
 ..\obj\delay.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h
@@ -63,7 +63,7 @@
 ..\obj\delay.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/transform_functions.h
 ..\obj\delay.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/filtering_functions.h
 ..\obj\delay.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/quaternion_math_functions.h
-..\obj\delay.o: ..\BSP\Ins\delay.h
+..\obj\delay.o: ..\BSP\delay\Inc\delay.h
 ..\obj\delay.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\delay.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\senior.h
@@ -76,4 +76,5 @@
 ..\obj\delay.o: ..\EMBEDDED\proto\Recieve.pb-c.h
 ..\obj\delay.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\delay.o: ..\USER\BSP.h
-..\obj\delay.o: ..\BSP\Ins\crclib.h
+..\obj\delay.o: ..\BSP\can\Inc\can.h
+..\obj\delay.o: ..\BSP\usart\Inc\usart.h

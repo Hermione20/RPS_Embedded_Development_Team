@@ -63,7 +63,7 @@
 ..\obj\bsp.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/transform_functions.h
 ..\obj\bsp.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/filtering_functions.h
 ..\obj\bsp.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/quaternion_math_functions.h
-..\obj\bsp.o: ..\BSP\Ins\delay.h
+..\obj\bsp.o: ..\BSP\delay\Inc\delay.h
 ..\obj\bsp.o: ..\HEADFILE\public.h
 ..\obj\bsp.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\bsp.o: ..\APP\BAL\Ins\oldpid.h
@@ -76,4 +76,5 @@
 ..\obj\bsp.o: ..\EMBEDDED\proto\Recieve.pb-c.h
 ..\obj\bsp.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\bsp.o: ..\USER\BSP.h
-..\obj\bsp.o: ..\BSP\Ins\crclib.h
+..\obj\bsp.o: ..\BSP\can\Inc\can.h
+..\obj\bsp.o: ..\BSP\usart\Inc\usart.h

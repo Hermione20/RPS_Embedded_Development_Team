@@ -1,5 +1,6 @@
 ..\obj\canbus.o: ..\EMBEDDED\Src\CanBus.c
 ..\obj\canbus.o: ..\EMBEDDED\Ins\CanBus.h
+..\obj\canbus.o: ..\HEADFILE\main.h
 ..\obj\canbus.o: ..\HEADFILE\public.h
 ..\obj\canbus.o: ..\USER\stm32f4xx.h
 ..\obj\canbus.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h
@@ -63,7 +64,7 @@
 ..\obj\canbus.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/transform_functions.h
 ..\obj\canbus.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/filtering_functions.h
 ..\obj\canbus.o: E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp/quaternion_math_functions.h
-..\obj\canbus.o: ..\BSP\Ins\delay.h
+..\obj\canbus.o: ..\BSP\delay\Inc\delay.h
 ..\obj\canbus.o: ..\HEADFILE\public.h
 ..\obj\canbus.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\canbus.o: ..\APP\BAL\Ins\oldpid.h
@@ -76,4 +77,5 @@
 ..\obj\canbus.o: ..\EMBEDDED\proto\Recieve.pb-c.h
 ..\obj\canbus.o: ..\EMBEDDED\Ins\CanBus.h
 ..\obj\canbus.o: ..\USER\BSP.h
-..\obj\canbus.o: ..\BSP\Ins\crclib.h
+..\obj\canbus.o: ..\BSP\can\Inc\can.h
+..\obj\canbus.o: ..\BSP\usart\Inc\usart.h

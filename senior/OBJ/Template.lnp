@@ -9,8 +9,10 @@
 "..\obj\recieve.pb-c.o"
 "..\obj\send.pb-c.o"
 "..\obj\protobuf-c.o"
+"..\obj\can.o"
 "..\obj\delay.o"
-"..\obj\crclib.o"
+"..\obj\usart.o"
+"..\obj\sys.o"
 "..\obj\misc.o"
 "..\obj\stm32f4xx_adc.o"
 "..\obj\stm32f4xx_can.o"
@@ -76,7 +78,7 @@
 "..\obj\transformfunctions.o"
 "..\obj\transformfunctionsf16.o"
 "..\obj\retarget_io.o"
---strict --scatter "..\OBJ\Template.sct"
+--library_type=microlib --strict --scatter "..\OBJ\Template.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\OBJ\Template.map" -o ..\OBJ\Template.axf

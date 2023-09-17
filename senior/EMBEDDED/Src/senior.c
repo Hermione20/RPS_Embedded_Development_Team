@@ -912,7 +912,7 @@ void send_protocol(float x, float y, float r, int id, float ammo_speed, int gimb
 	data[1] = DateLength;
 	Append_CRC8_Check_Sum(&data[2], DateLength + 1);
 	data[DateLength + 3] = 0xED;
-	Uart4SendBytesInfoProc(data, DateLength + 4);
+//	Uart4SendBytesInfoProc(data, DateLength + 4);
 }
 /***********************************Ò£¿ØÆ÷½ÓÊÕ*************************************************************/
 void RemoteDataPrcess(uint8_t *pData)
