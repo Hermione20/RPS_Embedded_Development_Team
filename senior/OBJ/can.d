@@ -78,3 +78,5 @@
 ..\obj\can.o: ..\USER\BSP.h
 ..\obj\can.o: ..\BSP\can\Inc\can.h
 ..\obj\can.o: ..\BSP\usart\Inc\usart.h
+..\obj\can.o: ..\BSP\LED\led.h
+..\obj\can.o: ..\BSP\sys\Inc\sys.h

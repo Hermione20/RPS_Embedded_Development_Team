@@ -74,6 +74,8 @@
 ..\obj\senior.o: ..\USER\BSP.h
 ..\obj\senior.o: ..\BSP\can\Inc\can.h
 ..\obj\senior.o: ..\BSP\usart\Inc\usart.h
+..\obj\senior.o: ..\BSP\LED\led.h
+..\obj\senior.o: ..\BSP\sys\Inc\sys.h
 ..\obj\senior.o: ..\EMBEDDED\proto\send.pb-c.h
 ..\obj\senior.o: ..\EMBEDDED\proto\protobuf-c.h
 ..\obj\senior.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

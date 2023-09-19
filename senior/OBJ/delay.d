@@ -78,3 +78,5 @@
 ..\obj\delay.o: ..\USER\BSP.h
 ..\obj\delay.o: ..\BSP\can\Inc\can.h
 ..\obj\delay.o: ..\BSP\usart\Inc\usart.h
+..\obj\delay.o: ..\BSP\LED\led.h
+..\obj\delay.o: ..\BSP\sys\Inc\sys.h

@@ -79,3 +79,5 @@
 ..\obj\canbus.o: ..\USER\BSP.h
 ..\obj\canbus.o: ..\BSP\can\Inc\can.h
 ..\obj\canbus.o: ..\BSP\usart\Inc\usart.h
+..\obj\canbus.o: ..\BSP\LED\led.h
+..\obj\canbus.o: ..\BSP\sys\Inc\sys.h

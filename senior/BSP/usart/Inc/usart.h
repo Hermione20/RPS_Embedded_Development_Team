@@ -6,59 +6,59 @@
 
 #define USART_REC_LEN  			200  	//定义最大接收字节数 200
 
-#define EN_USART1 							1
-#define EN_USART1_RX 						1		//使能（1）/禁止（0）串口1接收
-#define EN_USART1_TX						1
-#define EN_USART1_DMA						0
-#define EN_USART1_DMA_RX					0
-#define EN_USART1_DMA_TX					0
-#define EN_USART1_DMA_SECOND_FIFO           0
-#define EN_USART1_RX_IRQ 					1
+#define EN_USART1 							          1
+#define EN_USART1_RX 						          1		//使能（1）/禁止（0）串口1接收
+#define EN_USART1_TX						          1
+#define EN_USART1_DMA						          0
+#define EN_USART1_DMA_RX					        0
+#define EN_USART1_DMA_TX					        0
+#define EN_USART1_DMA_SECOND_FIFO         0
+#define EN_USART1_RX_IRQ 					        1
 
-#define EN_USART2       					0//0
-#define EN_UART2_RX       					0
-#define EN_UART2_TX							0
-#define EN_UART2_DMA						0
-#define EN_UART2_DMA_TX      		  		0
-#define EN_UART2_DMA_RX      		  		0
-#define EN_UART2_DMA_SECOND_FIFO  			0
-#define EN_UART2_DMA_TX_IRQ			  		0
-
-#define EN_USART3							1
-#define EN_USART3_RX						1
-#define EN_USART3_DMA						0
-#define EN_USART3_DMA_RX					0
-#define EN_USART3_DMA_TX					0
-#define EN_USART3_DMA_SECOND_FIFO           0
-
-
-#define EN_UART4							0
-#define EN_UART4_RX       					0
-#define EN_UART4_TX							0
-#define EN_UART4_DMA						0
-#define EN_UART4_DMA_TX      		  		0
-#define EN_UART4_DMA_RX      				0
-#define EN_UART4_DMA_SECOND_FIFO  			0
-#define EN_UART4_DMA_TX_IRQ					0
+#define EN_USART2       				          0
+#define EN_UART2_RX       			          0
+#define EN_UART2_TX							          0
+#define EN_UART2_DMA						          0
+#define EN_UART2_DMA_TX      		          0
+#define EN_UART2_DMA_RX      		          0
+#define EN_UART2_DMA_SECOND_FIFO          0
+#define EN_UART2_DMA_TX_IRQ			          0
+                                          
+#define EN_USART3							            1          
+#define EN_USART3_RX						          1
+#define EN_USART3_DMA						          0
+#define EN_USART3_DMA_RX				          0
+#define EN_USART3_DMA_TX				          0
+#define EN_USART3_DMA_SECOND_FIFO         0
 
 
-#define EN_UART5							0
-#define EN_UART5_RX							0
-#define EN_UART5_TX							0
+#define EN_UART4							            0
+#define EN_UART4_RX       					      0
+#define EN_UART4_TX							          0
+#define EN_UART4_DMA						          0
+#define EN_UART4_DMA_TX      		          0
+#define EN_UART4_DMA_RX      		        	0
+#define EN_UART4_DMA_SECOND_FIFO  			  0
+#define EN_UART4_DMA_TX_IRQ				       	0
+
+
+#define EN_UART5						            	0
+#define EN_UART5_RX					          		0
+#define EN_UART5_TX					           		0
 #define EN_UART5_DMA          		        0
-#define EN_UART5_DMA_TX						0
-#define EN_UART5_DMA_RX       				0
-#define EN_UART5_DMA_SECOND_FIFO  			0
-#define EN_UART5_RX_IQR       				0
-
-#define EN_UART6							0//0
-#define EN_UART6_RX							0
-#define EN_UART6_TX							0
-#define EN_UART6_DMA          				0
-#define EN_UART6_DMA_TX						0
-#define EN_UART6_DMA_RX       				0
-#define EN_UART6_DMA_SECOND_FIFO  			0
-#define EN_UART6_RX_IQR       				0   
+#define EN_UART5_DMA_TX					        	0
+#define EN_UART5_DMA_RX       			  		0
+#define EN_UART5_DMA_SECOND_FIFO  	   		0
+#define EN_UART5_RX_IQR       			  		0
+																		
+#define EN_UART6						            	1
+#define EN_UART6_RX					              1
+#define EN_UART6_TX					            	1
+#define EN_UART6_DMA          			  		1
+#define EN_UART6_DMA_TX				           	1
+#define EN_UART6_DMA_RX       			  		1
+#define EN_UART6_DMA_SECOND_FIFO  	   		1
+#define EN_UART6_RX_IQR       			   		1 	  
 
  /* Definition for USART_CH100 resources ******************************************/
   #define USART_CH100                           USART3

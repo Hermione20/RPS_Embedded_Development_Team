@@ -1,4 +1,4 @@
-..\obj\usart.o: ..\BSP\usart\Src\usart.c
+..\obj\usart.o: ..\BSP\usart\Scr\usart.c
 ..\obj\usart.o: ..\BSP\usart\Inc\usart.h
 ..\obj\usart.o: ..\HEADFILE\public.h
 ..\obj\usart.o: ..\USER\stm32f4xx.h
@@ -78,3 +78,5 @@
 ..\obj\usart.o: ..\USER\BSP.h
 ..\obj\usart.o: ..\BSP\can\Inc\can.h
 ..\obj\usart.o: ..\BSP\usart\Inc\usart.h
+..\obj\usart.o: ..\BSP\LED\led.h
+..\obj\usart.o: ..\BSP\sys\Inc\sys.h
