@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Ins;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\EMBEDDED\Ins;..\EMBEDDED\Protocol;..\EMBEDDED\proto;..\BSP\can\Inc;..\BSP\delay\Inc;..\BSP\usart\Inc;..\BSP\sys\Inc;..\BSP\LED</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Ins;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\BSP\can\Inc;..\BSP\delay\Inc;..\BSP\usart\Inc;..\BSP\sys\Inc;..\BSP\LED;..\EMBEDDED\CAN_BUS;..\EMBEDDED\senior\Auto_Shoot;..\EMBEDDED\senior\Auto_Shoot\proto;..\EMBEDDED\senior\Auto_Shoot\Protocol;..\EMBEDDED\senior\CH100;..\EMBEDDED\senior\DJI_MOTOR;..\EMBEDDED\senior\HI220;..\EMBEDDED\senior\HT430;..\EMBEDDED\senior\JUDGE;..\EMBEDDED\senior\LK_TECH;..\EMBEDDED\senior\PM01;..\EMBEDDED\senior_struct;..\EMBEDDED\senior\REMOTE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -423,27 +423,72 @@
             <File>
               <FileName>senior.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\Src\senior.c</FilePath>
-            </File>
-            <File>
-              <FileName>CanBus.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\Src\CanBus.c</FilePath>
-            </File>
-            <File>
-              <FileName>Recieve.pb-c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\proto\Recieve.pb-c.c</FilePath>
-            </File>
-            <File>
-              <FileName>Send.pb-c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\proto\Send.pb-c.c</FilePath>
+              <FilePath>..\EMBEDDED\senior_struct\senior.c</FilePath>
             </File>
             <File>
               <FileName>protobuf-c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\proto\protobuf-c.c</FilePath>
+              <FilePath>..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.c</FilePath>
+            </File>
+            <File>
+              <FileName>Recieve.pb-c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.c</FilePath>
+            </File>
+            <File>
+              <FileName>Send.pb-c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\Auto_Shoot\proto\Send.pb-c.c</FilePath>
+            </File>
+            <File>
+              <FileName>CanBus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\CAN_BUS\CanBus.c</FilePath>
+            </File>
+            <File>
+              <FileName>CH100.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\CH100\CH100.c</FilePath>
+            </File>
+            <File>
+              <FileName>DJI_MOTOR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.c</FilePath>
+            </File>
+            <File>
+              <FileName>HI220.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\HI220\HI220.c</FilePath>
+            </File>
+            <File>
+              <FileName>HT430.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\HT430\HT430.c</FilePath>
+            </File>
+            <File>
+              <FileName>JUDGE.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\JUDGE\JUDGE.c</FilePath>
+            </File>
+            <File>
+              <FileName>Auto_shoot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.c</FilePath>
+            </File>
+            <File>
+              <FileName>LK_TECH.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\LK_TECH\LK_TECH.c</FilePath>
+            </File>
+            <File>
+              <FileName>PM01.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\PM01\PM01.c</FilePath>
+            </File>
+            <File>
+              <FileName>REMOTE.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\REMOTE\REMOTE.c</FilePath>
             </File>
           </Files>
         </Group>

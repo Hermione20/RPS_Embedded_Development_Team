@@ -2,7 +2,7 @@
 
 void BSP_Init(void)
 {
-	LED_Init();
+
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
 	
 #if EN_USART1

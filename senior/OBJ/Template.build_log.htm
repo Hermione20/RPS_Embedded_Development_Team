@@ -22,15 +22,30 @@ Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
 C:\Users\HP\Desktop\RPS-embedded\senior\USER\Template.uvprojx
-Project File Date:  09/17/2023
+Project File Date:  09/20/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Template'
+compiling CH100.c...
+compiling main.c...
+compiling HI220.c...
+compiling PM01.c...
+compiling DJI_MOTOR.c...
+compiling REMOTE.c...
+compiling CanBus.c...
 compiling led.c...
+compiling delay.c...
+compiling BSP.c...
+compiling senior.c...
+compiling HT430.c...
+compiling Auto_shoot.c...
+compiling JUDGE.c...
+compiling can.c...
+compiling LK_TECH.c...
 compiling usart.c...
 linking...
-Program Size: Code=10388 RO-data=424 RW-data=40 ZI-data=2376  
+Program Size: Code=28452 RO-data=2920 RW-data=92 ZI-data=5036  
 FromELF: creating hex file...
 "..\OBJ\Template.axf" - 0 Error(s), 0 Warning(s).
 
@@ -61,44 +76,44 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: ARM::CMSIS:DSP:Source:1.10.0
-      Source file:   CMSIS\DSP\Source\ComplexMathFunctions\ComplexMathFunctions.c
-      Source file:   CMSIS\DSP\Source\FilteringFunctions\FilteringFunctions.c
-      Source file:   CMSIS\DSP\Source\MatrixFunctions\MatrixFunctions.c
-      Source file:   CMSIS\DSP\Source\StatisticsFunctions\StatisticsFunctions.c
-      Source file:   CMSIS\DSP\Source\DistanceFunctions\DistanceFunctions.c
-      Source file:   CMSIS\DSP\Source\SupportFunctions\SupportFunctions.c
-      Include file:  CMSIS\DSP\Include\arm_const_structs_f16.h
-      Source file:   CMSIS\DSP\Source\ControllerFunctions\ControllerFunctions.c
-      Include file:  CMSIS\DSP\Include\arm_math_f16.h
-      Include file:  CMSIS\DSP\Include\arm_math.h
-      Include file:  CMSIS\DSP\Include\arm_const_structs.h
-      Include file:  CMSIS\DSP\Include\arm_common_tables.h
-      Source file:   CMSIS\DSP\Source\BasicMathFunctions\BasicMathFunctions.c
-      Source file:   CMSIS\DSP\Source\BayesFunctions\BayesFunctions.c
       Source file:   CMSIS\DSP\Source\CommonTables\CommonTables.c
-      Include file:  CMSIS\DSP\Include\arm_common_tables_f16.h
-      Source file:   CMSIS\DSP\Source\QuaternionMathFunctions\QuaternionMathFunctions.c
+      Source file:   CMSIS\DSP\Source\ControllerFunctions\ControllerFunctions.c
+      Source file:   CMSIS\DSP\Source\DistanceFunctions\DistanceFunctions.c
+      Source file:   CMSIS\DSP\Source\ComplexMathFunctions\ComplexMathFunctions.c
       Source file:   CMSIS\DSP\Source\FastMathFunctions\FastMathFunctions.c
-      Source file:   CMSIS\DSP\Source\BasicMathFunctions\BasicMathFunctionsF16.c
+      Include file:  CMSIS\DSP\Include\arm_const_structs_f16.h
+      Source file:   CMSIS\DSP\Source\BasicMathFunctions\BasicMathFunctions.c
+      Source file:   CMSIS\DSP\Source\QuaternionMathFunctions\QuaternionMathFunctions.c
+      Include file:  CMSIS\DSP\Include\arm_math_f16.h
+      Include file:  CMSIS\DSP\Include\arm_common_tables.h
+      Include file:  CMSIS\DSP\Include\arm_common_tables_f16.h
+      Include file:  CMSIS\DSP\Include\arm_const_structs.h
+      Source file:   CMSIS\DSP\Source\BayesFunctions\BayesFunctions.c
+      Include file:  CMSIS\DSP\Include\arm_math.h
+      Source file:   CMSIS\DSP\Source\MatrixFunctions\MatrixFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\FastMathFunctions\FastMathFunctionsF16.c
       Source file:   CMSIS\DSP\Source\SupportFunctions\SupportFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\FilteringFunctions\FilteringFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\InterpolationFunctions\InterpolationFunctions.c
+      Source file:   CMSIS\DSP\Source\StatisticsFunctions\StatisticsFunctions.c
+      Source file:   CMSIS\DSP\Source\ComplexMathFunctions\ComplexMathFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\SupportFunctions\SupportFunctions.c
+      Source file:   CMSIS\DSP\Source\DistanceFunctions\DistanceFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\StatisticsFunctions\StatisticsFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\CommonTables\CommonTablesF16.c
+      Source file:   CMSIS\DSP\Source\InterpolationFunctions\InterpolationFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\MatrixFunctions\MatrixFunctions.c
       Source file:   CMSIS\DSP\Source\SVMFunctions\SVMFunctions.c
+      Source file:   CMSIS\DSP\Source\BayesFunctions\BayesFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\InterpolationFunctions\InterpolationFunctions.c
+      Source file:   CMSIS\DSP\Source\FilteringFunctions\FilteringFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\SVMFunctions\SVMFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\BasicMathFunctions\BasicMathFunctionsF16.c
+      Source file:   CMSIS\DSP\Source\FilteringFunctions\FilteringFunctions.c
       Source file:   CMSIS\DSP\Source\TransformFunctions\TransformFunctions.c
       Source file:   CMSIS\DSP\Source\TransformFunctions\TransformFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\MatrixFunctions\MatrixFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\BayesFunctions\BayesFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\SVMFunctions\SVMFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\ComplexMathFunctions\ComplexMathFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\InterpolationFunctions\InterpolationFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\FastMathFunctions\FastMathFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\DistanceFunctions\DistanceFunctionsF16.c
-      Source file:   CMSIS\DSP\Source\CommonTables\CommonTablesF16.c
-      Source file:   CMSIS\DSP\Source\StatisticsFunctions\StatisticsFunctionsF16.c
 
    * Component: Keil.ARM Compiler::Compiler:I/O:STDERR:ITM:1.2.0
       Source file:   Source\retarget_io.c
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

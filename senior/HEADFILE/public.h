@@ -31,12 +31,19 @@
 
 
 /**************senior**********************/
-#include "senior.h"
 #include "CanBus.h"
+#include "CH100.h"
+#include "DJI_MOTOR.h"
+#include "HI220.h"
+#include "HT430.h"
+#include "JUDGE.h"
+#include "Auto_shoot.h"
+#include "LK_TECH.h"
+#include "REMOTE.h"
+#include "PM01.h"
 
 
-
-
+#include "senior.h"
 /****************BSP**********************/
 #include "BSP.h"
 #include "can.h"

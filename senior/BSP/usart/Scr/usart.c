@@ -136,6 +136,7 @@ void uart1_init(u32 bound)
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
+	
 
    //USART1 ³õÊ¼»¯ÉèÖÃ
 	USART_DeInit(USART1);
@@ -533,13 +534,13 @@ void uart3_init(u32 bound)//921600
 		#endif
 		
   /* Configure DMA controller to manage USART TX and RX DMA request ----------*/ 
-	#if EN_UART3_DMA
+	#if EN_USART3_DMA
 		
 				/* Enable the DMA clock */
 			RCC_AHB1PeriphClockCmd(USART_CH100_DMAx_CLK, ENABLE);
 			DMA_InitTypeDef  DMA_InitStructure;
 			
-			#if EN_UART3_DMA_RX
+			#if EN_USART3_DMA_RX
 
 						#if EN_USART3_DMA_SECOND_FIFO
 							DMA_InitStructure.DMA_Memory0BaseAddr   =   (uint32_t)&_USART3_DMA_RX_BUF[0][0];
@@ -616,7 +617,7 @@ void uart3_init(u32 bound)//921600
   USART_Cmd(USART_CH100, ENABLE);
 }
 	
-			#if EN_UART3_RX
+#if EN_USART3_RX
 			uint8_t lengt=0;
 			void USART3_IRQHandler(void)
 			{
@@ -627,15 +628,15 @@ void uart3_init(u32 bound)//921600
 				(void)USART_CH100->DR;
 				DMA_Cmd(USART_CH100_TX_DMA_STREAM, DISABLE);
 				DMA_ClearFlag(USART_CH100_TX_DMA_STREAM, DMA_FLAG_TCIF5 | DMA_FLAG_HTIF5);
-				lengt = UART3_RX_BUF_LENGTH - DMA_GetCurrDataCounter(USART_CH100_TX_DMA_STREAM);
+				lengt = USART3_DMA_RX_BUF_LEN - DMA_GetCurrDataCounter(USART_CH100_TX_DMA_STREAM);
 
 				USART3_Data_Receive_Process;
 				DMA_SetCurrDataCounter(USART_CH100_TX_DMA_STREAM,UART2_RX_BUF_LENGTH);
 				DMA_Cmd(USART_CH100_TX_DMA_STREAM, ENABLE);
 			}
 		}
-		#endif
-		#if EN_UART3_DMA_TX
+#endif
+		#if EN_USART3_DMA_TX
 			/**
 			************************************************************************************************************************
 			* @Name     : UART3_MYDMA_Enable
