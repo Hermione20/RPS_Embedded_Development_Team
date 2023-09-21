@@ -103,7 +103,7 @@ u8 CAN1_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
    	NVIC_InitTypeDef       NVIC_InitStructure;
 #endif
     //使能相关时钟
-		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);//使能PORTA时钟	            
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);//使能PORTA时钟	            
 
   	RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN1, ENABLE);//使能CAN1时钟	
 	
@@ -169,17 +169,18 @@ u8 CAN2_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
 {
 
   	GPIO_InitTypeDef       GPIO_InitStructure; 
-		CAN_InitTypeDef        CAN_InitStructure;
+	CAN_InitTypeDef        CAN_InitStructure;
   	CAN_FilterInitTypeDef  CAN_FilterInitStructure;
 #if CAN2_RX0_INT_ENABLE|CAN2_TX0_INT_ENABLE
    	NVIC_InitTypeDef       NVIC_InitStructure;
 #endif
     //使能相关时钟
-		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);//使能PORTA时钟	            
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);//使能PORTA时钟	            
+
   	RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN2, ENABLE);//使能CAN1时钟	
 	
     //初始化GPIO
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12| GPIO_Pin_13;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12| GPIO_Pin_13;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;//复用功能
     GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;//推挽输出
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;//100MHz
@@ -187,8 +188,8 @@ u8 CAN2_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
     GPIO_Init(GPIOB, &GPIO_InitStructure);//初始化PA11,PA12
 	
 	  //引脚复用映射配置
-		GPIO_PinAFConfig(GPIOB,GPIO_PinSource12,GPIO_AF_CAN2); //GPIOA11复用为CAN1
-		GPIO_PinAFConfig(GPIOB,GPIO_PinSource13,GPIO_AF_CAN2); //GPIOA12复用为CAN1
+	GPIO_PinAFConfig(GPIOB,GPIO_PinSource12,GPIO_AF_CAN2); //GPIOA11复用为CAN1
+	GPIO_PinAFConfig(GPIOB,GPIO_PinSource13,GPIO_AF_CAN2); //GPIOA12复用为CAN1
 	  
 		CAN_DeInit(CAN2);
     CAN_StructInit(&CAN_InitStructure);
@@ -267,7 +268,7 @@ void CAN2_RX0_IRQHandler(void)
        CAN_ClearITPendingBit(CAN2, CAN_IT_FMP0);//|CAN_IT_FF0|CAN_IT_FOV0
        CAN_Receive(CAN2, CAN_FIFO0, &rx_message);  
        //电机编码器数据处理
-       CAN2_Data_Receive_Process
+       CAN2_Receive_Msg(rx_message.Data);
 			 for(i=0;i<8;i++)
 				CAN2_receive_buf[i]=rx_message.Data[i];	
     }
@@ -284,13 +285,11 @@ void CAN1_RX0_IRQHandler(void)
        CAN_ClearITPendingBit(CAN1, CAN_IT_FMP0);//|CAN_IT_FF0|CAN_IT_FOV0
        CAN_Receive(CAN1, CAN_FIFO0, &rx_message);  
        //电机编码器数据处理
-			 CAN1_Data_Receive_Process
 				for(i=0;i<8;i++)
 				CAN1_receive_buf[i]=rx_message.Data[i];
-			}
+    }
+
 }
-
-
 #endif
 
 

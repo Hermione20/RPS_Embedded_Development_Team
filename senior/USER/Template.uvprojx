@@ -511,14 +511,14 @@
               <FilePath>..\BSP\sys\Sor\sys.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\usart\Scr\usart.c</FilePath>
-            </File>
-            <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\LED\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\usart\Src\usart.c</FilePath>
             </File>
           </Files>
         </Group>

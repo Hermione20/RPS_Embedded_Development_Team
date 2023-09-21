@@ -1,4 +1,4 @@
-..\obj\usart.o: ..\BSP\usart\Scr\usart.c
+..\obj\usart.o: ..\BSP\usart\Src\usart.c
 ..\obj\usart.o: ..\BSP\usart\Inc\usart.h
 ..\obj\usart.o: ..\HEADFILE\public.h
 ..\obj\usart.o: ..\USER\stm32f4xx.h

@@ -129,7 +129,7 @@
    Timeout value 
    */
 #if !defined  (HSE_STARTUP_TIMEOUT) 
-  #define HSE_STARTUP_TIMEOUT    ((uint16_t)0x05000)   /*!< Time out for HSE start up */
+  #define HSE_STARTUP_TIMEOUT    ((uint16_t)0x0500)   /*!< Time out for HSE start up */
 #endif /* HSE_STARTUP_TIMEOUT */   
 
 #if !defined  (HSI_VALUE)   
@@ -140,8 +140,8 @@
  * @brief STM32F4XX Standard Peripherals Library version number V1.4.0
    */
 #define __STM32F4XX_STDPERIPH_VERSION_MAIN   (0x01) /*!< [31:24] main version */
-#define __STM32F4XX_STDPERIPH_VERSION_SUB1   (0x04) /*!< [23:16] sub1 version */
-#define __STM32F4XX_STDPERIPH_VERSION_SUB2   (0x00) /*!< [15:8]  sub2 version */
+#define __STM32F4XX_STDPERIPH_VERSION_SUB1   (0x00) /*!< [23:16] sub1 version */
+#define __STM32F4XX_STDPERIPH_VERSION_SUB2   (0x02) /*!< [15:8]  sub2 version */
 #define __STM32F4XX_STDPERIPH_VERSION_RC     (0x00) /*!< [7:0]  release candidate */ 
 #define __STM32F4XX_STDPERIPH_VERSION        ((__STM32F4XX_STDPERIPH_VERSION_MAIN << 24)\
                                              |(__STM32F4XX_STDPERIPH_VERSION_SUB1 << 16)\
