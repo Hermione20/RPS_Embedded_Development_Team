@@ -1,69 +1,11 @@
-#ifndef __USART_H__
-#define __USART_H__
+#ifndef __CH100_DMA_H
+#define __CH100_DMA_H
 #include "public.h"
+extern float pitch_Angle1, yaw_Angle1, roll_Angle1; 
+extern float pitch_Gyro1, yaw_Gyro1, roll_Gyro1;
+extern float x_Acc1, y_Acc1, z_Acc1;
 
-
-#define EN_USART1 								1
-//#define EN_USART1_DMA_SECOND_FIFO 1
-
-
-#define EN_USART2       					1
-#define EN_UART2_DMA_SECOND_FIFO  0
-
-
-#define EN_USART3									1
-#define EN_USART3_DMA_SECOND_FIFO 0
-
-
-#define EN_UART4									1
-#define EN_UART4_DMA_SECOND_FIFO  0
-
-
-#define EN_UART5									1
-#define EN_UART5_DMA_SECOND_FIFO  0
-
-
-#define EN_USART6									1
-
-/*
-*********************************************************************************************************
-*                                    中断调用函数接口
-*********************************************************************************************************
-*/
-#define USART1_Data_Receive_Process_0				do{}while(0);
-#define USART1_Data_Receive_Process_1				do{}while(0);
-#define USART2_Data_Receive_Process					do{}while(0);
-#define USART3_Data_Receive_Process					do{}while(0);
-#define UART4_Data_Receive_Process					do{}while(0);
-#define UART5_Data_Receive_Process					do{}while(0);
-#define USART6_Data_Receive_Process					do{}while(0);
-
-
-/*
-*********************************************************************************************************
-*                                               MACROS
-*********************************************************************************************************
-*/
-
-#define  BSP_USART1_DMA_RX_BUF_LEN               64u                   
-#define BSP_USART1_RX_BUF_SIZE_IN_FRAMES         (BSP_USART1_RX_BUF_SIZE / RC_FRAME_LENGTH)
-#define BSP_USART2_DMA_RX_BUF_LEN 100
 #define CH100_RX_BUFF_SIZE 100
-#define UART4_RX_BUF_LENGTH   100
-#define UART4_TX_BUF_LENGTH   100
-#define BSP_USART6_DMA_RX_BUF_LEN 100
-#define  RC_FRAME_LENGTH                            18u
-#define PITCH_MAX 35.0f
-#define PITCH_MIN -25.0f
-#define YAW_MAX 40				//cyq:云台角度的范围
-#define YAW_MIN -40
-/*
-*********************************************************************************************************
-*                                             FUNCTION PROTOTYPES
-*********************************************************************************************************
-*/
-
-
 
 
 
@@ -113,15 +55,6 @@
 //  #define USART_CH100_DMA_TX_IRQHandler         DMA2_Stream6_IRQHandler
 //  #define USART_CH100_DMA_RX_IRQHandler         DMA2_Stream1_IRQHandler
 
-void usart1_init(uint32_t baud_rate);
-void usart2_init(u32 bound);
-void usart3_init(u32 bound);
-void uart4_init (u32 bound);
-void uart5_init (u32 bound);
-void usart6_init(u32 bound);
-void RemoteDataPrcess(uint8_t *pData);
-void Uart4DmaSendDataProc(DMA_Stream_TypeDef *DMA_Streamx,u16 ndtr);
-void Uart4SendByteInfoProc(u8 nSendInfo);
-void Uart4SendBytesInfoProc(u8* pSendInfo, u16 nSendCount);
+void ch100_USART_Config(void);
 
 #endif
