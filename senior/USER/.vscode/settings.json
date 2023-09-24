@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "public.h": "c",
+        "senior.h": "c",
+        "main.h": "c",
+        "remote.h": "c",
+        "canbus.h": "c",
+        "usart.h": "c",
+        "can.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
