@@ -22,3 +22,6 @@ receive_judge_t judge_rece_mesg;
 location new_location;
 /**********************************************remote_define***************************************/
 RC_Ctl_t RC_CtrlData;
+/**************************************************chassis_data************************************/
+chassis_data_t can_chassis_data;
+ 

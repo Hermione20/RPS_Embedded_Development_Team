@@ -481,14 +481,14 @@
               <FilePath>..\EMBEDDED\senior\LK_TECH\LK_TECH.c</FilePath>
             </File>
             <File>
-              <FileName>PM01.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMBEDDED\senior\PM01\PM01.c</FilePath>
-            </File>
-            <File>
               <FileName>REMOTE.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\EMBEDDED\senior\REMOTE\REMOTE.c</FilePath>
+            </File>
+            <File>
+              <FileName>PM01.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMBEDDED\senior\PM01\PM01.c</FilePath>
             </File>
           </Files>
         </Group>

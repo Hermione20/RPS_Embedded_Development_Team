@@ -16,6 +16,7 @@
 
 /********************general chassis encoder********************************/
 
+
 typedef struct 
 {
 	volatile Encoder right_front_GM6020;
@@ -60,37 +61,31 @@ typedef struct
 	volatile Encoder scope_encoder;
 	volatile Encoder small_gimbal_encoder;
 }hero_small_gimbal_t;
+/*********************************************chassis_data*****************************************/
+
+
+
 
 
 ///***************************senior function*************************************/
 //void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
 
-//static void crc16_update(uint16_t *currectCrc, const uint8_t *src, uint32_t lengthInBytes);
 //void HI220_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO,uint8_t length);
 
-//void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg);
-//void EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
-//void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 //void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
+
 //void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
-//void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//‘∆Ã®yaw£¨pitchπ≤”√
+
 //void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
 
 //void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
 
 //void HT_430_Information_Receive(CanRxMsg * msg,HT430_J10_t *HT430_J10_t,volatile Encoder *v);
 
-//unsigned char Get_CRC8_Check_Sum(unsigned char *pchMessage,unsigned int dwLength,unsigned char ucCRC8);
-//unsigned int Verify_CRC8_Check_Sum(unsigned char *pchMessage, unsigned int dwLength);
-//void Append_CRC8_Check_Sum(unsigned char *pchMessage, unsigned int dwLength);
-//uint16_t Get_CRC16_Check_Sum(uint8_t *pchMessage,uint32_t dwLength,uint16_t wCRC);
-//uint32_t Verify_CRC16_Check_Sum(uint8_t *pchMessage, uint32_t dwLength);
-//void Append_CRC16_Check_Sum(uint8_t * pchMessage,uint32_t dwLength);
-//unsigned char get_crc8(unsigned char* data, unsigned int length);
-
 //void judgement_data_handle(uint8_t *p_frame,u16 rec_len);
 
 //void vision_process_general_message(unsigned char* address, unsigned int length);
+
 //void send_protocol(float x, float y, float r, int id, float ammo_speed, int gimbal_mode, u8 *data);
 
 //void RemoteDataPrcess(uint8_t *pData);
@@ -104,6 +99,8 @@ extern volatile Encoder yaw_Encoder;
 extern hero_small_gimbal_t hero_small_gimbal;
 extern friction_t general_friction;
 extern poke_t general_poke;
+
+
 //extern volatile capacitance_message_t capacitance_message;
 //extern receive_judge_t judge_rece_mesg;
 //extern location new_location;

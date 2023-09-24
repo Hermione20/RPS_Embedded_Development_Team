@@ -7,15 +7,15 @@
 
 #define USART_REC_LEN  			200  	//定义最大接收字节数 200
 
-#define EN_USART1 								0
-#define EN_USART1_DMA_SECOND_FIFO 0
+#define EN_USART1 								1
+#define EN_USART1_DMA_SECOND_FIFO 1
 
 
 #define EN_USART2       					0
 #define EN_UART2_DMA_SECOND_FIFO  0
 
 
-#define EN_USART3									1
+#define EN_USART3									0
 #define EN_USART3_DMA_SECOND_FIFO 0
 
 
@@ -24,7 +24,7 @@
 
 
 #define EN_UART5									1
-#define EN_UART5_DMA_SECOND_FIFO  0
+#define EN_UART5_DMA_SECOND_FIFO  1
 
 
 #define EN_UART6									1
@@ -73,12 +73,12 @@
   #define USART_CH100_RX_DMA_FLAG_TCIF          DMA_FLAG_TCIF1
 
 
-#define USART1_Data_Receive_Process				do{}while(0)   		
-#define USART2_Data_Receive_Process				do{}while(0) 
-#define USART3_Data_Receive_Process				do{}while(0) 
+#define USART1_Data_Receive_Process				do{RemoteDataPrcess(_UART1_DMA_RX_BUF[0]);}while(0);   		
+#define USART2_Data_Receive_Process				do{}while(0);
+#define USART3_Data_Receive_Process				do{}while(0); 
 #define USART4_Data_Receive_Process				do{}while(0); 
-#define USART5_Data_Receive_Process				do{}while(0); 
-#define USART6_Data_Receive_Process				do{}while(0) 
+#define USART5_Data_Receive_Process				do{judgement_data_handle(_UART5_DMA_RX_BUF[0],this_time_rx_len);}while(0); 
+#define USART6_Data_Receive_Process				do{CH100_getDATA(_UART6_DMA_RX_BUF,&gimbal_gyro);}while(0); 
 
 
 extern u8  USART_RX_BUF[USART_REC_LEN]; //接收缓冲,最大USART_REC_LEN个字节.末字节为换行符 

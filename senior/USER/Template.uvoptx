@@ -180,6 +180,26 @@
           <WinNumber>2</WinNumber>
           <ItemText>judge_rece_mesg,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>gimbal_gyro</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>RC_CtrlData,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>USART1-&gt;DR;</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>USART6-&gt;DR,0x0A</ItemText>
+        </Ww>
       </WatchWindow2>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -477,8 +497,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\EMBEDDED\senior\PM01\PM01.c</PathWithFileName>
-      <FilenameWithoutPath>PM01.c</FilenameWithoutPath>
+      <PathWithFileName>..\EMBEDDED\senior\REMOTE\REMOTE.c</PathWithFileName>
+      <FilenameWithoutPath>REMOTE.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -489,8 +509,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\EMBEDDED\senior\REMOTE\REMOTE.c</PathWithFileName>
-      <FilenameWithoutPath>REMOTE.c</FilenameWithoutPath>
+      <PathWithFileName>..\EMBEDDED\senior\PM01\PM01.c</PathWithFileName>
+      <FilenameWithoutPath>PM01.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
