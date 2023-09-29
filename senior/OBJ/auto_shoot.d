@@ -70,10 +70,10 @@
 ..\obj\auto_shoot.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\auto_shoot.o: ..\HEADFILE\main.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\CH100\CH100.h
+..\obj\auto_shoot.o: ..\EMBEDDED\senior\JUDGE\JUDGE.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\HI220\HI220.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\HT430\HT430.h
-..\obj\auto_shoot.o: ..\EMBEDDED\senior\JUDGE\JUDGE.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\LK_TECH\LK_TECH.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\REMOTE\REMOTE.h
@@ -84,6 +84,7 @@
 ..\obj\auto_shoot.o: ..\BSP\usart\Inc\usart.h
 ..\obj\auto_shoot.o: ..\BSP\LED\led.h
 ..\obj\auto_shoot.o: ..\BSP\sys\Inc\sys.h
+..\obj\auto_shoot.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\send.pb-c.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.h
 ..\obj\auto_shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

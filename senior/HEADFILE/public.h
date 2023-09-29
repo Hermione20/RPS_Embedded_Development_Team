@@ -15,7 +15,30 @@
 #include <math.h>
 #include <arm_math.h>
 
+//定义PI 值
+#ifndef PI
+#define PI 3.14159265358979f
+#endif
 
+//定义 角度(度)转换到 弧度的比例
+#ifndef ANGLE_TO_RAD
+#define ANGLE_TO_RAD 0.01745329251994329576923690768489f
+#endif
+
+//定义 弧度 转换到 角度的比例
+#ifndef RAD_TO_ANGLE
+#define RAD_TO_ANGLE 57.295779513082320876798154814105f
+#endif
+
+#define VAL_LIMIT(val, min, max)\
+if(val<=min)\
+{\
+	val = min;\
+}\
+else if(val>=max)\
+{\
+	val = max;\
+}\
 
 /**************TOOL HEAD*******************/
 #include <delay.h>
@@ -33,14 +56,15 @@
 /**************senior**********************/
 #include "CanBus.h"
 #include "CH100.h"
+#include "JUDGE.h"
 #include "DJI_MOTOR.h"
 #include "HI220.h"
 #include "HT430.h"
-#include "JUDGE.h"
 #include "Auto_shoot.h"
 #include "LK_TECH.h"
 #include "REMOTE.h"
 #include "PM01.h"
+
 
 
 #include "senior.h"
@@ -52,7 +76,8 @@
 
 
 
-
+/***************TASK*********************/
+#include "infantry_gimbal_task.h"
 
 
 

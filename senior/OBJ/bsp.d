@@ -70,10 +70,10 @@
 ..\obj\bsp.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\bsp.o: ..\HEADFILE\main.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\CH100\CH100.h
+..\obj\bsp.o: ..\EMBEDDED\senior\JUDGE\JUDGE.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\HI220\HI220.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\HT430\HT430.h
-..\obj\bsp.o: ..\EMBEDDED\senior\JUDGE\JUDGE.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\Auto_Shoot\proto\send.pb-c.h
 ..\obj\bsp.o: ..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.h
@@ -89,3 +89,4 @@
 ..\obj\bsp.o: ..\BSP\usart\Inc\usart.h
 ..\obj\bsp.o: ..\BSP\LED\led.h
 ..\obj\bsp.o: ..\BSP\sys\Inc\sys.h
+..\obj\bsp.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h

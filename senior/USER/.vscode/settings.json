@@ -7,7 +7,9 @@
         "remote.h": "c",
         "canbus.h": "c",
         "usart.h": "c",
-        "can.h": "c"
+        "can.h": "c",
+        "infantry_gimbal_task.h": "c",
+        "math.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
