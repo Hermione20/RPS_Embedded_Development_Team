@@ -15,6 +15,7 @@ typedef struct
   int16_t dis;
   uint8_t flag;
   uint8_t xy_0_flag;
+  float xy_o_time;
   uint8_t color;
   int16_t receNewDataFlag;
   int16_t id;

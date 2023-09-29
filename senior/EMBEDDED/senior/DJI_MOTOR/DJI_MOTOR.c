@@ -74,10 +74,8 @@ void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 	//计算得到角度值，范围正负无穷大
 	v->ecd_angle = (float)(v->raw_value - v->ecd_bias)*0.0439453125f  + v->round_cnt * 360;
 	v->filter_rate = (msg->Data[2]<<8)|msg->Data[3];
-//	if(v->filter_rate>32768)
-//	{
-//		v->filter_rate = (~((msg->Data[2]<<8)|msg->Data[3])+1);
-//	}
+	if(v->filter_rate>=1000)
+		v->filter_rate = v->filter_rate - 65535;
 	v->temperature = msg->Data[6];
 }
 
