@@ -3446,4 +3446,8 @@ I (D:\Users\G\RM\keil\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Users\G\RM\keil\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
 I (D:\Users\G\RM\keil\ARM\ARMCC\include\assert.h)(0x5E8E3CC2)
 I (D:\Users\G\RM\keil\ARM\ARMCC\include\rt_sys.h)(0x5E8E3CC2)
+<<<<<<< Updated upstream
 I (.\RTE\_Template\RTE_Components.h)(0x65164C14)
+=======
+I (.\RTE\_Template\RTE_Components.h)(0x65164C4E)
+>>>>>>> Stashed changes
