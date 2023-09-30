@@ -33,7 +33,10 @@ u8 CAN1_Receive_Msg(u8 *buf);							//接收数据
 
 u8 CAN2_Receive_Msg(u8 *buf);
 
-
+void CAN1_Configuration(void);
+void set_M3508_info(void);
+void CAN2_Configuration(void);
+void Set_Gimbal_Current1(CAN_TypeDef *CANx, int16_t ch_1_iq, int16_t ch_2_iq, int16_t ch_3_iq, int16_t ch_4_iq);
 #endif
 
 

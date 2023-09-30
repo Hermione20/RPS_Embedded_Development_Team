@@ -69,7 +69,7 @@ void gimbal_init_handle	( void )
 {
     //大幅参数初始化
     first_flag = 0;
-	ved = 0;
+		ved = 0;
 
     int init_rotate_num = 0;
     gimbal_data.gim_ref_and_fdb.pit_angle_ref = 0.0f;
@@ -94,6 +94,12 @@ void gimbal_init_handle	( void )
                                                                       gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
                                                                       gimbal_gyro.pitch_Gyro,
                                                                       0 );
+	if (1)//(fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=4&&fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=1.5)
+    {
+        gimbal_data.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
+        
+    }
+    																																		
 }
 
 void gimbal_follow_gyro_handle(void)

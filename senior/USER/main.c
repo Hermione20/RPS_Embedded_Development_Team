@@ -1,7 +1,6 @@
 #include "main.h"
 
 
-
 int main()
 {
 		
@@ -9,8 +8,9 @@ int main()
 
 	while(1)
 	{
-		
-		
+
+		gimbal_task();
+		mode_switch_task();
 		
 	}
 }

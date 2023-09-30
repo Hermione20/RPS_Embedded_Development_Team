@@ -11,7 +11,7 @@
 
 
 
-
+void mode_switch_task(void);
 
 
 

@@ -60,40 +60,32 @@ void SetInputMode(RC_Ctl_t *remote)
 
 void GetRemoteSwitchAction(RC_Ctl_t *remote)
 {
-	 static uint32_t switch_cnt = 0;
-  /* 最新状态值 */
-  remote->RemoteSwitch.switch_value_raw = remote->rc.s1;
-  remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_index] = remote->RemoteSwitch.switch_value_raw;
-  /* 取最新值和上一次值 */
-  remote->RemoteSwitch.switch_value1 = (remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_last_index] << 2)|
-                      (remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_index]);
-
-  /* 最老的状态值的索引 */
-  remote->RemoteSwitch.buf_end_index = (remote->RemoteSwitch.buf_index + 1)%REMOTE_SWITCH_VALUE_BUF_DEEP;
-
-  /* 合并三个值 */
-  remote->RemoteSwitch.switch_value2 = (remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_end_index]<<4)|remote->RemoteSwitch.switch_value1;
-  /* 长按判断 */
-  if(remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_index] == remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_last_index])
-    {
-      switch_cnt++;
-    }
-  else
-    {
-      switch_cnt = 0;
-    }
-
-  if(switch_cnt >= 40)
-    {
-      remote->RemoteSwitch.switch_long_value = remote->RemoteSwitch.switch_value_buf[remote->RemoteSwitch.buf_index];
-    }
-
-  remote->RemoteSwitch.buf_last_index = remote->RemoteSwitch.buf_index;
-  remote->RemoteSwitch.buf_index++;
-  if(remote->RemoteSwitch.buf_index == REMOTE_SWITCH_VALUE_BUF_DEEP)
-    {
-      remote->RemoteSwitch.buf_index = 0;
-    }
+	remote->RemoteSwitch.switch_value_raw = remote->rc.s1;
+	remote->RemoteSwitch.switch_value = remote->RemoteSwitch.last_switch_value - remote->RemoteSwitch.switch_value_raw;
+	remote->RemoteSwitch.last_switch_value = remote->RemoteSwitch.switch_value_raw;
+	if(remote->RemoteSwitch.switch_value == 1)
+	{
+		remote->RemoteSwitch.s3to2_cnt++;
+		if(remote->RemoteSwitch.s3to2_cnt%2==0)
+		{
+			remote->RemoteSwitch.s3to2 = 0;
+		}else
+		{
+			remote->RemoteSwitch.s3to2 = 1;
+		}
+	}
+	if(remote->RemoteSwitch.switch_value == 2)
+	{
+		remote->RemoteSwitch.s3to1_cnt++;
+		if(remote->RemoteSwitch.s3to1_cnt%2==0)
+		{
+			remote->RemoteSwitch.s3to1 = 0;
+		}else
+		{
+			remote->RemoteSwitch.s3to1 = 1;
+		}
+	}
+	
 }
 
 u8 remote_flagW1, remote_flagW2 = 0;
