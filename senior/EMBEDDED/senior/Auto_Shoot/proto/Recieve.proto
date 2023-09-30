@@ -1,9 +1,0 @@
-syntax="proto3";
-package device_to_host;
-message Frame{	
-	float Current_Pitch_=1;
-	float Current_Yaw_=2;
-	int32 Current_Color_=3;
-	float Bullet_Speed_=4;
-	int32 Mode_=5;
-}
