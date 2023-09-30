@@ -71,60 +71,8 @@ typedef struct pid_t
 } pid_t;
 
 
-#if 0
-#define PID_PARAM_DEFAULT \
-{\
-  0,\
-  0,\
-  0,\
-  0,\
-  0,\
-  {0,0,0},\
-  0,\
-  0,\
-  0,\
-  0,\
-  0,\
-  0,\
-}\
 
-typedef struct
-{
-  float p;
-  float i;
-  float d;
 
-  float set;
-  float get;
-  float err[3]; //error
-
-  float pout; 
-  float iout; 
-  float dout; 
-  float out;
-
-  float input_max_err;    //input max err;
-  float output_deadband;  //output deadband; 
-
-  float p_far;
-  float p_near;
-  float grade_range;
-  
-  uint32_t pid_mode;
-  uint32_t max_out;
-  uint32_t integral_limit;
-
-  void (*f_param_init)(struct pid_t *pid, 
-                       uint32_t      pid_mode,
-                       uint32_t      max_output,
-                       uint32_t      inte_limit,
-                       float         p,
-                       float         i,
-                       float         d);
-  void (*f_pid_reset)(struct pid_t *pid, float p, float i, float d);
- 
-} grade_pid_t;
-#endif
 
 void PID_struct_init(
     pid_t*   pid,
@@ -139,6 +87,12 @@ void PID_struct_init(
 float pid_calc(pid_t *pid, float fdb, float ref);
 float pid_calc1(pid_t *pid, float get, float set);
 void  pid_clr(pid_t *pid);
+float pid_double_loop_cal(pid_t *Outer_loop_pid,
+                          pid_t *Inner_loop_pid,
+                          float outer_ref,
+                          float outer_fdb,
+                          float Inner_fdb,
+                          float feedforward);
 		
 extern pid_t pid_pit_follow;
 extern pid_t pid_yaw_follow;

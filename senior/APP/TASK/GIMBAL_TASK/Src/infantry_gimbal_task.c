@@ -26,24 +26,7 @@ void gimbal_parameter_Init(void)
     /************************************************************************/
 }
 
-float gimbal_yaw_loop_task(pid_t *Outer_loop_pid,pid_t *Inner_loop_pid,float angle_ref,float angle_fdb,float speed_Feedforward)
-{
-    gimbal_data.gim_ref_and_fdb.yaw_speed_ref = pid_calc(Outer_loop_pid,angle_fdb,angle_ref) + speed_Feedforward;
-    gimbal_data.gim_ref_and_fdb.yaw_speed_fdb = gimbal_gyro.yaw_Gyro;
 
-    return pid_calc(Inner_loop_pid,gimbal_data.gim_ref_and_fdb.yaw_speed_fdb,gimbal_data.gim_ref_and_fdb.yaw_speed_ref);
-
-}
-
-float gimbal_pit_loop_task(pid_t *Outer_loop_pid,pid_t *Inner_loop_pid,float angle_ref,float angle_fdb,float speed_Feedforward)
-{
-
-    gimbal_data.gim_ref_and_fdb.pit_speed_ref = pid_calc(Outer_loop_pid,angle_fdb,angle_ref) + speed_Feedforward;
-    gimbal_data.gim_ref_and_fdb.pit_speed_fdb = gimbal_gyro.pitch_Gyro;
-
-    return pid_calc(Inner_loop_pid,gimbal_data.gim_ref_and_fdb.pit_speed_fdb,gimbal_data.gim_ref_and_fdb.pit_speed_ref);
-
-}
 
 void gimbal_task(void)
 {
@@ -98,12 +81,19 @@ void gimbal_init_handle	( void )
     init_rotate_num = yaw_Encoder.ecd_angle/360;
     gimbal_data.gim_ref_and_fdb.yaw_angle_ref = init_rotate_num*360;
 
-    gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_Angle,&gimbal_data.pid_yaw_speed,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
-    gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_Angle,&gimbal_data.pid_pit_speed, gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
-   // if(fabs(gimbal_data.gim_ref_and_fdb.yaw_angle_ref-gimbal_data.gim_ref_and_fdb.yaw_angle_fdb)<=1.5f&&fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<3.0f)
-   // {
-        
-   // }
+   
+    gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_Angle,
+                                                                      &gimbal_data.pid_yaw_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      0 );
+    gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
 }
 
 void gimbal_follow_gyro_handle(void)
@@ -118,14 +108,35 @@ void gimbal_follow_gyro_handle(void)
             gimbal_data.gim_ref_and_fdb.yaw_angle_ref = new_location.x;
 
         }
-        gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_follow,&gimbal_data.pid_yaw_speed_follow,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,new_location.yaw_speed);
-        gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_follow,&gimbal_data.pid_pit_speed_follow, gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+
+        gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_follow,
+                                                                      &gimbal_data.pid_yaw_speed_follow,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      new_location.yaw_speed);
+        gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
     }else
     {
         gimbal_data.gim_ref_and_fdb.pit_angle_ref = gimbal_data.gim_dynamic_ref.pitch_angle_dynamic_ref;
         gimbal_data.gim_ref_and_fdb.yaw_angle_ref = gimbal_data.gim_dynamic_ref.yaw_angle_dynamic_ref;
-        gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_Angle,&gimbal_data.pid_yaw_speed,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
-        gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_Angle,&gimbal_data.pid_pit_speed, gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+    gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_Angle,
+                                                                      &gimbal_data.pid_yaw_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      0 );
+    gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
     }
 }
 
@@ -170,8 +181,19 @@ void auto_small_buff_handle(void)
         gimbal_data.gim_ref_and_fdb.yaw_angle_ref = last_yaw_angle;
         gimbal_data.gim_ref_and_fdb.pit_angle_ref = last_pitch_angle;
     }
-    gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_small_buff,&gimbal_data.pid_yaw_speed_small_buff,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
-    gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_small_buff,&gimbal_data.pid_pit_speed_small_buff,gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+    
+    gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_small_buff,
+                                                                      &gimbal_data.pid_yaw_speed_small_buff,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      0 );
+    gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_small_buff,
+                                                                      &gimbal_data.pid_pit_speed_small_buff,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
 }
 
 void auto_big_buff_handle(void)
@@ -214,7 +236,19 @@ void auto_big_buff_handle(void)
         gimbal_data.gim_ref_and_fdb.yaw_angle_ref = last_yaw_angle;
         gimbal_data.gim_ref_and_fdb.pit_angle_ref = last_pitch_angle;
     }
-    gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_big_buff,&gimbal_data.pid_yaw_speed_big_buff,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
-    gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_big_buff,&gimbal_data.pid_pit_speed_big_buff,gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+    //gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_big_buff,&gimbal_data.pid_yaw_speed_big_buff,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
+    //gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_big_buff,&gimbal_data.pid_pit_speed_big_buff,gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+    gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_big_buff,
+                                                                      &gimbal_data.pid_yaw_speed_big_buff,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      0 );
+    gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_big_buff,
+                                                                      &gimbal_data.pid_pit_speed_big_buff,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
 }
 
