@@ -73,7 +73,7 @@ else if(val>=max)\
 #include "can.h"
 #include "usart.h"
 #include "led.h"
-
+#include "timer.h"
 
 
 /***************TASK*********************/
