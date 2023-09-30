@@ -90,3 +90,5 @@
 ..\obj\main.o: ..\BSP\LED\led.h
 ..\obj\main.o: ..\BSP\sys\Inc\sys.h
 ..\obj\main.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
+..\obj\main.o: ..\APP\TASK\CHASSIS_TASK\Ins\CHASSIS_TASK.H
+..\obj\main.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

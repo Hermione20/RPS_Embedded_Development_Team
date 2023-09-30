@@ -79,8 +79,8 @@ else if(val>=max)\
 /***************TASK*********************/
 #include "infantry_gimbal_task.h"
 
+#include "CHASSIS_TASK.H"
 
-
-
+#include "mode_switch_task.h"
 
 #endif

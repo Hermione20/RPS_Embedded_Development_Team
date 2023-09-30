@@ -30,8 +30,8 @@
 *                                    中断调用函数接口
 *********************************************************************************************************
 */
-#define USART1_Data_Receive_Process_0				do{}while(0);
-#define USART1_Data_Receive_Process_1				do{}while(0);
+#define USART1_Data_Receive_Process_0				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[0]);}while(0);
+#define USART1_Data_Receive_Process_1				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[1]);}while(0);
 #define USART2_Data_Receive_Process					do{}while(0);
 #define USART3_Data_Receive_Process					do{}while(0);
 #define UART4_Data_Receive_Process					do{}while(0);

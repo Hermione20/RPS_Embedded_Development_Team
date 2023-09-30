@@ -4,6 +4,7 @@
 "..\obj\system_stm32f4xx.o"
 "..\obj\bsp.o"
 "..\obj\infantry_gimbal_task.o"
+"..\obj\mode_switch_task.o"
 "..\obj\oldpid.o"
 "..\obj\senior.o"
 "..\obj\protobuf-c.o"

@@ -90,3 +90,5 @@
 ..\obj\judge.o: ..\BSP\LED\led.h
 ..\obj\judge.o: ..\BSP\sys\Inc\sys.h
 ..\obj\judge.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
+..\obj\judge.o: ..\APP\TASK\CHASSIS_TASK\Ins\CHASSIS_TASK.H
+..\obj\judge.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
