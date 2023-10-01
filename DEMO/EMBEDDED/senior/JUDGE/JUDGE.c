@@ -173,6 +173,8 @@ unsigned char get_crc8(unsigned char* data, unsigned int length)
 /**********************************************Judge_handle****************************************/
 void judgement_data_handle(uint8_t *p_frame, u16 rec_len)
 {
+    if(rec_len <= (HEADER_LEN + CMD_LEN + CRC_LEN))
+    return;
   u8 header[HEADER_LEN];
   u8 data[32];
   u16 deal_cnt = 0;

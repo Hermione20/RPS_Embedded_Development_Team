@@ -13,6 +13,22 @@ float last_yaw,last_pit;
 uint8_t first_flag = 0;
 uint8_t ved = 0;
 float Delta_Dect_Angle_Yaw,Delta_Dect_Angle_Pit;
+
+#if STANDARD == 3
+float Yaw_remain = -0.4;//向右为正
+float pitch_remain=-0.5;//5.2;
+#elif STANDARD == 4
+float Yaw_remain = -0.2;//向右为正
+float pitch_remain=6.15;//5.2;
+#elif STANDARD == 5
+float Yaw_remain =1;//向右为正
+float pitch_remain=0.8 ;//5.2;
+#elif STANDARD == 6
+float Yaw_remain = -1.3;//向右为正
+float pitch_remain=2.9;//5.2;
+
+
+#endif
 /*************************************************************************************/
 
 void gimbal_parameter_Init(void)
@@ -58,6 +74,11 @@ void gimbal_task(void)
         auto_big_buff_handle();
     }
         break;
+    case GIMBAL_AUTO_AIM:
+    {
+        security_gimbal_handle();
+    }
+        break;
     default:
         break;
     }
@@ -94,7 +115,7 @@ void gimbal_init_handle	( void )
                                                                       gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
                                                                       gimbal_gyro.pitch_Gyro,
                                                                       0 );
-	if (1)//(fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=4&&fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=1.5)
+	if (fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=4&&fabs(gimbal_data.gim_ref_and_fdb.pit_angle_ref - gimbal_data.gim_ref_and_fdb.pit_angle_fdb)<=1.5)
     {
         gimbal_data.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
         
@@ -147,6 +168,7 @@ void gimbal_follow_gyro_handle(void)
 }
 
 
+
 void auto_small_buff_handle(void)
 {
     if(first_flag == 0)
@@ -172,8 +194,8 @@ void auto_small_buff_handle(void)
             Delta_Dect_Angle_Yaw = RAD_TO_ANGLE * atan2 ( ( (double) new_location.x1 ) * TARGET_SURFACE_LENGTH,FOCAL_LENGTH);
             Delta_Dect_Angle_Pit = RAD_TO_ANGLE * atan2 ( ( (double) new_location.y1 ) * TARGET_SURFACE_WIDTH,FOCAL_LENGTH);
 				
-			yaw_angle_ref_aim=Delta_Dect_Angle_Yaw + new_location.x;
-			pit_angle_ref_aim=Delta_Dect_Angle_Pit + new_location.y;
+			yaw_angle_ref_aim=Delta_Dect_Angle_Yaw + new_location.x + Yaw_remain;
+			pit_angle_ref_aim=Delta_Dect_Angle_Pit + new_location.y + pitch_remain;
         }
         last_yaw=new_location.x1;
 		last_pit=new_location.y1;
@@ -227,8 +249,8 @@ void auto_big_buff_handle(void)
             Delta_Dect_Angle_Yaw = RAD_TO_ANGLE * atan2 ( ( (double) new_location.x1 ) * TARGET_SURFACE_LENGTH,FOCAL_LENGTH);
             Delta_Dect_Angle_Pit = RAD_TO_ANGLE * atan2 ( ( (double) new_location.y1 ) * TARGET_SURFACE_WIDTH,FOCAL_LENGTH);
 				
-			yaw_angle_ref_aim=Delta_Dect_Angle_Yaw + new_location.x;
-			pit_angle_ref_aim=Delta_Dect_Angle_Pit + new_location.y;
+			yaw_angle_ref_aim=Delta_Dect_Angle_Yaw + new_location.x + Yaw_remain;
+			pit_angle_ref_aim=Delta_Dect_Angle_Pit + new_location.y + pitch_remain;
         }
         last_yaw=new_location.x1;
 		last_pit=new_location.y1;
@@ -242,8 +264,7 @@ void auto_big_buff_handle(void)
         gimbal_data.gim_ref_and_fdb.yaw_angle_ref = last_yaw_angle;
         gimbal_data.gim_ref_and_fdb.pit_angle_ref = last_pitch_angle;
     }
-    //gimbal_data.gim_ref_and_fdb.yaw_motor_input = gimbal_yaw_loop_task(&gimbal_data.pid_yaw_big_buff,&gimbal_data.pid_yaw_speed_big_buff,gimbal_data.gim_ref_and_fdb.yaw_angle_ref,gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,0);
-    //gimbal_data.gim_ref_and_fdb.pitch_motor_input = gimbal_pit_loop_task(&gimbal_data.pid_pit_big_buff,&gimbal_data.pid_pit_speed_big_buff,gimbal_data.gim_ref_and_fdb.pit_angle_ref,gimbal_data.gim_ref_and_fdb.pit_angle_fdb,0);
+    
     gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_big_buff,
                                                                       &gimbal_data.pid_yaw_speed_big_buff,
                                                                       gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
@@ -258,3 +279,62 @@ void auto_big_buff_handle(void)
                                                                       0 );
 }
 
+
+void security_gimbal_handle(void)
+{
+    static int wait_tick = 0;//识别不到的时候多等两秒，确认看不到了进入巡逻
+
+    gimbal_data.gim_ref_and_fdb.pit_angle_fdb = gimbal_gyro.pitch_Angle;
+    gimbal_data.gim_ref_and_fdb.yaw_angle_fdb = gimbal_gyro.yaw_Angle;
+    if(new_location.control_flag)
+    {
+        gimbal_data.gim_ref_and_fdb.pit_angle_ref = new_location.y;
+        gimbal_data.gim_ref_and_fdb.yaw_angle_ref = new_location.x;
+
+        gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_follow,
+                                                                      &gimbal_data.pid_yaw_speed_follow,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      new_location.yaw_speed);
+        gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
+    }else
+    {
+        wait_tick++;
+        if(wait_tick<=200)
+        {
+            gimbal_data.gim_ref_and_fdb.pit_angle_ref = new_location.last_y;
+            gimbal_data.gim_ref_and_fdb.yaw_angle_ref = new_location.last_x;
+
+            gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_double_loop_cal(&gimbal_data.pid_yaw_follow,
+                                                                      &gimbal_data.pid_yaw_speed_follow,
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.yaw_angle_fdb,
+                                                                      gimbal_gyro.yaw_Gyro,
+                                                                      0);
+            gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
+        }else
+        {
+            gimbal_data.gim_ref_and_fdb.pit_angle_ref = -2;
+
+            gimbal_data.gim_ref_and_fdb.pitch_motor_input = pid_double_loop_cal(&gimbal_data.pid_pit_Angle,
+                                                                      &gimbal_data.pid_pit_speed,
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_ref,                     
+                                                                      gimbal_data.gim_ref_and_fdb.pit_angle_fdb,
+                                                                      gimbal_gyro.pitch_Gyro,
+                                                                      0 );
+            gimbal_data.gim_ref_and_fdb.yaw_motor_input = pid_calc(&gimbal_data.pid_yaw_speed_follow,gimbal_gyro.yaw_Gyro,150);
+
+        }
+    }
+}

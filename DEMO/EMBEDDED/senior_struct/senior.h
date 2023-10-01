@@ -16,7 +16,8 @@
 
 /********************general chassis encoder********************************/
 
-
+//名字整改
+//定义中间结构体
 typedef struct 
 {
 	volatile Encoder right_front_GM6020;

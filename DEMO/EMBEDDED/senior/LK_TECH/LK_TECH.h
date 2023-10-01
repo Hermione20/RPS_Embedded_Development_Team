@@ -45,6 +45,17 @@ void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//‘∆Ã®yaw£¨pitchπ≤”√
 void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
 
 
+void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint8_t id);
+void CAN_9015setpidCommand(CAN_TypeDef *CANx, float akp,
+                           float aki,
+                           float skp,
+                           float ski,
+                           float iqkp,
+                           float iqki, uint8_t id);
+void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint8_t id);
+void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint8_t id);
+void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint8_t id);
+
 
 
 

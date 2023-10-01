@@ -55,6 +55,19 @@ typedef struct{
 void HT_430_Information_Receive(CanRxMsg * msg,HT430_J10_t *HT430_J10_t,volatile Encoder *v);
 
 
+void HT_430_Encoder_Calibration(CAN_TypeDef *CANx,int ID);
+void HT_430_Encoder_Origin(CAN_TypeDef *CANx,int ID);
+void Motor_Information_Request(CAN_TypeDef *CANx,int ID);
+void HT_430_Fault_Clear(CAN_TypeDef *CANx,int ID);
+void HT_430_Tuen_Off(CAN_TypeDef *CANx,int ID);
+void HT_430_Origin_Total(CAN_TypeDef *CANx,int ID);
+void HT_430_Back(CAN_TypeDef *CANx,int ID);
+void HT_430_Power_Open_Loop(CAN_TypeDef *CANx,int ID,int16_t Pow);
+void HT_430_V_Clossed_Loop(CAN_TypeDef *CANx,int ID,int16_t V);
+void HT_430_Absolute_Position_closed_Loop(CAN_TypeDef *CANx,int ID,uint32_t Angle);
+void HT_430_Relative_Position_closed_Loop(CAN_TypeDef *CANx,int ID,uint32_t Angle);
+void HT_430_Position_closed_Loop_T_R_OR_W(CAN_TypeDef *CANx,int ID,int16_t V,int Flag_RW);
+
 
 
 

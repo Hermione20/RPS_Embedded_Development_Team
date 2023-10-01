@@ -89,6 +89,9 @@
 ..\obj\led.o: ..\BSP\can\Inc\can.h
 ..\obj\led.o: ..\BSP\usart\Inc\usart.h
 ..\obj\led.o: ..\BSP\LED\led.h
+..\obj\led.o: ..\BSP\timer\Inc\timer.h
 ..\obj\led.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
+..\obj\led.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
 ..\obj\led.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\led.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\led.o: ..\APP\RTOS\Ins\control_task.h

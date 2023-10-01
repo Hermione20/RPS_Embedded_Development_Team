@@ -38,4 +38,54 @@ void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg)
 	}
 }
 
+/**********************超级电容**************************/
+void POWER_Control1(CAN_TypeDef *CANx ,uint16_t Power,uint16_t StdId) //设置参数使用数据帧，设置成功返回设置，设置失败返回 0x00 00
+{
+    CanTxMsg tx_message;    
+    tx_message.StdId = StdId;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Data;
+    tx_message.DLC = 0x08;
+    tx_message.Data[0] = (Power >> 8);
+    tx_message.Data[1] = Power;
+    tx_message.Data[2] = (0 >> 8);
+    tx_message.Data[3] = 0;
+    tx_message.Data[4] = 0x00;
+    tx_message.Data[5] = 0x00;
+    tx_message.Data[6] = 0x00;
+    tx_message.Data[7] = 0x00;
+    CAN_Transmit(CANx,&tx_message);
+}
+void POWER_Control1l(CAN_TypeDef *CANx ,uint16_t StdId)//读取数据采用远程帧访问，模块反馈回来是数据帧
+{
+    CanTxMsg tx_message;    
+    tx_message.StdId = StdId;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Remote;//CAN_RTR_Data;
+    tx_message.DLC = 0x06;
+    tx_message.Data[0] = 0x00;
+    tx_message.Data[1] = 0x00;
+    tx_message.Data[2] = 0x00;
+    tx_message.Data[3] = 0x00;
+    tx_message.Data[4] = 0x00;
+    tx_message.Data[5] = 0x00;
+
+    CAN_Transmit(CANx,&tx_message);
+}
+
+void power_send_handle2(CAN_TypeDef *CANx)
+{
+    POWER_Control1l(CANx,0x610);
+    POWER_Control1l(CANx,0x611);
+    POWER_Control1l(CANx,0x612);
+    POWER_Control1l(CANx,0x613);
+}
+
+void power_send_handle1(CAN_TypeDef *CANx,u16 Max_Power)
+{
+    POWER_Control1(CANx,2, 0x600);
+    POWER_Control1(CANx,Max_Power * 100, 0x601);
+    POWER_Control1(CANx,2500, 0x602);
+    POWER_Control1(CANx,7 * 100, 0x603);
+}
 

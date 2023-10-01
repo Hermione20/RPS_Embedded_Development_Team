@@ -16,7 +16,7 @@
 void mode_switch_task(void);
 
 
-
+extern chassis_t chassis;
 
 
 

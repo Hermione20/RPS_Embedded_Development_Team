@@ -15,6 +15,9 @@
 //°ÐÃæ¿ímm
 #define TARGET_SURFACE_WIDTH        3.45e-3F
 
+
+
+
 typedef enum
 {
   GIMBAL_RELAX         = 0,
@@ -103,8 +106,10 @@ void gimbal_init_handle	( void );
 void gimbal_follow_gyro_handle(void);
 void auto_small_buff_handle(void);
 void auto_big_buff_handle(void);
+void security_gimbal_handle(void);
 
 extern gimbal_t gimbal_data;
+extern float yaw_angle_ref_aim,pit_angle_ref_aim;
 
 
 

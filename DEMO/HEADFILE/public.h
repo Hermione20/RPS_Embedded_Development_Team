@@ -73,14 +73,21 @@ else if(val>=max)\
 #include "can.h"
 #include "usart.h"
 #include "led.h"
+#include "timer.h"
 
 
 
 /***************TASK*********************/
 #include "infantry_gimbal_task.h"
 
+#include "buff_karman_filter.h"
+
 #include "CHASSIS_TASK.H"
 
 #include "mode_switch_task.h"
+
+/**************RTOS**********************/
+
+#include "control_task.h"
 
 #endif

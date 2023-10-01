@@ -58,3 +58,107 @@ void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int o
 	}
 }
 
+/********************FM9025ÃüÁî·¢ËÍº¯Êý*********************/
+void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint8_t id)
+{
+	CanTxMsg txmsg;
+	txmsg.StdId = id;
+	txmsg.DLC = 0x08;
+	txmsg.IDE = CAN_Id_Standard;
+	txmsg.RTR = CAN_RTR_Data;
+	txmsg.Data[0] = command;
+	txmsg.Data[1] = 0;
+	txmsg.Data[2] = 0;
+	txmsg.Data[3] = 0;
+	txmsg.Data[4] = 0;
+	txmsg.Data[5] = 0;
+	txmsg.Data[6] = 0;
+	txmsg.Data[7] = 0;
+	
+	
+	CAN_Transmit(CANx,&txmsg);
+	
+}
+
+void CAN_9015setpidCommand(CAN_TypeDef *CANx, float akp,
+                           float aki,
+                           float skp,
+                           float ski,
+                           float iqkp,
+                           float iqki, uint8_t id)
+{
+    CanTxMsg txmsg;
+    txmsg.StdId = id;
+    txmsg.DLC = 0x08;
+    txmsg.IDE = CAN_Id_Standard;
+    txmsg.RTR = CAN_RTR_Data;
+    txmsg.Data[0] = 0x32;
+    txmsg.Data[1] = 0x00;
+    txmsg.Data[2] = akp;
+    txmsg.Data[3] = aki;
+    txmsg.Data[4] = skp;
+    txmsg.Data[5] = ski;
+    txmsg.Data[6] = iqkp;
+    txmsg.Data[7] = iqki;
+
+    CAN_Transmit(CANx, &txmsg);
+}
+
+void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint8_t id)
+{
+	CanTxMsg txmsg;
+	txmsg.StdId = id;
+	txmsg.DLC = 0x08;
+	txmsg.IDE = CAN_Id_Standard;
+	txmsg.RTR = CAN_RTR_Data;
+	txmsg.Data[0] = 0xA4;
+	txmsg.Data[1] = 0x00;
+	txmsg.Data[2] = (uint8_t)maxSpeed;
+	txmsg.Data[3] = (uint8_t)(maxSpeed >> 8);
+	txmsg.Data[4] = (uint8_t)angleControl;
+	txmsg.Data[5] = (uint8_t)(angleControl >> 8);
+	txmsg.Data[6] = (uint8_t)(angleControl >> 16);
+	txmsg.Data[7] = (uint8_t)(angleControl >> 24);
+	
+	CAN_Transmit(CANx,&txmsg);
+}
+
+void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint8_t id)
+{
+	CanTxMsg txmsg;
+	txmsg.StdId = id;
+	txmsg.DLC = 0x08;
+	txmsg.IDE = CAN_Id_Standard;
+	txmsg.RTR = CAN_RTR_Data;
+	txmsg.Data[0] = 0xA2;
+	txmsg.Data[1] = 0x00;
+	txmsg.Data[2] = 0x00;
+	txmsg.Data[3] = 0x00;
+	txmsg.Data[4] = (uint8_t)speedControl;
+	txmsg.Data[5] = (uint8_t)(speedControl >> 8);
+	txmsg.Data[6] = (uint8_t)(speedControl >> 16);
+	txmsg.Data[7] = (uint8_t)(speedControl >> 24);
+	
+	CAN_Transmit(CANx,&txmsg);
+}
+
+void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint8_t id)
+{
+	CanTxMsg txmsg;
+	txmsg.StdId = id;
+	txmsg.DLC = 0x08;
+	txmsg.IDE = CAN_Id_Standard;
+	txmsg.RTR = CAN_RTR_Data;
+	txmsg.Data[0] = 0xA1;
+	txmsg.Data[1] = 0x00;
+	txmsg.Data[2] = 0x00;
+	txmsg.Data[3] = 0x00;
+	txmsg.Data[4] = (uint8_t)iqcontrol;
+	txmsg.Data[5] = (uint8_t)(iqcontrol >> 8);
+	txmsg.Data[6] = 0x00;
+	txmsg.Data[7] = 0x00;
+	
+	CAN_Transmit(CANx,&txmsg);
+
+	
+}

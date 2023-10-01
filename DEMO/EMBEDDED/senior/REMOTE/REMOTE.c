@@ -3,8 +3,10 @@
 
 
 /***********************************Ò£¿ØÆ÷½ÓÊÕ*************************************************************/
-void RemoteDataPrcess(uint8_t *pData)
+void RemoteDataPrcess(uint8_t *pData,u16 length)
 {
+	if(length != RC_FRAME_LENGTH)
+		return;
 	if (pData == NULL)
 	{
 		return;

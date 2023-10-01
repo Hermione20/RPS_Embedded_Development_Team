@@ -24,4 +24,3 @@ location new_location;
 RC_Ctl_t RC_CtrlData;
 /**************************************************chassis_data************************************/
 chassis_data_t can_chassis_data;
- 
