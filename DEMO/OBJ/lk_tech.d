@@ -94,3 +94,4 @@
 ..\obj\lk_tech.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\lk_tech.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\lk_tech.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\lk_tech.o: ..\APP\TASK\SHOOT_TASK\Ins\shoot_task.h

@@ -94,3 +94,4 @@
 ..\obj\mode_switch_task.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\mode_switch_task.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\mode_switch_task.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\mode_switch_task.o: ..\APP\TASK\SHOOT_TASK\Ins\shoot_task.h

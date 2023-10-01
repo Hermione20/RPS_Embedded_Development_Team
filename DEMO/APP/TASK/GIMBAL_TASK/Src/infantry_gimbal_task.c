@@ -26,8 +26,6 @@ void gimbal_parameter_Init(void)
     /************************************************************************/
 }
 
-
-
 void gimbal_task(void)
 {
     switch (gimbal_data.ctrl_mode)

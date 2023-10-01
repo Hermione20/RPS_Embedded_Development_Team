@@ -69,7 +69,8 @@ void GetRemoteSwitchAction(RC_Ctl_t *remote)
 		if(remote->RemoteSwitch.s3to2_cnt%2==0)
 		{
 			remote->RemoteSwitch.s3to2 = 0;
-		}else
+		}
+		else
 		{
 			remote->RemoteSwitch.s3to2 = 1;
 		}
@@ -80,12 +81,12 @@ void GetRemoteSwitchAction(RC_Ctl_t *remote)
 		if(remote->RemoteSwitch.s3to1_cnt%2==0)
 		{
 			remote->RemoteSwitch.s3to1 = 0;
-		}else
+		}
+		else
 		{
 			remote->RemoteSwitch.s3to1 = 1;
 		}
 	}
-	
 }
 
 u8 remote_flagW1, remote_flagW2 = 0;

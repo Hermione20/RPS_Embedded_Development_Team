@@ -89,6 +89,7 @@
 ..\obj\auto_shoot.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\auto_shoot.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\auto_shoot.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\auto_shoot.o: ..\APP\TASK\SHOOT_TASK\Ins\shoot_task.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\send.pb-c.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.h
 ..\obj\auto_shoot.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\assert.h

@@ -94,3 +94,4 @@
 ..\obj\judge.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\judge.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\judge.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\judge.o: ..\APP\TASK\SHOOT_TASK\Ins\shoot_task.h

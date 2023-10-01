@@ -3,6 +3,8 @@
 
 #include "public.h"
 
+#define EN_PWM 1
+
 #define PWM_STOP 0//´ý¸Ä
 #define PWM_UP 1
 #define PWM_DOWN 2

@@ -1,0 +1,479 @@
+#include "main.h"
+#include "AHRS_MiddleWare.h"
+u8  draw_cnt=0;
+u16 draw_data_ID=0x0101;
+u16 data_ID=0xD180;
+u16 client_custom_ID=0;
+
+
+ext_client_custom_character_t client_custom_character;//小陀螺标志位
+ext_client_custom_character_t client_custom_character_voltage;//“电容：
+ext_client_custom_character_t client_custom_character_voltage_num;//实时电容电量
+ext_client_custom_character_t client_custom_emission_frequency ;//射频选择
+ext_client_custom_graphic_seven_t   client_custom_graphic_seven;//电量显示
+ext_client_custom_graphic_seven_t   client_custom_sight_bead ;//准星
+
+#define START_POINT_X 0
+#define START_POINT_Y -50
+#define END_POINT_X   0
+#define END_POINT_Y   50
+#define RADIOS    20
+#define WIDTH    2
+#define OFFSET_X 1600
+#define OFFSET_Y 600
+
+typedef struct
+{
+  int16_t x;
+  int16_t y;
+} point;
+
+point rotate_point(int16_t x,int16_t y,float angle)
+{
+  point result;
+  float rad_angle=angle*ANGLE_TO_RAD;
+  result.x=(int)(x*cos(rad_angle)-y*sin(rad_angle));
+  result.y=(int)(x*sin(rad_angle)+y*cos(rad_angle));
+  return result;
+}
+void Client_send_handle()
+{
+  u8 id;
+  id=judge_rece_mesg.game_robot_state.robot_id;
+
+
+  switch(id)
+    {
+    case 3:
+      client_custom_ID=0x0103;
+      break;
+    case 4:
+      client_custom_ID=0x0104;
+      break;
+    case 5:
+      client_custom_ID=0x0105;
+      break;
+    case 103://蓝色
+      client_custom_ID=0x0167;
+      break;
+    case 104:
+      client_custom_ID=0x0168;
+      break;
+    case 105:
+      client_custom_ID=0x0169;
+      break;
+    }
+
+
+
+
+  switch(draw_cnt)
+    {
+		case 1:
+		{
+			ddata[0]=0x0104;
+      ddata[1]=0x0104>>8;	 //数据内容id
+      //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+      ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+      ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+      ddata[4]=client_custom_ID;
+      ddata[5]=client_custom_ID>>8;       //客户端id
+			
+			
+			/*********************准星显示****************************************/
+			client_custom_sight_bead.grapic_data_struct[5].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[5].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[5].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[5].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[5].graphic_name[1]=0;
+      client_custom_sight_bead.grapic_data_struct[5].graphic_name[2]=8;
+      client_custom_sight_bead.grapic_data_struct[5].start_x=960;
+      client_custom_sight_bead.grapic_data_struct[5].start_y=680;
+      client_custom_sight_bead.grapic_data_struct[5].end_y=340;
+      client_custom_sight_bead.grapic_data_struct[5].end_x=960;
+      client_custom_sight_bead.grapic_data_struct[5].color=2;
+      client_custom_sight_bead.grapic_data_struct[5].width=1;
+
+
+
+      client_custom_sight_bead.grapic_data_struct[6].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[6].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[6].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[6].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[6].graphic_name[1]=0;
+      client_custom_sight_bead.grapic_data_struct[6].graphic_name[2]=9;
+      client_custom_sight_bead.grapic_data_struct[6].start_x=800;
+      client_custom_sight_bead.grapic_data_struct[6].start_y=540;
+      client_custom_sight_bead.grapic_data_struct[6].end_y=540;
+      client_custom_sight_bead.grapic_data_struct[6].end_x=1120;
+      client_custom_sight_bead.grapic_data_struct[6].color=2;
+      client_custom_sight_bead.grapic_data_struct[6].width=1;
+
+
+      client_custom_sight_bead.grapic_data_struct[7].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[7].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[7].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[7].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[7].graphic_name[1]=1;
+      client_custom_sight_bead.grapic_data_struct[7].graphic_name[2]=0;
+      client_custom_sight_bead.grapic_data_struct[7].start_x=760;
+      client_custom_sight_bead.grapic_data_struct[7].start_y=500;
+      client_custom_sight_bead.grapic_data_struct[7].end_y=500;
+      client_custom_sight_bead.grapic_data_struct[7].end_x=1160;
+      client_custom_sight_bead.grapic_data_struct[7].color=2;
+      client_custom_sight_bead.grapic_data_struct[7].width=1;
+
+
+
+      client_custom_sight_bead.grapic_data_struct[0].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[0].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[0].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[0].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[0].graphic_name[1]=1;
+      client_custom_sight_bead.grapic_data_struct[0].graphic_name[2]=1;
+      client_custom_sight_bead.grapic_data_struct[0].start_x=800;
+      client_custom_sight_bead.grapic_data_struct[0].start_y=460;
+      client_custom_sight_bead.grapic_data_struct[0].end_y=460;
+      client_custom_sight_bead.grapic_data_struct[0].end_x=1120;
+      client_custom_sight_bead.grapic_data_struct[0].color=2;
+      client_custom_sight_bead.grapic_data_struct[0].width=1;
+
+
+
+      client_custom_sight_bead.grapic_data_struct[1].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[1].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[1].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[1].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[1].graphic_name[1]=1;
+      client_custom_sight_bead.grapic_data_struct[1].graphic_name[2]=2;
+      client_custom_sight_bead.grapic_data_struct[1].start_x=840;
+      client_custom_sight_bead.grapic_data_struct[1].start_y=420;
+      client_custom_sight_bead.grapic_data_struct[1].end_y=420;
+      client_custom_graphic_seven.grapic_data_struct[1].end_x=1080;
+      client_custom_sight_bead.grapic_data_struct[1].color=2;
+      client_custom_sight_bead.grapic_data_struct[1].width=1;
+
+
+      client_custom_sight_bead.grapic_data_struct[2].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[2].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[2].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[2].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[2].graphic_name[1]=1;
+      client_custom_sight_bead.grapic_data_struct[2].graphic_name[2]=3;
+      client_custom_sight_bead.grapic_data_struct[2].start_x=880;
+      client_custom_sight_bead.grapic_data_struct[2].start_y=380;
+      client_custom_sight_bead.grapic_data_struct[2].end_y=380;
+      client_custom_sight_bead.grapic_data_struct[2].end_x=1040;
+      client_custom_sight_bead.grapic_data_struct[2].color=2;
+      client_custom_sight_bead.grapic_data_struct[2].width=1;
+
+
+      /*********************外框显示****************************************/
+      client_custom_sight_bead.grapic_data_struct[3].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_sight_bead.grapic_data_struct[3].layer=1;   //图层
+      client_custom_sight_bead.grapic_data_struct[3].graphic_type=1;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_sight_bead.grapic_data_struct[3].graphic_name[0]=0;
+      client_custom_sight_bead.grapic_data_struct[3].graphic_name[1]=1;
+      client_custom_sight_bead.grapic_data_struct[3].graphic_name[2]=4;
+      client_custom_sight_bead.grapic_data_struct[3].start_x=195;
+      client_custom_sight_bead.grapic_data_struct[3].start_y=605;
+      client_custom_sight_bead.grapic_data_struct[3].end_x=465;
+      client_custom_sight_bead.grapic_data_struct[3].end_y=635;
+      client_custom_sight_bead.grapic_data_struct[3].color=3;
+      client_custom_sight_bead.grapic_data_struct[3].width=1;
+
+      *(ext_client_custom_graphic_seven_t*)(&ddata[6])=client_custom_sight_bead;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_sight_bead),DN_REG_ID,tx_buf);
+		}break;
+		case 2:
+		{
+			      ddata[0]=0x0110;
+      ddata[1]=0x0110>>8;	 //数据内容id
+      //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+      ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+      ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+      ddata[4]=client_custom_ID;
+      ddata[5]=client_custom_ID>>8;       //客户端id
+      client_custom_character_voltage.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_character_voltage.grapic_data_struct.layer=1;   //图层
+      client_custom_character_voltage.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_character_voltage.grapic_data_struct.graphic_name[0]=0;
+      client_custom_character_voltage.grapic_data_struct.graphic_name[1]=0;
+      client_custom_character_voltage.grapic_data_struct.graphic_name[2]=2;
+
+      client_custom_character_voltage.grapic_data_struct.start_x=200;
+      client_custom_character_voltage.grapic_data_struct.start_y=670;
+      client_custom_character_voltage.grapic_data_struct.width=WIDTH;
+      client_custom_character_voltage.grapic_data_struct.start_angle=20;
+      client_custom_character_voltage.grapic_data_struct.end_angle=8;
+
+      client_custom_character_voltage.data[0]='V';
+      client_custom_character_voltage.data[1]='O';
+      client_custom_character_voltage.data[2]='L';
+      client_custom_character_voltage.data[3]='T';
+      client_custom_character_voltage.data[4]='A';
+      client_custom_character_voltage.data[5]='G';
+      client_custom_character_voltage.data[6]='E';
+      client_custom_character_voltage.data[7]=':';
+
+      *(ext_client_custom_character_t*)(&ddata[6])=client_custom_character_voltage;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_character_voltage),DN_REG_ID,tx_buf);
+    }break;
+		case 3 :
+		{
+			      ddata[0]=0x0110;
+      ddata[1]=0x0110>>8;	 //数据内容id
+      //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+      ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+      ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+      ddata[4]=client_custom_ID;
+      ddata[5]=client_custom_ID>>8;       //客户端id
+      client_custom_character_voltage_num.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_character_voltage_num.grapic_data_struct.layer=1;   //图层
+      client_custom_character_voltage_num.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_character_voltage_num.grapic_data_struct.graphic_name[0]=0;
+      client_custom_character_voltage_num.grapic_data_struct.graphic_name[1]=0;
+      client_custom_character_voltage_num.grapic_data_struct.graphic_name[2]=3;
+
+      client_custom_character_voltage_num.grapic_data_struct.start_x=350;
+      client_custom_character_voltage_num.grapic_data_struct.start_y=670;
+      client_custom_character_voltage_num.grapic_data_struct.width=WIDTH;
+      client_custom_character_voltage_num.grapic_data_struct.start_angle=20;
+      client_custom_character_voltage_num.grapic_data_struct.end_angle=4;
+
+
+      sprintf(client_custom_character_voltage_num.data,"%f",capacitance_message1.cap_voltage_filte);
+
+      *(ext_client_custom_character_t*)(&ddata[6])=client_custom_character_voltage_num;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_character_voltage_num),DN_REG_ID,tx_buf);
+    }break;
+		case 4:
+		{
+			      ddata[0]=0x0104;
+      ddata[1]=0x0104>>8;	 //数据内容id
+      //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+      ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+      ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+      ddata[4]=client_custom_ID;
+      ddata[5]=client_custom_ID>>8;       //客户端id
+		
+			      /*************************电量显示*******************************/
+
+      client_custom_graphic_seven.grapic_data_struct[4].operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+      client_custom_graphic_seven.grapic_data_struct[4].layer=1;   //图层
+      client_custom_graphic_seven.grapic_data_struct[4].graphic_type=0;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+      client_custom_graphic_seven.grapic_data_struct[4].graphic_name[0]=0;
+      client_custom_graphic_seven.grapic_data_struct[4].graphic_name[1]=0;
+      client_custom_graphic_seven.grapic_data_struct[4].graphic_name[2]=7;
+
+      client_custom_graphic_seven.grapic_data_struct[4].start_x=200;
+      client_custom_graphic_seven.grapic_data_struct[4].start_y=620;
+
+      client_custom_graphic_seven.grapic_data_struct[4].end_y=620;
+      if(capacitance_message1.cap_voltage_filte>=0.0f&&capacitance_message1.cap_voltage_filte<=13.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=230;
+          client_custom_graphic_seven.grapic_data_struct[4].color=3;
+        }
+      else if(capacitance_message1.cap_voltage_filte>13.0f&&capacitance_message1.cap_voltage_filte<=14.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=250;
+          client_custom_graphic_seven.grapic_data_struct[4].color=3;
+        }
+      else if(capacitance_message1.cap_voltage_filte>14.0f&&capacitance_message1.cap_voltage_filte<=15.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=270;
+          client_custom_graphic_seven.grapic_data_struct[4].color=3;
+        }
+      else if(capacitance_message1.cap_voltage_filte>15.0f&&capacitance_message1.cap_voltage_filte<=16.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=300;
+          client_custom_graphic_seven.grapic_data_struct[4].color=1;
+        }
+      else if(capacitance_message1.cap_voltage_filte>16.0f&&capacitance_message1.cap_voltage_filte<=17.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=330;
+          client_custom_graphic_seven.grapic_data_struct[4].color=1;
+        }
+      else if(capacitance_message1.cap_voltage_filte>17.0f&&capacitance_message1.cap_voltage_filte<=18.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=360;
+          client_custom_graphic_seven.grapic_data_struct[4].color=1;
+        }
+      else if(capacitance_message1.cap_voltage_filte>18.0f&&capacitance_message1.cap_voltage_filte<=19.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=390;
+          client_custom_graphic_seven.grapic_data_struct[4].color=2;
+        }
+      else if(capacitance_message1.cap_voltage_filte>19.0f&&capacitance_message1.cap_voltage_filte<=20.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=420;
+          client_custom_graphic_seven.grapic_data_struct[4].color=2;
+        }
+      else if(capacitance_message1.cap_voltage_filte>20.0f&&capacitance_message1.cap_voltage_filte<=21.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=440;
+          client_custom_graphic_seven.grapic_data_struct[4].color=2;
+        }
+      else if(capacitance_message1.cap_voltage_filte>21.0f)
+        {
+          client_custom_graphic_seven.grapic_data_struct[4].end_x=460;
+          client_custom_graphic_seven.grapic_data_struct[4].color=2;
+        }
+
+      client_custom_graphic_seven.grapic_data_struct[4].width=16;
+			    *(ext_client_custom_graphic_seven_t*)(&ddata[6])=client_custom_graphic_seven;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_graphic_seven),DN_REG_ID,tx_buf);
+			}break;
+		case 5:
+		{
+			//------------------------射频选择----------------------------------------//
+			 ddata[0]=0x0110;
+          ddata[1]=0x0110>>8;	 //数据内容id
+          //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+          ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+          ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+          ddata[4]=client_custom_ID;
+          ddata[5]=client_custom_ID>>8;       //客户端id
+      if(bulletspead_level==0)
+        {         
+          client_custom_emission_frequency.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+          client_custom_emission_frequency.grapic_data_struct.layer=1;   //图层
+          client_custom_emission_frequency.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[0]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[1]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[2]=2;
+
+          client_custom_emission_frequency.grapic_data_struct.start_x=600;
+          client_custom_emission_frequency.grapic_data_struct.start_y=730;
+          client_custom_emission_frequency.grapic_data_struct.width=WIDTH;
+          client_custom_emission_frequency.grapic_data_struct.start_angle=20;
+          client_custom_emission_frequency.grapic_data_struct.end_angle=11;
+          client_custom_emission_frequency.grapic_data_struct.color=2;
+          client_custom_emission_frequency.data[0]='N';
+          client_custom_emission_frequency.data[1]='O';
+          client_custom_emission_frequency.data[2]='R';
+          client_custom_emission_frequency.data[3]='M';
+          client_custom_emission_frequency.data[4]='A';
+          client_custom_emission_frequency.data[5]='L';
+
+        }
+      else if(bulletspead_level==1)
+        {
+         
+          client_custom_emission_frequency.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+          client_custom_emission_frequency.grapic_data_struct.layer=1;   //图层
+          client_custom_emission_frequency.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[0]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[1]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[2]=2;
+
+          client_custom_emission_frequency.grapic_data_struct.start_x=600;
+          client_custom_emission_frequency.grapic_data_struct.start_y=730;
+          client_custom_emission_frequency.grapic_data_struct.width=WIDTH;
+          client_custom_emission_frequency.grapic_data_struct.start_angle=20;
+          client_custom_emission_frequency.grapic_data_struct.end_angle=11;
+          client_custom_emission_frequency.grapic_data_struct.color=2;
+          client_custom_emission_frequency.data[0]='M';
+          client_custom_emission_frequency.data[1]='I';
+          client_custom_emission_frequency.data[2]='D';
+          client_custom_emission_frequency.data[3]='D';
+          client_custom_emission_frequency.data[4]='L';
+          client_custom_emission_frequency.data[5]='E';
+        }
+      else if(bulletspead_level==2)
+        {
+          client_custom_emission_frequency.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+          client_custom_emission_frequency.grapic_data_struct.layer=1;   //图层
+          client_custom_emission_frequency.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[0]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[1]=0;
+          client_custom_emission_frequency.grapic_data_struct.graphic_name[2]=2;
+
+          client_custom_emission_frequency.grapic_data_struct.start_x=600;
+          client_custom_emission_frequency.grapic_data_struct.start_y=730;
+          client_custom_emission_frequency.grapic_data_struct.width=WIDTH;
+          client_custom_emission_frequency.grapic_data_struct.start_angle=20;
+          client_custom_emission_frequency.grapic_data_struct.end_angle=11;
+          client_custom_emission_frequency.grapic_data_struct.color=2;
+          client_custom_emission_frequency.data[0]='H';
+          client_custom_emission_frequency.data[1]='I';
+          client_custom_emission_frequency.data[2]='G';
+          client_custom_emission_frequency.data[3]='H';
+        }
+ *(ext_client_custom_character_t*)(&ddata[6])=client_custom_emission_frequency;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_emission_frequency),DN_REG_ID,tx_buf);
+		}break;
+		case 6:
+		{
+			    if(chassis.ctrl_mode==CHASSIS_ROTATE)
+        {
+          ddata[0]=0x0110;
+          ddata[1]=0x0110>>8;	 //数据内容id
+          //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+          ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+          ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+          ddata[4]=client_custom_ID;
+          ddata[5]=client_custom_ID>>8;       //客户端id
+          client_custom_character.grapic_data_struct.operate_type=1;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+          client_custom_character.grapic_data_struct.layer=1;   //图层
+          client_custom_character.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+          client_custom_character.grapic_data_struct.graphic_name[0]=0;
+          client_custom_character.grapic_data_struct.graphic_name[1]=0;
+          client_custom_character.grapic_data_struct.graphic_name[2]=1;
+
+          client_custom_character.grapic_data_struct.start_x=200;
+          client_custom_character.grapic_data_struct.start_y=730;
+          client_custom_character.grapic_data_struct.width=WIDTH;
+          client_custom_character.grapic_data_struct.start_angle=20;
+          client_custom_character.grapic_data_struct.end_angle=12;
+          client_custom_character.grapic_data_struct.color=2;
+          client_custom_character.data[0]='R';
+          client_custom_character.data[1]='O';
+          client_custom_character.data[2]='T';
+          client_custom_character.data[3]='A';
+          client_custom_character.data[4]='T';
+          client_custom_character.data[5]='E';
+          client_custom_character.data[6]='_';
+          client_custom_character.data[7]='O';
+          client_custom_character.data[8]='P';
+          client_custom_character.data[9]='E';
+          client_custom_character.data[10]='N';
+        }
+      else
+        {
+          ddata[0]=0x0110;
+          ddata[1]=0x0110>>8;	 //数据内容id
+          //0x0100  删除图形 0x0101 绘制一个图形 0x0102 绘制二个图形 0x0103 绘制五个图形 0x0104绘制七个图形 0x0110客户端绘制字符图形
+          ddata[2]=judge_rece_mesg.game_robot_state.robot_id;
+          ddata[3]=judge_rece_mesg.game_robot_state.robot_id>>8;    //机器人id
+          ddata[4]=client_custom_ID;
+          ddata[5]=client_custom_ID>>8;       //客户端id
+          client_custom_character.grapic_data_struct.operate_type=3;  //1 增加 2修改图形 3删除单个图形 5删除一个图层的图形 6删除所有图形
+          client_custom_character.grapic_data_struct.layer=1;   //图层
+          client_custom_character.grapic_data_struct.graphic_type=7;  //0 直线 1矩形 2整圆 3椭圆 4圆弧 5浮点数 6整数型 7字符
+          client_custom_character.grapic_data_struct.graphic_name[0]=0;
+          client_custom_character.grapic_data_struct.graphic_name[1]=0;
+          client_custom_character.grapic_data_struct.graphic_name[2]=1;
+        }
+
+      *(ext_client_custom_character_t*)(&ddata[6])=client_custom_character;
+      data_upload_handle(STUDENT_INTERACTIVE_HEADER_DATA_ID, ddata,6+sizeof(client_custom_character),DN_REG_ID,tx_buf);
+    }
+    break;			
+    default:
+      break;
+		
+    }
+
+  draw_cnt++;
+  if(draw_cnt==7)//在需要刷新的图层刷新
+    draw_cnt=3;
+}
+
+void delete_Coverage(u8 coverage)
+{
+  ddata[6]=4;//1增加2修改3删除单个4删除图层5删除所有
+  ddata[13]=coverage;//图层0-9
+}
+

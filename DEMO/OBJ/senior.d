@@ -95,3 +95,4 @@
 ..\obj\senior.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\senior.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\senior.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
+..\obj\senior.o: ..\APP\TASK\SHOOT_TASK\Ins\shoot_task.h

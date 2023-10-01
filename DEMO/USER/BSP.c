@@ -37,9 +37,6 @@ void BSP_Init(void)
 	#if EN_TIM2
 		TIM2_Configuration();
 	#endif
-	#if EN_TIM3
-		TIM3_Configuration();
-	#endif
 	#if EN_TIM4
 		TIM4_Configuration();
 	#endif
@@ -56,5 +53,13 @@ void BSP_Init(void)
 		TIM8_Configuration();
 	#endif
 	
+	#if EN_TIM3 == 2
+		PWM_Configuration();
+	#endif
+	#if EN_TIM3 == 1
+		TIM3_Configuration();
+	#endif
+	
 }
 	
+

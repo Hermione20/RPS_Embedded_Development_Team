@@ -3,8 +3,6 @@
 
 
 /**************ST HEAD*********************/
-
-
 #include "stm32f4xx.h"
 #include "stm32f4xx_it.h"
 #include "stm32f4xx_spi.h"
@@ -85,5 +83,7 @@ else if(val>=max)\
 #include "CHASSIS_TASK.H"
 
 #include "mode_switch_task.h"
+
+#include "shoot_task.h"
 
 #endif

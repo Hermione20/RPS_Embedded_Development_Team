@@ -75,7 +75,7 @@ typedef enum
 //to detect the action of the switch
 typedef __packed struct 
 {
-	 uint8_t switch_value_raw;            // the current switch value
+	uint8_t switch_value_raw;            // the current switch value
 	uint8_t last_switch_value;
 	uint8_t switch_value;
 	uint8_t s3to2;
@@ -86,7 +86,7 @@ typedef __packed struct
 
 typedef __packed struct
 {
-  	u8 Key_W_Flag ;
+  u8 Key_W_Flag ;
 	u8 Key_A_Flag ;
 	u8 Key_S_Flag ;
 	u8 Key_D_Flag ;

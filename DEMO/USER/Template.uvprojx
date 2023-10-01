@@ -547,11 +547,6 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\pwm\Src\pwm.c</FilePath>
             </File>
-            <File>
-              <FileName>pwm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\BSP\pwm\Inc\pwm.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

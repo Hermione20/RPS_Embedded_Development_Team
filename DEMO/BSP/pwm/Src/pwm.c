@@ -3,6 +3,7 @@
 void PWM_Configuration(void)
 {
     GPIO_InitTypeDef          gpio;
+    TIM_TimeBaseInitTypeDef   tim;
     TIM_OCInitTypeDef         oc;
     
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC ,ENABLE);
@@ -15,9 +16,15 @@ void PWM_Configuration(void)
 	  gpio.GPIO_PuPd = GPIO_PuPd_UP ;
     GPIO_Init(GPIOC,&gpio);
 	
-	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource8, GPIO_AF_TIM3);  
-	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource9, GPIO_AF_TIM3);  
+	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource8, GPIO_AF_TIM3);  //TIM3->CCR1 ????PWM4
+	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource9, GPIO_AF_TIM3);  //TIM3->CCR2 ????PWM5
 	
+	  tim.TIM_Prescaler = 1000-1;    //psc
+    tim.TIM_CounterMode = TIM_CounterMode_Up;
+    tim.TIM_Period = 1680-1;   //arr
+    tim.TIM_ClockDivision = TIM_CKD_DIV1;
+    TIM_TimeBaseInit(TIM3,&tim);
+
 	  oc.TIM_OCMode = TIM_OCMode_PWM2;
     oc.TIM_OutputState = TIM_OutputState_Enable;
     oc.TIM_OutputNState = TIM_OutputState_Disable;
@@ -32,9 +39,9 @@ void PWM_Configuration(void)
 	  TIM_OC4Init(TIM3,&oc);
 	  TIM_OC4PreloadConfig(TIM3,TIM_OCPreload_Enable);  
 		
-		#if EN_TIM3
-			TIM3_Configuration();
-		#endif
+    TIM_ARRPreloadConfig(TIM3,ENABLE);
+    TIM_Cmd(TIM3,ENABLE);
+		
 		PWM2=85;
 }
 
