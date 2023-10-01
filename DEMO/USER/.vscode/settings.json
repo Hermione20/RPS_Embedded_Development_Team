@@ -3,7 +3,9 @@
         "bsp.h": "c",
         "public.h": "c",
         "senior.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "remote.h": "c",
+        "judge.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

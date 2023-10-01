@@ -20,7 +20,7 @@
 
 
 #define EN_UART5									1
-#define EN_UART5_DMA_SECOND_FIFO  0
+#define EN_UART5_DMA_SECOND_FIFO  1
 
 
 #define EN_USART6									1
@@ -35,12 +35,14 @@
 #define USART1_Data_Receive_Process_1				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[1]);}while(0);
 
 #define USART2_Data_Receive_Process					do{}while(0);
-#define USART3_Data_Receive_Process					do{}while(0);
+#define USART3_Data_Receive_Process					do{CH100_getDATA(ch100_Rx_Buffer,&gimbal_gyro);}while(0);
 #define UART4_Data_Receive_Process					do{}while(0);
-#define UART5_Data_Receive_Process					do{}while(0);
-#define USART6_Data_Receive_Process					do{}while(0);
+	
+#define UART5_Data_Receive_Process0					do{judgement_data_handle(_UART5_DMA_RX_BUF[0],this_time_rx_len5);}while(0);
+#define UART5_Data_Receive_Process1					do{judgement_data_handle(_UART5_DMA_RX_BUF[1],this_time_rx_len5);}while(0);
 
-
+	
+#define USART6_Data_Receive_Process					do{HI220_getDATA(USART6_DMA_RX_BUF,&gimbal_gyro,this_time_rx_len6);}while(0);
 /*
 *********************************************************************************************************
 *                                               MACROS

@@ -1,7 +1,7 @@
 #include "mode_switch_task.h"
 
 chassis_t chassis;
-
+int16_t chassis_speed = 0;
 
 
 
@@ -50,7 +50,7 @@ void mode_switch_task(void)
 		    gimbal_data.ctrl_mode = GIMBAL_INIT;
 	    }
 			if( gimbal_data.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
-				can_chassis_data.if_follow_gim = 1;
+				chassis.follow_gimbal = 1;
 			/*****************************************************************************************/
 			
 			gimbal_data.last_ctrl_mode = gimbal_data.ctrl_mode;
@@ -59,7 +59,16 @@ void mode_switch_task(void)
         break;
     case KEY_MOUSE_INPUT:
     {
-
+        /*******************************底盘云台键鼠数据接收******************************************/
+         if(gimbal_data.ctrl_mode != GIMBAL_INIT)
+         {
+            if (RC_CtrlData.Key_Flag.Key_SHIFT_Flag)
+            {
+                chassis.chassis_speed_mode = HIGH_SPEED_MODE;
+                chassis_speed = HIGH_SPEED;
+            }
+            
+         }
     }
         break;
     case STOP:

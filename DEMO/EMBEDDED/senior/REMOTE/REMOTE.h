@@ -139,13 +139,15 @@ typedef struct
 typedef struct
 {
 	u8 if_follow_gim;
+	u8 speed_mode;
 	u8 chassis_mode;
-	volatile Encoder yaw_Encoder;
+	float yaw_encoder_angle;
+	int16_t yaw_encoder_filter_rate;
 	int16_t x;
 	int16_t y;
-	int16_t w;
-	float chassis_power;
+	int16_t chassis_power;
 	uint16_t chassis_power_buffer;
+	u8 chassis_power_limit;
 } chassis_data_t;
 
 void RemoteDataPrcess(uint8_t *pData);
