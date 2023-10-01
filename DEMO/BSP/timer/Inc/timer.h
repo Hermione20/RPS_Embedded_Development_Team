@@ -18,7 +18,7 @@
 #define EN_TIM2									0
 #define	EN_TIM2_IRQ							0
 
-#define EN_TIM3									0
+#define EN_TIM3									1
 #define	EN_TIM3_IRQ							0
 
 #define EN_TIM4									0

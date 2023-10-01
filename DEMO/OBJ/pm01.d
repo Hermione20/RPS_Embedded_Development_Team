@@ -90,6 +90,7 @@
 ..\obj\pm01.o: ..\BSP\LED\led.h
 ..\obj\pm01.o: ..\BSP\sys\Inc\sys.h
 ..\obj\pm01.o: ..\BSP\timer\Inc\timer.h
+..\obj\pm01.o: ..\BSP\pwm\Inc\pwm.h
 ..\obj\pm01.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\pm01.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\pm01.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

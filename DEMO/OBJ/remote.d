@@ -90,6 +90,7 @@
 ..\obj\remote.o: ..\BSP\LED\led.h
 ..\obj\remote.o: ..\BSP\sys\Inc\sys.h
 ..\obj\remote.o: ..\BSP\timer\Inc\timer.h
+..\obj\remote.o: ..\BSP\pwm\Inc\pwm.h
 ..\obj\remote.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\remote.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\remote.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

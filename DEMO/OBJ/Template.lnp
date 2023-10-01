@@ -26,6 +26,7 @@
 "..\obj\led.o"
 "..\obj\usart.o"
 "..\obj\timer.o"
+"..\obj\pwm.o"
 "..\obj\misc.o"
 "..\obj\stm32f4xx_adc.o"
 "..\obj\stm32f4xx_can.o"
