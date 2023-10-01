@@ -1,2163 +1,0 @@
-Dependencies for Project 'RM2018 Infantry.uvprojx', Target 'RM2018': (DO NOT MODIFY !)
-F (.\User\main.c)(0x5D3CBEDF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\main.o --omf_browse .\outputs\main.crf --depend .\outputs\main.d)
-I (User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\User\main.h)(0x5D387DDC)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\readme.txt)(0x5D3DB99B)()
-F (.\User\config.h)(0x5D3DBA4C)()
-F (.\BSP\bsp.c)(0x5D355D47)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\bsp.o --omf_browse .\outputs\bsp.crf --depend .\outputs\bsp.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\led.c)(0x5CE76F90)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\led.o --omf_browse .\outputs\led.crf --depend .\outputs\led.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\gun.c)(0x5CD9AD4E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\gun.o --omf_browse .\outputs\gun.crf --depend .\outputs\gun.d)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-F (.\BSP\can1.c)(0x5D19C813)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\can1.o --omf_browse .\outputs\can1.crf --depend .\outputs\can1.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\can2.c)(0x5D19C321)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\can2.o --omf_browse .\outputs\can2.crf --depend .\outputs\can2.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\delay.c)(0x572C0CD4)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\delay.o --omf_browse .\outputs\delay.crf --depend .\outputs\delay.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\exti.c)(0x5C3A883A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\exti.o --omf_browse .\outputs\exti.crf --depend .\outputs\exti.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\laser.c)(0x5730353E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\laser.o --omf_browse .\outputs\laser.crf --depend .\outputs\laser.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\timer.c)(0x5D234217)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\timer.o --omf_browse .\outputs\timer.crf --depend .\outputs\timer.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\usart1.c)(0x5CE8C1AD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\usart1.o --omf_browse .\outputs\usart1.crf --depend .\outputs\usart1.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\usart3.c)(0x5D355D47)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\usart3.o --omf_browse .\outputs\usart3.crf --depend .\outputs\usart3.d)
-I (BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\BSP\bsp_flash.c)(0x5C3A883A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\bsp_flash.o --omf_browse .\outputs\bsp_flash.crf --depend .\outputs\bsp_flash.d)
-I (BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\BSP\encoder.c)(0x5C3AA727)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\encoder.o --omf_browse .\outputs\encoder.crf --depend .\outputs\encoder.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\output2vs.c)(0x5D356042)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\output2vs.o --omf_browse .\outputs\output2vs.crf --depend .\outputs\output2vs.d)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\OLED\oled.c)(0x5C3A883A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\oled.o --omf_browse .\outputs\oled.crf --depend .\outputs\oled.d)
-I (BSP\OLED\oled.h)(0x5AAFAD1E)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-I (BSP\OLED\oledfont.h)(0x544D152E)
-F (.\BSP\key_scan.c)(0x5C3A883A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\key_scan.o --omf_browse .\outputs\key_scan.crf --depend .\outputs\key_scan.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\uart4.c)(0x5D236BC8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\uart4.o --omf_browse .\outputs\uart4.crf --depend .\outputs\uart4.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\Judge.c)(0x5D36FF9D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\judge.o --omf_browse .\outputs\judge.crf --depend .\outputs\judge.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\iwdg.c)(0x5CD52CCC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\iwdg.o --omf_browse .\outputs\iwdg.crf --depend .\outputs\iwdg.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\pid.c)(0x5D3D3748)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\pid.o --omf_browse .\outputs\pid.crf --depend .\outputs\pid.d)
-I (BSP\pid.h)(0x5D3D3748)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (.\BSP\adc.c)(0x5CB6D3C7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\adc.o --omf_browse .\outputs\adc.crf --depend .\outputs\adc.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\hi220.c)(0x5CD9E3FD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\hi220.o --omf_browse .\outputs\hi220.crf --depend .\outputs\hi220.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\BSP\client.c)(0x5D3CBC50)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\client.o --omf_browse .\outputs\client.crf --depend .\outputs\client.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\STLibraries\startup_stm32f4xx.s)(0x5CE78A22)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F40_41xxx SETA 1"--list .\listings\startup_stm32f4xx.lst --xref -o .\outputs\startup_stm32f4xx.o --depend .\outputs\startup_stm32f4xx.d)
-F (.\User\stm32f4xx_it.c)(0x5CE78A46)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_it.o --omf_browse .\outputs\stm32f4xx_it.crf --depend .\outputs\stm32f4xx_it.d)
-I (User\stm32f4xx_it.h)(0x53BAA63E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\misc.c)(0x571D931E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\misc.o --omf_browse .\outputs\misc.crf --depend .\outputs\misc.d)
-I (STLibraries\misc.h)(0x546307F8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_adc.c)(0x546307EC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_adc.o --omf_browse .\outputs\stm32f4xx_adc.crf --depend .\outputs\stm32f4xx_adc.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_can.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_can.o --omf_browse .\outputs\stm32f4xx_can.crf --depend .\outputs\stm32f4xx_can.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_crc.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_crc.o --omf_browse .\outputs\stm32f4xx_crc.crf --depend .\outputs\stm32f4xx_crc.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_dac.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_dac.o --omf_browse .\outputs\stm32f4xx_dac.crf --depend .\outputs\stm32f4xx_dac.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_dma.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_dma.o --omf_browse .\outputs\stm32f4xx_dma.crf --depend .\outputs\stm32f4xx_dma.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_exti.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_exti.o --omf_browse .\outputs\stm32f4xx_exti.crf --depend .\outputs\stm32f4xx_exti.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_flash.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_flash.o --omf_browse .\outputs\stm32f4xx_flash.crf --depend .\outputs\stm32f4xx_flash.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_gpio.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_gpio.o --omf_browse .\outputs\stm32f4xx_gpio.crf --depend .\outputs\stm32f4xx_gpio.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_pwr.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_pwr.o --omf_browse .\outputs\stm32f4xx_pwr.crf --depend .\outputs\stm32f4xx_pwr.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_rcc.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_rcc.o --omf_browse .\outputs\stm32f4xx_rcc.crf --depend .\outputs\stm32f4xx_rcc.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_spi.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_spi.o --omf_browse .\outputs\stm32f4xx_spi.crf --depend .\outputs\stm32f4xx_spi.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_syscfg.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_syscfg.o --omf_browse .\outputs\stm32f4xx_syscfg.crf --depend .\outputs\stm32f4xx_syscfg.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_tim.c)(0x571486A6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_tim.o --omf_browse .\outputs\stm32f4xx_tim.crf --depend .\outputs\stm32f4xx_tim.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_usart.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_usart.o --omf_browse .\outputs\stm32f4xx_usart.crf --depend .\outputs\stm32f4xx_usart.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\system_stm32f4xx.c)(0x5AC2F725)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\system_stm32f4xx.o --omf_browse .\outputs\system_stm32f4xx.crf --depend .\outputs\system_stm32f4xx.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_i2c.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_i2c.o --omf_browse .\outputs\stm32f4xx_i2c.crf --depend .\outputs\stm32f4xx_i2c.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\STLibraries\stm32f4xx_iwdg.c)(0x546307EE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\stm32f4xx_iwdg.o --omf_browse .\outputs\stm32f4xx_iwdg.crf --depend .\outputs\stm32f4xx_iwdg.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-F (.\Protocol\MF_CRC16.h)(0x54C62776)()
-F (.\Protocol\protocal.h)(0x572CA4D6)()
-F (.\Protocol\Protocol.lib)(0x572CA576)()
-F (.\APP\ControlTask.c)(0x5D3D8266)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\controltask.o --omf_browse .\outputs\controltask.crf --depend .\outputs\controltask.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\IOTask.c)(0x5C833B3C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\iotask.o --omf_browse .\outputs\iotask.crf --depend .\outputs\iotask.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\RemoteTask.c)(0x5D3D39A8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\remotetask.o --omf_browse .\outputs\remotetask.crf --depend .\outputs\remotetask.d)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\CanBusTask.c)(0x5D3B562A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\canbustask.o --omf_browse .\outputs\canbustask.crf --depend .\outputs\canbustask.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\Auto_Shoot_Control_Task.c)(0x5D373D29)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\auto_shoot_control_task.o --omf_browse .\outputs\auto_shoot_control_task.crf --depend .\outputs\auto_shoot_control_task.d)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\SuperviseTask.c)(0x5CE82246)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\supervisetask.o --omf_browse .\outputs\supervisetask.crf --depend .\outputs\supervisetask.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\modeswitch_task.c)(0x5D3B58B7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\modeswitch_task.o --omf_browse .\outputs\modeswitch_task.crf --depend .\outputs\modeswitch_task.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\gimbal_task.c)(0x5D3DB80D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\gimbal_task.o --omf_browse .\outputs\gimbal_task.crf --depend .\outputs\gimbal_task.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\shoot_task.c)(0x5D3D591E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\shoot_task.o --omf_browse .\outputs\shoot_task.crf --depend .\outputs\shoot_task.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\chassis_task.c)(0x5D3D802C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\chassis_task.o --omf_browse .\outputs\chassis_task.crf --depend .\outputs\chassis_task.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\APP\auto_angle_task.c)(0x5D387F33)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\auto_angle_task.o --omf_browse .\outputs\auto_angle_task.crf --depend .\outputs\auto_angle_task.d)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\RmLib\common.h)(0x572B4E1E)()
-F (.\RmLib\fifo.h)(0x57160360)()
-F (.\RmLib\LostCounter.h)(0x571A1CD4)()
-F (.\RmLib\pid_regulator.h)(0x572C0EE2)()
-F (.\RmLib\ramp.h)(0x5B155CCE)()
-F (.\RmLib\RMLib.lib)(0x572C130A)()
-F (.\ICM20948\icm20948.c)(0x5CD9EBA0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\icm20948.o --omf_browse .\outputs\icm20948.crf --depend .\outputs\icm20948.d)
-I (ICM20948\icm20948.h)(0x5CD9AF3E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (ICM20948\AHRS.h)(0x5CC1B0E9)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\ICM20948\icm20948_driver.c)(0x5CC1B52E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\icm20948_driver.o --omf_browse .\outputs\icm20948_driver.crf --depend .\outputs\icm20948_driver.d)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (ICM20948\spi.h)(0x5CC1CED4)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\ICM20948\spi.c)(0x5CD9B964)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\spi.o --omf_browse .\outputs\spi.crf --depend .\outputs\spi.d)
-I (ICM20948\spi.h)(0x5CC1CED4)
-I (.\User\main.h)(0x5D387DDC)
-I (.\RmLib\common.h)(0x572B4E1E)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (.\User\stm32f4xx_it.h)(0x53BAA63E)
-I (.\APP\SuperviseTask.h)(0x5CD52F26)
-I (.\BSP\ad.h)(0x57203FF2)
-I (.\BSP\gun.h)(0x5D356F18)
-I (.\User\config.h)(0x5D3DBA4C)
-I (.\BSP\can1.h)(0x5C24FE86)
-I (.\BSP\can2.h)(0x5CFA9679)
-I (.\BSP\delay.h)(0x550CE6A0)
-I (.\BSP\timer.h)(0x5582970C)
-I (.\BSP\usart1.h)(0x5D305BC9)
-I (.\BSP\usart3.h)(0x5D232271)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (.\BSP\uart4.h)(0x5D236979)
-I (.\BSP\led.h)(0x5CCF2EFF)
-I (.\BSP\OLED\oled.h)(0x5AAFAD1E)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (.\BSP\bsp_flash.h)(0x56FBA3BA)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
-I (.\RmLib\ramp.h)(0x5B155CCE)
-I (.\APP\CanBusTask.h)(0x5D3B515C)
-I (.\BSP\pid.h)(0x5D3D3748)
-I (.\RmLib\pid_regulator.h)(0x572C0EE2)
-I (.\BSP\laser.h)(0x5D29B834)
-I (.\BSP\bsp.h)(0x572C17BC)
-I (.\BSP\encoder.h)(0x571ED722)
-I (.\APP\ControlTask.h)(0x5D36FF7E)
-I (.\RmLib\LostCounter.h)(0x571A1CD4)
-I (.\APP\RemoteTask.h)(0x5D3C0D74)
-I (.\APP\IOTask.h)(0x5C3A933A)
-I (.\Protocol\protocal.h)(0x572CA4D6)
-I (.\RmLib\FIFO.h)(0x57160360)
-I (.\APP\Judge.h)(0x5D36FFAD)
-I (.\BSP\output2vs.h)(0x5D356069)
-I (.\BSP\Key_scan.h)(0x5AEEA19D)
-I (.\BSP\iwdg.h)(0x5AE6B8F5)
-I (.\APP\modeswitch_task.h)(0x5CBE10FC)
-I (.\APP\gimbal_task.h)(0x5D3D4DF1)
-I (.\APP\chassis_task.h)(0x5D3D770F)
-I (.\APP\shoot_task.h)(0x5D3AC323)
-I (.\ICM20948\icm20948.h)(0x5CD9AF3E)
-I (.\ICM20948\spi.h)(0x5CC1CED4)
-I (.\BSP\adc.h)(0x5CB5F09B)
-I (.\BSP\HI220.h)(0x5CD9E133)
-I (.\APP\kalman_filter.h)(0x5D373C1C)
-I (.\BSP\client.h)(0x5D370CF1)
-I (.\APP\auto_angle_task.h)(0x5D387E89)
-F (.\ICM20948\AHRS_middleware.c)(0x5CC1B0EC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\ahrs_middleware.o --omf_browse .\outputs\ahrs_middleware.crf --depend .\outputs\ahrs_middleware.d)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (.\ICM20948\AHRS.lib)(0x5C332B29)()
-F (.\APP\kalman_filter.c)(0x5D3B0FEF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I .\BSP -I .\APP -I .\STLibraries -I .\User -I .\Protocol -I .\FIFO -I .\ -I .\Debug -I .\RmLib -I .\BSP\OLED -I .\ICM20948-I.\RTE\_RM2018-ID:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\MDK-523\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o .\outputs\kalman_filter.o --omf_browse .\outputs\kalman_filter.crf --depend .\outputs\kalman_filter.d)
-I (APP\kalman_filter.h)(0x5D373C1C)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
-I (.\User\stm32f4xx_conf.h)(0x551690E0)
-I (.\STLibraries\misc.h)(0x546307F8)
-I (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\arm_math.h)(0x5898498A)
-I (D:\software\MDK-523\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (D:\software\MDK-523\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (D:\software\MDK-523\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Lib\ARM\arm_cortexM4lf_math.lib)(0x5898498E)()
