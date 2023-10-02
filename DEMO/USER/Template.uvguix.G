@@ -6,7 +6,11 @@
   <Header>### uVision Project, (C) Keil Software</Header>
 
   <PrjGuiSettings>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
     <LastAddFilePath>D:\GitHub\RPS_Embedded_Development_Team\DEMO\APP\TASK\SHOOT_TASK\Src</LastAddFilePath>
+=======
+    <LastAddFilePath></LastAddFilePath>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
   </PrjGuiSettings>
 
   <ViewPool/>
@@ -15,7 +19,11 @@
     <View>
       <WinId>38003</WinId>
       <ViewName>Registers</ViewName>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
       <TableColWidths>124 105</TableColWidths>
+=======
+      <TableColWidths>124 79</TableColWidths>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
     </View>
     <View>
       <WinId>346</WinId>
@@ -70,7 +78,11 @@
       <WinId>466</WinId>
       <ViewName>Source Browser</ViewName>
       <UserString>500</UserString>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
       <TableColWidths>166</TableColWidths>
+=======
+      <TableColWidths>300</TableColWidths>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
     </View>
   </TreeListPane>
 
@@ -78,11 +90,19 @@
 
   <WindowSettings>
     <LogicAnalizer>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
       <ShowLACursor>0</ShowLACursor>
       <ShowSignalInfo>0</ShowSignalInfo>
       <ShowCycles>0</ShowCycles>
       <LeftSideBarSize>50</LeftSideBarSize>
       <TimeBaseIndex>16</TimeBaseIndex>
+=======
+      <ShowLACursor>1</ShowLACursor>
+      <ShowSignalInfo>1</ShowSignalInfo>
+      <ShowCycles>0</ShowCycles>
+      <LeftSideBarSize>0</LeftSideBarSize>
+      <TimeBaseIndex>-1</TimeBaseIndex>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
     </LogicAnalizer>
   </WindowSettings>
 
@@ -93,8 +113,13 @@
       <flags>2</flags>
       <showCmd>3</showCmd>
       <MinPosition>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <xPos>-32000</xPos>
         <yPos>-32000</yPos>
+=======
+        <xPos>-1</xPos>
+        <yPos>-1</yPos>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
       </MinPosition>
       <MaxPosition>
         <xPos>-1</xPos>
@@ -102,16 +127,26 @@
       </MaxPosition>
       <NormalPosition>
         <Top>0</Top>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <Left>12</Left>
         <Right>1297</Right>
+=======
+        <Left>15</Left>
+        <Right>1300</Right>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <Bottom>1026</Bottom>
       </NormalPosition>
     </WindowPosition>
     <MDIClientArea>
       <RegID>0</RegID>
       <MDITabState>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <Len>1326</Len>
         <Data>0100000004000000010000000100000001000000010000000000000002000000000000000100000001000000000000002800000028000000010000000C000000000000000100000037443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C555345525C4253502E6300000000054253502E6300000000C5D4F200FFFFFFFF37443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C555345525C4253502E6800000000054253502E6800000000FFDC7800FFFFFFFF3E443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4845414446494C455C7075626C69632E6800000000087075626C69632E6800000000F0A0A100FFFFFFFF51443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4150505C5441534B5C53484F4F545F5441534B5C5372635C53686F6F745F5461736B2E63000000000C53686F6F745F5461736B2E6300000000F7B88600FFFFFFFF41443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4150505C42414C5C5372635C6F6C647069642E6300000000086F6C647069642E63000000009CC1B600FFFFFFFF5D443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4150505C5441534B5C4D4F44455F5357495443485F5441534B5C536F725C6D6F64655F7377697463685F7461736B2E6300000000126D6F64655F7377697463685F7461736B2E6300000000D9ADC200FFFFFFFF4C443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C454D4245444445445C73656E696F725F7374727563745C73656E696F722E63000000000873656E696F722E6300000000A5C2D700FFFFFFFF4C443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C454D4245444445445C73656E696F725C52454D4F54455C52454D4F54452E68000000000852454D4F54452E6800000000B3A6BE00FFFFFFFF4C443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C454D4245444445445C73656E696F725C52454D4F54455C52454D4F54452E63000000000852454D4F54452E6300000000EAD6A300FFFFFFFF3E443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4253505C70776D5C5372635C70776D2E63000000000570776D2E6300000000EAD6A300FFFFFFFF3E443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C4253505C70776D5C496E635C70776D2E68000000000570776D2E6800000000F6FA7D00FFFFFFFF46443A5C4769744875625C5250535F456D6265646465645F446576656C6F706D656E745F5465616D5C44454D4F5C53544C49425C696E635C73746D3332663478785F74696D2E68000000000F73746D3332663478785F74696D2E6800000000B5E99D00FFFFFFFF0100000010000000C5D4F200FFDC7800BECEA100F0A0A100BCA8E1009CC1B600F7B88600D9ADC200A5C2D700B3A6BE00EAD6A300F6FA7D00B5E99D005FC3CF00C1838300CACAD500010000000000000002000000F300000066000000AB06000005030000</Data>
+=======
+        <Len>60</Len>
+        <Data>010000000400000001000000010000000100000001000000000000000200000000000000010000000100000000000000280000002800000000000000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
       </MDITabState>
     </MDIClientArea>
     <ViewEx>
@@ -134,7 +169,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D900000066000000F0040000F1000000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -150,11 +189,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000066000000EC000000D5020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>0300000066000000D200000029030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -170,11 +217,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000066000000EC000000D5020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>0300000066000000D200000029030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -190,11 +245,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>000000001A020000F0040000A5020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -210,11 +273,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -230,11 +301,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -250,11 +329,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -270,11 +357,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED040000FD000000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -294,7 +389,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -314,7 +413,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -330,11 +433,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -350,11 +461,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -370,11 +489,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -390,11 +517,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -410,11 +545,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -430,11 +573,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -450,11 +601,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000066000000EC000000D5020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>0300000066000000D200000029030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -470,11 +629,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000066000000EC000000D5020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>0300000066000000D200000029030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -490,11 +657,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>000000005A030000AB060000D1030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -514,13 +689,21 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
         <RegID>199</RegID>
         <PaneID>199</PaneID>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <IsVisible>1</IsVisible>
+=======
+        <IsVisible>0</IsVisible>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
@@ -530,11 +713,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>030000005D030000ED040000B8030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -550,11 +741,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>DC00000066000000ED040000C1000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>D900000063000000F0040000DA000000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -574,7 +773,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -610,11 +813,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1B04000063000000F004000016020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -630,11 +841,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>000000001A020000F004000091020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -654,7 +873,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -674,7 +897,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -690,11 +917,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>DC00000066000000ED040000C1000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>D900000063000000F0040000DA000000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -714,7 +949,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -730,11 +969,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -750,11 +997,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -770,11 +1025,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -790,11 +1053,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -810,11 +1081,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -830,11 +1109,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -850,11 +1137,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -870,11 +1165,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -890,11 +1193,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -910,11 +1221,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -930,11 +1249,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -950,11 +1277,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -970,11 +1305,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -990,11 +1333,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1010,11 +1361,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1030,11 +1389,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1050,11 +1417,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1070,11 +1445,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1090,11 +1473,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1110,11 +1501,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1130,11 +1529,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1150,17 +1557,29 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000066000000EC000000D5020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>0300000066000000D20000008C020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
         <RegID>38007</RegID>
         <PaneID>38007</PaneID>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <IsVisible>1</IsVisible>
+=======
+        <IsVisible>0</IsVisible>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
@@ -1170,11 +1589,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>000000005A030000F0040000D1030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1190,11 +1617,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>030000005D030000ED040000B8030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1210,11 +1645,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1230,11 +1673,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1250,11 +1701,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>030000005D030000ED040000B8030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1270,11 +1729,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>0300000009030000A8060000B8030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000D40100001C030000</Data>
+=======
+          <Data>030000005D030000ED040000B8030000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000BA01000002030000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1294,7 +1761,11 @@
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>D8000000EF000000500300007A010000</Data>
+=======
+          <Data>BE000000D50000003603000060010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1310,11 +1781,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1330,11 +1809,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1350,11 +1837,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1370,11 +1865,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1390,11 +1893,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1410,11 +1921,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1430,11 +1949,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1450,11 +1977,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1470,11 +2005,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1490,11 +2033,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1510,11 +2061,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1530,11 +2089,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1550,11 +2117,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1570,11 +2145,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1590,11 +2173,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1610,11 +2201,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1630,11 +2229,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1650,11 +2257,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1670,11 +2285,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1690,11 +2313,19 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>1E04000066000000ED040000FD010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>1E04000066000000ED0400006E010000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1704,7 +2335,11 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <MRUWidth>966</MRUWidth>
+=======
+        <MRUWidth>32767</MRUWidth>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
@@ -1744,7 +2379,11 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <MRUWidth>476</MRUWidth>
+=======
+        <MRUWidth>32767</MRUWidth>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>1</RecentRowIndex>
@@ -1764,7 +2403,11 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <MRUWidth>612</MRUWidth>
+=======
+        <MRUWidth>32767</MRUWidth>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>2</RecentRowIndex>
@@ -1790,23 +2433,40 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>030000001D020000ED0400008C020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
           <Data>D8000000EF000000AD010000B6010000</Data>
+=======
+          <Data>030000001D020000ED04000078020000</Data>
+        </RectRecentDocked>
+        <RectRecentFloat>
+          <Len>16</Len>
+          <Data>BE000000D5000000930100009C010000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </RectRecentFloat>
       </Window>
       <DockMan>
         <Len>3312</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
         <Data>000000000B000000000000000020000000000000FFFFFFFFFFFFFFFFD9000000DA000000F0040000DE000000000000000100000004000000010000000000000000000000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E650020000000000000D900000066000000F0040000F1000000D90000004F000000F0040000DA0000000000000040280046080000000B446973617373656D626C7900000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFF170400004F0000001B04000016020000000000000200000004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C30000018000400000000000001B04000066000000F00400002D0200001B0400004F000000F00400001602000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000010000001000000FFFFFFFFFFFFFFFFEF0000004F000000F3000000EE0200000100000002000010040000000100000006FFFFFFA6050000FFFFFFFF05000000ED0300006D000000C3000000C400000073940000018000100000010000000000000066000000EF00000005030000000000004F000000EF000000EE0200000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73010000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7301000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657301000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273000000007394000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000000000000FFFFFFFFFFFFFFFF0000000002020000F00400000602000000000000010000000400000001000000000000000000000000000000000000000000000001000000C6000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB09000001800080000000000000000000001D020000F0040000BC0200000000000006020000F0040000A502000000000000404100460F0000001343616C6C20537461636B202B204C6F63616C73000000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031000000009007000001000000FFFFFFFFFFFFFFFF0757617463682032000000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203100000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000001000000000000000000000001000000FFFFFFFF78020000060200007C020000A502000000000000020000000400000000000000000000000000000000000000000000000000000002000000C6000000FFFFFFFF8F07000001000000FFFFFFFF8F07000001000000C6000000000000000080000001000000FFFFFFFFFFFFFFFF00000000EE020000AB060000F20200000100000001000010040000000100000012FDFFFF89000000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF01000077940000018000800000010000000000000009030000AB060000E803000000000000F2020000AB060000D10300000000000040820056060000000C4275696C64204F757470757401000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657301000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0742726F77736572010000007794000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000000000000000000</Data>
+=======
+        <Data>000000000B000000000000000020000000000000FFFFFFFFFFFFFFFFD9000000DA000000F0040000DE000000000000000100001004000000010000000000000000000000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E650020000000000000BE000000D50000003603000060010000D90000004F000000F0040000DA0000000000000040280046080000000B446973617373656D626C7900000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFF170400004F0000001B04000016020000000000000200001004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C3000001800040000000000000BE000000D5000000930100009C0100001B0400004F000000F00400001602000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000010000001000000FFFFFFFFFFFFFFFFD50000004F000000D900000042030000010000000200001004000000010000000000000000000000FFFFFFFF05000000ED0300006D000000C3000000C40000007394000001800010000001000000BE000000D5000000930100009C010000000000004F000000D5000000420300000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73010000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7301000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657301000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273000000007394000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000000000000FFFFFFFFFFFFFFFF0000000002020000F00400000602000000000000010000100400000001000000000000000000000000000000000000000000000001000000C6000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB09000001800080000000000000BE000000D5000000930100009C0100000000000006020000F0040000A502000000000000404100460F0000001343616C6C20537461636B202B204C6F63616C73000000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031000000009007000001000000FFFFFFFFFFFFFFFF0757617463682032000000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203100000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000001000000000000000000000001000000FFFFFFFF78020000060200007C020000A502000000000000020000000400000000000000000000000000000000000000000000000000000002000000C6000000FFFFFFFF8F07000001000000FFFFFFFF8F07000001000000C6000000000000000080000001000000FFFFFFFFFFFFFFFF0000000042030000AB06000046030000010000000100001004000000010000000000000000000000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF0100007794000001800080000001000000BE000000D500000036030000600100000000000046030000AB060000D10300000000000040820056060000000C4275696C64204F757470757401000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657300000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0742726F77736572000000007794000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000000000000000000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
       </DockMan>
       <ToolBar>
         <RegID>59392</RegID>
         <Name>File</Name>
         <Buttons>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Len>2985</Len>
           <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000000020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000040004000000000000000000000000000000000100000001000000018022E100000000040005000000000000000000000000000000000100000001000000018025E10000000000000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000000000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000000000900000000000000000000000000000000010000000100000001807B8A0000000004000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000000000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000400460000000000000000000000000000000001000000010000000180FE880000000004004500000000000000000000000000000000010000000100000001800B810000000004001300000000000000000000000000000000010000000100000001800C810000000004001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE803000000000000000000000000000000000000000000000001000000010000009600000002002050000000001354494D365F4441435F49525148616E646C657296000000000000001400097333746F325F636E741354494D365F4441435F49525148616E646C65720250490850574D5F53544F500F54494D375F49525148616E646C65721774797065646566205F5F7061636B6564207374727563740F54494D365F49525150726F636573730F54494D345F49525150726F636573730F54494D355F49525150726F636573731655534152545F43483130305F44525F414444524553530F54494D365F49525148616E646C65720F54494D345F49525148616E646C65721354494D375F4441435F49525148616E646C65721354494D325F4441435F49525148616E646C65721354494D315F4441435F49525148616E646C65721B5553415254315F446174615F526563656976655F50726F636573730F4765745F54696D655F4D6963726F730E43414E315F4D6F64655F496E69741243414E5F5472616E736D697453746174757319454E5F5553415254315F444D415F5345434F4E445F4649464F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000000001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000000160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000002180C8880000000000001700000027264B696C6C20416C6C20427265616B706F696E747320696E2043757272656E7420546172676574000000000000000000000000010000000100000000000000000000000100000003002180C8880000000000001700000027264B696C6C20416C6C20427265616B706F696E747320696E2043757272656E7420546172676574000000000000000000000000010000000100000000000000000000000100000000002180E50100000000000078000000264B696C6C20416C6C20427265616B706F696E747320696E204163746976652050726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180E601000000000000790000002F4B696C6C20416C6C20427265616B706F696E747320696E204D756C74692D50726F6A65637420576F726B73706163650000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000001000000000000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65C6030000</Data>
+=======
+          <Len>2975</Len>
+          <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000400020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000040004000000000000000000000000000000000100000001000000018022E100000000040005000000000000000000000000000000000100000001000000018025E10000000004000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000004000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000004000900000000000000000000000000000000010000000100000001807B8A0000000004000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000004000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000400460000000000000000000000000000000001000000010000000180FE880000000004004500000000000000000000000000000000010000000100000001800B810000000004001300000000000000000000000000000000010000000100000001800C810000000004001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE80300000000040000000000000000000000000000000000000100000001000000960000000200205000000000097333746F325F636E7496000000000000001400097333746F325F636E741354494D365F4441435F49525148616E646C65720250490850574D5F53544F500F54494D375F49525148616E646C65721774797065646566205F5F7061636B6564207374727563740F54494D365F49525150726F636573730F54494D345F49525150726F636573730F54494D355F49525150726F636573731655534152545F43483130305F44525F414444524553530F54494D365F49525148616E646C65720F54494D345F49525148616E646C65721354494D375F4441435F49525148616E646C65721354494D325F4441435F49525148616E646C65721354494D315F4441435F49525148616E646C65721B5553415254315F446174615F526563656976655F50726F636573730F4765745F54696D655F4D6963726F730E43414E315F4D6F64655F496E69741243414E5F5472616E736D697453746174757319454E5F5553415254315F444D415F5345434F4E445F4649464F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000004001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000400160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000002180C8880000000000001700000027264B696C6C20416C6C20427265616B706F696E747320696E2043757272656E7420546172676574000000000000000000000000010000000100000000000000000000000100000003002180C8880000000000001700000027264B696C6C20416C6C20427265616B706F696E747320696E2043757272656E7420546172676574000000000000000000000000010000000100000000000000000000000100000000002180E50100000000000078000000264B696C6C20416C6C20427265616B706F696E747320696E204163746976652050726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180E601000000000000790000002F4B696C6C20416C6C20427265616B706F696E747320696E204D756C74692D50726F6A65637420576F726B73706163650000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000000000000010000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65FF7F0000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </Buttons>
         <OriginalItems>
           <Len>1423</Len>
@@ -1822,7 +2482,11 @@
         <Name>Build</Name>
         <Buttons>
           <Len>976</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>00200000010000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000000001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000002001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0100000000000000000000000100000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000004002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA00000000000000000000000000000000000000000000000001000000010000009600000003002050000000000854656D706C617465960000000000000001000854656D706C617465000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000400240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64DC010000</Data>
+=======
+          <Data>00200000010000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000004001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000000001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0100000000000000000000000100000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000004002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA00000000000000000000000000000000000000000000000001000000010000009600000003002050000000000854656D706C617465960000000000000001000854656D706C617465000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000400240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64FF7F0000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </Buttons>
         <OriginalItems>
           <Len>583</Len>
@@ -1838,6 +2502,7 @@
         <Name>Debug</Name>
         <Buttons>
           <Len>2373</Len>
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
           <Data>00200000000000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000000002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000000002800000000000000000000000000000000010000000100000001801B80000000000000290000000000000000000000000000000001000000010000000180E57F0000000000002A00000000000000000000000000000000010000000100000001801C800000000000002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000000002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000000000002D0000000000000000000000000000000001000000010000000180F07F0000000000002E0000000000000000000000000000000001000000010000000180E8880000000000003700000000000000000000000000000000010000000100000001803B010000000000002F0000000000000000000000000000000001000000010000000180BB8A00000000000030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000000000000310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000010000000000000001000000000000000000000001000000000013800F01000000000000320000000E4D656D6F72792057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000000000000330000000E53657269616C2057696E646F77730000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000000000007200000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000100000000000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000010000000000000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000010000000000000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000000000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000010000000000000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000010000000000000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F72010000000000000001000000000000000100000000000000000000000100000000000000000005446562756764020000</Data>
         </Buttons>
         <OriginalItems>
@@ -3580,6 +4245,9 @@
         <Buttons>
           <Len>2362</Len>
           <Data>00200000010000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000000002600000000000000000000000000000000010000000100000001801D800000000004002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000000002800000000000000000000000000000000010000000100000001801B80000000000000290000000000000000000000000000000001000000010000000180E57F0000000004002A00000000000000000000000000000000010000000100000001801C800000000000002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000000002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000020001002D0000000000000000000000000000000001000000010000000180F07F0000020001002E0000000000000000000000000000000001000000010000000180E8880000020000003700000000000000000000000000000000010000000100000001803B010000020001002F0000000000000000000000000000000001000000010000000180BB8A00000200010030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000002000100310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000010000000000000001000000000000000000000001000000000013800F0100000200010032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000002000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000000000007200000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000100000000000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000010000000000000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000010000000000000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000002000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000010000000000000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000010000000000000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F72010000000000000001000000000000000100000000000000000000000100000000000000000005446562756764020000</Data>
+=======
+          <Data>00200000000000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000000002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000000002800000000000000000000000000000000010000000100000001801B80000000000000290000000000000000000000000000000001000000010000000180E57F0000000000002A00000000000000000000000000000000010000000100000001801C800000000000002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000000002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000000000002D0000000000000000000000000000000001000000010000000180F07F0000000000002E0000000000000000000000000000000001000000010000000180E8880000000000003700000000000000000000000000000000010000000100000001803B010000000000002F0000000000000000000000000000000001000000010000000180BB8A00000000000030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000000000000310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000000000000100000001000000000000000000000001000000000013800F01000000000000320000000E4D656D6F72792057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000000000000330000000E53657269616C2057696E646F77730000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000000000007200000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000000000001000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000000000000100000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000000000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000000000000100000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000000000000100000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F720100000000000000000000000100000001000000000000000000000001000000000000000000054465627567FF7F0000</Data>
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
         </Buttons>
         <OriginalItems>
           <Len>898</Len>
@@ -3598,6 +4266,7 @@
     </ViewEx>
   </WinLayoutEx>
 
+<<<<<<< Updated upstream:DEMO/USER/Template.uvguix.G
   <MDIGroups>
     <Orientation>1</Orientation>
     <ActiveMDIGroup>0</ActiveMDIGroup>
@@ -3715,4 +4384,6 @@
     </MDIGroup>
   </MDIGroups>
 
+=======
+>>>>>>> Stashed changes:senior/USER/Template.uvguix.G
 </ProjectGui>
