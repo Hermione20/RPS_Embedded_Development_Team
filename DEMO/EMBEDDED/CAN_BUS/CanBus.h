@@ -3,20 +3,20 @@
 #include "main.h"
 
 /*********************麦轮底盘电机id**************************/
-#define M_RIGHT_FRONT_MOTOR 0x00
-#define M_LEFT_FRONT_MOTOR 0x00
-#define M_LEFT_BEHIND_MOTOR 0x00
-#define M_RIGHT_BEHIND_MOTOR 0x00
+#define CM1Encoder_MOTOR 0x00
+#define CM2Encoder_MOTOR 0x00
+#define CM3Encoder_MOTOR 0x00
+#define CM4Encoder_MOTOR 0x00
 /**********************舵轮底盘电机id**************************************/
-#define RIGHT_FRONT_GM6020 0x00
-#define LEFT_FRONT_GM6020 0X00
-#define LEFT_BEHIND_GM6020 0X00
-#define RIGHT_BEHIND_GM6020 0X00
+#define Heading_Encoder1 0x00
+#define Heading_Encoder2 0X00
+#define Heading_Encoder3 0X00
+#define Heading_Encoder4 0X00
 
-#define S_RIGHT_FRONT_MOTOR 0x00
-#define S_LEFT_FRONT_MOTOR 0x00
-#define S_LEFT_BEHIND_MOTOR 0x00
-#define S_RIGHT_BEHIND_MOTOR 0x00
+#define CM1Encoder_MOTOR 0x00
+#define CM2Encoder_MOTOR 0x00
+#define CM3Encoder_MOTOR 0x00
+#define CM4Encoder_MOTOR 0x00
 /*************************云台电机id******************************/
 #define GIMBAL_YAW_MOTOR 0X207
 #define GIMBAL_PITCH_MOTOR 0X00

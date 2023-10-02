@@ -89,9 +89,3 @@
 ..\obj\usart.o: ..\BSP\usart\Inc\usart.h
 ..\obj\usart.o: ..\BSP\LED\led.h
 ..\obj\usart.o: ..\BSP\sys\Inc\sys.h
-..\obj\usart.o: ..\BSP\timer\Inc\timer.h
-..\obj\usart.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
-..\obj\usart.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
-..\obj\usart.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
-..\obj\usart.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
-..\obj\usart.o: ..\APP\RTOS\Ins\control_task.h

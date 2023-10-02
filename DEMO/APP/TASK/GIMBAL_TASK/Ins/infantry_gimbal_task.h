@@ -8,6 +8,8 @@
 #define PITCH_MIN -25.0f
 
 /************************buff*****************************/
+//摄像头和枪管中心的距离
+#define HEIGHT_BETWEEN_GUN_CAMERA 	4.89f
 //相机焦距mm
 #define FOCAL_LENGTH                6.0F
 //靶面长mm
@@ -107,6 +109,7 @@ void gimbal_follow_gyro_handle(void);
 void auto_small_buff_handle(void);
 void auto_big_buff_handle(void);
 void security_gimbal_handle(void);
+float raw_data_to_pitch_angle(float ecd_angle_pit);
 
 extern gimbal_t gimbal_data;
 extern float yaw_angle_ref_aim,pit_angle_ref_aim;

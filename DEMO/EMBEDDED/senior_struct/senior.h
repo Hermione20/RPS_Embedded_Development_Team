@@ -12,7 +12,7 @@
 #define  GM3Encoder_Offset   4141
 #define  GM4Encoder_Offset   6732
 
-
+//以下底盘结构体的数组方位表示为象限表示
 
 /********************general chassis encoder********************************/
 
@@ -20,23 +20,15 @@
 //定义中间结构体
 typedef struct 
 {
-	volatile Encoder right_front_GM6020;
-	volatile Encoder left_front_GM6020;
-	volatile Encoder left_behind_GM6020;
-	volatile Encoder right_behind_GM6020;
+	volatile Encoder Heading_Encoder[4];
 
-	volatile Encoder right_front_M3508;
-	volatile Encoder left_front_M3508;
-	volatile Encoder left_behind_M3508;
-	volatile Encoder right_behind_M3508;
+	volatile Encoder Driving_Encoder[4];
+	
 }steering_wheel_t;
 
 typedef struct
 {
-	volatile Encoder right_front_M3508;
-	volatile Encoder left_front_M3508;
-	volatile Encoder left_behind_M3508;
-	volatile Encoder right_behind_M3508;
+	volatile Encoder Driving_Encoder[4];
 }Mecanum_wheel_t;
 
 /***************************general friction encoder********************************************/

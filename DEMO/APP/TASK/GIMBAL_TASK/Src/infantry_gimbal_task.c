@@ -200,8 +200,8 @@ void auto_small_buff_handle(void)
         last_yaw=new_location.x1;
 		last_pit=new_location.y1;
 
-        gimbal_data.gim_ref_and_fdb.yaw_angle_ref = 1;
-        gimbal_data.gim_ref_and_fdb.pit_angle_ref = 1;
+        gimbal_data.gim_ref_and_fdb.yaw_angle_ref = buff_kalman_filter.buff_yaw_angle;
+        gimbal_data.gim_ref_and_fdb.pit_angle_ref = raw_data_to_pitch_angle(buff_kalman_filter.buff_pitch_angle)+pitch_remain;;
     }
     VAL_LIMIT(gimbal_data.gim_ref_and_fdb.pit_angle_ref,PITCH_MIN,PITCH_MAX);
     if(ved==0)
@@ -255,8 +255,8 @@ void auto_big_buff_handle(void)
         last_yaw=new_location.x1;
 		last_pit=new_location.y1;
 
-        gimbal_data.gim_ref_and_fdb.yaw_angle_ref = 1;
-        gimbal_data.gim_ref_and_fdb.pit_angle_ref = 1;
+        gimbal_data.gim_ref_and_fdb.yaw_angle_ref = buff_kalman_filter.buff_yaw_angle;
+        gimbal_data.gim_ref_and_fdb.pit_angle_ref = raw_data_to_pitch_angle(buff_kalman_filter.buff_pitch_angle)+pitch_remain;;
     }
     VAL_LIMIT(gimbal_data.gim_ref_and_fdb.pit_angle_ref,PITCH_MIN,PITCH_MAX);
     if(ved==0)
@@ -338,3 +338,36 @@ void security_gimbal_handle(void)
         }
     }
 }
+
+float raw_data_to_pitch_angle(float ecd_angle_pit)
+{
+  int shoot_angle_speed;
+  float distance_s;
+  float distance_x;
+  float distance_y;
+  float x1;
+  float x2;
+  float x3;
+  float x4;
+  float angle_tan;
+  float shoot_radian;
+  float shoot_angle;
+  float real_angle;
+	
+  shoot_angle_speed=28;//judge_rece_mesg.shoot_data.bullet_speed;
+  distance_s=6.9/cos(gimbal_gyro.pitch_Angle*ANGLE_TO_RAD);//*cos((get_yaw_angle-yaw_Angle)*ANGLE_TO_RAD));//(Gimbal_Auto_Shoot.Distance-7)/100;
+	real_angle=ecd_angle_pit+RAD_TO_ANGLE * atan2 ( HEIGHT_BETWEEN_GUN_CAMERA, distance_s );
+	
+  distance_x=(cos((ecd_angle_pit)*ANGLE_TO_RAD)*distance_s);
+  distance_y=(sin((ecd_angle_pit)*ANGLE_TO_RAD)*distance_s);
+
+  x1=shoot_angle_speed*shoot_angle_speed;
+  x2=distance_x*distance_x;
+  x3=sqrt(x2-(19.6*x2*((9.8*x2)/(2*x1)+distance_y))/x1);
+  x4=9.8*x2;
+  angle_tan=(x1*(distance_x-x3))/(x4);
+  shoot_radian=atan(angle_tan);
+  shoot_angle=shoot_radian*RAD_TO_ANGLE;
+  return shoot_angle;
+}
+

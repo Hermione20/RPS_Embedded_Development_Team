@@ -89,9 +89,3 @@
 ..\obj\hi220.o: ..\BSP\usart\Inc\usart.h
 ..\obj\hi220.o: ..\BSP\LED\led.h
 ..\obj\hi220.o: ..\BSP\sys\Inc\sys.h
-..\obj\hi220.o: ..\BSP\timer\Inc\timer.h
-..\obj\hi220.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
-..\obj\hi220.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
-..\obj\hi220.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
-..\obj\hi220.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
-..\obj\hi220.o: ..\APP\RTOS\Ins\control_task.h

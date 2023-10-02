@@ -89,9 +89,3 @@
 ..\obj\infantry_gimbal_task.o: ..\BSP\usart\Inc\usart.h
 ..\obj\infantry_gimbal_task.o: ..\BSP\LED\led.h
 ..\obj\infantry_gimbal_task.o: ..\BSP\sys\Inc\sys.h
-..\obj\infantry_gimbal_task.o: ..\BSP\timer\Inc\timer.h
-..\obj\infantry_gimbal_task.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
-..\obj\infantry_gimbal_task.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
-..\obj\infantry_gimbal_task.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
-..\obj\infantry_gimbal_task.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
-..\obj\infantry_gimbal_task.o: ..\APP\RTOS\Ins\control_task.h

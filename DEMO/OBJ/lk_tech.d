@@ -89,9 +89,3 @@
 ..\obj\lk_tech.o: ..\BSP\usart\Inc\usart.h
 ..\obj\lk_tech.o: ..\BSP\LED\led.h
 ..\obj\lk_tech.o: ..\BSP\sys\Inc\sys.h
-..\obj\lk_tech.o: ..\BSP\timer\Inc\timer.h
-..\obj\lk_tech.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
-..\obj\lk_tech.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
-..\obj\lk_tech.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
-..\obj\lk_tech.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
-..\obj\lk_tech.o: ..\APP\RTOS\Ins\control_task.h

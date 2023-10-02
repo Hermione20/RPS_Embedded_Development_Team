@@ -15,7 +15,8 @@
         "delay.h": "c",
         "ch100.h": "c",
         "ht430.h": "c",
-        "auto_shoot.h": "c"
+        "auto_shoot.h": "c",
+        "infantry_gimbal_task.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

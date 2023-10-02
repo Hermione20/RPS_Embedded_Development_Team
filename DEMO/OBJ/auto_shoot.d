@@ -84,14 +84,3 @@
 ..\obj\auto_shoot.o: ..\BSP\usart\Inc\usart.h
 ..\obj\auto_shoot.o: ..\BSP\LED\led.h
 ..\obj\auto_shoot.o: ..\BSP\sys\Inc\sys.h
-..\obj\auto_shoot.o: ..\BSP\timer\Inc\timer.h
-..\obj\auto_shoot.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
-..\obj\auto_shoot.o: ..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h
-..\obj\auto_shoot.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
-..\obj\auto_shoot.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h
-..\obj\auto_shoot.o: ..\APP\RTOS\Ins\control_task.h
-..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\send.pb-c.h
-..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.h
-..\obj\auto_shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
-..\obj\auto_shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-..\obj\auto_shoot.o: ..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h

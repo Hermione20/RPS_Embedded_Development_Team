@@ -145,7 +145,8 @@ typedef struct
 	u8 if_follow_gim;
 	u8 speed_mode;
 	u8 chassis_mode;
-	int16_t yaw_encoder_angle;
+	int16_t send_yaw_encoder_angle;
+	float receive_yaw_encoder_angle;
 	int16_t yaw_encoder_filter_rate;
 	int16_t x;
 	int16_t y;
