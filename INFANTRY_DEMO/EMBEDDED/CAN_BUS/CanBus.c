@@ -19,8 +19,8 @@
  **/
  
  
-static uint32_t can1_count = 0;
-static uint32_t can2_count = 0;
+uint32_t can1_count = 0;
+uint32_t can2_count = 0;
 
 void Can1ReceiveMsgProcess(CanRxMsg * msg)
 {
@@ -62,17 +62,8 @@ void Can2ReceiveMsgProcess(CanRxMsg * msg)
 
 void can_bus_send_task(void)
 {
-	can_chassis_task(CAN2,chassis.follow_gimbal,
-							chassis.chassis_speed_mode ,
-							chassis.ctrl_mode,yaw_Encoder.ecd_angle,
-							yaw_Encoder.filter_rate,
-							chassis.ChassisSpeed_Ref.left_right_ref,
-							chassis.ChassisSpeed_Ref.forward_back_ref,
-							550,
-							judge_rece_mesg.power_heat_data.chassis_power,
-							judge_rece_mesg.power_heat_data.chassis_power_buffer,
-							judge_rece_mesg.game_robot_state.chassis_power_limit);
-	Set_GM6020_IQ1(CAN2,gimbal_data.gim_ref_and_fdb.yaw_motor_input,gimbal_data.gim_ref_and_fdb.pitch_motor_input,0,0);
+	
+	Set_GM6020_IQ1(CAN2,-gimbal_data.gim_ref_and_fdb.yaw_motor_input,-gimbal_data.gim_ref_and_fdb.pitch_motor_input,0,0);
 	
 }
 

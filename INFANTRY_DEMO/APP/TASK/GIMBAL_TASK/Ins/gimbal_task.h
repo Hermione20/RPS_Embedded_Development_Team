@@ -61,8 +61,8 @@ typedef struct
   float yaw_speed_fdb;
   float pit_speed_fdb;
 
-  float yaw_motor_input;
-  float pitch_motor_input;
+  int16_t yaw_motor_input;
+  int16_t pitch_motor_input;
 } gim_ref_and_fdb_t;
 
 

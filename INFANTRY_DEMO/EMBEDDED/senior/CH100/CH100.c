@@ -39,7 +39,7 @@ void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO)
 
     GYRO->roll_Angle = dat.eul[1];
 
-    GYRO->pitch_Gyro = dat.gyr[1];
+    GYRO->pitch_Gyro = -dat.gyr[1];
     GYRO->yaw_Gyro = -dat.gyr[2];
     GYRO->roll_Gyro = dat.gyr[0];
 

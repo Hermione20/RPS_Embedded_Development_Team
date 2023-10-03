@@ -290,6 +290,11 @@
           <WinNumber>2</WinNumber>
           <ItemText>remote_flagW2,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>14</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>can2_count,0x10</ItemText>
+        </Ww>
       </WatchWindow2>
       <Tracepoint>
         <THDelay>0</THDelay>

@@ -32,18 +32,19 @@ float pitch_max = SECURITY_PITCH_MAX;
 void gimbal_parameter_Init(void)
 {
     memset(&gimbal_data, 0, sizeof(gimbal_t));
+		
 
     /*******************************pid_Init*********************************/
 #if STANDARD == 1
 #elif STANDARD == 3
     // 跟随陀螺仪下的参数
     PID_struct_init(&gimbal_data.pid_pit_Angle, POSITION_PID, 500, 4,
-                    15, 0.01f, 8); 
+                    15, 0.01f, 8); //15, 0.01f, 8
     PID_struct_init(&gimbal_data.pid_pit_speed, POSITION_PID, 27000, 20000,
-                    170, 0.001f, 60); 
+                    170, 0.001, 60); //170, 0.001f, 60
     //------------------------------------------------
     PID_struct_init(&gimbal_data.pid_yaw_Angle, POSITION_PID, 500, 4,
-                    3, 0.15f, 8); 
+                    7, 0.15f, 8); 
     PID_struct_init(&gimbal_data.pid_yaw_speed, POSITION_PID, 29000, 10000,
                     150, 0.8f, 40); 
 
@@ -176,11 +177,11 @@ void gimbal_init_handle	( void )
     int init_rotate_num = 0;
     gimbal_data.gim_ref_and_fdb.pit_angle_ref = 0.0f;
     gimbal_data.gim_ref_and_fdb.pit_angle_fdb = gimbal_gyro.pitch_Angle;
-
+		//步兵机械将电机反着装导致yaw轴电机向右编码器角度为负，与期望极性相反，需要加负号
     gimbal_data.gim_ref_and_fdb.yaw_angle_ref = 0.0f;
-    gimbal_data.gim_ref_and_fdb.yaw_angle_fdb = yaw_Encoder.ecd_angle;
+    gimbal_data.gim_ref_and_fdb.yaw_angle_fdb = -yaw_Encoder.ecd_angle;
 
-    init_rotate_num = yaw_Encoder.ecd_angle/360;
+    init_rotate_num = (-yaw_Encoder.ecd_angle)/360;
     gimbal_data.gim_ref_and_fdb.yaw_angle_ref = init_rotate_num*360;
 
    //通过劣弧转到正的角度

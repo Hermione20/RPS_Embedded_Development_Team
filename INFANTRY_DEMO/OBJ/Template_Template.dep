@@ -1,5 +1,5 @@
 Dependencies for Project 'Template', Target 'Template': (DO NOT MODIFY !)
-F (.\main.c)(0x651AAB87)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x651BD992)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -66,7 +66,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
 I (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h)(0x6519153B)
@@ -82,14 +82,14 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -236,7 +236,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -253,19 +253,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\APP\RTOS\Src\control_task.c)(0x651B832D)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\control_task.o --omf_browse ..\obj\control_task.crf --depend ..\obj\control_task.d)
+F (..\APP\RTOS\Src\control_task.c)(0x651BE95D)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\control_task.o --omf_browse ..\obj\control_task.crf --depend ..\obj\control_task.d)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -332,7 +332,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -349,14 +349,14 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -427,7 +427,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -444,19 +444,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\APP\TASK\GIMBAL_TASK\Src\gimbal_task.c)(0x651B86F3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\gimbal_task.o --omf_browse ..\obj\gimbal_task.crf --depend ..\obj\gimbal_task.d)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+F (..\APP\TASK\GIMBAL_TASK\Src\gimbal_task.c)(0x651BEAA2)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\gimbal_task.o --omf_browse ..\obj\gimbal_task.crf --depend ..\obj\gimbal_task.d)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F4ADE)
@@ -522,7 +522,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -539,7 +539,7 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
@@ -550,7 +550,7 @@ I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\APP\TASK\MODE_SWITCH_TASK\Sor\infantry_mode_switch_task.c)(0x651B7B8E)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\infantry_mode_switch_task.o --omf_browse ..\obj\infantry_mode_switch_task.crf --depend ..\obj\infantry_mode_switch_task.d)
+F (..\APP\TASK\MODE_SWITCH_TASK\Sor\infantry_mode_switch_task.c)(0x651BE6AF)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\infantry_mode_switch_task.o --omf_browse ..\obj\infantry_mode_switch_task.crf --depend ..\obj\infantry_mode_switch_task.d)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -617,7 +617,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -634,14 +634,14 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
@@ -683,8 +683,8 @@ I (..\STLIB\inc\stm32f4xx_dac.h)(0x6517ED97)
 I (..\STLIB\inc\stm32f4xx_dcmi.h)(0x6517ED97)
 I (..\STLIB\inc\stm32f4xx_fsmc.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
-F (..\EMBEDDED\senior_struct\senior.c)(0x651BC184)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\senior.o --omf_browse ..\obj\senior.crf --depend ..\obj\senior.d)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+F (..\EMBEDDED\senior_struct\senior.c)(0x651BCA8A)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\senior.o --omf_browse ..\obj\senior.crf --depend ..\obj\senior.d)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -751,7 +751,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
 I (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h)(0x6519153B)
@@ -773,7 +773,7 @@ I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -800,8 +800,8 @@ I (E:\Keil_v5\ARM\ARMCC\include\assert.h)(0x57F606B6)
 I (E:\Keil_v5\ARM\ARMCC\include\limits.h)(0x57F606B6)
 I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-F (..\EMBEDDED\CAN_BUS\CanBus.c)(0x651BBBF3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\canbus.o --omf_browse ..\obj\canbus.crf --depend ..\obj\canbus.d)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+F (..\EMBEDDED\CAN_BUS\CanBus.c)(0x651BE5A7)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\canbus.o --omf_browse ..\obj\canbus.crf --depend ..\obj\canbus.d)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -883,19 +883,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\CH100\CH100.c)(0x651871DA)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ch100.o --omf_browse ..\obj\ch100.crf --depend ..\obj\ch100.d)
+F (..\EMBEDDED\senior\CH100\CH100.c)(0x651BE2A5)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ch100.o --omf_browse ..\obj\ch100.crf --depend ..\obj\ch100.d)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -962,7 +962,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
 I (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h)(0x6519153B)
@@ -978,19 +978,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.c)(0x6519153D)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\dji_motor.o --omf_browse ..\obj\dji_motor.crf --depend ..\obj\dji_motor.d)
+F (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.c)(0x651BD991)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\dji_motor.o --omf_browse ..\obj\dji_motor.crf --depend ..\obj\dji_motor.d)
 I (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h)(0x6519153B)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1057,7 +1057,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1073,19 +1073,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\HI220\HI220.c)(0x6519322E)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\hi220.o --omf_browse ..\obj\hi220.crf --depend ..\obj\hi220.d)
+F (..\EMBEDDED\senior\HI220\HI220.c)(0x651BCDFD)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\hi220.o --omf_browse ..\obj\hi220.crf --depend ..\obj\hi220.d)
 I (..\EMBEDDED\senior\HI220\HI220.h)(0x6517ED97)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1152,7 +1152,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1168,19 +1168,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\HT430\HT430.c)(0x65192D82)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ht430.o --omf_browse ..\obj\ht430.crf --depend ..\obj\ht430.d)
+F (..\EMBEDDED\senior\HT430\HT430.c)(0x651BCDFC)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ht430.o --omf_browse ..\obj\ht430.crf --depend ..\obj\ht430.d)
 I (..\EMBEDDED\senior\HT430\HT430.h)(0x65192D80)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1247,7 +1247,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1263,19 +1263,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\JUDGE\JUDGE.c)(0x651BBBF3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\judge.o --omf_browse ..\obj\judge.crf --depend ..\obj\judge.d)
+F (..\EMBEDDED\senior\JUDGE\JUDGE.c)(0x651BCDFB)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\judge.o --omf_browse ..\obj\judge.crf --depend ..\obj\judge.d)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1342,7 +1342,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\DJI_MOTOR\DJI_MOTOR.h)(0x6519153B)
@@ -1358,19 +1358,19 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.c)(0x651BBBF3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\auto_shoot.o --omf_browse ..\obj\auto_shoot.crf --depend ..\obj\auto_shoot.d)
+F (..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.c)(0x651BCB46)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\auto_shoot.o --omf_browse ..\obj\auto_shoot.crf --depend ..\obj\auto_shoot.d)
 I (..\EMBEDDED\senior\Auto_Shoot\Auto_shoot.h)(0x6519819C)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1437,7 +1437,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1448,14 +1448,14 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -1465,7 +1465,7 @@ I (..\EMBEDDED\senior\Auto_Shoot\proto\protobuf-c.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\assert.h)(0x57F606B6)
 I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h)(0x6517ED97)
-F (..\EMBEDDED\senior\LK_TECH\LK_TECH.c)(0x65191571)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\lk_tech.o --omf_browse ..\obj\lk_tech.crf --depend ..\obj\lk_tech.d)
+F (..\EMBEDDED\senior\LK_TECH\LK_TECH.c)(0x651BDAC3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\lk_tech.o --omf_browse ..\obj\lk_tech.crf --depend ..\obj\lk_tech.d)
 I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1532,7 +1532,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1548,19 +1548,19 @@ I (..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h)(0x6517ED97)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
 I (..\APP\RTOS\Ins\control_task.h)(0x65195D76)
-F (..\EMBEDDED\senior\PM01\PM01.c)(0x651BBBF3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pm01.o --omf_browse ..\obj\pm01.crf --depend ..\obj\pm01.d)
+F (..\EMBEDDED\senior\PM01\PM01.c)(0x651BCEDF)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\USER -I ..\README -I ..\HEADFILE -I ..\STLIB\inc -I ..\STLIB\src -I ..\APP\BAL\Ins -I ..\APP\RTOS\Ins -I ..\APP\TASK\CHASSIS_TASK\Inc -I ..\APP\TASK\GIMBAL_TASK\Ins -I ..\APP\TASK\SHOOT_TASK\Ins -I ..\BSP\can\Inc -I ..\BSP\delay\Inc -I ..\BSP\usart\Inc -I ..\BSP\sys\Inc -I ..\BSP\LED -I ..\EMBEDDED\CAN_BUS -I ..\EMBEDDED\senior\Auto_Shoot -I ..\EMBEDDED\senior\Auto_Shoot\proto -I ..\EMBEDDED\senior\Auto_Shoot\Protocol -I ..\EMBEDDED\senior\CH100 -I ..\EMBEDDED\senior\DJI_MOTOR -I ..\EMBEDDED\senior\HI220 -I ..\EMBEDDED\senior\HT430 -I ..\EMBEDDED\senior\JUDGE -I ..\EMBEDDED\senior\LK_TECH -I ..\EMBEDDED\senior\PM01 -I ..\EMBEDDED\senior_struct -I ..\EMBEDDED\senior\REMOTE -I ..\APP\TASK\MODE_SWITCH_TASK\Inc -I ..\BSP\timer\Inc -I ..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT-I.\RTE\_Template-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include-IE:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\PrivateInclude-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F405xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\pm01.o --omf_browse ..\obj\pm01.crf --depend ..\obj\pm01.d)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\HEADFILE\public.h)(0x651BBBF3)
 I (..\USER\stm32f4xx.h)(0x6517ED97)
@@ -1627,7 +1627,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1643,14 +1643,14 @@ I (..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h)(0x6517ED97)
 I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -1722,7 +1722,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1738,14 +1738,14 @@ I (..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h)(0x6517ED97)
 I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -1817,7 +1817,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1833,14 +1833,14 @@ I (..\EMBEDDED\senior\Auto_Shoot\proto\Recieve.pb-c.h)(0x6517ED97)
 I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -1912,7 +1912,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -1929,13 +1929,13 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -2006,7 +2006,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\filtering_functions
 I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_functions.h)(0x626F4ADE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -2023,14 +2023,14 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -2140,7 +2140,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -2157,12 +2157,12 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -2234,7 +2234,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -2251,13 +2251,13 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
 I (..\BSP\timer\Inc\timer.h)(0x65195F26)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
@@ -2329,7 +2329,7 @@ I (E:\Keil_v5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\DSP\Include\dsp\quaternion_math_fun
 I (..\BSP\delay\Inc\delay.h)(0x6517ED97)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (..\APP\BAL\Ins\oldpid.h)(0x6517ED97)
-I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BBBF3)
+I (..\EMBEDDED\CAN_BUS\CanBus.h)(0x651BC7D6)
 I (..\HEADFILE\main.h)(0x651649B1)
 I (..\EMBEDDED\senior\CH100\CH100.h)(0x6517ED97)
 I (..\EMBEDDED\senior\JUDGE\JUDGE.h)(0x6517ED97)
@@ -2346,13 +2346,13 @@ I (..\EMBEDDED\senior\LK_TECH\LK_TECH.h)(0x6519182E)
 I (..\EMBEDDED\senior\REMOTE\REMOTE.h)(0x651BBBF3)
 I (..\EMBEDDED\senior\PM01\PM01.h)(0x6517ED97)
 I (..\EMBEDDED\senior\CAN_CHASSIS_TRANSMIT\can_chassis_transmit.h)(0x651BC08C)
-I (..\EMBEDDED\senior_struct\senior.h)(0x651BBFD6)
+I (..\EMBEDDED\senior_struct\senior.h)(0x651BC48E)
 I (..\USER\BSP.h)(0x6517ED97)
 I (..\BSP\can\Inc\can.h)(0x65192D85)
 I (..\BSP\usart\Inc\usart.h)(0x651B7CAF)
 I (..\BSP\LED\led.h)(0x6517ED97)
 I (..\BSP\sys\Inc\sys.h)(0x6517ED97)
-I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651B73FC)
+I (..\APP\TASK\GIMBAL_TASK\Ins\gimbal_task.h)(0x651BDBFB)
 I (..\APP\TASK\GIMBAL_TASK\Ins\buff_karman_filter.h)(0x65198126)
 I (..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H)(0x651AB15A)
 I (..\APP\TASK\MODE_SWITCH_TASK\Inc\infantry_mode_switch_task.h)(0x651B7B2F)
