@@ -1,0 +1,8 @@
+syntax="proto3";
+package host_to_device;
+message Frame{
+	float Target_Pitch_=1;
+	float Target_Yaw_=2;
+	int32 X_=3;
+	int32 Y_=4;
+}
