@@ -52,7 +52,7 @@
 #define BSP_USART2_DMA_RX_BUF_LEN 100
 #define CH100_RX_BUFF_SIZE 100
 #define UART4_RX_BUF_LENGTH   100
-#define UART4_TX_BUF_LENGTH   100
+#define UART4_TX_BUF_LENGTH	100
 #define BSP_USART6_DMA_RX_BUF_LEN 100
 #define  RC_FRAME_LENGTH                            18u
 #define PITCH_MAX 35.0f

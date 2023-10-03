@@ -1,8 +1,5 @@
 #include "infantry_gimbal_task.h"
 
-
-
-
 gimbal_t gimbal_data;
 
 /****************************big_or_small_buff_var************************************/

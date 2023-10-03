@@ -58,11 +58,13 @@ typedef struct pid_t
   uint32_t pid_mode;
   uint32_t max_out;
   uint32_t integral_limit;
-
+	
   void (*f_param_init)(struct pid_t *pid, 
                        uint32_t      pid_mode,
                        uint32_t      max_output,
                        uint32_t      inte_limit,
+											 float      output_deadband,
+
                        float         p,
                        float         i,
                        float         d);
@@ -70,19 +72,16 @@ typedef struct pid_t
  
 } pid_t;
 
-
-
-
-
 void PID_struct_init(
     pid_t*   pid,
     uint32_t mode,
     uint32_t maxout,
     uint32_t intergral_limit,
-
+		float    output_deadband,
     float kp,
     float ki,
-    float kd);
+    float kd				);
+
 
 float pid_calc(pid_t *pid, float fdb, float ref);
 float pid_calc1(pid_t *pid, float get, float set);
@@ -150,8 +149,24 @@ extern pid_t pid_front_distance;
 extern pid_t pid_right_distance;
 extern pid_t pid_angle_distance;
 extern pid_t pid_spring[2];
+
+//舵轮底盘双环
 extern pid_t pid_cha_6020_angle[4];
 extern pid_t pid_cha_3508_angle[4];
 extern pid_t pid_cha_6020_speed[4];
 extern pid_t pid_cha_3508_speed[4];
+
+//摩擦轮，发射机构通用
+extern pid_t pid_friction_whell_speed[4];
+
+//42mm发射机构
+extern pid_t pid_42mm_poke_speed;//下拨盘速度环
+
+extern pid_t pid_42mm_poke2_angle;//上波盘角度环
+extern pid_t pid_42mm_poke2_speed;//上波盘速度环
+
+//17mm发射机构
+extern pid_t pid_17mm_poke_angle;//拨盘角度环
+extern pid_t pid_17mm_poke_speed;//拨盘速度环
+
 #endif

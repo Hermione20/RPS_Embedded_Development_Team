@@ -2,16 +2,15 @@
 #define __SENIOR_H
 #include "main.h"
 
-
+//云台电机初始位置
 #define  GMPitchEncoder_Offset 0
-//yaw轴电机初始位置
 #define  GMYawEncoder_Offset   4758
+
 //底盘航向轴电机初始位置
 #define  GM1Encoder_Offset   1437
 #define  GM2Encoder_Offset   8042
 #define  GM3Encoder_Offset   4141
 #define  GM4Encoder_Offset   6732
-
 
 
 /********************general chassis encoder********************************/

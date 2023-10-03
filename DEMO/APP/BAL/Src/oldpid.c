@@ -169,16 +169,16 @@ void PID_struct_init(
     uint32_t mode,
     uint32_t maxout,
     uint32_t intergral_limit,
-
+		float    output_deadband,
     float kp,
     float ki,
     float kd)
 {
   pid->f_param_init = pid_param_init;
-//  pid->f_pid_reset  = pid_reset;
+  pid->f_pid_reset  = pid_reset;
 
-  pid->f_param_init(pid, mode, maxout, intergral_limit, kp, ki, kd);
-//  pid->f_pid_reset(pid, kp, ki, kd);
+  pid->f_param_init(pid, mode, maxout, intergral_limit,output_deadband, kp, ki, kd);
+  pid->f_pid_reset(pid, kp, ki, kd);
 }
 
 
@@ -212,70 +212,82 @@ float pid_double_loop_cal(pid_t *Outer_loop_pid,
 
 
 
-//è‡ªç„æ¨¡å¼å¤–ç¯çš„å‚æ•°
-pid_t pid_yaw_follow    = {0};
-pid_t pid_pit_follow    = {0};
-pid_t pid_pit_speed_follow    = {0};
-pid_t pid_yaw_speed_follow    = {0};
+//×ÔÃéÄ£Ê½Íâ»·µÄ²ÎÊı
+pid_t pid_yaw_follow    						= {0};
+pid_t pid_pit_follow    						= {0};
+pid_t pid_pit_speed_follow    			= {0};
+pid_t pid_yaw_speed_follow    			= {0};
+
+//Ğ¡·ûÏÂµÄPID²ÎÊı
+pid_t pid_yaw_small_buff    				= {0};
+pid_t pid_pit_small_buff    				= {0};
+pid_t pid_pit_speed_small_buff    	= {0};
+pid_t pid_yaw_speed_small_buff    	= {0};
+
+pid_t pid_yaw_small_buff1    				= {0};
+pid_t pid_pit_small_buff1    				= {0};
+pid_t pid_pit_speed_small_buff1   	= {0};
+pid_t pid_yaw_speed_small_buff1   	= {0};
+
+//´ó·ûÏÂµÄPID²ÎÊı	
+pid_t pid_yaw_big_buff							= {0};
+pid_t pid_pit_big_buff							= {0};
+pid_t pid_pit_speed_big_buff    		= {0};
+pid_t pid_yaw_speed_big_buff    		= {0};
+
+pid_t pid_yaw_big_buff1    					= {0};
+pid_t pid_pit_big_buff1    					= {0};
+pid_t pid_pit_speed_big_buff1    		= {0};
+pid_t pid_yaw_speed_big_buff1    		= {0};
+
+//µõÉäÏÂµÄPID²ÎÊı	
+pid_t pid_yaw_auto_angle    				= {0};
+pid_t pid_pit_auto_angle    				= {0};
+pid_t pid_pit_speed_auto_angle    	= {0};
+pid_t pid_yaw_speed_auto_angle    	= {0};
 
 
-//å°ç¬¦ä¸‹çš„PIDå‚æ•°
-pid_t pid_yaw_small_buff    = {0};
-pid_t pid_pit_small_buff    = {0};
-pid_t pid_pit_speed_small_buff    = {0};
-pid_t pid_yaw_speed_small_buff    = {0};
-
-pid_t pid_yaw_small_buff1    = {0};
-pid_t pid_pit_small_buff1    = {0};
-pid_t pid_pit_speed_small_buff1    = {0};
-pid_t pid_yaw_speed_small_buff1    = {0};
-
-//å¤§ç¬¦ä¸‹çš„PIDå‚æ•°
-pid_t pid_yaw_big_buff    = {0};
-pid_t pid_pit_big_buff    = {0};
-pid_t pid_pit_speed_big_buff    = {0};
-pid_t pid_yaw_speed_big_buff    = {0};
-
-pid_t pid_yaw_big_buff1    = {0};
-pid_t pid_pit_big_buff1    = {0};
-pid_t pid_pit_speed_big_buff1    = {0};
-pid_t pid_yaw_speed_big_buff1    = {0};
-
-//åŠå°„ä¸‹çš„PIDå‚æ•°
-pid_t pid_yaw_auto_angle    = {0};
-pid_t pid_pit_auto_angle    = {0};
-pid_t pid_pit_speed_auto_angle    = {0};
-pid_t pid_yaw_speed_auto_angle    = {0};
+//×Ô¶¯²¹µ¯µÄPID²ÎÊı	
+pid_t pid_yaw_follow_chassis_angle	= {0};
+pid_t pid_yaw_follow_chassis_speed	= {0};
 
 
-//è‡ªåŠ¨è¡¥å¼¹çš„PIDå‚æ•°
-pid_t pid_yaw_follow_chassis_angle    = {0};
-pid_t pid_yaw_follow_chassis_speed    = {0};
+//ÆÕÍ¨Ä£Ê½PID²ÎÊı
+pid_t pid_yaw           					= {0};
+pid_t pid_pit           					= {0};
+pid_t pid_auto_aim_yaw  					= {0};
+pid_t pid_auto_aim_pit  					= {0};
+pid_t pid_yaw_speed     					= {0};
+pid_t pid_pit_speed     					= {0};
+pid_t pid_spd[4]        					= {0};
+pid_t pid_chassis_angle 					= {0};
+pid_t pid_trigger       					= {0};
+pid_t pid_trigger_speed 					= {0};
+pid_t pid_trigger_second_speed 		= {0};
+pid_t pid_imu_tmp       					= {0};
+pid_t pid_voltage       					= {0};
+pid_t pid_software_limit					= {0};
+pid_t pid_speed_bias    					= {0};
+pid_t pid_front_distance					= {0};
+pid_t pid_right_distance					= {0};
+pid_t pid_angle_distance					= {0};
+pid_t pid_spring[2] 							= {0};
 
+//¶æÂÖµ×ÅÌË«»·
+pid_t pid_cha_6020_angle[4]				= {0};
+pid_t pid_cha_3508_angle[4]				= {0};
+pid_t pid_cha_6020_speed[4]				= {0};
+pid_t pid_cha_3508_speed[4]				= {0};
 
-//æ™®é€šæ¨¡å¼PIDå‚æ•°
-pid_t pid_yaw           = {0};
-pid_t pid_pit           = {0};
-pid_t pid_auto_aim_yaw  = {0};
-pid_t pid_auto_aim_pit  = {0};
-pid_t pid_yaw_speed     = {0};
-pid_t pid_pit_speed     = {0};
-pid_t pid_spd[4]        = {0};
-pid_t pid_chassis_angle = {0};
-pid_t pid_trigger       = {0};
-pid_t pid_trigger_speed = {0};
-pid_t pid_trigger_second_speed = {0};
-pid_t pid_rotate[4]     = {0};
-pid_t pid_imu_tmp       = {0};
-pid_t pid_voltage       = {0};
-pid_t pid_software_limit= {0};
-pid_t pid_speed_bias    = {0};
-pid_t pid_front_distance= {0};
-pid_t pid_right_distance= {0};
-pid_t pid_angle_distance= {0};
-pid_t pid_spring[2] = {0};
+//Ä¦²ÁÂÖ£¬·¢Éä»ú¹¹Í¨ÓÃ
+pid_t pid_friction_whell_speed[4] = {0};
 
-pid_t pid_cha_6020_angle[4]={0};
-pid_t pid_cha_3508_angle[4]={0};
-pid_t pid_cha_6020_speed[4]={0};
-pid_t pid_cha_3508_speed[4]={0};
+//42mm·¢Éä»ú¹¹
+pid_t pid_42mm_poke_speed 	= {0};//ÏÂ²¦ÅÌËÙ¶È»·
+
+pid_t pid_42mm_poke2_angle 	= {0};//ÉÏ²¨ÅÌ½Ç¶È»·
+pid_t pid_42mm_poke2_speed	= {0};//ÉÏ²¨ÅÌËÙ¶È»·
+
+//17mm·¢Éä»ú¹¹
+pid_t pid_17mm_poke_angle		=	{0};//²¦ÅÌ½Ç¶È»·
+pid_t pid_17mm_poke_speed		=	{0};//²¦ÅÌËÙ¶È»·

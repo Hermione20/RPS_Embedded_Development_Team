@@ -8,12 +8,12 @@ void Can1ReceiveMsgProcess(CanRxMsg * msg)
     can1_count++;
     switch (msg->StdId)
     {
-    case GIMBAL_YAW_MOTOR:
-		{
-//			GM6020EncoderTask(can2_count,&yaw_Encoder,msg,GMYawEncoder_Offset);
-		}break;
-    default:
-        break;
+			case GIMBAL_YAW_MOTOR:
+			{
+//				GM6020EncoderTask(can2_count,&yaw_Encoder,msg,GMYawEncoder_Offset);
+			}break;
+			default:
+					break;
     }
 }
 
@@ -22,13 +22,13 @@ void Can2ReceiveMsgProcess(CanRxMsg * msg)
     can2_count++;
     switch (msg->StdId)
     {
-    case GIMBAL_YAW_MOTOR:
-			GM6020EncoderTask(can2_count,&yaw_Encoder,msg,GMYawEncoder_Offset);
-        /* code */
-        break;
-
-    default:
-        break;
+			case GIMBAL_YAW_MOTOR:
+			{
+				GM6020EncoderTask(can2_count,&yaw_Encoder,msg,GMYawEncoder_Offset);
+			}
+				break;
+			default:
+				break;
     }
 }
 
@@ -205,9 +205,7 @@ void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint8_t id)
 	txmsg.Data[6] = 0x00;
 	txmsg.Data[7] = 0x00;
 	
-	CAN_Transmit(CANx,&txmsg);
-
-	
+	CAN_Transmit(CANx,&txmsg);	
 }
 
 /**********************≥¨º∂µÁ»›**************************/

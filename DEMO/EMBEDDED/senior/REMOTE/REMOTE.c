@@ -1,7 +1,5 @@
 #include "REMOTE.h"
 
-
-
 /***********************************Ò£¿ØÆ÷½ÓÊÕ*************************************************************/
 void RemoteDataPrcess(uint8_t *pData)
 {
@@ -34,8 +32,7 @@ void RemoteDataPrcess(uint8_t *pData)
 
 
 	/*****************************************************************/
-}
-
+} 
 
 void SetInputMode(RC_Ctl_t *remote)
 {
@@ -52,9 +49,7 @@ void SetInputMode(RC_Ctl_t *remote)
   else if(remote->rc.s2 == 2)
     {
       remote->inputmode = STOP;
-    
     }
-
 }
 
 
@@ -153,7 +148,6 @@ void keyborad_process(RC_Ctl_t *remote)
 
 uint8_t T_Key_procces(u8 flag,u8 *a,u8 *i)
 {
-	
 	if (flag)
 	{
 	  if ( *a == 0)

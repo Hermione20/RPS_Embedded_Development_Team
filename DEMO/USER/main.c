@@ -4,7 +4,7 @@ int i;
 int main()
 {
    BSP_Init();
-	 PID_struct_init(&pid_yaw ,POSITION_PID ,15000,10000,3,2,0);
+	 PID_struct_init(&pid_yaw ,POSITION_PID ,15000,10000,0, 3, 2, 0);
 	 
 	
 	while(1)
