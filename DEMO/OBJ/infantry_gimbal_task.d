@@ -66,6 +66,7 @@
 ..\obj\infantry_gimbal_task.o: ..\BSP\delay\Inc\delay.h
 ..\obj\infantry_gimbal_task.o: ..\HEADFILE\public.h
 ..\obj\infantry_gimbal_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\infantry_gimbal_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\infantry_gimbal_task.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\infantry_gimbal_task.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\infantry_gimbal_task.o: ..\HEADFILE\main.h

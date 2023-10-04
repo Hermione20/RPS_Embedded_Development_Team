@@ -66,6 +66,7 @@
 ..\obj\mode_switch_task.o: ..\BSP\delay\Inc\delay.h
 ..\obj\mode_switch_task.o: ..\HEADFILE\public.h
 ..\obj\mode_switch_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\mode_switch_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\mode_switch_task.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\mode_switch_task.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\mode_switch_task.o: ..\HEADFILE\main.h

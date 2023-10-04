@@ -66,6 +66,7 @@
 ..\obj\auto_shoot.o: ..\BSP\delay\Inc\delay.h
 ..\obj\auto_shoot.o: ..\HEADFILE\public.h
 ..\obj\auto_shoot.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\auto_shoot.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\auto_shoot.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\auto_shoot.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\auto_shoot.o: ..\HEADFILE\main.h

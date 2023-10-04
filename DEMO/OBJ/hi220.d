@@ -66,6 +66,7 @@
 ..\obj\hi220.o: ..\BSP\delay\Inc\delay.h
 ..\obj\hi220.o: ..\HEADFILE\public.h
 ..\obj\hi220.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\hi220.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\hi220.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\hi220.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\hi220.o: ..\HEADFILE\main.h

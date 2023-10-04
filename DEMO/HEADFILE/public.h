@@ -1,4 +1,4 @@
-#ifndef __PUBLIC_H
+#ifndef __PUBLIC_H  
 #define __PUBLIC_H
 
 
@@ -42,7 +42,7 @@ else if(val>=max)\
 #include <delay.h>
 #include <string.h>
 #include <stdarg.h>
-
+#include <stdlib.h>
 
 /*************Algorithm********************/
 #include "oldpid.h"

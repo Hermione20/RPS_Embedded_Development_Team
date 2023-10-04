@@ -66,6 +66,7 @@
 ..\obj\usart.o: ..\BSP\delay\Inc\delay.h
 ..\obj\usart.o: ..\HEADFILE\public.h
 ..\obj\usart.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\usart.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\usart.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\usart.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\usart.o: ..\HEADFILE\main.h

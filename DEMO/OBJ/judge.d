@@ -66,6 +66,7 @@
 ..\obj\judge.o: ..\BSP\delay\Inc\delay.h
 ..\obj\judge.o: ..\HEADFILE\public.h
 ..\obj\judge.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\judge.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\judge.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\judge.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\judge.o: ..\HEADFILE\main.h

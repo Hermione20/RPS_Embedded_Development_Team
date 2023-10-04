@@ -66,6 +66,7 @@
 ..\obj\shoot_task.o: ..\BSP\delay\Inc\delay.h
 ..\obj\shoot_task.o: ..\HEADFILE\public.h
 ..\obj\shoot_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\shoot_task.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\shoot_task.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\shoot_task.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\shoot_task.o: ..\HEADFILE\main.h

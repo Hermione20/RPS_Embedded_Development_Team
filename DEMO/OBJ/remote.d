@@ -66,6 +66,7 @@
 ..\obj\remote.o: ..\BSP\delay\Inc\delay.h
 ..\obj\remote.o: ..\HEADFILE\public.h
 ..\obj\remote.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\remote.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\remote.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\remote.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\remote.o: ..\HEADFILE\main.h

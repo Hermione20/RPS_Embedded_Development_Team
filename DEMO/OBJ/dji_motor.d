@@ -66,6 +66,7 @@
 ..\obj\dji_motor.o: ..\BSP\delay\Inc\delay.h
 ..\obj\dji_motor.o: ..\HEADFILE\public.h
 ..\obj\dji_motor.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\dji_motor.o: D:\Users\G\RM\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\dji_motor.o: ..\APP\BAL\Ins\oldpid.h
 ..\obj\dji_motor.o: ..\EMBEDDED\CAN_BUS\CanBus.h
 ..\obj\dji_motor.o: ..\HEADFILE\main.h
