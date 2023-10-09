@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "hero_mode_switch_task.h": "c",
+        "public.h": "c"
+    }
+}
