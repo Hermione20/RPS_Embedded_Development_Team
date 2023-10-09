@@ -12,31 +12,31 @@ float pitch_max = 0;
     float Pitch_min = HERO_PITCH_MIN;
     float Pitch_max = HERO_PITCH_MAX;
     
-    #define VISION_PITCH_MIN -25  //视觉的传感器视角往往都是世界坐标系
-    #define VISION_PITCH_MAX 30
+    #define VISION_PITCH_MIN            -25  //视觉的传感器视角往往都是世界坐标系
+    #define VISION_PITCH_MAX            30
 
-    #define YAW_INIT_ANGLE_FDB   -yaw_Encoder.ecd_angle
-    #define PITCH_INIT_ANGLE_FDB -gimbal_gyro.roll_Angle
-    #define YAW_INIT_SPEED_FDB   gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB -gimbal_gyro.roll_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_INIT_ANGLE_FDB        -gimbal_gyro.roll_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        -gimbal_gyro.roll_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB Pitch_Encoder.ecd_angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB -gimbal_gyro.roll_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             Pitch_Encoder.ecd_angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             -gimbal_gyro.roll_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB -gimbal_gyro.roll_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB -gimbal_gyro.roll_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      -gimbal_gyro.roll_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      -gimbal_gyro.roll_Gyro
 
-    #define YAW_AUTO_ANGLE_FDB -yaw_Encoder.ecd_angle
-    #define PITCH_AUTO_ANGLE_FDB Pitch_Encoder.ecd_angle
-    #define YAW_AUTO_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_AUTO_SPEED_FDB -gimbal_gyro.roll_Gyro
+    #define YAW_AUTO_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_AUTO_ANGLE_FDB        Pitch_Encoder.ecd_angle
+    #define YAW_AUTO_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_AUTO_SPEED_FDB        -gimbal_gyro.roll_Gyro
 
-    #define YAW_MOTOR_POLARITY -1
-    #define PITCH_MOTOR_POLARITY 1
+    #define YAW_MOTOR_POLARITY          -1
+    #define PITCH_MOTOR_POLARITY        1
 
     float auto_aim_Yaw_remain = 0;
     float auto_aim_pitch_remain = 0;
@@ -45,26 +45,26 @@ float pitch_max = 0;
     float Pitch_min = INFANTRY_PITCH_MIN;
     float Pitch_max = INFANTRY_PITCH_MAX;
 
-    #define VISION_PITCH_MIN -25
-    #define VISION_PITCH_MAX 30
+    #define VISION_PITCH_MIN            -25
+    #define VISION_PITCH_MAX            30
 
-    #define YAW_INIT_ANGLE_FDB -yaw_Encoder.ecd_angle   //步兵机械将电机反着装导致yaw轴电机向右编码器角度为负，与期望极性相反，需要加负号
-    #define PITCH_INIT_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_INIT_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle   //步兵机械将电机反着装导致yaw轴电机向右编码器角度为负，与期望极性相反，需要加负号
+    #define PITCH_INIT_ANGLE_FDB        gimbal_gyro.pitch_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        gimbal_gyro.pitch_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             gimbal_gyro.pitch_Angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             gimbal_gyro.pitch_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      gimbal_gyro.pitch_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      gimbal_gyro.pitch_Gyro
 
-    #define YAW_MOTOR_POLARITY -1
-    #define PITCH_MOTOR_POLARITY -1
+    #define YAW_MOTOR_POLARITY          -1
+    #define PITCH_MOTOR_POLARITY        -1
 
     float Buff_Yaw_remain = -0.4;
     float Buff_pitch_remain=-0.5;
@@ -76,26 +76,26 @@ float pitch_max = 0;
     float Pitch_min = INFANTRY_PITCH_MIN;
     float Pitch_max = INFANTRY_PITCH_MAX;
 
-    #define VISION_PITCH_MIN -25
-    #define VISION_PITCH_MAX 30
+    #define VISION_PITCH_MIN            -25
+    #define VISION_PITCH_MAX            30
 
-    #define YAW_INIT_ANGLE_FDB -yaw_Encoder.ecd_angle
-    #define PITCH_INIT_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_INIT_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_INIT_ANGLE_FDB        gimbal_gyro.pitch_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        gimbal_gyro.pitch_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             gimbal_gyro.pitch_Angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             gimbal_gyro.pitch_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      gimbal_gyro.pitch_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      gimbal_gyro.pitch_Gyro
 
-    #define YAW_MOTOR_POLARITY -1
-    #define PITCH_MOTOR_POLARITY -1
+    #define YAW_MOTOR_POLARITY          -1
+    #define PITCH_MOTOR_POLARITY        -1
 
     float Buff_Yaw_remain = -0.2;//向右为正
     float Buff_pitch_remain=6.15;//5.2;
@@ -107,26 +107,26 @@ float pitch_max = 0;
     float Pitch_min = INFANTRY_PITCH_MIN;
     float Pitch_max = INFANTRY_PITCH_MAX;
 
-    #define VISION_PITCH_MIN -25
-    #define VISION_PITCH_MAX 30
+    #define VISION_PITCH_MIN            -25
+    #define VISION_PITCH_MAX            30
 
-    #define YAW_INIT_ANGLE_FDB -yaw_Encoder.ecd_angle
-    #define PITCH_INIT_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_INIT_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_INIT_ANGLE_FDB        gimbal_gyro.pitch_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        gimbal_gyro.pitch_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             gimbal_gyro.pitch_Angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             gimbal_gyro.pitch_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      gimbal_gyro.pitch_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      gimbal_gyro.pitch_Gyro
 
-    #define YAW_MOTOR_POLARITY -1
-    #define PITCH_MOTOR_POLARITY -1
+    #define YAW_MOTOR_POLARITY          -1
+    #define PITCH_MOTOR_POLARITY        -1
 
     float Buff_Yaw_remain =1;//向右为正
     float Buff_pitch_remain=0.8 ;//5.2;
@@ -141,23 +141,23 @@ float pitch_max = 0;
     #define VISION_PITCH_MIN -25
     #define VISION_PITCH_MAX 30
 
-    #define YAW_INIT_ANGLE_FDB -yaw_Encoder.ecd_angle
-    #define PITCH_INIT_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_INIT_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_INIT_ANGLE_FDB        gimbal_gyro.pitch_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        gimbal_gyro.pitch_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             gimbal_gyro.pitch_Angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             gimbal_gyro.pitch_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      gimbal_gyro.pitch_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      gimbal_gyro.pitch_Gyro
 
-    #define YAW_MOTOR_POLARITY 1
-    #define PITCH_MOTOR_POLARITY 1
+    #define YAW_MOTOR_POLARITY          1
+    #define PITCH_MOTOR_POLARITY        1
 
     float auto_aim_Yaw_remain = 0;
     float auto_aim_pitch_remain = 0;
@@ -166,26 +166,26 @@ float pitch_max = 0;
     float Pitch_min = SECURITY_PITCH_MIN;
     float Pitch_max = SECURITY_PITCH_MAX;
 
-    #define VISION_PITCH_MIN -25
-    #define VISION_PITCH_MAX 30
+    #define VISION_PITCH_MIN            -25
+    #define VISION_PITCH_MAX            30
 
-    #define YAW_INIT_ANGLE_FDB -yaw_Encoder.ecd_angle
-    #define PITCH_INIT_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_INIT_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_INIT_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_INIT_ANGLE_FDB          -yaw_Encoder.ecd_angle
+    #define PITCH_INIT_ANGLE_FDB        gimbal_gyro.pitch_Angle
+    #define YAW_INIT_SPEED_FDB          gimbal_gyro.yaw_Gyro
+    #define PITCH_INIT_SPEED_FDB        gimbal_gyro.pitch_Gyro
 
-    #define YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define YAW_ANGLE_FDB               gimbal_gyro.yaw_Angle
+    #define PITCH_ANGLE_FDB             gimbal_gyro.pitch_Angle
+    #define YAW_SPEED_FDB               gimbal_gyro.yaw_Gyro
+    #define PITCH_SPEED_FDB             gimbal_gyro.pitch_Gyro
 
-    #define VISION_YAW_ANGLE_FDB gimbal_gyro.yaw_Angle
-    #define VISION_PITCH_ANGLE_FDB gimbal_gyro.pitch_Angle
-    #define VISION_YAW_SPEED_FDB gimbal_gyro.yaw_Gyro
-    #define VISION_PITCH_SPEED_FDB gimbal_gyro.pitch_Gyro
+    #define VISION_YAW_ANGLE_FDB        gimbal_gyro.yaw_Angle
+    #define VISION_PITCH_ANGLE_FDB      gimbal_gyro.pitch_Angle
+    #define VISION_YAW_SPEED_FDB        gimbal_gyro.yaw_Gyro
+    #define VISION_PITCH_SPEED_FDB      gimbal_gyro.pitch_Gyro
 
-    #define YAW_MOTOR_POLARITY -1
-    #define PITCH_MOTOR_POLARITY -1
+    #define YAW_MOTOR_POLARITY          -1
+    #define PITCH_MOTOR_POLARITY        -1
 
     float auto_aim_Yaw_remain = 0;
     float auto_aim_pitch_remain = 0;

@@ -50,9 +50,11 @@ void hero_mode_switch_task(void)
         {
 
             chassis.ctrl_mode = CHASSIS_ROTATE;
+						chassis.ChassisSpeed_Ref.rotate_ref = 120;
         }
         else
         {
+						chassis.ChassisSpeed_Ref.rotate_ref = 0;
             chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
         }
         /****************************µ×ÅÌÄ¬ÈÏ×´Ì¬ÉèÖÃ**********************************************/

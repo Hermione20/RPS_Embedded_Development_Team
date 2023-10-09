@@ -5,7 +5,7 @@
 
 /* Variables_definination-----------------------------------------------------------------------------------------------*/
  
-ChassisSpeed_Ref_t ChassisSpeedRef;
+
 Chassis_angle_t 	 Chassis_angle;
 chassis_t 		 		 chassis;
 
@@ -449,8 +449,8 @@ void follow_gimbal_handle(void)
 		else
 		{Chassis_angle.yaw_angle__pi_pi=Chassis_angle.yaw_angle_0_2pi;}
 			
-	chassis.vy = ChassisSpeedRef.left_right_ref;
-  chassis.vx = ChassisSpeedRef.forward_back_ref;
+	chassis.vy = chassis.ChassisSpeed_Ref.left_right_ref;
+  chassis.vx = chassis.ChassisSpeed_Ref.forward_back_ref;
 	chassis.vw = pid_calc(&pid_chassis_angle,Chassis_angle.yaw_encoder_ecd_angle,0);
 
 }
@@ -470,8 +470,8 @@ void separate_gimbal_handle(void)
 #elif CHASSIS_TYPE == 2
 void separate_gimbal_handle(void)
 {
-	chassis.vy = ChassisSpeedRef.left_right_ref;
-  chassis.vx = ChassisSpeedRef.forward_back_ref;
+	chassis.vy = chassis.ChassisSpeed_Ref.left_right_ref;
+  chassis.vx = chassis.ChassisSpeed_Ref.forward_back_ref;
 	chassis.vw = 0;
 }
 #endif
@@ -511,18 +511,19 @@ else if(get_speedw_flag==1)
 #elif CHASSIS_TYPE == 2
 void rotate_follow_gimbal_handle(void)
 {
+	
+	
+  chassis.sin_chassis_angle = sinf(Chassis_angle.yaw_encoder_ecd_angle*ANGLE_TO_RAD);
+  chassis.cos_chassis_angle = cosf(Chassis_angle.yaw_encoder_ecd_angle*ANGLE_TO_RAD);
 
-  chassis.sin_chassis_angle = arm_sin_f32(Chassis_angle.yaw_encoder_ecd_angle*ANGLE_TO_RAD);
-  chassis.cos_chassis_angle = arm_cos_f32(Chassis_angle.yaw_encoder_ecd_angle*ANGLE_TO_RAD);
-
-  chassis.foward_back_to_foward_back_rotate_speed = ChassisSpeedRef.forward_back_ref*chassis.cos_chassis_angle;
-  chassis.foward_back_to_left_right_rotate_speed  = -ChassisSpeedRef.forward_back_ref*chassis.sin_chassis_angle;
-  chassis.left_right_to_foward_back_rotate_speed  = ChassisSpeedRef.left_right_ref*chassis.sin_chassis_angle;
-  chassis.left_right_to_left_right_rotate_speed   = ChassisSpeedRef.left_right_ref*chassis.cos_chassis_angle;
+  chassis.foward_back_to_foward_back_rotate_speed = chassis.ChassisSpeed_Ref.forward_back_ref*chassis.cos_chassis_angle;
+  chassis.foward_back_to_left_right_rotate_speed  = -chassis.ChassisSpeed_Ref.forward_back_ref*chassis.sin_chassis_angle;
+  chassis.left_right_to_foward_back_rotate_speed  = chassis.ChassisSpeed_Ref.left_right_ref*chassis.sin_chassis_angle;
+  chassis.left_right_to_left_right_rotate_speed   = chassis.ChassisSpeed_Ref.left_right_ref*chassis.cos_chassis_angle;
 
   chassis.vy = chassis.foward_back_to_left_right_rotate_speed  + chassis.left_right_to_left_right_rotate_speed;
   chassis.vx = chassis.foward_back_to_foward_back_rotate_speed + chassis.left_right_to_foward_back_rotate_speed;
-
+	chassis.vw = chassis.ChassisSpeed_Ref.rotate_ref;
 //出事的话加负号
 }
 #endif
@@ -546,13 +547,13 @@ void rotate_follow_gimbal_handle(void)
 //麦轮
 #elif CHASSIS_TYPE == 2
  void reverse_follow_gimbal_handle(void)
-{;}
+{}
 #endif
 
 	
 	
 #if CHASSIS_TYPE == 2
-void mecanum_calc(float vx, float vy, float vw, float *speed)
+void mecanum_calc(float vx, float vy, float vw, int16_t *speed)
 {
   int16_t wheel_rpm[4];
   float   max = 0;
@@ -831,6 +832,7 @@ for (int i = 0; i < 4; i++)
  for (int i = 0; i < 4; i++)
 		{ 
 		chassis.cha_pid_3508.speed_fdb[i]=Mecanum_chassis.Driving_Encoder[i].filter_rate; 
+		pid_calc(&pid_cha_3508_speed[i],chassis.cha_pid_3508.speed_fdb[i],chassis.cha_pid_3508.speed_ref[i]);
 		}
 for (int i = 0; i < 4; i++)
     {   
@@ -898,8 +900,8 @@ void get_remote_set()
 		Chassis_angle.yaw_encoder_ecd_angle=yaw_Encoder.ecd_angle;
 		Chassis_angle.yaw_angle_0_2pi=convert_ecd_angle_to_0_2pi(Chassis_angle.yaw_encoder_ecd_angle,Chassis_angle.yaw_angle_0_2pi);
 	
-		chassis.vx=ChassisSpeedRef.forward_back_ref;
-		chassis.vy=ChassisSpeedRef.left_right_ref;
+		chassis.vx=chassis.ChassisSpeed_Ref.forward_back_ref;
+		chassis.vy=chassis.ChassisSpeed_Ref.left_right_ref;
 
 }
 #elif CHASSIS_TYPE == 4

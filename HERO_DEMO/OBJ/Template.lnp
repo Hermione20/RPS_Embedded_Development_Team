@@ -77,7 +77,7 @@
 "..\obj\transformfunctions.o"
 "..\obj\transformfunctionsf16.o"
 "..\obj\retarget_io.o"
---strict --scatter "..\OBJ\Template.sct"
+--library_type=microlib --strict --scatter "..\OBJ\Template.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\OBJ\Template.map" -o ..\OBJ\Template.axf

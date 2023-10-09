@@ -143,8 +143,8 @@ typedef struct
 	float angle_fdb[4];
   /* speed loop */
 
-	float speed_ref[4];
-	float speed_fdb[4];
+	int16_t speed_ref[4];
+	int16_t speed_fdb[4];
 	
 } cha_pid_t;
 
@@ -176,9 +176,9 @@ typedef __packed struct
 **/
 typedef struct
 {
-		double           vx; // forward/back
-		double           vy; // left/right
-		double           vw; // 
+		float           vx; // forward/back
+		float           vy; // left/right
+		float           vw; // 
 		
 		chassis_mode_e  			ctrl_mode;
 		chassis_mode_e  			last_ctrl_mode;
@@ -238,7 +238,7 @@ typedef struct
 
 void Motion_resolution(void);
 void Chassis_PID_handle(void);
-void mecanum_calc(float vx, float vy, float vw, float *speed);
+void mecanum_calc(float vx, float vy, float vw, int16_t *speed);
 void chassis_param_init(void);
 void  chassis_task(void);
 float limit_angle_to_0_2pi(float angle);
@@ -266,7 +266,7 @@ double convert_ecd_angle_to_0_2pi(double ecd_angle,float _0_2pi_angle);
 
 
 
-extern ChassisSpeed_Ref_t ChassisSpeedRef;
+
 extern Chassis_angle_t 	 Chassis_angle;
 extern chassis_t 		 		 chassis;
 
