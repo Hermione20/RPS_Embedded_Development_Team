@@ -7,10 +7,10 @@
 //yaw轴电机初始位置
 #define  GMYawEncoder_Offset   6013
 //底盘航向轴电机初始位置
-#define  GM1Encoder_Offset   1437
-#define  GM2Encoder_Offset   8042
-#define  GM3Encoder_Offset   4141
-#define  GM4Encoder_Offset   6732
+#define  GM1Encoder_Offset   1370-1024
+#define  GM2Encoder_Offset   1298+1024
+#define  GM3Encoder_Offset   1231-1024
+#define  GM4Encoder_Offset   3964+1024
 
 
 #ifndef STRUCT_MOTOR
