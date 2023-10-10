@@ -62,11 +62,11 @@ poke_t general_poke = {0};
 
 //void HI220_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO,uint8_t length);
 
-//void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
+//void M3508orM2006EncoderTask(volatile Encoder *v, CanRxMsg * msg);
 
-//void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+//void GM6020EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset);
 
-//void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+//void MF_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset);
 
 //void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
 
