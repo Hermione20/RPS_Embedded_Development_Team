@@ -37,8 +37,28 @@ typedef struct{
 	
 }Encoder;
 	
-}Encoder;
 
+
+
+
+
+#endif
+
+#ifndef GENERAL_GYRO_T
+/**************************general gyro*********************************/
+#define GENERAL_GYRO_T
+typedef struct 
+{
+	float pitch_Angle;
+	float yaw_Angle;
+	float roll_Angle;
+	float pitch_Gyro;
+	float yaw_Gyro;
+	float roll_Gyro;
+	float x_Acc;
+	float y_Acc;
+	float z_Acc;
+}general_gyro_t;
 
 
 
