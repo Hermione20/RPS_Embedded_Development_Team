@@ -52,15 +52,13 @@ void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg)//云台yaw，pitch共用
 	v->temperature = msg->Data[1];
 }
 
-void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset)
+void MF_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset)
 {
-	if(can_count < 10)
-	{
-		v->ecd_bias = offset;
-	}
+	v->can_cnt++;
+	if(v->can_cnt<=2){v->ecd_bias = offset;}
 	MF_EncoderProcess(v, msg);
 	// 码盘中间值设定也需要修改
-	if (can_count <= 100)
+	if (v->can_cnt <= 10)
 	{
 		if ((v->ecd_bias - v->ecd_value) < -32700)
 		{
@@ -74,7 +72,7 @@ void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int o
 }
 
 /********************FM9025命令发送函数*********************/
-void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint8_t id)
+void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint32_t id)
 {
 	CanTxMsg txmsg;
 	txmsg.StdId = id;
@@ -100,7 +98,7 @@ void CAN_9015setpidCommand(CAN_TypeDef *CANx, float akp,
                            float skp,
                            float ski,
                            float iqkp,
-                           float iqki, uint8_t id)
+                           float iqki, uint32_t id)
 {
     CanTxMsg txmsg;
     txmsg.StdId = id;
@@ -119,7 +117,7 @@ void CAN_9015setpidCommand(CAN_TypeDef *CANx, float akp,
     CAN_Transmit(CANx, &txmsg);
 }
 
-void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint8_t id)
+void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint32_t id)
 {
 	CanTxMsg txmsg;
 	txmsg.StdId = id;
@@ -138,7 +136,7 @@ void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleCon
 	CAN_Transmit(CANx,&txmsg);
 }
 
-void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint8_t id)
+void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint32_t id)
 {
 	CanTxMsg txmsg;
 	txmsg.StdId = id;
@@ -157,7 +155,7 @@ void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint8_t id)
 	CAN_Transmit(CANx,&txmsg);
 }
 
-void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint8_t id)
+void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint32_t id)
 {
 	CanTxMsg txmsg;
 	txmsg.StdId = id;

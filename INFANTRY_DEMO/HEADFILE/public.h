@@ -87,6 +87,10 @@ else if(val>=max)\
 
 #include "infantry_mode_switch_task.h"
 
+
+
+
+
 /**************RTOS**********************/
 
 #include "control_task.h"

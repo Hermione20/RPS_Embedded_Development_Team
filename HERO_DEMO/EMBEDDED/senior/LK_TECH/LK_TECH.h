@@ -28,6 +28,8 @@ typedef struct{
 	int32_t ecd_raw_rate;									//通过编码器计算得到的速度原始值
 	int32_t rate_buf[RATE_BUF_SIZE];	//buf，for filter
 	int32_t round_cnt;										//圈数
+	int32_t can_cnt;					//记录函数的使用次数，在电机初始完成部分任务
+
 	int32_t filter_rate;											//速度
 	double ecd_angle;											//角度
 	u32 temperature;
@@ -42,7 +44,7 @@ typedef struct{
 #endif
 
 void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//云台yaw，pitch共用
-void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+void MF_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset);
 
 
 void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint32_t id);

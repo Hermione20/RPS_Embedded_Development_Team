@@ -105,24 +105,24 @@ void can_chassis_receive_task(CanRxMsg * msg)
    {
 			case UP_CAN2_TO_DOWN_CAN1_1:
 		{
-			can_chassis_data.if_follow_gim									=(msg->Data[0]);
-			can_chassis_data.speed_mode											=(msg->Data[1]);
-			can_chassis_data.chassis_mode										=(msg->Data[2]);
-			can_chassis_data.rotate_speed 									=((msg->Data[3]<<8)|msg->Data[4]);
-			can_chassis_data.yaw_Encoder_filter_rate				=(msg->Data[5]<<8)|msg->Data[6];
-			can_chassis_data.chassis_power_limit						=(msg->Data[7]);	
+			can_chassis_data.if_follow_gim																	=(msg->Data[0]);
+			can_chassis_data.speed_mode																			=(msg->Data[1]);
+			can_chassis_data.chassis_mode																		=(msg->Data[2]);
+			can_chassis_data.rotate_speed 																	=((msg->Data[3]<<8)|msg->Data[4]);
+			can_chassis_data.yaw_Encoder_filter_rate												=(msg->Data[5]<<8)|msg->Data[6];
+			judge_rece_mesg.game_robot_state.chassis_power_limit						=(msg->Data[7]);	
 		}break;
 			case UP_CAN2_TO_DOWN_CAN1_2:
 		{
-			can_chassis_data.x															=(msg->Data[0]<<8)|msg->Data[1];
-			can_chassis_data.y															=(msg->Data[2]<<8)|msg->Data[3];
-			can_chassis_data.chassis_power									=(msg->Data[4]<<8)|msg->Data[5];
-			can_chassis_data.chassis_power_buffer						=(msg->Data[6]<<8)|msg->Data[7];
+			can_chassis_data.x																							=(msg->Data[0]<<8)|msg->Data[1];
+			can_chassis_data.y																							=(msg->Data[2]<<8)|msg->Data[3];
+			judge_rece_mesg.power_heat_data.chassis_power										=(msg->Data[4]<<8)|msg->Data[5];
+			judge_rece_mesg.power_heat_data.chassis_power_buffer						=(msg->Data[6]<<8)|msg->Data[7];
 		}break;
 		
 			case UP_CAN2_TO_DOWN_CAN1_3:
 		{
-			can_chassis_data.yaw_Encoder_ecd_angle	=((msg->Data[0]<<56)|(msg->Data[1]<<48)|(msg->Data[2]<<40)|(msg->Data[3]<<32)|(msg->Data[4]<<24)|(msg->Data[5]<<16)|(msg->Data[6]<<8)|msg->Data[7]);
+			can_chassis_data.yaw_Encoder_ecd_angle													=((msg->Data[0]<<56)|(msg->Data[1]<<48)|(msg->Data[2]<<40)|(msg->Data[3]<<32)|(msg->Data[4]<<24)|(msg->Data[5]<<16)|(msg->Data[6]<<8)|msg->Data[7]);
 		}break;
 	}
 }

@@ -19,12 +19,9 @@
  **/
  
  
-uint32_t can1_count = 0;
-uint32_t can2_count = 0;
 
 void Can1ReceiveMsgProcess(CanRxMsg * msg)
 {
-    can1_count++;
     switch (msg->StdId)
     {
     case GIMBAL_YAW_MOTOR:
@@ -38,15 +35,14 @@ void Can1ReceiveMsgProcess(CanRxMsg * msg)
 
 void Can2ReceiveMsgProcess(CanRxMsg * msg)
 {
-    can2_count++;
     switch (msg->StdId)
     {
     case GIMBAL_YAW_MOTOR:
-			GM6020EncoderTask(can2_count,&yaw_Encoder,msg,GMYawEncoder_Offset);
+			GM6020EncoderTask(&yaw_Encoder,msg,GMYawEncoder_Offset);
         /* code */
         break;
 		case GIMBAL_PITCH_MOTOR:
-			GM6020EncoderTask(can2_count,&Pitch_Encoder,msg,GMPitchEncoder_Offset);
+			GM6020EncoderTask(&Pitch_Encoder,msg,GMPitchEncoder_Offset);
 
     default:
         break;
@@ -63,7 +59,7 @@ void Can2ReceiveMsgProcess(CanRxMsg * msg)
 void can_bus_send_task(void)
 {
 	
-	Set_GM6020_IQ1(CAN2,-gimbal_data.gim_ref_and_fdb.yaw_motor_input,-gimbal_data.gim_ref_and_fdb.pitch_motor_input,0,0);
+	Set_GM6020_IQ1(CAN2,gimbal_data.gim_ref_and_fdb.yaw_motor_input,gimbal_data.gim_ref_and_fdb.pitch_motor_input,0,0);
 	
 }
 

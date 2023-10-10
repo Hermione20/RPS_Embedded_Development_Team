@@ -18,6 +18,8 @@ typedef struct{
 	int32_t ecd_raw_rate;									//通过编码器计算得到的速度原始值
 	int32_t rate_buf[RATE_BUF_SIZE];	//buf，for filter
 	int32_t round_cnt;										//圈数
+	int32_t can_cnt;					//记录函数的使用次数，在电机初始完成部分任务
+
 	int32_t filter_rate;											//速度
 	double ecd_angle;											//角度
 	u32 temperature;
@@ -38,8 +40,8 @@ typedef struct{
 void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg);
 void EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
 void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg);
-void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
-void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
+void M3508orM2006EncoderTask(volatile Encoder *v, CanRxMsg * msg);
+void GM6020EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset);
 
 
 void Set_GM6020_IQ1(CAN_TypeDef *CANx, int16_t motor1_iq, int16_t motor2_iq, int16_t motor3_iq, int16_t motor4_iq);

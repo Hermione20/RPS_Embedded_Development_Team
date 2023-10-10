@@ -11,8 +11,8 @@
 #define STICK_TO_PITCH_ANGLE_INC_FACT       0.008
 #define STICK_TO_YAW_ANGLE_INC_FACT         0.008f
 
-#define MOUSE_TO_PITCH_ANGLE_INC_FACT 		4.0f
-#define MOUSE_TO_YAW_ANGLE_INC_FACT 		0.042f
+#define MOUSE_TO_PITCH_ANGLE_INC_FACT 		0.04f
+#define MOUSE_TO_YAW_ANGLE_INC_FACT 		0.06f
 
 /*************************************¼üÊó**********************************************/
 #define  KEY_W  0X0001    //Ç°ºó×óÓÒ

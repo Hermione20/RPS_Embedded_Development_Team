@@ -28,10 +28,14 @@ typedef struct{
 	int32_t ecd_raw_rate;									//通过编码器计算得到的速度原始值
 	int32_t rate_buf[RATE_BUF_SIZE];	//buf，for filter
 	int32_t round_cnt;										//圈数
+	int32_t can_cnt;					//记录函数的使用次数，在电机初始完成部分任务
+
 	int32_t filter_rate;											//速度
 	double ecd_angle;											//角度
 	u32 temperature;
 	int16_t rate_rpm;
+	
+}Encoder;
 	
 }Encoder;
 

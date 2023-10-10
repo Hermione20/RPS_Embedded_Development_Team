@@ -19,17 +19,16 @@
  **/
  
  
-uint32_t can1_count = 0;
-uint32_t can2_count = 0;
+
 
 void Can1ReceiveMsgProcess(CanRxMsg * msg)
 {
-    can1_count++;
+
     switch (msg->StdId)
     {
     case GIMBAL_PITCH_MOTOR:
 		{
-			MF_EncoderTask(can1_count,&Pitch_Encoder,msg,GMPitchEncoder_Offset);
+			MF_EncoderTask(&Pitch_Encoder,msg,GMPitchEncoder_Offset);
 		}break;
     default:
         break;
@@ -38,28 +37,28 @@ void Can1ReceiveMsgProcess(CanRxMsg * msg)
 
 void Can2ReceiveMsgProcess(CanRxMsg *msg)
 {
-    can2_count++;
+
     switch (msg->StdId)
     {
     case GIMBAL_YAW_MOTOR:
     {
-        MF_EncoderTask(can2_count, &yaw_Encoder, msg, GMYawEncoder_Offset);
+        MF_EncoderTask(&yaw_Encoder, msg, GMYawEncoder_Offset);
     }break;
     case CM1Encoder_MOTOR:
     {
-        M3508orM2006EncoderTask(can2_count,&Mecanum_chassis.Driving_Encoder[0],msg);
+        M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[0],msg);
     }break;
     case CM2Encoder_MOTOR:
     {
-        M3508orM2006EncoderTask(can2_count,&Mecanum_chassis.Driving_Encoder[1],msg);
+        M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[1],msg);
     }break;
     case CM3Encoder_MOTOR:
     {
-        M3508orM2006EncoderTask(can2_count,&Mecanum_chassis.Driving_Encoder[2],msg);
+        M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[2],msg);
     }break;
     case CM4Encoder_MOTOR:
     {
-        M3508orM2006EncoderTask(can2_count,&Mecanum_chassis.Driving_Encoder[3],msg);
+        M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[3],msg);
     }break;
     default:
         break;

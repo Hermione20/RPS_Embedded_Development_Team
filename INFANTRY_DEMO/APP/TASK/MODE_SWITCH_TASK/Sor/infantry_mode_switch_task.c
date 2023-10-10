@@ -2,10 +2,22 @@
 
 chassis_t chassis;
 int16_t chassis_speed = 0;
-u8 steering_P_mode = 0;
 
-void mode_switch_task(void)
+u8 this_input_mode = 0;
+u8 last_input_mode = 0;
+
+void infantry_mode_switch_task(void)
 {
+		//切换遥控模式的时候所有任务归位重新开始
+		last_input_mode = this_input_mode;
+		this_input_mode = RC_CtrlData.inputmode;
+		if(this_input_mode != last_input_mode)
+		{
+			gimbal_data.ctrl_mode = GIMBAL_RELAX;
+			gimbal_data.last_ctrl_mode = GIMBAL_RELAX;
+      chassis.ctrl_mode = CHASSIS_RELAX;
+			chassis.last_ctrl_mode = CHASSIS_RELAX;
+		}
     switch (RC_CtrlData.inputmode)
     {
     case REMOTE_INPUT:
@@ -47,11 +59,17 @@ void mode_switch_task(void)
         if (gimbal_data.last_ctrl_mode == GIMBAL_RELAX && gimbal_data.ctrl_mode != GIMBAL_RELAX)
 	    {
 		    gimbal_data.ctrl_mode = GIMBAL_INIT;
+				gimbal_data.if_finish_Init = 0;
 	    }
 			if( gimbal_data.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
 			{
 				
 				chassis.follow_gimbal = 1;
+			}
+			//遥控器模式的模式选择从这里开始
+			if(gimbal_data.if_finish_Init == 1)
+			{
+				gimbal_data.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
 			}
 			/*****************************************************************************************/
 			
@@ -118,30 +136,15 @@ void mode_switch_task(void)
             }
 					 
            /*******************************键鼠云台赋值****************************************/
-            if (gimbal_data.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
+            if (gimbal_data.ctrl_mode == GIMBAL_FOLLOW_ZGYRO&&RC_CtrlData.mouse.press_r == 0)
             {
                 VAL_LIMIT(RC_CtrlData.mouse.x, -100, 100);
                 VAL_LIMIT(RC_CtrlData.mouse.y, -100, 100);
                 gimbal_data.gim_dynamic_ref.yaw_angle_dynamic_ref += RC_CtrlData.mouse.x * MOUSE_TO_YAW_ANGLE_INC_FACT;
-                gimbal_data.gim_dynamic_ref.pitch_angle_dynamic_ref += RC_CtrlData.mouse.y * MOUSE_TO_PITCH_ANGLE_INC_FACT;
+                gimbal_data.gim_dynamic_ref.pitch_angle_dynamic_ref -= RC_CtrlData.mouse.y * MOUSE_TO_PITCH_ANGLE_INC_FACT;
                 VAL_LIMIT(gimbal_data.gim_dynamic_ref.pitch_angle_dynamic_ref, pitch_min, pitch_max);
             }
-            else
-            {
-                if (RC_CtrlData.Key_Flag.Key_V_TFlag)
-                {
-                    gimbal_data.ctrl_mode = GIMBAL_AUTO_BIG_BUFF;
-                }
-                else if (RC_CtrlData.Key_Flag.Key_Z_TFlag)
-                {
-                    gimbal_data.ctrl_mode = GIMBAL_AUTO_SMALL_BUFF;
-                }
-                else
-                {
-                    gimbal_data.ctrl_mode = GIMBAL_INIT;
-                    chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
-                }
-            }
+            
          }
 
          /****************************底盘默认状态设置**********************************************/
@@ -160,10 +163,28 @@ void mode_switch_task(void)
         if (gimbal_data.last_ctrl_mode == GIMBAL_RELAX && gimbal_data.ctrl_mode != GIMBAL_RELAX)
 	    {
 		    gimbal_data.ctrl_mode = GIMBAL_INIT;
+				gimbal_data.if_finish_Init = 0;
 	    }
 			if( gimbal_data.ctrl_mode == GIMBAL_FOLLOW_ZGYRO)
 				chassis.follow_gimbal = 1;
-        
+      //键鼠模式的模式选择从这里开始
+			if(gimbal_data.if_finish_Init == 1)
+			{
+				if (RC_CtrlData.Key_Flag.Key_V_TFlag)
+                {
+                    gimbal_data.ctrl_mode = GIMBAL_AUTO_BIG_BUFF;
+                }
+                else if (RC_CtrlData.Key_Flag.Key_Z_TFlag)
+                {
+                    gimbal_data.ctrl_mode = GIMBAL_AUTO_SMALL_BUFF;
+                }
+                else
+                {
+                    gimbal_data.ctrl_mode = GIMBAL_FOLLOW_ZGYRO;
+                    chassis.ctrl_mode = MANUAL_FOLLOW_GIMBAL;
+                }
+
+			}
         
 			/*****************************************************************************************/
     }
@@ -177,7 +198,6 @@ void mode_switch_task(void)
     default:
         break;
     }
-    gimbal_data.last_ctrl_mode = gimbal_data.ctrl_mode;
 	chassis.last_ctrl_mode = chassis.ctrl_mode;
 }
 

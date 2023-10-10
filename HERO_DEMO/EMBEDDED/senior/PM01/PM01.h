@@ -28,8 +28,10 @@ typedef struct
 
 
 void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
-
-
+void POWER_Control1(CAN_TypeDef *CANx ,uint16_t Power,uint32_t StdId);
+void POWER_Control1l(CAN_TypeDef *CANx ,uint32_t StdId);
+void power_send_handle2(CAN_TypeDef *CANx);
+void power_send_handle1(CAN_TypeDef *CANx,u16 Max_Power);
 
 extern volatile capacitance_message_t capacitance_message;
 

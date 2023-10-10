@@ -16,7 +16,9 @@
         "ch100.h": "c",
         "ht430.h": "c",
         "auto_shoot.h": "c",
-        "infantry_gimbal_task.h": "c"
+        "infantry_gimbal_task.h": "c",
+        "gimbal_task.h": "c",
+        "infantry_mode_switch_task.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

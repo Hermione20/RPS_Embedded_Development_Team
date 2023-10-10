@@ -1,15 +1,38 @@
 #ifndef __CHASSIS_TASK_H 
 #define __CHASSIS_TASK_H
+
 /* Includes ------------------------------------------------------------------*/
 #include "public.h"
 /*----------------------------------------------------------------------------*/
+//底盘类型 1舵轮 2麦轮 3全向轮 4新舵轮
+#define CHASSIS_TYPE  1
 
-#define NORMAL_FORWARD_BACK_SPEED								 550
-#define NORMAL_LEFT_RIGHT_SPEED  								 550
-#define HIGH_FORWARD_BACK_SPEED 								 1600
-#define HIGH_LEFT_RIGHT_SPEED   								 800
-#define CHASSIS_ROTATE_MOVING_FORWARD_BACK_SPEED 900
-#define CHASSIS_ROTATE_MOVING_LEFT_RIGHT_SPEED   600
+/*******************************CONFIG********************************/
+#define STANDARD              3
+#define YAW_POLARITY 					-1 //逆正  舵轮要顺正，改-1；麦轮1
+
+#define POWER_LIMIT_HANDLE    0
+
+
+
+#if     CHASSIS_TYPE == 1//舵轮
+#define RIGHT_FRONT_REVERSE    1
+#define LEFT_FRONT_REVERSE    -1
+#define LEFT_BEHIND_REVERSE    1
+#define RIGHT_BEHIND_REVERSE   1
+
+
+#elif		CHASSIS_TYPE == 2//麦轮
+#define MAX_WHEEL_RPM 					  7400
+
+
+
+#elif   CHASSIS_TYPE == 3//全向轮
+#endif
+/*******************************CONFIG********************************/
+
+
+
 
 #define  I_TIMES_V_TO_WATT    0.0000225f    //I -16384~+16384 V .filter_rate
 //电机发热计算 p=i^2*FACTOR_2+i*FACTOR_1+FACTOR0; i是直接发给电调的数-16384~16384 使用虚拟示波器读值后matlab拟合
@@ -18,6 +41,9 @@
 #define FACTOR_0  0.458f
 //#define TOTATE_PARA    PI/180.0f
 
+#define  WARNING_VOLTAGE       12.5
+
+#define  TARGET_VOLTAGE        12
 
 //定义 NULL
 #ifndef NULL
@@ -98,11 +124,6 @@ typedef enum
 } chassis_mode_e;
 
 
-typedef enum
-{
-	READY  =0,
-	STANDBY=1,
-}chassis_gim_e ;
 /**
 ************************************************************************************************************************
 * @StructName : cha_pid_t
@@ -117,31 +138,14 @@ typedef enum
 typedef struct
 {
   /* position loop */
-  float angle1_ref;
-  float angle2_ref;
-  float angle1_fdb;
-  float angle2_fdb;
-	
-	float angle3_ref;
-  float angle4_ref;
-  float angle3_fdb;
-  float angle4_fdb;
-	
+
 	float angle_ref[4];
 	float angle_fdb[4];
   /* speed loop */
-  float speed1_ref;
-  float speed2_ref;
-  float speed1_fdb;
-  float speed2_fdb;
 
-  float speed3_ref;
-  float speed4_ref;
-  float speed3_fdb;
-  float speed4_fdb;
+	int16_t speed_ref[4];
+	int16_t speed_fdb[4];
 	
-	float speed_ref[4];
-	float speed_fdb[4];
 } cha_pid_t;
 
 
@@ -149,9 +153,10 @@ typedef enum
 {
   NORMAL_SPEED_MODE          = 2,
 	HIGH_SPEED_MODE            = 3,
+	LOW_SPEED_MODE             = 1,
 } chassis_speed_mode_e;
 
-//remote data process
+
 typedef __packed struct
 {
     int16_t forward_back_ref;
@@ -171,22 +176,19 @@ typedef __packed struct
 **/
 typedef struct
 {
-		double           vx; // forward/back
-		double           vy; // left/right
-		double           vw; // 
+		float           vx; // forward/back
+		float           vy; // left/right
+		float           vw; // 
 		
 		chassis_mode_e  			ctrl_mode;
 		chassis_mode_e  			last_ctrl_mode;
-		chassis_gim_e					chassis_gim;
 		chassis_speed_mode_e  chassis_speed_mode;
 
-		ChassisSpeed_Ref_t ChassisSpeed_Ref;
+		ChassisSpeed_Ref_t  ChassisSpeed_Ref;
 	
 		float           gyro_angle;
 		float           gyro_palstance;
 
-		int16_t         wheel_speed_fdb[4];
-		int16_t         wheel_speed_ref[4];
 		int16_t         current[4];
 		int16_t					voltage[4];
 		
@@ -225,31 +227,48 @@ typedef struct
 		float Remote_speed;
 		float deviation_angle[4];
 		int16_t handle_speed[4];
+		int16_t handle_speed_lim[4];
 		float get_speedw;
 		float yaw_angle_0_2pi;
 		float yaw_angle__pi_pi;
+		double yaw_encoder_ecd_angle;
 }Chassis_angle_t;
 
 
 
-
-
-
-void limit_angle_to_0_2pi(float angle);
-//void get_chassis_speed_ref(Remote *rc);
+void Motion_resolution(void);
+void Chassis_PID_handle(void);
+void mecanum_calc(float vx, float vy, float vw, int16_t *speed);
+void chassis_param_init(void);
+void  chassis_task(void);
+float limit_angle_to_0_2pi(float angle);
 void chassis_stop_handle(void);
 void get_remote_set(void);
 void start_angle_handle(void);
 void start_chassis_6020(void);
 float get_6020power(void);
-void get_chassis_ctrl_mode(void);
 void power_limit_handle(void);
 void set_3508current_6020voltage(void);
+float get_max_power2(float voltage);
+float get_max_power1(float voltage);
 static float get_the_limite_rate(float max_power);
+void cap_limit_mode_switch(void);
+void chassis_mode_select(void);
+void chassis_stop_handle(void);
+void follow_gimbal_handle(void);
+void separate_gimbal_handle(void);
+void rotate_follow_gimbal_handle(void);
+void reverse_follow_gimbal_handle(void);
+ 
+ 
+ 
 double convert_ecd_angle_to_0_2pi(double ecd_angle,float _0_2pi_angle);
 
 
 
+
+extern Chassis_angle_t 	 Chassis_angle;
+extern chassis_t 		 		 chassis;
 
 
 

@@ -9,7 +9,7 @@
 
 /*******************************CONFIG********************************/
 #define STANDARD              1
-
+#define YAW_POLARITY 					1 //逆正  舵轮要顺正，改-1；麦轮1
 
 #define POWER_LIMIT_HANDLE    0
 
