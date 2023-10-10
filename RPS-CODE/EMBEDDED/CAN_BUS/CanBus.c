@@ -19,17 +19,14 @@
  **/
  
  
-uint32_t can1_count = 0;
-uint32_t can2_count = 0;
 
 void Can1ReceiveMsgProcess(CanRxMsg * msg)
 {
-    can1_count++;
     switch (msg->StdId)
     {
     case GIMBAL_YAW_MOTOR:
 		{
-			/*FUNCTION*/
+			
 		}break;
     default:
         break;
@@ -38,16 +35,16 @@ void Can1ReceiveMsgProcess(CanRxMsg * msg)
 
 void Can2ReceiveMsgProcess(CanRxMsg * msg)
 {
-    can2_count++;
     switch (msg->StdId)
     {
-    case GIMBAL_YAW_MOTOR/*id*/:
-		{
-			/*FUNCTION*/
-		}break;
+    case GIMBAL_YAW_MOTOR:
+			
+        /* code */
+        break;
+
+
     default:
         break;
-    
     }
 }
 
@@ -61,7 +58,7 @@ void Can2ReceiveMsgProcess(CanRxMsg * msg)
 void can_bus_send_task(void)
 {
 	
-	/*FUNCTION*/
+	
 	
 }
 
