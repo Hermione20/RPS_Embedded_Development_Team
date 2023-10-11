@@ -2,28 +2,58 @@
 
 /*****************************************VARIABLES*******************************************************/
 /*********************************************************************************************************/                                             
-
-static uint8_t _USART1_DMA_RX_BUF[2][BSP_USART1_DMA_RX_BUF_LEN];
-static uint8_t _USART1_RX_BUF[BSP_USART1_DMA_RX_BUF_LEN];
-
-static uint8_t _USART2_DMA_RX_BUF[2][BSP_USART2_DMA_RX_BUF_LEN];
-static uint8_t _USART2_RX_BUF[BSP_USART2_DMA_RX_BUF_LEN];
-
-static uint8_t ch100_Rx_Buffer[CH100_RX_BUFF_SIZE];
-
-static uint8_t UART4_DMA_RX_BUF[UART4_RX_BUF_LENGTH];
-static uint8_t UART4_DMA_TX_BUF[UART4_TX_BUF_LENGTH];
-
-static uint8_t UART5_DMA_TX_BUF[UART5_TX_BUF_LENGTH];
 #if EN_UART5_DMA_SECOND_FIFO == 1	
 uint8_t _UART5_DMA_RX_BUF[2][BSP_UART5_DMA_RX_BUF_LEN];
 #else
 uint8_t _UART5_DMA_RX_BUF[100];
 #endif
 
-static uint8_t USART6_DMA_RX_BUF[USART6_RX_BUF_LENGTH] = {0};
+	static uint8_t _USART1_DMA_RX_BUF[2][BSP_USART1_DMA_RX_BUF_LEN];//双缓冲接收区
+	static uint8_t _USART2_DMA_RX_BUF[2][BSP_USART2_DMA_RX_BUF_LEN];//双缓冲接收区
+	static uint8_t _USART3_RX_BUF[BSP_USART2_DMA_RX_BUF_LEN];//ch100单缓冲接收区
+	static uint8_t _UART4_DMA_RX_BUF[UART4_RX_BUF_LENGTH];	
+	static uint8_t _USART6_DMA_RX_BUF[BSP_USART6_RX_BUF_LENGTH];
+
+//static uint8_t USART1_DMA_TX_BUF[USART1_TX_BUF_LENGTH];//注释不配
+//static uint8_t USART2_DMA_TX_BUF[USART2_TX_BUF_LENGTH];
+//static uint8_t USART3_DMA_TX_BUF[USART3_TX_BUF_LENGTH];
+	static uint8_t UART4_DMA_TX_BUF[UART4_TX_BUF_LENGTH];
+	static uint8_t UART5_DMA_TX_BUF[UART5_TX_BUF_LENGTH];
+//static uint8_t USART6_DMA_TX_BUF[USART6_TX_BUF_LENGTH];
 /*********************************************************************************************************/
 /*********************************************************************************************************/
+#if 0
+#pragma import(__use_no_semihosting)  
+/**
+************************************************************************************************************************
+* @Name     : fputc/_sys_exit
+* @brief    : 加入以下代码,支持printf函数,而不需要选择use MicroLIB
+* @param    : ch
+* @param    : FILE *f
+* @retval   : void
+* @Note     : 加入以下代码,支持printf函数,而不需要选择use MicroLIB
+************************************************************************************************************************
+**/ 
+//标准库需要的支持函数                 
+struct __FILE 
+{ 
+	int handle; 
+}; 
+
+FILE __stdout;       
+//定义_sys_exit()以避免使用半主机模式    
+void _sys_exit(int x) 
+{ 
+	x = x; 
+} 
+//重定义fputc函数 
+int fputc(int ch, FILE *f)
+{ 	
+	while((USART2->SR&0X40)==0);//循环发送,直到发送完毕   
+	USART2 ->DR = (u8) ch;      
+	return ch;
+}
+#endif
 
 #if EN_USART1
 void usart1_init(uint32_t baud_rate)
@@ -54,7 +84,6 @@ void usart1_init(uint32_t baud_rate)
     usart.USART_Mode = USART_Mode_Rx;
     usart.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
     USART_Init(USART1, &usart);
-//    USART1_FIFO_Init();
     
     USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
     
@@ -81,14 +110,14 @@ void usart1_init(uint32_t baud_rate)
     DMA_DoubleBufferModeCmd(DMA2_Stream2, ENABLE);
     DMA_Cmd(DMA2_Stream2, ENABLE);
     
-	nvic.NVIC_IRQChannel = USART1_IRQn;                          
-	nvic.NVIC_IRQChannelPreemptionPriority = 0;   //pre-emption priority 
-	nvic.NVIC_IRQChannelSubPriority = 0;		    //subpriority 
-	nvic.NVIC_IRQChannelCmd = ENABLE;			
-	NVIC_Init(&nvic);	
+		nvic.NVIC_IRQChannel = USART1_IRQn;                          
+		nvic.NVIC_IRQChannelPreemptionPriority = 0;   //pre-emption priority 
+		nvic.NVIC_IRQChannelSubPriority = 0;		    //subpriority 
+		nvic.NVIC_IRQChannelCmd = ENABLE;			
+		NVIC_Init(&nvic);	
 
-	USART_ITConfig(USART1, USART_IT_IDLE, ENABLE);        //usart rx idle interrupt  enabled
-	USART_Cmd(USART1, ENABLE);
+		USART_ITConfig(USART1, USART_IT_IDLE, ENABLE);        //usart rx idle interrupt  enabled
+		USART_Cmd(USART1, ENABLE);
 
 }
 
@@ -108,9 +137,9 @@ void USART1_IRQHandler(void)
 			DMA2_Stream2->NDTR = (uint16_t)BSP_USART1_DMA_RX_BUF_LEN;     //relocate the dma memory pointer to the beginning position
 			DMA2_Stream2->CR |= (uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 1
 			DMA_Cmd(DMA2_Stream2, ENABLE);
-			
+
 					USART1_Data_Receive_Process_0
-			
+
 		}
 		
 		else 
@@ -122,9 +151,7 @@ void USART1_IRQHandler(void)
 			DMA2_Stream2->CR &= ~(uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 0
 			DMA_Cmd(DMA2_Stream2, ENABLE);
 
-					
 					USART1_Data_Receive_Process_1
-			
 		}
 	}       
 }
@@ -145,9 +172,10 @@ void usart2_init(uint32_t baud_rate)
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1, ENABLE);
 		RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE); 
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART1);
+		GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART1);
 	
     GPIO_StructInit(&gpio);
-    gpio.GPIO_Pin = GPIO_Pin_2;
+    gpio.GPIO_Pin = GPIO_Pin_2| GPIO_Pin_3;
     gpio.GPIO_Mode = GPIO_Mode_AF;
     gpio.GPIO_Speed = GPIO_Speed_2MHz;
     gpio.GPIO_PuPd = GPIO_PuPd_UP;
@@ -158,11 +186,10 @@ void usart2_init(uint32_t baud_rate)
     usart.USART_BaudRate = baud_rate;
     usart.USART_WordLength = USART_WordLength_8b;
     usart.USART_StopBits = USART_StopBits_1;
-    usart.USART_Parity = USART_Parity_Even;
-    usart.USART_Mode = USART_Mode_Rx;
+    usart.USART_Parity = USART_Parity_No;
+    usart.USART_Mode = USART_Mode_Tx|USART_Mode_Rx;
     usart.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
     USART_Init(USART2, &usart);
-//    USART1_FIFO_Init();
     
     USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
     
@@ -189,14 +216,14 @@ void usart2_init(uint32_t baud_rate)
     DMA_DoubleBufferModeCmd(DMA1_Stream5, ENABLE);
     DMA_Cmd(DMA1_Stream5, ENABLE);
     
-	nvic.NVIC_IRQChannel = USART2_IRQn;                          
-	nvic.NVIC_IRQChannelPreemptionPriority = 0;   //pre-emption priority 
-	nvic.NVIC_IRQChannelSubPriority = 0;		    //subpriority 
-	nvic.NVIC_IRQChannelCmd = ENABLE;			
-	NVIC_Init(&nvic);	
+		nvic.NVIC_IRQChannel = USART2_IRQn;                          
+		nvic.NVIC_IRQChannelPreemptionPriority = 0;   //pre-emption priority 
+		nvic.NVIC_IRQChannelSubPriority = 0;		    //subpriority 
+		nvic.NVIC_IRQChannelCmd = ENABLE;			
+		NVIC_Init(&nvic);	
 
-	USART_ITConfig(USART2, USART_IT_IDLE, ENABLE);        //usart rx idle interrupt  enabled
-	USART_Cmd(USART2, ENABLE);
+		USART_ITConfig(USART2, USART_IT_IDLE, ENABLE);        //usart rx idle interrupt  enabled
+		USART_Cmd(USART2, ENABLE);
 
 }
 
@@ -208,8 +235,7 @@ void USART2_IRQHandler(void)
 	{
 		(void)USART2->SR;
 		(void)USART2->DR;
-		if(DMA_GetCurrentMemoryTarget(DMA2_Stream2) == 0)
-		{
+
 			DMA_Cmd(DMA1_Stream5, DISABLE);
 			DMA_ClearFlag(DMA1_Stream5, DMA_FLAG_TCIF5 | DMA_FLAG_HTIF5);	
 			this_time_rx_len2 = BSP_USART2_DMA_RX_BUF_LEN - DMA_GetCurrDataCounter(DMA1_Stream5);
@@ -217,8 +243,7 @@ void USART2_IRQHandler(void)
 			DMA1_Stream5->CR |= (uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 1
 			DMA_Cmd(DMA1_Stream5, ENABLE);
 
-//				RemoteDataPrcess(_USART1_DMA_RX_BUF[0]);
-					USART2_Data_Receive_Process
+					USART2_Data_Receive_Process_0
 		}
 		
 		else 
@@ -230,12 +255,11 @@ void USART2_IRQHandler(void)
 			DMA1_Stream5->CR &= ~(uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 0
 			DMA_Cmd(DMA1_Stream5, ENABLE);
 
-//				RemoteDataPrcess(_USART1_DMA_RX_BUF[1]);
-					USART2_Data_Receive_Process
+					USART2_Data_Receive_Process_1
 
 		}
 	}       
-}
+
 
 #endif
 
@@ -305,7 +329,7 @@ void usart3_init(u32 bound)
   /* Configure DMA controller to manage USART TX and RX DMA request ----------*/ 
    
   /* Configure DMA Initialization Structure */
-  DMA_InitStructure.DMA_BufferSize = CH100_RX_BUFF_SIZE ;
+  DMA_InitStructure.DMA_BufferSize = BSP_USART2_DMA_RX_BUF_LEN ;
   DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Disable ;
   DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull ;
   DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single ;
@@ -320,7 +344,7 @@ void usart3_init(u32 bound)
   /* Configure RX DMA */
   DMA_InitStructure.DMA_Channel = USART_CH100_RX_DMA_CHANNEL ;
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory ;
-  DMA_InitStructure.DMA_Memory0BaseAddr =(uint32_t)ch100_Rx_Buffer ; 
+  DMA_InitStructure.DMA_Memory0BaseAddr =(uint32_t)_USART3_RX_BUF ; 
   DMA_Init(USART_CH100_RX_DMA_STREAM,&DMA_InitStructure);
    /* Enable DMA USART RX Stream */
   DMA_Cmd(USART_CH100_RX_DMA_STREAM,ENABLE);
@@ -339,9 +363,10 @@ void USART_CH100_IRQHandler(void)
 		USART_ClearITPendingBit(USART_CH100,USART_IT_IDLE);//清除中断标志位
 		DMA_Cmd(USART_CH100_RX_DMA_STREAM,DISABLE);  
 		USART_DMACmd(USART_CH100, USART_DMAReq_Rx, DISABLE);
-//		memcpy(&dat, &ch100_Rx_Buffer[6], sizeof(id0x91_t));
-//		CH100_getDATA();
+
 		USART3_Data_Receive_Process
+		
+		
 		USART_DMACmd(USART_CH100, USART_DMAReq_Rx, ENABLE);
 		DMA_Cmd(USART_CH100_RX_DMA_STREAM,ENABLE);//重新置位后，地址指针变成0
 	}
@@ -386,7 +411,7 @@ void USART_CH100_IRQHandler(void)
   DMA_StructInit(&dma);
   dma.DMA_Channel = DMA_Channel_4;
   dma.DMA_PeripheralBaseAddr		= (uint32_t)(&UART4->DR);
-  dma.DMA_Memory0BaseAddr   		= (uint32_t)&UART4_DMA_RX_BUF;
+  dma.DMA_Memory0BaseAddr   		= (uint32_t)&_UART4_DMA_RX_BUF;
   dma.DMA_DIR 					= DMA_DIR_PeripheralToMemory;
   dma.DMA_BufferSize				= UART4_RX_BUF_LENGTH;//sizeof(USART1_DMA_RX_BUF);
   dma.DMA_PeripheralInc 			= DMA_PeripheralInc_Disable;
@@ -416,18 +441,18 @@ void USART_CH100_IRQHandler(void)
   dma.DMA_Channel = DMA_Channel_4;
   dma.DMA_PeripheralBaseAddr	= (uint32_t)(&UART4->DR);
   dma.DMA_Memory0BaseAddr   	= (uint32_t)&UART4_DMA_TX_BUF[0];
-  dma.DMA_DIR 			    = DMA_DIR_MemoryToPeripheral;
-  dma.DMA_BufferSize			= 0;//sizeof(USART1_DMA_TX_BUF);
-  dma.DMA_PeripheralInc 		= DMA_PeripheralInc_Disable;
-  dma.DMA_MemoryInc 			= DMA_MemoryInc_Enable;
+  dma.DMA_DIR 			   				 = DMA_DIR_MemoryToPeripheral;
+  dma.DMA_BufferSize					= 0;//sizeof(USART1_DMA_TX_BUF);
+  dma.DMA_PeripheralInc 			= DMA_PeripheralInc_Disable;
+  dma.DMA_MemoryInc 					= DMA_MemoryInc_Enable;
   dma.DMA_PeripheralDataSize 	= DMA_PeripheralDataSize_Byte;
-  dma.DMA_MemoryDataSize 		= DMA_MemoryDataSize_Byte;
-  dma.DMA_Mode 				= DMA_Mode_Normal;
-  dma.DMA_Priority 			= DMA_Priority_Medium;
-  dma.DMA_FIFOMode 			= DMA_FIFOMode_Disable;
-  dma.DMA_FIFOThreshold 		= DMA_FIFOThreshold_Full;
-  dma.DMA_MemoryBurst 		= DMA_MemoryBurst_Single;
-  dma.DMA_PeripheralBurst 	= DMA_PeripheralBurst_Single;
+  dma.DMA_MemoryDataSize 			= DMA_MemoryDataSize_Byte;
+  dma.DMA_Mode 								= DMA_Mode_Normal;
+  dma.DMA_Priority 						= DMA_Priority_Medium;
+  dma.DMA_FIFOMode 						= DMA_FIFOMode_Disable;
+  dma.DMA_FIFOThreshold 			= DMA_FIFOThreshold_Full;
+  dma.DMA_MemoryBurst 				= DMA_MemoryBurst_Single;
+  dma.DMA_PeripheralBurst 		= DMA_PeripheralBurst_Single;
   DMA_Init(DMA1_Stream4,&dma);
 
 //	DMA_Cmd(DMA1_Stream3, DISABLE);                           // 关DMA通道
@@ -437,7 +462,6 @@ void USART_CH100_IRQHandler(void)
   nvic.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&nvic);
   DMA_ITConfig(DMA1_Stream4,DMA_IT_TC,ENABLE);
-
 
   USART_ITConfig(UART4,USART_IT_IDLE,ENABLE);
   USART_Cmd(UART4,ENABLE);
@@ -455,7 +479,6 @@ void UART4_IRQHandler(void)
       DMA_ClearFlag(DMA1_Stream2, DMA_FLAG_TCIF2 | DMA_FLAG_HTIF2);
       length = UART4_RX_BUF_LENGTH - DMA_GetCurrDataCounter(DMA1_Stream2);
 
-//      targetOffsetDataDeal(length, UART4_DMA_RX_BUF );
 			UART4_Data_Receive_Process
       DMA_SetCurrDataCounter(DMA1_Stream2,UART4_RX_BUF_LENGTH);
       DMA_Cmd(DMA1_Stream2, ENABLE);
@@ -661,9 +684,7 @@ void UART5_IRQHandler(void)
           DMA_MemoryTargetConfig (DMA1_Stream0,(uint32_t)&_UART5_DMA_RX_BUF[1][0],DMA_Memory_1);
           DMA_Cmd(DMA1_Stream0, ENABLE);
 
-          if(this_time_rx_len5 > (HEADER_LEN + CMD_LEN + CRC_LEN))
-
-					UART5_Data_Receive_Process0
+					UART5_Data_Receive_Process_0
         }
       //Target is Memory1
       else
@@ -676,8 +697,8 @@ void UART5_IRQHandler(void)
           DMA_SetCurrDataCounter(DMA1_Stream0, BSP_UART5_DMA_RX_BUF_LEN);
           DMA_MemoryTargetConfig (DMA1_Stream0,(uint32_t)&_UART5_DMA_RX_BUF[0][0],DMA_Memory_0);
           DMA_Cmd(DMA1_Stream0, ENABLE);
-          if(this_time_rx_len5 > (HEADER_LEN + CMD_LEN + CRC_LEN))
-						UART5_Data_Receive_Process1
+					
+					UART5_Data_Receive_Process_1
         }
 #else
       DMA_Cmd(DMA1_Stream0, DISABLE);                          //关闭串口5的DMA接收通道
@@ -685,8 +706,8 @@ void UART5_IRQHandler(void)
       this_time_rx_len5 = BSP_UART5_DMA_RX_BUF_LEN - DMA_GetCurrDataCounter(DMA1_Stream0); //获取DMA_GetCurrDataCounter剩余数据量
 
       DMA_SetCurrDataCounter(DMA1_Stream0, BSP_UART5_DMA_RX_BUF_LEN);      //设置当前DMA剩余数据量
-      DMA_Cmd(DMA1_Stream0, ENABLE);                                       //开启串口5的DMA接收通道
-			 if(this_time_rx_len5 > (HEADER_LEN + CMD_LEN + CRC_LEN))
+      DMA_Cmd(DMA1_Stream0, ENABLE); 
+				//开启串口5的DMA接收通道
 				UART5_Data_Receive_Process
      
 #endif
@@ -745,9 +766,9 @@ void usart6_init()
 //    DMA_StructInit(&dma);
     dma.DMA_Channel = DMA_Channel_5;
     dma.DMA_PeripheralBaseAddr	= (uint32_t)(&USART6->DR);
-    dma.DMA_Memory0BaseAddr   	= (uint32_t)&USART6_DMA_RX_BUF[0];
+    dma.DMA_Memory0BaseAddr   	= (uint32_t)&_USART6_DMA_RX_BUF[0];
     dma.DMA_DIR 			    = DMA_DIR_PeripheralToMemory;
-    dma.DMA_BufferSize			= USART6_RX_BUF_LENGTH;//sizeof(USART1_DMA_RX_BUF);
+    dma.DMA_BufferSize			= BSP_USART6_RX_BUF_LENGTH;//sizeof(USART1_DMA_RX_BUF);
     dma.DMA_PeripheralInc 		= DMA_PeripheralInc_Disable;
     dma.DMA_MemoryInc 			= DMA_MemoryInc_Enable;
     dma.DMA_PeripheralDataSize 	= DMA_PeripheralDataSize_Byte;
@@ -795,9 +816,11 @@ void USART6_IRQHandler(void)
 		(void)USART6->DR;
 		DMA_Cmd(DMA2_Stream1, DISABLE); 
 		DMA_ClearFlag(DMA2_Stream1, DMA_FLAG_TCIF1 | DMA_FLAG_HTIF1);  //************************************
-		this_time_rx_len6 = USART6_RX_BUF_LENGTH - DMA_GetCurrDataCounter(DMA2_Stream1);
+		this_time_rx_len6 = BSP_USART6_RX_BUF_LENGTH - DMA_GetCurrDataCounter(DMA2_Stream1);
+
 		USART6_Data_Receive_Process
-		DMA_SetCurrDataCounter(DMA2_Stream1,USART6_RX_BUF_LENGTH);
+		
+		DMA_SetCurrDataCounter(DMA2_Stream1,BSP_USART6_RX_BUF_LENGTH);
 		DMA_Cmd(DMA2_Stream1, ENABLE);
 	}       
 }
