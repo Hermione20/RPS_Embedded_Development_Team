@@ -7,12 +7,6 @@
 /****************************Judge***********************************/
 
 #define myCRC8_INIT											0xff
-#define UART5_TX_BUF_LENGTH             150
-#define UART_RX_DMA_SIZE                1024
-#define BSP_UART5_DMA_RX_BUF_LEN        512  
-#define BSP_UART5_RX_BUF_SIZE_IN_FRAMES (BSP_UART5_DMA_RX_BUF_LEN / RC_FRAME_LENGTH)
-#define RC_FRAME_LENGTH                 18u
-#define JUDGE_FRAME_BUFLEN              200
 #define ADRESS                          6
 #define JudgeBufferLength               150
 #define JudgeFrameLength_1              17  //比赛机器人状态数据长度
