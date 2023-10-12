@@ -91,6 +91,7 @@ float pid_double_loop_cal(pid_t *Outer_loop_pid,
                           pid_t *Inner_loop_pid,
                           float outer_ref,
                           float outer_fdb,
+													float *Inner_ref,
                           float Inner_fdb,
                           float feedforward);
 		

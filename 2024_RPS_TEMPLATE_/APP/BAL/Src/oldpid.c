@@ -198,16 +198,18 @@ void pid_clr(pid_t *pid)
 	pid->err[2] = 0;
 }
 
+
 float pid_double_loop_cal(pid_t *Outer_loop_pid,
                           pid_t *Inner_loop_pid,
                           float outer_ref,
                           float outer_fdb,
+													float *Inner_ref,
                           float Inner_fdb,
                           float feedforward)
 {
-	float Inner_ref;
-  Inner_ref = pid_calc(Outer_loop_pid,outer_fdb,outer_ref) + feedforward;
-  return pid_calc(Inner_loop_pid,Inner_fdb,Inner_ref);
+	
+  *Inner_ref = pid_calc(Outer_loop_pid,outer_fdb,outer_ref) + feedforward;
+  return pid_calc(Inner_loop_pid,Inner_fdb,*Inner_ref);
 }
 
 
