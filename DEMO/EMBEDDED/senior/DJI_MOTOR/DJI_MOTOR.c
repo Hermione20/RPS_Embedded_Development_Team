@@ -1,6 +1,21 @@
 #include "DJI_MOTOR.h"
 
 
+/**
+  ******************************************************************************
+  * @file    DJI_MOTOR.c
+  * @author  Lee_ZEKAI
+  * @version V1.1.0
+  * @date    03-October-2023
+  * @brief   此文件编写了DJI各型号电机的解算，包含c610电调
+						 c620电调与GM6020电机的解算，入口参数包含通用
+						 编码器结构体，can总线的计数，can结构体，（GM
+						 6020还包含编码器初始值设定）
+						 
+@verbatim
+ ===============================================================================
+ **/
+ 
 /*****************************dji encoder*************************************/
 
 void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg)
@@ -80,18 +95,20 @@ void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 }
 
 
-void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg)
+void M3508orM2006EncoderTask(volatile Encoder *v, CanRxMsg * msg)
 {
-	(can_count<=50)?GetEncoderBias(v,msg):EncoderProcess(v,msg);
+	v->can_cnt++;
+	(v->can_cnt<=5)?GetEncoderBias(v,msg):EncoderProcess(v,msg);
 }
 
 
-void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset)
+void GM6020EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset)
 {
-
+	v->can_cnt++;
+	if(v->can_cnt<=2){v->ecd_bias = offset;}
 	GM6020EncoderProcess(v, msg);
 	// 码盘中间值设定也需要修改
-	if (can_count <= 100)
+	if (v->can_cnt <= 10)
 	{
 		if ((v->ecd_bias - v->ecd_value) < -4000)
 		{
@@ -104,3 +121,74 @@ void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,in
 	}
 }
 
+void Set_GM6020_IQ1(CAN_TypeDef *CANx, int16_t motor1_iq, int16_t motor2_iq, int16_t motor3_iq, int16_t motor4_iq)
+{
+    CanTxMsg tx_message;
+    tx_message.StdId = 0x1FF;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Data;
+    tx_message.DLC = 0x08;
+    tx_message.Data[0] = (uint8_t)(motor1_iq >> 8);
+    tx_message.Data[1] = (uint8_t)motor1_iq;
+    tx_message.Data[2] = (uint8_t)(motor2_iq >> 8);
+    tx_message.Data[3] = (uint8_t)motor2_iq;
+    tx_message.Data[4] = (uint8_t)(motor3_iq >> 8);
+    tx_message.Data[5] = (uint8_t)motor3_iq;
+    tx_message.Data[6] = (uint8_t)(motor4_iq >> 8);
+    tx_message.Data[7] = (uint8_t)motor4_iq;
+    CAN_Transmit(CANx,&tx_message);
+}
+
+void Set_GM6020_IQ2(CAN_TypeDef *CANx, int16_t motor5_iq, int16_t motor6iq, int16_t motor7_iq, int16_t motor8_iq)
+{
+    CanTxMsg tx_message;
+    tx_message.StdId = 0x2FF;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Data;
+    tx_message.DLC = 0x08;
+    tx_message.Data[0] = (uint8_t)(motor5_iq >> 8);
+    tx_message.Data[1] = (uint8_t)motor5_iq;
+    tx_message.Data[2] = (uint8_t)(motor6iq >> 8);
+    tx_message.Data[3] = (uint8_t)motor6iq;
+    tx_message.Data[4] = (uint8_t)(motor7_iq >> 8);
+    tx_message.Data[5] = (uint8_t)motor7_iq;
+    tx_message.Data[6] = (uint8_t)(motor8_iq >> 8);
+    tx_message.Data[7] = (uint8_t)motor8_iq;
+    CAN_Transmit(CANx,&tx_message);
+}
+
+void Set_C620andC610_IQ1(CAN_TypeDef *CANx, int16_t motor1_iq, int16_t motor2_iq, int16_t motor3_iq, int16_t motor4_iq)
+{
+    CanTxMsg tx_message;
+    tx_message.StdId = 0x200;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Data;
+    tx_message.DLC = 0x08;
+    tx_message.Data[0] = (uint8_t)(motor1_iq >> 8);
+    tx_message.Data[1] = (uint8_t)motor1_iq;
+    tx_message.Data[2] = (uint8_t)(motor2_iq >> 8);
+    tx_message.Data[3] = (uint8_t)motor2_iq;
+    tx_message.Data[4] = (uint8_t)(motor3_iq >> 8);
+    tx_message.Data[5] = (uint8_t)motor3_iq;
+    tx_message.Data[6] = (uint8_t)(motor4_iq >> 8);
+    tx_message.Data[7] = (uint8_t)motor4_iq;
+    CAN_Transmit(CANx,&tx_message);
+}
+
+void Set_C620andC610_IQ2(CAN_TypeDef *CANx, int16_t motor5_iq, int16_t motor6_iq, int16_t motor7_iq, int16_t motor8_iq)
+{
+    CanTxMsg tx_message;
+    tx_message.StdId = 0x1FF;
+    tx_message.IDE = CAN_Id_Standard;
+    tx_message.RTR = CAN_RTR_Data;
+    tx_message.DLC = 0x08;
+    tx_message.Data[0] = (uint8_t)(motor5_iq >> 8);
+    tx_message.Data[1] = (uint8_t)motor5_iq;
+    tx_message.Data[2] = (uint8_t)(motor6_iq >> 8);
+    tx_message.Data[3] = (uint8_t)motor6_iq;
+    tx_message.Data[4] = (uint8_t)(motor7_iq >> 8);
+    tx_message.Data[5] = (uint8_t)motor7_iq;
+    tx_message.Data[6] = (uint8_t)(motor8_iq >> 8);
+    tx_message.Data[7] = (uint8_t)motor8_iq;
+    CAN_Transmit(CANx,&tx_message);
+}

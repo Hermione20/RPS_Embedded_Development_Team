@@ -21,7 +21,7 @@ void BSP_Init(void)
 		uart5_init(115200);	//初始化串口波特率为115200
 	#endif
 	#if EN_USART6
-		usart6_init(115200);	//初始化串口波特率为115200
+		usart6_init();	//初始化串口波特率为115200
 	#endif
 		
 	#if EN_CAN1 

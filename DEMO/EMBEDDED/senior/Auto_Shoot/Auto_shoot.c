@@ -1,5 +1,22 @@
 #include "Auto_shoot.h"
 
+
+/**
+  ******************************************************************************
+  * @file    Auto_shoot.c
+  * @author  Lee_ZEKAI
+  * @version V1.1.0
+  * @date    03-October-2023
+  * @brief   此文件编写了与视觉通信的内容，包含自瞄数据的接收，大小福
+						 数据的接收与和串口发送函数
+						 
+@verbatim
+ ===============================================================================
+ **/
+ 
+/******************************************auto_shoot_define***************************************/
+location new_location;
+
 HostToDevice__Frame *Uart4_Protobuf_Receive_Gimbal_Angle;
 
 
@@ -45,6 +62,8 @@ void vision_process_general_message(unsigned char* address, unsigned int length)
 	{
 		if(flag_x!=0&&flag_y!=0)
 		{
+			new_location.last_x = new_location.x;
+			new_location.last_y = new_location.y;
 			new_location.x = Uart4_Protobuf_Receive_Gimbal_Angle->target_yaw_;
 			new_location.y = Uart4_Protobuf_Receive_Gimbal_Angle->target_pitch_;
 			new_location.pitch_speed = Uart4_Protobuf_Receive_Gimbal_Angle->pitch_speed;
@@ -62,6 +81,32 @@ void vision_process_general_message(unsigned char* address, unsigned int length)
 			new_location.pitch_speed = 0;
 		}
 	}
+	//为防止神经网络误识别导致哨兵不跟随直接进入巡逻，需要做此处理
+	if(new_location.flag)
+	{
+		new_location.lost_cnt++;
+	}else
+	{
+		new_location.lost_cnt--;
+	}
+  if(new_location.lost_cnt<=0)
+	{
+		new_location.lost_cnt = 0;
+	}
+	if(new_location.lost_cnt>=3)
+	{
+		new_location.lost_cnt = 3;
+	}
+		
+	
+	if(new_location.lost_cnt == 3)
+	{
+		new_location.control_flag = 1;
+	}else if(new_location.lost_cnt == 0)
+	{
+		new_location.control_flag = 0;
+	}
+    /*****************************************************/
 	float flagg_x = Uart4_Protobuf_Receive_Gimbal_Angle->x_;
 	float flagg_y = Uart4_Protobuf_Receive_Gimbal_Angle->y_;
 	if (flagg_x == Uart4_Protobuf_Receive_Gimbal_Angle->x_ && flagg_y == Uart4_Protobuf_Receive_Gimbal_Angle->y_)
@@ -69,6 +114,7 @@ void vision_process_general_message(unsigned char* address, unsigned int length)
 		if (flagg_x != 0 && flagg_y != 0)
 		{
 			new_location.xy_0_flag = 0;
+			new_location.buff_kf_flag = 1;
 			new_location.x1 = Uart4_Protobuf_Receive_Gimbal_Angle->x_;
 			new_location.y1 = Uart4_Protobuf_Receive_Gimbal_Angle->y_;
 		}

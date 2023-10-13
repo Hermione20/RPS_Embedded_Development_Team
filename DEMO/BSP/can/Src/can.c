@@ -109,11 +109,11 @@ void CAN1_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
     nvic.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&nvic);
     
-//    nvic.NVIC_IRQChannel = CAN1_TX_IRQn;
-//    nvic.NVIC_IRQChannelPreemptionPriority = 1;
-//    nvic.NVIC_IRQChannelSubPriority = 0;
-//    nvic.NVIC_IRQChannelCmd = ENABLE;
-//    NVIC_Init(&nvic);    
+    nvic.NVIC_IRQChannel = CAN1_TX_IRQn;
+    nvic.NVIC_IRQChannelPreemptionPriority = 1;
+    nvic.NVIC_IRQChannelSubPriority = 0;
+    nvic.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&nvic);    
     
     CAN_DeInit(CAN1);
     CAN_StructInit(&can);
@@ -142,7 +142,7 @@ void CAN1_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
 		can_filter.CAN_FilterActivation=ENABLE;
 		CAN_FilterInit(&can_filter);
     CAN_ITConfig(CAN1,CAN_IT_FMP0,ENABLE);
-//    CAN_ITConfig(CAN1,CAN_IT_TME,ENABLE); 
+    CAN_ITConfig(CAN1,CAN_IT_TME,ENABLE); 
 }
 
 void CAN1_TX_IRQHandler(void) //CAN TX
@@ -157,6 +157,7 @@ void CAN1_TX_IRQHandler(void) //CAN TX
                           CAN1_RX0_IRQHandler
 描述：CAN1的接收中断函数
 *************************************************************************/
+
 void CAN1_RX0_IRQHandler(void)
 {   
 		CanRxMsg rx_message;	
@@ -193,15 +194,11 @@ void CAN2_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode)
 
     nvic.NVIC_IRQChannel = CAN2_RX0_IRQn;
     nvic.NVIC_IRQChannelPreemptionPriority = 3;
-    nvic.NVIC_IRQChannelSubPriority = 3;
+    nvic.NVIC_IRQChannelSubPriority = 0;
     nvic.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&nvic);
     
-    nvic.NVIC_IRQChannel = CAN2_TX_IRQn;
-    nvic.NVIC_IRQChannelPreemptionPriority = 3;
-    nvic.NVIC_IRQChannelSubPriority = 3;
-    nvic.NVIC_IRQChannelCmd = ENABLE;
-    NVIC_Init(&nvic);
+
 
     CAN_DeInit(CAN2);
     CAN_StructInit(&can);

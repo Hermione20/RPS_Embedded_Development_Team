@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Inc;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\BSP\can\Inc;..\BSP\delay\Inc;..\BSP\usart\Inc;..\BSP\sys\Inc;..\BSP\timer\Inc;..\BSP\pwm\Inc;..\BSP\LED;..\EMBEDDED\CAN_BUS;..\EMBEDDED\senior\Auto_Shoot;..\EMBEDDED\senior\Auto_Shoot\proto;..\EMBEDDED\senior\Auto_Shoot\Protocol;..\EMBEDDED\senior\CH100;..\EMBEDDED\senior\DJI_MOTOR;..\EMBEDDED\senior\HI220;..\EMBEDDED\senior\HT430;..\EMBEDDED\senior\JUDGE;..\EMBEDDED\senior\LK_TECH;..\EMBEDDED\senior\PM01;..\EMBEDDED\senior_struct;..\EMBEDDED\senior\REMOTE;..\APP\TASK\MODE_SWITCH_TASK\Inc</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\README;..\HEADFILE;..\STLIB\inc;..\STLIB\src;..\APP\BAL\Ins;..\APP\RTOS\Ins;..\APP\TASK\CHASSIS_TASK\Inc;..\APP\TASK\GIMBAL_TASK\Ins;..\APP\TASK\SHOOT_TASK\Ins;..\BSP\can\Inc;..\BSP\delay\Inc;..\BSP\usart\Inc;..\BSP\sys\Inc;..\BSP\timer\Inc;..\BSP\pwm\Inc;..\BSP\LED;..\EMBEDDED\CAN_BUS;..\EMBEDDED\senior\Auto_Shoot;..\EMBEDDED\senior\Auto_Shoot\proto;..\EMBEDDED\senior\Auto_Shoot\Protocol;..\EMBEDDED\senior\CH100;..\EMBEDDED\senior\DJI_MOTOR;..\EMBEDDED\senior\HI220;..\EMBEDDED\senior\HT430;..\EMBEDDED\senior\JUDGE;..\EMBEDDED\senior\LK_TECH;..\EMBEDDED\senior\PM01;..\EMBEDDED\senior_struct;..\EMBEDDED\senior\REMOTE;..\APP\TASK\MODE_SWITCH_TASK\Inc;..\APP\RTOS\Ins</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -412,6 +412,11 @@
         <Group>
           <GroupName>TASK</GroupName>
           <Files>
+            <File>
+              <FileName>control_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\RTOS\Src\control_task.c</FilePath>
+            </File>
             <File>
               <FileName>infantry_gimbal_task.c</FileName>
               <FileType>1</FileType>

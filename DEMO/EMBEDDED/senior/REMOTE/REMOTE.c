@@ -1,8 +1,29 @@
 #include "REMOTE.h"
 
+
+/**
+  ******************************************************************************
+  * @file    REMOTE.c
+  * @author  Lee_ZEKAI
+  * @version V1.1.0
+  * @date    03-October-2023
+  * @brief   此文件编写遥控器的数据接收与解算，接收函数入口参数为
+						 串口地址，数据长度，结构体中rc为遥控器原始数据，mouse
+						 为鼠标原始数据，key为键盘原始数据
+						 
+@verbatim
+ ===============================================================================
+ **/
+ 
+ 
+/**********************************************remote_define***************************************/
+RC_Ctl_t RC_CtrlData;
+
 /***********************************遥控器接收*************************************************************/
-void RemoteDataPrcess(uint8_t *pData)
+void RemoteDataPrcess(uint8_t *pData,u16 length)
 {
+	if(length != RC_FRAME_LENGTH)
+		return;
 	if (pData == NULL)
 	{
 		return;
@@ -32,7 +53,8 @@ void RemoteDataPrcess(uint8_t *pData)
 
 
 	/*****************************************************************/
-} 
+}
+
 
 void SetInputMode(RC_Ctl_t *remote)
 {
@@ -49,7 +71,9 @@ void SetInputMode(RC_Ctl_t *remote)
   else if(remote->rc.s2 == 2)
     {
       remote->inputmode = STOP;
+    
     }
+
 }
 
 
@@ -64,8 +88,7 @@ void GetRemoteSwitchAction(RC_Ctl_t *remote)
 		if(remote->RemoteSwitch.s3to2_cnt%2==0)
 		{
 			remote->RemoteSwitch.s3to2 = 0;
-		}
-		else
+		}else
 		{
 			remote->RemoteSwitch.s3to2 = 1;
 		}
@@ -76,12 +99,12 @@ void GetRemoteSwitchAction(RC_Ctl_t *remote)
 		if(remote->RemoteSwitch.s3to1_cnt%2==0)
 		{
 			remote->RemoteSwitch.s3to1 = 0;
-		}
-		else
+		}else
 		{
 			remote->RemoteSwitch.s3to1 = 1;
 		}
 	}
+	
 }
 
 u8 remote_flagW1, remote_flagW2 = 0;
@@ -148,12 +171,13 @@ void keyborad_process(RC_Ctl_t *remote)
 
 uint8_t T_Key_procces(u8 flag,u8 *a,u8 *i)
 {
+	
 	if (flag)
 	{
 	  if ( *a == 0)
 	  {
 		  *a = 1;
-		  *i++;
+		  *i = *i+1;
 	  }
 	}
 	else

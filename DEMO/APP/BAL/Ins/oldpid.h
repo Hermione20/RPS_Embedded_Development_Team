@@ -169,4 +169,7 @@ extern pid_t pid_42mm_poke2_speed;//上波盘速度环
 extern pid_t pid_17mm_poke_angle;//拨盘角度环
 extern pid_t pid_17mm_poke_speed;//拨盘速度环
 
+extern pid_t pid_17mm_poke_angle_buf;
+extern pid_t pid_17mm_poke_speed_buf;
+
 #endif

@@ -2,10 +2,10 @@
 #define __SENIOR_H
 #include "main.h"
 
-//云台电机初始位置
-#define  GMPitchEncoder_Offset 0
-#define  GMYawEncoder_Offset   4758
 
+#define  GMPitchEncoder_Offset 6165
+//yaw轴电机初始位置
+#define  GMYawEncoder_Offset   58500
 //底盘航向轴电机初始位置
 #define  GM1Encoder_Offset   1437
 #define  GM2Encoder_Offset   8042
@@ -13,28 +13,74 @@
 #define  GM4Encoder_Offset   6732
 
 
-/********************general chassis encoder********************************/
+#ifndef STRUCT_MOTOR
+#define STRUCT_MOTOR
+
+#define RATE_BUF_SIZE 6
+typedef struct{
+	int32_t raw_value;   									//编码器不经处理的原始值
+	int32_t last_raw_value;								//上一次的编码器原始值
+	int32_t ecd_value;                       //经过处理后连续的编码器值
+	int32_t diff;													//两次编码器之间的差值
+	int32_t temp_count;                   //计数用
+	uint8_t buf_count;								//滤波更新buf用
+	int32_t ecd_bias;											//初始编码器值	
+	int32_t ecd_raw_rate;									//通过编码器计算得到的速度原始值
+	int32_t rate_buf[RATE_BUF_SIZE];	//buf，for filter
+	int32_t round_cnt;										//圈数
+	int32_t can_cnt;					//记录函数的使用次数，在电机初始完成部分任务
+
+	int32_t filter_rate;											//速度
+	double ecd_angle;											//角度
+	u32 temperature;
+	int16_t rate_rpm;
+	
+}Encoder;
+	
 
 
+
+
+
+#endif
+
+#ifndef GENERAL_GYRO_T
+/**************************general gyro*********************************/
+#define GENERAL_GYRO_T
 typedef struct 
 {
-	volatile Encoder right_front_GM6020;
-	volatile Encoder left_front_GM6020;
-	volatile Encoder left_behind_GM6020;
-	volatile Encoder right_behind_GM6020;
+	float pitch_Angle;
+	float yaw_Angle;
+	float roll_Angle;
+	float pitch_Gyro;
+	float yaw_Gyro;
+	float roll_Gyro;
+	float x_Acc;
+	float y_Acc;
+	float z_Acc;
+}general_gyro_t;
 
-	volatile Encoder right_front_motor;
-	volatile Encoder left_front_motor;
-	volatile Encoder left_behind_motor;
-	volatile Encoder right_behind_motor;
+
+
+#endif
+
+//以下底盘结构体的数组方位表示为象限表示
+
+/********************general chassis encoder********************************/
+
+//名字整改
+//定义中间结构体
+typedef struct 
+{
+	volatile Encoder Heading_Encoder[4];
+
+	volatile Encoder Driving_Encoder[4];
+	
 }steering_wheel_t;
 
 typedef struct
 {
-	volatile Encoder right_front_motor;
-	volatile Encoder left_front_motor;
-	volatile Encoder left_behind_motor;
-	volatile Encoder right_behind_motor;
+	volatile Encoder Driving_Encoder[4];
 }Mecanum_wheel_t;
 
 /***************************general friction encoder********************************************/
@@ -60,34 +106,13 @@ typedef struct
 	volatile Encoder scope_encoder;
 	volatile Encoder small_gimbal_encoder;
 }hero_small_gimbal_t;
-/*********************************************chassis_data*****************************************/
 
 
 
 
 
-///***************************senior function*************************************/
-//void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO);
 
-//void HI220_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO,uint8_t length);
 
-//void M3508orM2006EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg);
-
-//void GM6020EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
-
-//void MF_EncoderTask(uint32_t can_count,volatile Encoder *v, CanRxMsg * msg,int offset);
-
-//void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
-
-//void HT_430_Information_Receive(CanRxMsg * msg,HT430_J10_t *HT430_J10_t,volatile Encoder *v);
-
-//void judgement_data_handle(uint8_t *p_frame,u16 rec_len);
-
-//void vision_process_general_message(unsigned char* address, unsigned int length);
-
-//void send_protocol(float x, float y, float r, int id, float ammo_speed, int gimbal_mode, u8 *data);
-
-//void RemoteDataPrcess(uint8_t *pData);
 /**************general_gyro define**********************/
 extern general_gyro_t gimbal_gyro;
 extern general_gyro_t chassis_gyro;
@@ -100,9 +125,6 @@ extern friction_t general_friction;
 extern poke_t general_poke;
 
 
-//extern volatile capacitance_message_t capacitance_message;
-//extern receive_judge_t judge_rece_mesg;
-//extern location new_location;
-//extern RC_Ctl_t RC_CtrlData;
+
 #endif
 

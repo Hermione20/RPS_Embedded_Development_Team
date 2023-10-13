@@ -1,5 +1,21 @@
 #include "CH100.h"
 
+
+/**
+  ******************************************************************************
+  * @file    CH100.c
+  * @author  Lee_ZEKAI
+  * @version V1.1.0
+  * @date    03-October-2023
+  * @brief   此文件编写了与CH100陀螺仪的数据接收与解算，
+							函数入口参数为串口dma接收地址与通用陀螺仪
+							结构体
+						 
+@verbatim
+ ===============================================================================
+ **/
+ 
+ 
 void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO)
 {
     static __align(4) id0x91_t dat; /* struct must be 4 byte aligned */
@@ -23,7 +39,7 @@ void CH100_getDATA(uint8_t *DataAddress,general_gyro_t *GYRO)
 
     GYRO->roll_Angle = dat.eul[1];
 
-    GYRO->pitch_Gyro = dat.gyr[1];
+    GYRO->pitch_Gyro = -dat.gyr[1];
     GYRO->yaw_Gyro = -dat.gyr[2];
     GYRO->roll_Gyro = dat.gyr[0];
 

@@ -29,10 +29,6 @@ void CAN2_Mode_Init(u8 tbs2,u8 tbs1,u16 brp,u8 mode);//CAN初始化
 	 
 u8 CAN1_Send_Msg(u8* msg,u8 len);						//发送数据
 
-u8 CAN1_Receive_Msg(u8 *buf);							//接收数据
-
-u8 CAN2_Receive_Msg(u8 *buf);
-
 void CAN1_Configuration(void);
 void set_M3508_info(void);
 void CAN2_Configuration(void);

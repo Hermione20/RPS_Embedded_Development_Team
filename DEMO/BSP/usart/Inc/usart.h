@@ -3,72 +3,70 @@
 #include "public.h"
 
 
-#define EN_USART1 								1
-//#define EN_USART1_DMA_SECOND_FIFO 1
+#define EN_USART1 									    1//默认双缓冲
 
+#define EN_USART2       						  	1//默认双缓冲
 
-#define EN_USART2       					1
-#define EN_UART2_DMA_SECOND_FIFO  0
+#define EN_USART3												1//默认单缓冲
 
+#define EN_UART4												1//默认单缓冲
 
-#define EN_USART3									1
-#define EN_USART3_DMA_SECOND_FIFO 0
+#define EN_UART5												1//可选缓冲
+#define EN_UART5_DMA_SECOND_FIFO 				1
 
-
-#define EN_UART4									1
-#define EN_UART4_DMA_SECOND_FIFO  0
-
-
-#define EN_UART5									1
-#define EN_UART5_DMA_SECOND_FIFO  0
-
-
-#define EN_USART6									1
+#define EN_USART6												1//默认单缓冲
 
 /*
 *********************************************************************************************************
-*                                    中断调用函数接口
+*                                     中断调用函数接口
 *********************************************************************************************************
 */
-#define USART1_Data_Receive_Process_0				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[0]);}while(0);
-																										
-#define USART1_Data_Receive_Process_1				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[1]);}while(0);
+#define USART1_Data_Receive_Process_0				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[0],this_time_rx_len1);}while(0);																																															
+#define USART1_Data_Receive_Process_1				do{RemoteDataPrcess(_USART1_DMA_RX_BUF[1],this_time_rx_len1);}while(0);
 
-#define USART2_Data_Receive_Process					do{}while(0);
-#define USART3_Data_Receive_Process					do{}while(0);
+#define USART2_Data_Receive_Process_0				do{}while(0);
+#define USART2_Data_Receive_Process_1				do{}while(0);
+	
+#define USART3_Data_Receive_Process					do{CH100_getDATA(_USART3_RX_BUF,&gimbal_gyro);}while(0);
 #define UART4_Data_Receive_Process					do{}while(0);
-#define UART5_Data_Receive_Process					do{}while(0);
-#define USART6_Data_Receive_Process					do{}while(0);
+	
+#define UART5_Data_Receive_Process_0				do{judgement_data_handle(_UART5_DMA_RX_BUF[0],this_time_rx_len5);}while(0);
+#define UART5_Data_Receive_Process_1				do{judgement_data_handle(_UART5_DMA_RX_BUF[1],this_time_rx_len5);}while(0);
 
-
+#define USART6_Data_Receive_Process					do{HI220_getDATA(_USART6_DMA_RX_BUF,&gimbal_gyro,this_time_rx_len6);}while(0);
 /*
 *********************************************************************************************************
-*                                               MACROS
+*                                          MACROS
 *********************************************************************************************************
-*/
+*///供调用 
+//	static uint8_t _USART1_DMA_RX_BUF[2][BSP_USART1_DMA_RX_BUF_LEN];//双缓冲接收区
+//	static uint8_t _USART2_DMA_RX_BUF[2][BSP_USART2_DMA_RX_BUF_LEN];//双缓冲接收区
+//	static uint8_t _USART3_RX_BUF[BSP_USART2_DMA_RX_BUF_LEN];//ch100单缓冲接收区
+//	static uint8_t _UART4_DMA_RX_BUF[UART4_RX_BUF_LENGTH];	
+//	static uint8_t _USART6_DMA_RX_BUF[USART6_RX_BUF_LENGTH];
+//	static uint8_t UART4_DMA_TX_BUF[UART4_TX_BUF_LENGTH];
+//	static uint8_t UART5_DMA_TX_BUF[UART5_TX_BUF_LENGTH];
+#define UART4_RX_BUF_LENGTH       100
 
-#define  BSP_USART1_DMA_RX_BUF_LEN               64u                   
-#define BSP_USART1_RX_BUF_SIZE_IN_FRAMES         (BSP_USART1_RX_BUF_SIZE / RC_FRAME_LENGTH)
+#define BSP_USART1_DMA_RX_BUF_LEN 64u 
 #define BSP_USART2_DMA_RX_BUF_LEN 100
-#define CH100_RX_BUFF_SIZE 100
-#define UART4_RX_BUF_LENGTH   100
-#define UART4_TX_BUF_LENGTH	100
-#define BSP_USART6_DMA_RX_BUF_LEN 100
-#define  RC_FRAME_LENGTH                            18u
-#define PITCH_MAX 35.0f
-#define PITCH_MIN -25.0f
-#define YAW_MAX 40				//cyq:云台角度的范围
-#define YAW_MIN -40
+#define BSP_UART5_DMA_RX_BUF_LEN  512
+#define BSP_USART6_RX_BUF_LENGTH  100
+
+
+#define UART4_TX_BUF_LENGTH       100
+#define UART5_TX_BUF_LENGTH       150
+
+#define RC_FRAME_LENGTH           18u
+
+#define BSP_USART1_RX_BUF_SIZE_IN_FRAMES       (BSP_USART1_RX_BUF_SIZE / RC_FRAME_LENGTH)
+#define BSP_UART5_RX_BUF_SIZE_IN_FRAMES 			 (BSP_UART5_DMA_RX_BUF_LEN / RC_FRAME_LENGTH)  
 /*
 *********************************************************************************************************
 *                                             FUNCTION PROTOTYPES
 *********************************************************************************************************
 */
-
-
-
-
-
+#if EN_USART3												
  /* Definition for USART_CH100 resources ******************************************/
   #define USART_CH100                           USART3
   #define USART_CH100_CLK                       RCC_APB1Periph_USART3
@@ -114,14 +112,16 @@
 //  #define USART_CH100_DMA_RX_IRQn               DMA2_Stream1_IRQn
 //  #define USART_CH100_DMA_TX_IRQHandler         DMA2_Stream6_IRQHandler
 //  #define USART_CH100_DMA_RX_IRQHandler         DMA2_Stream1_IRQHandler
+#endif
+
 
 void usart1_init(uint32_t baud_rate);
 void usart2_init(u32 bound);
 void usart3_init(u32 bound);
 void uart4_init (u32 bound);
 void uart5_init (u32 bound);
-void usart6_init(u32 bound);
-void RemoteDataPrcess(uint8_t *pData);
+void usart6_init(void);
+
 void Uart4DmaSendDataProc(DMA_Stream_TypeDef *DMA_Streamx,u16 ndtr);
 void Uart4SendByteInfoProc(u8 nSendInfo);
 void Uart4SendBytesInfoProc(u8* pSendInfo, u16 nSendCount);

@@ -1,5 +1,24 @@
 #include "JUDGE.h"
 
+
+/**
+  ******************************************************************************
+  * @file    JUDGE.c
+  * @author  Lee_ZEKAI
+  * @version V1.1.0
+  * @date    03-October-2023
+  * @brief   此文件编写了裁判系统的数据接收与解算，函数入口参数为串口dma
+						 地址与数据长度
+						 
+@verbatim
+ ===============================================================================
+ **/
+ 
+ 
+/*************************************judge define********************************************/
+receive_judge_t judge_rece_mesg;
+
+
 /***********************************    ↓    DJI提供的CRC校检函数   ↓  ***********************************/
 //crc8 generator polynomial:G(x)=x8+x5+x4+1
 const unsigned char CRC8_INIT = 0xff;
@@ -173,6 +192,8 @@ unsigned char get_crc8(unsigned char* data, unsigned int length)
 /**********************************************Judge_handle****************************************/
 void judgement_data_handle(uint8_t *p_frame, u16 rec_len)
 {
+    if(rec_len <= (HEADER_LEN + CMD_LEN + CRC_LEN))
+    return;
   u8 header[HEADER_LEN];
   u8 data[32];
   u16 deal_cnt = 0;

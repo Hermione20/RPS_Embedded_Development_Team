@@ -32,7 +32,7 @@ typedef struct
 #define LENGTH_EULER_ANG_f_0xd9 	12
 #define LENGTH_QUATERNION_0xd1 		16
 #define LENGTH_AIR_PRESS_0xf0 		4
-#define USART6_RX_BUF_LENGTH 100
+
 
 typedef struct {
 					u8 User_ID;

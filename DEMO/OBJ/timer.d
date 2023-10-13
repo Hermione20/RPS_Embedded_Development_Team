@@ -92,6 +92,7 @@
 ..\obj\timer.o: ..\BSP\sys\Inc\sys.h
 ..\obj\timer.o: ..\BSP\timer\Inc\timer.h
 ..\obj\timer.o: ..\BSP\pwm\Inc\pwm.h
+..\obj\timer.o: ..\APP\RTOS\Ins\control_task.h
 ..\obj\timer.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\timer.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\timer.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

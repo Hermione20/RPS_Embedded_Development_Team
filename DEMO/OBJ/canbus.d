@@ -93,6 +93,7 @@
 ..\obj\canbus.o: ..\BSP\sys\Inc\sys.h
 ..\obj\canbus.o: ..\BSP\timer\Inc\timer.h
 ..\obj\canbus.o: ..\BSP\pwm\Inc\pwm.h
+..\obj\canbus.o: ..\APP\RTOS\Ins\control_task.h
 ..\obj\canbus.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\canbus.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\canbus.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

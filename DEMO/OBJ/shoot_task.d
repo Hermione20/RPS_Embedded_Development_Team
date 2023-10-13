@@ -92,6 +92,7 @@
 ..\obj\shoot_task.o: ..\BSP\sys\Inc\sys.h
 ..\obj\shoot_task.o: ..\BSP\timer\Inc\timer.h
 ..\obj\shoot_task.o: ..\BSP\pwm\Inc\pwm.h
+..\obj\shoot_task.o: ..\APP\RTOS\Ins\control_task.h
 ..\obj\shoot_task.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\shoot_task.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\shoot_task.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

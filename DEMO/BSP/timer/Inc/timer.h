@@ -18,7 +18,7 @@
 #define EN_TIM2									0
 #define	EN_TIM2_IRQ							0
 
-#define EN_TIM3									2			//0£º¹Ø±Õ	1£º¶¨Ê±Æ÷	2£ºPWM
+#define EN_TIM3									0
 #define	EN_TIM3_IRQ							0
 
 #define EN_TIM4									0
@@ -46,7 +46,7 @@
 #define TIM3_IRQProcess 				do{}while(0);
 #define TIM4_IRQProcess 				do{}while(0);
 #define TIM5_IRQProcess 				do{}while(0);
-#define TIM6_IRQProcess 				do{a++;}while(0);//Control_Task
+#define TIM6_IRQProcess 				do{control_task();}while(0);//Control_Task
 #define TIM7_IRQProcess 				do{}while(0);
 #define TIM8_IRQProcess 				do{}while(0);
 

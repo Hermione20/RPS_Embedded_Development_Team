@@ -261,17 +261,15 @@ pid_t pid_yaw_speed     					= {0};
 pid_t pid_pit_speed     					= {0};
 pid_t pid_spd[4]        					= {0};
 pid_t pid_chassis_angle 					= {0};
-pid_t pid_trigger       					= {0};
-pid_t pid_trigger_speed 					= {0};
-pid_t pid_trigger_second_speed 		= {0};
-pid_t pid_imu_tmp       					= {0};
-pid_t pid_voltage       					= {0};
+pid_t pid_trigger_second_speed		= {0};
+pid_t pid_imu_tmp									= {0};
+pid_t pid_voltage									= {0};
 pid_t pid_software_limit					= {0};
-pid_t pid_speed_bias    					= {0};
+pid_t pid_speed_bias							= {0};
 pid_t pid_front_distance					= {0};
 pid_t pid_right_distance					= {0};
 pid_t pid_angle_distance					= {0};
-pid_t pid_spring[2] 							= {0};
+pid_t pid_spring[2]								= {0};
 
 //舵轮底盘双环
 pid_t pid_cha_6020_angle[4]				= {0};
@@ -291,3 +289,9 @@ pid_t pid_42mm_poke2_speed	= {0};//上波盘速度环
 //17mm发射机构
 pid_t pid_17mm_poke_angle		=	{0};//拨盘角度环
 pid_t pid_17mm_poke_speed		=	{0};//拨盘速度环
+
+pid_t pid_17mm_poke_angle_buf={0};
+pid_t pid_17mm_poke_speed_buf={0};
+
+//打符模式
+

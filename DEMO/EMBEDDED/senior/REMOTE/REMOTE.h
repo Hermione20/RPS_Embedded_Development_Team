@@ -2,13 +2,17 @@
 #define __REMOTE_H
 #include "public.h"
 
+#define  RC_FRAME_LENGTH                            18u
+
 #define REMOTE_CONTROLLER_STICK_OFFSET      1024u   
 
 #define STICK_TO_CHASSIS_SPEED_REF_FACT     1.5f
 
 #define STICK_TO_PITCH_ANGLE_INC_FACT       0.008
-#define STICK_TO_YAW_ANGLE_INC_FACT         0.008f//0.005f
+#define STICK_TO_YAW_ANGLE_INC_FACT         0.008f
 
+#define MOUSE_TO_PITCH_ANGLE_INC_FACT 		0.04f
+#define MOUSE_TO_YAW_ANGLE_INC_FACT 		0.06f
 
 /*************************************¼üÊó**********************************************/
 #define  KEY_W  0X0001    //Ç°ºó×óÓÒ
@@ -75,7 +79,7 @@ typedef enum
 //to detect the action of the switch
 typedef __packed struct 
 {
-	uint8_t switch_value_raw;    // the current switch value
+	 uint8_t switch_value_raw;            // the current switch value
 	uint8_t last_switch_value;
 	uint8_t switch_value;
 	uint8_t s3to2;
@@ -86,7 +90,7 @@ typedef __packed struct
 
 typedef __packed struct
 {
-  u8 Key_W_Flag ;
+  	u8 Key_W_Flag ;
 	u8 Key_A_Flag ;
 	u8 Key_S_Flag ;
 	u8 Key_D_Flag ;
@@ -136,19 +140,8 @@ typedef struct
 
 }RC_Ctl_t;
 
-typedef struct
-{
-	u8 if_follow_gim;
-	u8 chassis_mode;
-	volatile Encoder yaw_Encoder;
-	int16_t x;
-	int16_t y;
-	int16_t w;
-	float chassis_power;
-	uint16_t chassis_power_buffer;
-} chassis_data_t;
 
-void RemoteDataPrcess(uint8_t *pData);
+void RemoteDataPrcess(uint8_t *pData,u16 length);
 void SetInputMode(RC_Ctl_t *remote);
 void updateKeyFlag(uint16_t key,RC_Ctl_t *remote, uint8_t *flag);
 void keyborad_process(RC_Ctl_t *remote);
@@ -156,7 +149,7 @@ uint8_t T_Key_procces(u8 flag,u8 *a,u8 *i);
 void GetRemoteSwitchAction(RC_Ctl_t *remote);
 
 extern RC_Ctl_t RC_CtrlData;
-extern chassis_data_t can_chassis_data;
+
 
 
 

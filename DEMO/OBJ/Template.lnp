@@ -3,6 +3,7 @@
 "..\obj\stm32f4xx_it.o"
 "..\obj\system_stm32f4xx.o"
 "..\obj\bsp.o"
+"..\obj\control_task.o"
 "..\obj\infantry_gimbal_task.o"
 "..\obj\mode_switch_task.o"
 "..\obj\shoot_task.o"

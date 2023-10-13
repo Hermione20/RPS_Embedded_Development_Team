@@ -92,6 +92,7 @@
 ..\obj\dji_motor.o: ..\BSP\sys\Inc\sys.h
 ..\obj\dji_motor.o: ..\BSP\timer\Inc\timer.h
 ..\obj\dji_motor.o: ..\BSP\pwm\Inc\pwm.h
+..\obj\dji_motor.o: ..\APP\RTOS\Ins\control_task.h
 ..\obj\dji_motor.o: ..\APP\TASK\GIMBAL_TASK\Ins\infantry_gimbal_task.h
 ..\obj\dji_motor.o: ..\APP\TASK\CHASSIS_TASK\Inc\CHASSIS_TASK.H
 ..\obj\dji_motor.o: ..\APP\TASK\MODE_SWITCH_TASK\Inc\mode_switch_task.h

@@ -18,7 +18,7 @@ void PWM_Configuration(void)
 	
 	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource8, GPIO_AF_TIM3);  //TIM3->CCR1 ????PWM4
 	  GPIO_PinAFConfig(GPIOC,GPIO_PinSource9, GPIO_AF_TIM3);  //TIM3->CCR2 ????PWM5
-	
+		
 	  tim.TIM_Prescaler = 1000-1;    //psc
     tim.TIM_CounterMode = TIM_CounterMode_Up;
     tim.TIM_Period = 1680-1;   //arr
