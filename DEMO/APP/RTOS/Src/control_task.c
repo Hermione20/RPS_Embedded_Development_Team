@@ -15,12 +15,10 @@ void control_task(void)
 	{
 		gimbal_task();
 			can_bus_send_task();
+		shoot_task();
 	}
 	
-	
-	
 }
-
 
 void control_task_Init(void)
 {

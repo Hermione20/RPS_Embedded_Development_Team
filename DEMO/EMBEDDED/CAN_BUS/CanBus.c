@@ -23,7 +23,6 @@
 
 void Can1ReceiveMsgProcess(CanRxMsg * msg)
 {
-
     switch (msg->StdId)
     {
 			case LEFT_FRICTION1:
@@ -32,12 +31,20 @@ void Can1ReceiveMsgProcess(CanRxMsg * msg)
 			}break;
 			case RIGHT_FRICTION1:
 			{
-				M3508orM2006EncoderTask(&general_friction.left_motor1,msg);
+				M3508orM2006EncoderTask(&general_friction.right_motor1,msg);
 			}break;
+		#if TYPE==1
 			case POKE_2:
 			{
 				M3508orM2006EncoderTask(&general_poke.right_poke,msg);
 			}break;
+		#endif
+		#if TYPE==2
+			case POKE_3:
+			{
+				M3508orM2006EncoderTask(&general_poke.left_poke,msg);
+			}break;
+		#endif
     default:
         break;
     }
@@ -47,30 +54,13 @@ void Can2ReceiveMsgProcess(CanRxMsg *msg)
 {
     switch (msg->StdId)
     {
-			case GIMBAL_YAW_MOTOR:
-			{
-					MF_EncoderTask(&yaw_Encoder, msg, GMYawEncoder_Offset);
-			}break;
-			case CM1Encoder_MOTOR:
-			{
-					M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[0],msg);
-			}break;
-			case CM2Encoder_MOTOR:
-			{
-					M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[1],msg);
-			}break;
-			case CM3Encoder_MOTOR:
-			{
-					M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[2],msg);
-			}break;
-			case CM4Encoder_MOTOR:
-			{
-					M3508orM2006EncoderTask(&Mecanum_chassis.Driving_Encoder[3],msg);
-			}break;
-			case POKE_2:
+		#if TYPE==1
+			case POKE_1:
 			{
 				M3508orM2006EncoderTask(&general_poke.left_poke,msg);
 			}break;
+		#endif
+
 
 			default:
 					break;
@@ -83,7 +73,13 @@ void can_bus_send_task(void)
 //	CAN_9015torsionControl(CAN1,gimbal_data.gim_ref_and_fdb.pitch_motor_input,GIMBAL_PITCH_MOTOR);
 	
 //	Set_C620andC610_IQ1(CAN2,chassis.current[0],chassis.current[1],chassis.current[2],chassis.current[3]);
-	Set_C620andC610_IQ1(CAN2,pid_friction_whell_speed[0].out,pid_friction_whell_speed[1].out,pid_friction_whell_speed[2].out,pid_friction_whell_speed[3].out);
-
+#if TYPE==1
+		Set_C620andC610_IQ1(CAN1,pid_friction_whell_speed[0].out,pid_friction_whell_speed[1].out,0,0);
+		Set_C620andC610_IQ2(CAN1,pid_42mm_poke2_speed.out,0,0,0);
+		Set_C620andC610_IQ2(CAN2,pid_42mm_poke_speed.out,0,0,0);
+#endif
+#if TYPE==2
+	Set_C620andC610_IQ1(CAN1,pid_friction_whell_speed[0].out,pid_friction_whell_speed[1].out,pid_17mm_poke_speed.out,0);
+#endif
 }
 

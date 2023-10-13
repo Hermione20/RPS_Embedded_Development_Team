@@ -5,7 +5,7 @@ int main()
 {
    BSP_Init();
 	 PID_struct_init(&pid_yaw ,POSITION_PID ,15000,10000,0, 3, 2, 0);
-	 
+	 shot_param_init();
 	
 	while(1)
 	{

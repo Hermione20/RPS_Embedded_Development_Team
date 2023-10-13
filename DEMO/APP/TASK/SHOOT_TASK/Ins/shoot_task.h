@@ -48,12 +48,11 @@
 //#define FRICTION_SPEED_14 2575
 #define FRICTION_SPEED_16 3200
 
-#define POKE_SPEED 200			//英雄下拨盘转速
+#define POKE_SPEED -200			//英雄下拨盘转速
 #define POKE_MAX_OUT 6000		//英雄下拨盘力度限制
 #define ONE_POKE_ANGLE_42 90.0f	//42mm单个弹丸角度
-#define ONE_POKE_ANGLE_17 30.0f	//17mm单个弹丸角度
+#define ONE_POKE_ANGLE_17 -30.0f	//17mm单个弹丸角度
 #define k_speed	0.005
-
 
 //摩擦轮转速——17mm
 #define FRICTION_SPEED_15 2000
@@ -88,21 +87,18 @@ void Mode_switch(void);		//步兵发射模式选择
 
 static void Shoot_42mm_speed_Select(void);		//42mm弹速
 static void Shoot_17mm_speed_Select(void);		//17mm弹速
-static void Shoot_17mm_speed_Select_double(void);//17mm弹速,双枪管
 
 void heat1_limit_42mm(void);								//热量限制,42mm
 void heat1_limit_17mm(void);								//热量限制,17mm
-void heat1_limit_17mm_double(void);					//热量限制,17mm,双枪管
 
-void shoot_friction_handle_42(void);				//摩擦轮部分，42mm
-void shoot_friction_handle_17(void);				//摩擦轮部分，17mm
-void shoot_friction_handle_17_double(void);	//摩擦轮部分，17mm,双枪管
+void shoot_friction_handle_42(void);				//42mm摩擦轮
+void shoot_friction_handle_17(void);				//17mm摩擦轮
 
+void shoot_bullet_handle_17(void);					//17mm拨盘
 void shoot_bullet_handle_42(void);					//42mm拨盘部分
 
 void friction_lock(void);										//摩擦轮堵转部分
 void Heat0_switch(void);
-
 
 void shot_param_init(void);									//发射机构PID参数初始化
 

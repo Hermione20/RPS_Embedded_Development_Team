@@ -86,6 +86,7 @@ typedef __packed struct
 	uint8_t s3to1;
 	int s3to2_cnt;
 	int s3to1_cnt;
+	uint8_t trigger;
 }RemoteSwitch_t;
 
 typedef __packed struct
