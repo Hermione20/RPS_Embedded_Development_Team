@@ -1,6 +1,6 @@
 #ifndef __SENIOR_H
 #define __SENIOR_H
-#include "main.h"
+#include "public.h"
 
 
 #define  GMPitchEncoder_Offset 6165
@@ -86,18 +86,27 @@ typedef struct
 /***************************general friction encoder********************************************/
 typedef struct 
 {
-	volatile Encoder right_motor1;
-	volatile Encoder left_motor1;
-	volatile Encoder left_motor2;
-	volatile Encoder right_motor2;
+	volatile Encoder right_up_motor;
+	volatile Encoder left_up_motor;
+	volatile Encoder left_down_motor;
+	volatile Encoder right_down_motor;
+
+	volatile Encoder left_motor;
+	volatile Encoder right_motor;
 }friction_t;
 
 /************************************general poke encoder******************************************************/
 
 typedef struct 
 {
+	//ÉÚ±ø
 	volatile Encoder right_poke;
 	volatile Encoder left_poke;
+	//Ó¢ÐÛ
+	volatile Encoder up_poke;
+	volatile Encoder down_poke;
+	//ÆäËû
+	volatile Encoder poke;
 }poke_t;
 
 /****************************************hero small gimbal encoder*****************************************************************/
