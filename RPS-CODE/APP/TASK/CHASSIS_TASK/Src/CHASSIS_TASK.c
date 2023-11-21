@@ -8,7 +8,7 @@
   * @version V1.1.0
   * @date    11-October-2023
   * @brief   此文件编写整合通用底盘，包括舵轮/麦轮 以及对应兵种功率限制
-						 均在头文件通过宏定义更改
+						 均在源文件通过宏定义更改
 						 《主调用函数下拉至底部》
 @verbatim
  ===============================================================================
@@ -56,6 +56,51 @@ float I6020[4],sdpower,shpower,dpower[4],hpower[4],all_power1[4],all_power2[4],
 	all_power,a6020[4],b6020[4],m6020,n6020,l6020,i6020,kall6020[4];
 
 float k6020=-0.000075,k2_6020=1.278e-7,k1_6020=6.157e-6,k0_6020=1.054;
+
+pid_t pid_cha_6020_angle[4]={0};
+pid_t pid_cha_3508_angle[4]={0};
+pid_t pid_cha_6020_speed[4]={0};
+pid_t pid_cha_3508_speed[4]={0};
+
+pid_t pid_chassis_angle = {0};
+
+/*----------------------------------------------------------------------------*/
+//底盘类型 1舵轮 2麦轮 3全向轮 4新舵轮
+#define CHASSIS_TYPE  2
+#define POWER_LIMIT_HANDLE    2//0不开 1为舵轮 2为英雄(麦轮)以及全向轮
+
+/*******************************CONFIG********************************/
+#define STANDARD              1  //参数选择  1英雄 2工程(None) 3456步兵 7烧饼
+#define YAW_POLARITY 					1 //逆正      舵轮要顺正，改-1；麦轮9025正装1
+
+
+
+
+#if     CHASSIS_TYPE == 1 //舵轮
+#define RIGHT_FRONT_REVERSE   -1 
+#define LEFT_FRONT_REVERSE    -1
+#define LEFT_BEHIND_REVERSE    1
+#define RIGHT_BEHIND_REVERSE   1
+#define  WARNING_VOLTAGE       12.5
+#define STEERING_POLARITY      1 //6020电机的输出极性 解算已考虑 故置1
+
+#elif		CHASSIS_TYPE == 2//麦轮
+#define MAX_WHEEL_RPM 				 7400
+#define  WARNING_VOLTAGE       13
+
+
+#elif   CHASSIS_TYPE == 3//全向轮
+#define MAX_WHEEL_RPM 				 7400
+#define  WARNING_VOLTAGE       12.5
+
+#elif   CHASSIS_TYPE == 4//新舵轮
+#define RIGHT_FRONT_REVERSE   -1 
+#define LEFT_FRONT_REVERSE    1
+#define LEFT_BEHIND_REVERSE   1
+#define RIGHT_BEHIND_REVERSE  1
+#define  WARNING_VOLTAGE       12.5
+#define STEERING_POLARITY      -1 //6020电机的输出极性 解算不考虑 故置-1
+#endif
 /*----------------------------------------------------------------------------------------------------------------------*/
 
 void chassis_param_init()//底盘参数初始化
