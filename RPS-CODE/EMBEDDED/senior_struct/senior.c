@@ -30,6 +30,8 @@ general_gyro_t chassis_gyro;
 /*********************general_chassis define***************************/
 steering_wheel_t steering_wheel_chassis = {0};
 Mecanum_wheel_t Mecanum_chassis  = {0};
+Omni_wheel_t Omni_wheel_chassis = {0};
+balance_t balance_chassis = {0};
 /*************************general_gimbal_define****************************************/
 volatile Encoder Pitch_Encoder = {0};
 volatile Encoder yaw_Encoder = {0};

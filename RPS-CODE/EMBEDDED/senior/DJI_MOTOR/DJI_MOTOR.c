@@ -21,46 +21,46 @@
 void GetEncoderBias(volatile Encoder *v, CanRxMsg * msg)
 {
 
-            v->ecd_bias = (msg->Data[0]<<8)|msg->Data[1];  //保存初始编码器值作为偏差  
-            v->ecd_value = v->ecd_bias;
-            v->last_raw_value = v->ecd_bias;
-            v->temp_count++;
+            v->cal_data.ecd_bias = (msg->Data[0]<<8)|msg->Data[1];  //保存初始编码器值作为偏差  
+            v->cal_data.ecd_value = v->cal_data.ecd_bias;
+            v->cal_data.last_raw_value = v->cal_data.ecd_bias;
+            v->cal_data.temp_count++;
 }
 
 void EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 {
 	int i=0;
 	int32_t temp_sum = 0;    
-	v->last_raw_value = v->raw_value;
-	v->raw_value = (msg->Data[0]<<8)|msg->Data[1];
-	v->diff = v->raw_value - v->last_raw_value;
-	if(v->diff < -4096)    //两次编码器的反馈值差别太大，表示圈数发生了改变
+	v->cal_data.last_raw_value = v->cal_data.raw_value;
+	v->cal_data.raw_value = (msg->Data[0]<<8)|msg->Data[1];
+	v->cal_data.diff = v->cal_data.raw_value - v->cal_data.last_raw_value;
+	if(v->cal_data.diff < -4096)    //两次编码器的反馈值差别太大，表示圈数发生了改变
 	{
-		v->round_cnt++;
-		v->ecd_raw_rate = v->diff + 8192;
+		v->cal_data.round_cnt++;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff + 8192;
 	}
-	else if(v->diff>4096)
+	else if(v->cal_data.diff>4096)
 	{
-		v->round_cnt--;
-		v->ecd_raw_rate = v->diff- 8192;
+		v->cal_data.round_cnt--;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff- 8192;
 	}		
 	else
 	{
-		v->ecd_raw_rate = v->diff;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff;
 	}
 	//计算得到连续的编码器输出值
-	v->ecd_value = v->raw_value + v->round_cnt * 8192;
+	v->cal_data.ecd_value = v->cal_data.raw_value + v->cal_data.round_cnt * 8192;
 	//计算得到角度值，范围正负无穷大
-	v->ecd_angle = (float)(v->raw_value - v->ecd_bias)*0.04394531f + v->round_cnt * 360;
-	v->rate_buf[v->buf_count++] = v->ecd_raw_rate;
-	if(v->buf_count == RATE_BUF_SIZE)
+	v->ecd_angle = (float)(v->cal_data.raw_value - v->cal_data.ecd_bias)*0.04394531f + v->cal_data.round_cnt * 360;
+	v->cal_data.rate_buf[v->cal_data.buf_count++] = v->cal_data.ecd_raw_rate;
+	if(v->cal_data.buf_count == RATE_BUF_SIZE)
 	{
-		v->buf_count = 0;
+		v->cal_data.buf_count = 0;
 	}
 	//计算速度平均值
 	for(i = 0;i < RATE_BUF_SIZE; i++)
 	{
-		temp_sum += v->rate_buf[i];
+		temp_sum += v->cal_data.rate_buf[i];
 	}
 	v->filter_rate = (int32_t)(temp_sum/RATE_BUF_SIZE);		
 	v->rate_rpm = (msg->Data[2]<<8)|msg->Data[3];
@@ -68,26 +68,26 @@ void EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 
 void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 {
-	v->last_raw_value = v->raw_value;
-	v->raw_value = (msg->Data[0]<<8)|msg->Data[1];
-	v->diff = v->raw_value - v->last_raw_value;
-	if(v->diff < -4096)    //两次编码器的反馈值差别太大，表示圈数发生了改变
+	v->cal_data.last_raw_value = v->cal_data.raw_value;
+	v->cal_data.raw_value = (msg->Data[0]<<8)|msg->Data[1];
+	v->cal_data.diff = v->cal_data.raw_value - v->cal_data.last_raw_value;
+	if(v->cal_data.diff < -4096)    //两次编码器的反馈值差别太大，表示圈数发生了改变
 	{
-		v->round_cnt++;
-		v->ecd_raw_rate = v->diff + 8192;
+		v->cal_data.round_cnt++;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff + 8192;
 	}
-	else if(v->diff>4096)
+	else if(v->cal_data.diff>4096)
 	{
-		v->round_cnt--;
-		v->ecd_raw_rate = v->diff- 8192;
+		v->cal_data.round_cnt--;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff- 8192;
 	}		
 	else
 	{
-		v->ecd_raw_rate = v->diff;
+		v->cal_data.ecd_raw_rate = v->cal_data.diff;
 	}
-	v->ecd_value = v->raw_value + v->round_cnt * 8192;
+	v->cal_data.ecd_value = v->cal_data.raw_value + v->cal_data.round_cnt * 8192;
 	//计算得到角度值，范围正负无穷大
-	v->ecd_angle = (float)(v->raw_value - v->ecd_bias)*0.0439453125f  + v->round_cnt * 360;
+	v->ecd_angle = (float)(v->cal_data.raw_value - v->cal_data.ecd_bias)*0.0439453125f  + v->cal_data.round_cnt * 360;
 	v->filter_rate = (msg->Data[2]<<8)|msg->Data[3];
 	if(v->filter_rate>=1000)
 		v->filter_rate = v->filter_rate - 65535;
@@ -97,26 +97,26 @@ void GM6020EncoderProcess(volatile Encoder *v, CanRxMsg * msg)
 
 void M3508orM2006EncoderTask(volatile Encoder *v, CanRxMsg * msg)
 {
-	v->can_cnt++;
-	(v->can_cnt<=5)?GetEncoderBias(v,msg):EncoderProcess(v,msg);
+	v->cal_data.can_cnt++;
+	(v->cal_data.can_cnt<=5)?GetEncoderBias(v,msg):EncoderProcess(v,msg);
 }
 
 
 void GM6020EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset)
 {
-	v->can_cnt++;
-	if(v->can_cnt<=2){v->ecd_bias = offset;}
+	v->cal_data.can_cnt++;
+	if(v->cal_data.can_cnt<=2){v->cal_data.ecd_bias = offset;}
 	GM6020EncoderProcess(v, msg);
 	// 码盘中间值设定也需要修改
-	if (v->can_cnt <= 10)
+	if (v->cal_data.can_cnt <= 10)
 	{
-		if ((v->ecd_bias - v->ecd_value) < -4000)
+		if ((v->cal_data.ecd_bias - v->cal_data.ecd_value) < -4000)
 		{
-				v->ecd_bias = offset + 8192;
+				v->cal_data.ecd_bias = offset + 8192;
 		}
-		else if ((v->ecd_bias - v->ecd_value) > 4000)
+		else if ((v->cal_data.ecd_bias - v->cal_data.ecd_value) > 4000)
 		{
-				v->ecd_bias = offset - 8192;
+				v->cal_data.ecd_bias = offset - 8192;
 		}
 	}
 }

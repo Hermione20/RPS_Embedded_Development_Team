@@ -17,7 +17,8 @@ typedef struct{
 #define STRUCT_MOTOR
 
 #define RATE_BUF_SIZE 6
-typedef struct{
+typedef struct 
+{
 	int32_t raw_value;   									//编码器不经处理的原始值
 	int32_t last_raw_value;								//上一次的编码器原始值
 	int32_t ecd_value;                       //经过处理后连续的编码器值
@@ -29,13 +30,26 @@ typedef struct{
 	int32_t rate_buf[RATE_BUF_SIZE];	//buf，for filter
 	int32_t round_cnt;										//圈数
 	int32_t can_cnt;					//记录函数的使用次数，在电机初始完成部分任务
+}Encoder_cal;
+
+
+typedef struct{
+	Encoder_cal cal_data;
+
 
 	int32_t filter_rate;											//速度
 	double ecd_angle;											//角度
-	u32 temperature;
 	int16_t rate_rpm;
+
+	double angle;
+	double gyro;
+
+	float Torque;
+	u32 temperature;
+	
 	
 }Encoder;
+	
 
 
 
@@ -43,20 +57,26 @@ typedef struct{
 
 #endif
 
-void MF_EncoderProcess(volatile Encoder *v, CanRxMsg * msg);//云台yaw，pitch共用
-void MF_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset);
+void MF_18bit_EncoderProcess(volatile Encoder *v, CanRxMsg * msg,float Torque_Constant);//云台yaw，pitch共用
+void MF_18bit_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset,float Torque_Constant);
+void CAN_MF_single_torsionControl(CAN_TypeDef *CANx ,float torque,uint32_t id,float Torque_Constant);
+void CAN_MF_multiy_torsionControl(CAN_TypeDef *CANx ,float Torque_Constant,float torque1,float torque2,float torque3,float torque4);
 
+void MG_18bit_EncoderProcess(volatile Encoder *v, CanRxMsg * msg,float Torque_Constant);
+void MG_18bit_EncoderTask(volatile Encoder *v, CanRxMsg * msg,int offset,float Torque_Constant);
+void CAN_MG_single_torsionControl(CAN_TypeDef *CANx ,float torque,uint32_t id,float Torque_Constant);
+void CAN_MG_multiy_torsionControl(CAN_TypeDef *CANx ,float Torque_Constant,float torque1,float torque2,float torque3,float torque4);
 
-void CAN_9015Command(CAN_TypeDef *CANx ,uint8_t command,uint32_t id);
-void CAN_9015setpidCommand(CAN_TypeDef *CANx, float akp,
+void CAN_LK_TechCommand(CAN_TypeDef *CANx ,uint8_t command,uint32_t id);
+void CAN_LK_TechsetpidCommand(CAN_TypeDef *CANx, float akp,
                            float aki,
                            float skp,
                            float ski,
                            float iqkp,
                            float iqki, uint32_t id);
-void CAN_9015angleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint32_t id);
-void CAN_9015speedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint32_t id);
-void CAN_9015torsionControl(CAN_TypeDef *CANx ,int16_t iqcontrol,uint32_t id);
+void CAN_LK_TechangleControl(CAN_TypeDef *CANx ,int16_t maxSpeed ,uint32_t angleControl,uint32_t id);
+void CAN_LK_TechspeedControl(CAN_TypeDef *CANx ,uint32_t speedControl,uint32_t id);
+
 
 
 
