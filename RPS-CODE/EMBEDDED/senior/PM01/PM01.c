@@ -25,7 +25,7 @@ void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg)
 	case 0x610:
 	{
 		v->mode = (msg->Data[0] << 8) | msg->Data[1];
-		v->mode_sure = (msg->Data[2] << 8) | msg->Data[3];
+		v->err_fdb = (msg->Data[2] << 8) | msg->Data[3];
 	}
 	break;
 	case 0x611:
@@ -40,6 +40,7 @@ void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg)
 		v->out_power = (msg->Data[0] << 8) | msg->Data[1];
 		v->out_v = (msg->Data[2] << 8) | msg->Data[3];
 		v->out_i = (msg->Data[4] << 8) | msg->Data[5];
+        v->cap_voltage_filte = v->out_v/100.0f;
 	}
 	break;
 	case 0x613:
@@ -54,16 +55,19 @@ void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg)
 	}
 }
 
-/**********************³¬¼¶µçÈİ**************************/
-void POWER_Control1(CAN_TypeDef *CANx ,uint16_t Power,uint32_t StdId) //ÉèÖÃ²ÎÊıÊ¹ÓÃÊı¾İÖ¡£¬ÉèÖÃ³É¹¦·µ»ØÉèÖÃ£¬ÉèÖÃÊ§°Ü·µ»Ø 0x00 00
+
+
+/**********************³¬¼¶µçÈİ¿ØÖÆ°åcommand**************************/
+
+void PM01_command_set(CAN_TypeDef *CANx ,uint16_t data,uint32_t StdId) //ÉèÖÃ²ÎÊıÊ¹ÓÃÊı¾İÖ¡£¬ÉèÖÃ³É¹¦·µ»ØÉèÖÃ£¬ÉèÖÃÊ§°Ü·µ»Ø 0x00 00
 {
     CanTxMsg tx_message;    
     tx_message.StdId = StdId;
     tx_message.IDE = CAN_Id_Standard;
     tx_message.RTR = CAN_RTR_Data;
     tx_message.DLC = 0x08;
-    tx_message.Data[0] = (Power >> 8);
-    tx_message.Data[1] = Power;
+    tx_message.Data[0] = (data >> 8);
+    tx_message.Data[1] = data;
     tx_message.Data[2] = (0 >> 8);
     tx_message.Data[3] = 0;
     tx_message.Data[4] = 0x00;
@@ -72,7 +76,8 @@ void POWER_Control1(CAN_TypeDef *CANx ,uint16_t Power,uint32_t StdId) //ÉèÖÃ²ÎÊı
     tx_message.Data[7] = 0x00;
     CAN_Transmit(CANx,&tx_message);
 }
-void POWER_Control1l(CAN_TypeDef *CANx ,uint32_t StdId)//¶ÁÈ¡Êı¾İ²ÉÓÃÔ¶³ÌÖ¡·ÃÎÊ£¬Ä£¿é·´À¡»ØÀ´ÊÇÊı¾İÖ¡
+
+void PM01_data_read(CAN_TypeDef *CANx ,uint32_t StdId)//¶ÁÈ¡Êı¾İ²ÉÓÃÔ¶³ÌÖ¡·ÃÎÊ£¬Ä£¿é·´À¡»ØÀ´ÊÇÊı¾İÖ¡
 {
     CanTxMsg tx_message;    
     tx_message.StdId = StdId;
@@ -89,19 +94,25 @@ void POWER_Control1l(CAN_TypeDef *CANx ,uint32_t StdId)//¶ÁÈ¡Êı¾İ²ÉÓÃÔ¶³ÌÖ¡·ÃÎÊ£
     CAN_Transmit(CANx,&tx_message);
 }
 
-void power_send_handle2(CAN_TypeDef *CANx)
+void power_data_read_handle(CAN_TypeDef *CANx)
 {
-    POWER_Control1l(CANx,0x610);
-    POWER_Control1l(CANx,0x611);
-    POWER_Control1l(CANx,0x612);
-    POWER_Control1l(CANx,0x613);
+    PM01_data_read(CANx,0x610); //¶ÁÈ¡Ä£¿é×´Ì¬
+    PM01_data_read(CANx,0x611); //¶ÁÈ¡ÊäÈëµçÑ¹ÓëµçÁ÷
+    PM01_data_read(CANx,0x612); //¶ÁÈ¡Êä³ö¹¦ÂÊ£¬µçÑ¹£¬µçÁ÷
+    PM01_data_read(CANx,0x613); //ÎÂ¶È£¬ÀÛ¼ÆÔËĞĞÊ±¼äÓë±¾´ÎÊ±¼ä
 }
 
-void power_send_handle1(CAN_TypeDef *CANx,u16 Max_Power)
+void power_data_set_handle(CAN_TypeDef *CANx,u16 Max_Power)
 {
-    POWER_Control1(CANx,2, 0x600);
-    POWER_Control1(CANx,Max_Power * 100, 0x601);
-    POWER_Control1(CANx,2500, 0x602);
-    POWER_Control1(CANx,7 * 100, 0x603);
+    PM01_command_set(CANx,2, 0x600); //³¬µç¿ØÖÆ°å¿ª»ú
+    PM01_command_set(CANx,Max_Power * 100, 0x601); //×î´óÊäÈë¹¦ÂÊÉèÖÃ
+    PM01_command_set(CANx,2400, 0x602); //×î´óÊä³öµçÑ¹ÉèÖÃ
+    PM01_command_set(CANx,7 * 100, 0x603); //×î´óÊä³öµçÁ÷ÉèÖÃ
 }
 
+void power_data_Init(CAN_TypeDef *CANx)
+{
+	PM01_command_set(CANx,2, 0x600); //³¬µç¿ØÖÆ°å¿ª»ú
+	PM01_command_set(CANx,2400, 0x602); //×î´óÊä³öµçÑ¹ÉèÖÃ
+  PM01_command_set(CANx,7 * 100, 0x603); //×î´óÊä³öµçÁ÷ÉèÖÃ
+}

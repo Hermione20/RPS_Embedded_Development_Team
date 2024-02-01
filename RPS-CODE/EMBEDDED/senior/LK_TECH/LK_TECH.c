@@ -115,6 +115,7 @@ void MF_18bit_EncoderProcess(volatile Encoder *v, CanRxMsg * msg,float Torque_Co
 	v->temperature = msg->Data[1];
 	int16_t iq = (msg->Data[3]<<8)|msg->Data[2];
 	v->Torque = iq*Torque_Constant;
+	v->rate_rpm = v->filter_rate*60/360;
 	v->gyro = v->filter_rate*PI/180.0f;
 	v->angle = v->ecd_angle*PI/180.0f;
 }
@@ -226,6 +227,7 @@ void MG_18bit_EncoderProcess(volatile Encoder *v, CanRxMsg * msg,float Torque_Co
 	//从电机编码器读取的速度
 	int16_t raw_rate = (msg->Data[5]<<8)|msg->Data[4];
 	v->filter_rate = raw_rate/6.0f;
+	v->rate_rpm = v->filter_rate*60/360;
 	v->temperature = msg->Data[1];
 	int16_t iq = (msg->Data[3]<<8)|msg->Data[2];
 	v->Torque = iq*Torque_Constant;

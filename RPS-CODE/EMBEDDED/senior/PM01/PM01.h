@@ -8,7 +8,7 @@ typedef struct
 {
 
 	uint16_t mode;
-	uint16_t mode_sure;
+	uint16_t err_fdb;
 	
 	uint16_t in_power;
 	uint16_t in_v;
@@ -22,16 +22,18 @@ typedef struct
 	uint16_t time;
 	uint16_t this_time;
 	
-	uint16_t  cap_voltage_filte;
+	float cap_voltage_filte;  //µÁ»› ‰≥ˆµÁ—π
 }capacitance_message_t;
 
 
 
 void PM01_message_Process(volatile capacitance_message_t *v,CanRxMsg * msg);
-void POWER_Control1(CAN_TypeDef *CANx ,uint16_t Power,uint32_t StdId);
-void POWER_Control1l(CAN_TypeDef *CANx ,uint32_t StdId);
-void power_send_handle2(CAN_TypeDef *CANx);
-void power_send_handle1(CAN_TypeDef *CANx,u16 Max_Power);
+
+void PM01_command_set(CAN_TypeDef *CANx ,uint16_t data,uint32_t StdId);
+void PM01_data_read(CAN_TypeDef *CANx ,uint32_t StdId);
+void power_data_read_handle(CAN_TypeDef *CANx);
+void power_data_set_handle(CAN_TypeDef *CANx,u16 Max_Power);
+void power_data_Init(CAN_TypeDef *CANx);
 
 extern volatile capacitance_message_t capacitance_message;
 

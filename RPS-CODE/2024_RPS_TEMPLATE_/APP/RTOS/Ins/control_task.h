@@ -10,10 +10,10 @@
 
 void control_task(void);
 
+void control_task_Init(void);
 
 
-
-
+extern int time_tick;
 
 
 
