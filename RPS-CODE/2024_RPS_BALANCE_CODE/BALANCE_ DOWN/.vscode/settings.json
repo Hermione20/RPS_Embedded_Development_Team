@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "canbus.h": "c",
+        "senior.h": "c",
+        "usart.h": "c",
+        "control_task.h": "c"
+    }
+}

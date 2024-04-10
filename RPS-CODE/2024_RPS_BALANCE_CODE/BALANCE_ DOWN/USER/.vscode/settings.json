@@ -1,0 +1,31 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "public.h": "c",
+        "senior.h": "c",
+        "main.h": "c",
+        "remote.h": "c",
+        "judge.h": "c",
+        "canbus.h": "c",
+        "mode_switch_task.h": "c",
+        "dji_motor.h": "c",
+        "lk_tech.h": "c",
+        "can.h": "c",
+        "usart.h": "c",
+        "delay.h": "c",
+        "ch100.h": "c",
+        "ht430.h": "c",
+        "auto_shoot.h": "c",
+        "infantry_gimbal_task.h": "c",
+        "gimbal_task.h": "c",
+        "infantry_mode_switch_task.h": "c",
+        "leg_task.h": "c",
+        "compare": "c",
+        "cstdint": "c",
+        "balance_mode_switch_task.h": "c",
+        "balance_task.h": "c",
+        "mileage.h": "c",
+        "pm01.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
