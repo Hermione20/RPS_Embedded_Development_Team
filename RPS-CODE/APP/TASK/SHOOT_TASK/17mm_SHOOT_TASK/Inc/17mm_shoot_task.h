@@ -2,18 +2,10 @@
 #define __17MM_SHOOT_TASK
 #include "public.h"
 
-#define SHOOT_TYPE 3//3步兵 6无人机  7哨兵
 
-#define SHOOT_MOTOR_SPEED 200.0f //哨兵拨盘
-#define FRICTION_SPEED    950// 950
-
-#if  STANDARD == 3
-
-#define FRICTION_SPEED_15  (-540)      //弹速
-#define FRICTION_SPEED_18  (-607)
 #define FRICTION_SPEED_30  (-1000)
 
-#endif
+
 
 
 typedef enum
@@ -44,19 +36,19 @@ typedef enum
 
 typedef struct
 {
-	float speed_ref[4];
-	float speed_fdb[4];
-	float angle_ref[4];
-	float angle_fdb[4];
+	float speed_ref[2];
+	float speed_fdb[2];
+	float angle_ref[2];
+	float angle_fdb[2];
 	
 }shoot_pid_friction_t;
 
 typedef struct
 {
-	float speed_ref[2];
-	float speed_fdb[2];
-	float angle_ref[2];
-	float angle_fdb[2];
+	float speed_ref;
+	float speed_fdb;
+	float angle_ref;
+	float angle_fdb;
 	
 }shoot_pid_poke_t;
 
@@ -67,8 +59,8 @@ typedef struct
   shoot_mode_e 						ctrl_mode;
 	shoot_pid_poke_t        poke_pid;
 	shoot_pid_friction_t		friction_pid;
-	int16_t        poke_current[2];
-	int16_t        fric_current[4];
+	int16_t        poke_current;
+	int16_t        fric_current[2];
 	uint8_t      poke_run;
 	uint8_t      bulletspead_level;
   uint8_t      fric_wheel_run; //run or not

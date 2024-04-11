@@ -3,10 +3,10 @@
 /**
   ******************************************************************************
   * @file   42mm_shoot_task.c
-  * @author  Lee_ZEKAI
+  * @author  Sun
   * @version V1.1.0
   * @date    03-October-2023
-  * @brief   42mm弹丸发射模块，该模块定制于英雄二级拨盘供弹双摩擦轮的
+  * @brief   42mm弹丸发射模块，该模块定制于英雄一级拨盘供弹双摩擦轮的
 							的设计。参数设置位置位于源文件上部，注意！！！英雄发射电机
 							的速度反馈选用rate_rpm非filter_rate。
 	
@@ -48,11 +48,12 @@ _42mm_shoot_t _42mm_shoot;
 #define FRICTION_SPEED_16 3200
 
 #define POKE_SPEED -200			//英雄下拨盘转速
-#define POKE_MAX_OUT 6000		//英雄下拨盘力度限制
-#define ONE_POKE_ANGLE_42 90.0f	//42mm单个弹丸上拨盘角度
+#define POKE_MAX_OUT 10500		//英雄下拨盘力度限制
+#define ONE_POKE_ANGLE_42 1030	//42mm单个弹丸下拨盘角度
 //摩擦轮旋转方向设置
-#define RIGHT_FRICTION_POLARITY -1
+#define RIGHT_FRICTION_POLARITY 1
 #define LEFT_FRICTION_POLARITY  1
+#define POKE_POLARITY      -1
 
 
 
@@ -64,6 +65,12 @@ int reverse_cnt = 0;
 int set_cnt = 0;
 u8 poke_init_flag = 0;
 u8 press_l_first_in = 0;
+u8 press_r_first_in = 0;
+
+int Stall_detection = 0;//堵转检测计数
+int Burst_count = 0;//爆发计数
+int bullet_lock_flag = 0;//拨盘堵转标志位
+int bullet_locked_flag =0;
 
  /**
   ******************************************************************************
@@ -77,14 +84,10 @@ void shoot_param_init(void)
 		//结构体内存置零
     memset(&_42mm_shoot,0,sizeof(_42mm_shoot_t));
 
-    //42mm摩擦轮
-  PID_struct_init(&_42mm_shoot.pid_right_friction_speed, POSITION_PID,10000,1000,  70 , 0.01f ,100);//两个摩擦轮
-  PID_struct_init(&_42mm_shoot.pid_left_friction_speed, POSITION_PID,10000,1000,  72 , 0.01f ,10);
-
-  //42mm拨盘
-    PID_struct_init(&_42mm_shoot.pid_downpoke_speed,   POSITION_PID, 6000 , 13000,  5  , 0.5, 0 );//下拨盘速度环
-	PID_struct_init(&_42mm_shoot.pid_uppoke_angle, POSITION_PID, 2000 , 0    ,  120, 5  , 10); //二级拨盘
-    PID_struct_init(&_42mm_shoot.pid_uppoke_speed, POSITION_PID, 9900 , 5500 ,  20 , 0  , 0 );
+   
+	 //42mm拨盘
+	PID_struct_init(&_42mm_shoot.pid_downpoke_angle,   POSITION_PID, 700 , 1,  10  , 0.003f  , 50 );//下拨盘位置环
+	PID_struct_init(&_42mm_shoot.pid_downpoke_speed,   POSITION_PID, 10000 , 1,  10  , 0.006f, 60 );//下
 }
 
 
@@ -95,14 +98,14 @@ void shoot_param_init(void)
  **/
 void shoot_task(void)
 {
-    Shoot_42mm_speed_Select(0);//弹速自动选择
-    heat_limit_42mm(RC_CtrlData.Key_Flag.Key_Z_Flag);//热量限制
+    Shoot_42mm_speed_Select(3050);//弹速自动选择
+    heat_limit_42mm(RC_CtrlData.Key_Flag.Key_B_Flag);//热量限制
     shoot_friction_handle_42();//摩擦轮控制任务
     shoot_bullet_handle_42();//拨盘控制任务
 
 }
 
-
+ 
  /**
   ******************************************************************************
 																弹速自动选择
@@ -114,12 +117,12 @@ static void Shoot_42mm_speed_Select(uint16_t test_frictionSpeed_42) // 42mm弹速
     if (test_frictionSpeed_42 == 0)
     {
 			//读裁判系统弹速上限进行选择
-        if (judge_rece_mesg.game_robot_state.shooter_id1_42mm_speed_limit == 10)
-            frictionSpeed_42 = FRICTION_SPEED_10;
-        else if (judge_rece_mesg.game_robot_state.shooter_id1_42mm_speed_limit == 16)
-            frictionSpeed_42 = FRICTION_SPEED_16;
-        else
-            frictionSpeed_42 = FRICTION_SPEED_10;
+//        if (judge_rece_mesg.game_robot_state.shooter_id1_42mm_speed_limit == 10)
+//            frictionSpeed_42 = FRICTION_SPEED_10;
+//        else if (judge_rece_mesg.game_robot_state.shooter_id1_42mm_speed_limit == 16)
+//            frictionSpeed_42 = FRICTION_SPEED_16;
+//        else
+//            frictionSpeed_42 = FRICTION_SPEED_10;
     }
     else
     {
@@ -136,10 +139,11 @@ static void Shoot_42mm_speed_Select(uint16_t test_frictionSpeed_42) // 42mm弹速
 		括号入口参数为是否忽略热量标志，为1忽略，为0限制
 	 =============================================================================
  **/
+
 void heat_limit_42mm(u8 ifignore)
 {
-    float residue_heart;//剩余热量
-    residue_heart=(judge_rece_mesg.game_robot_state.shooter_id1_42mm_cooling_limit           //通过裁判系统计算剩余热量
+   float residue_heart; //剩余热量
+    residue_heart=(judge_rece_mesg.game_robot_state.shooter_barrel_heat_limit           //通过裁判系统计算剩余热量
                        -judge_rece_mesg.power_heat_data.shooter_id1_42mm_cooling_heat);
     if (ifignore)
     {
@@ -161,51 +165,21 @@ void heat_limit_42mm(u8 ifignore)
 	摩擦轮任务内涵堵转检测与反转处理
 	 =============================================================================
  **/
-void shoot_friction_handle_42(void)
+ void shoot_friction_handle_42(void)
 {
     //摩擦轮状态判断与选择
     if (RC_CtrlData.inputmode != STOP)//非关控
 	{
         if((RC_CtrlData.RemoteSwitch.s3to1 || RC_CtrlData.Key_Flag.Key_C_TFlag))//开启摩擦轮输入
         {
-					 if(_42mm_shoot.friction_state!=BACK)
-					 {
-						 _42mm_shoot.friction_state = START;
-					 }
-            
-            if (general_friction.right_motor.rate_rpm>(30*RIGHT_FRICTION_POLARITY)||general_friction.left_motor.rate_rpm<(30*LEFT_FRICTION_POLARITY))//判断摩擦轮转没转起来
-            {
-							//没转起来
-                lock_cnt++;
-                if(lock_cnt == 500)//如果计数至500，判断摩擦轮堵转
-                {
-                     _42mm_shoot.friction_state = LOCK;
-                     lock_cnt = 0;//清零计数器
-                }
-            }else
-            {		//转起来了，设为普通
-                _42mm_shoot.friction_state = NORMAL;
-                lock_cnt = 0;//清零计数器
-            }
+					LASER_ON();
 
-            if (_42mm_shoot.friction_state == LOCK)//若堵转，说明弹丸卡在摩擦轮内，组织反转
-            {
-                _42mm_shoot.friction_state = BACK;
-            }
-            if (_42mm_shoot.friction_state == BACK)
-            {
-                reverse_cnt++;//反转时间计数
-                if (reverse_cnt == 100)//反转一定时间后恢复摩擦轮启动
-                {
-                    _42mm_shoot.friction_state = START;
-                    reverse_cnt = 0;
-                }
-                
-            }           
-            
+						   _42mm_shoot.friction_state = NORMAL;
+
         }else
         {
              _42mm_shoot.friction_state = Stop;
+			LASER_OFF();
         }
     }else
     {
@@ -220,9 +194,10 @@ void shoot_friction_handle_42(void)
         _42mm_shoot.shoot_ref_and_fdb.right_friction_speed_ref = RIGHT_FRICTION_POLARITY*frictionSpeed_42;
         _42mm_shoot.shoot_ref_and_fdb.left_friction_speed_ref = LEFT_FRICTION_POLARITY*frictionSpeed_42;
      }
-        break;
+         break;
     case NORMAL:
     {
+		
         _42mm_shoot.shoot_ref_and_fdb.right_friction_speed_ref = RIGHT_FRICTION_POLARITY*frictionSpeed_42;
         _42mm_shoot.shoot_ref_and_fdb.left_friction_speed_ref = LEFT_FRICTION_POLARITY*frictionSpeed_42;
     }
@@ -232,7 +207,7 @@ void shoot_friction_handle_42(void)
         _42mm_shoot.shoot_ref_and_fdb.right_friction_speed_ref = -RIGHT_FRICTION_POLARITY*frictionSpeed_42;
         _42mm_shoot.shoot_ref_and_fdb.left_friction_speed_ref = -LEFT_FRICTION_POLARITY*frictionSpeed_42;
     }
-				break;
+		 break;
     default:
     {
         _42mm_shoot.shoot_ref_and_fdb.right_friction_speed_ref = 0;
@@ -240,12 +215,6 @@ void shoot_friction_handle_42(void)
     }
         break;
     }
-		//更新摩擦轮反馈
-    _42mm_shoot.shoot_ref_and_fdb.left_friction_speed_fdb = general_friction.left_motor.rate_rpm;
-    _42mm_shoot.shoot_ref_and_fdb.right_friction_speed_fdb = general_friction.right_motor.rate_rpm;
-		//计算摩擦轮pid输出
-    _42mm_shoot.shoot_ref_and_fdb.left_friction_motor_input = pid_calc(&_42mm_shoot.pid_left_friction_speed,_42mm_shoot.shoot_ref_and_fdb.left_friction_speed_fdb,_42mm_shoot.shoot_ref_and_fdb.left_friction_speed_ref);
-    _42mm_shoot.shoot_ref_and_fdb.right_friction_motor_input = pid_calc(&_42mm_shoot.pid_right_friction_speed,_42mm_shoot.shoot_ref_and_fdb.right_friction_speed_fdb,_42mm_shoot.shoot_ref_and_fdb.right_friction_speed_ref);
 
 }
 
@@ -259,12 +228,7 @@ void shoot_friction_handle_42(void)
  **/
 void shoot_bullet_handle_42(void)
 {
-		//反馈赋值
-    _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_fdb = general_poke.up_poke.ecd_angle/36.0f;  //2006电机减速比1：36
-    _42mm_shoot.shoot_ref_and_fdb.up_poke_speed_fdb = general_poke.up_poke.rate_rpm;
 
-    _42mm_shoot.shoot_ref_and_fdb.down_poke_speed_fdb = general_poke.down_poke.rate_rpm;
-		
 	//本部分扳机逻辑为不连续按键，长按仅有一次输出信号
     if (RC_CtrlData.mouse.press_l == 1 || RC_CtrlData.RemoteSwitch.trigger == 1)//扳机扣下
     {
@@ -282,45 +246,93 @@ void shoot_bullet_handle_42(void)
     {
         press_l_first_in = 0;
     }
+	if (RC_CtrlData.mouse.press_r == 1)
+	{
+		if (press_r_first_in == 0)
+		{
+			press_r_first_in = 1;
+			_42mm_shoot.inverse_flag = 1;
+		
+		}
+		else
+		{
+			_42mm_shoot.inverse_flag =0;
+		}
+	
+	
+	
+	}
+	else
+	{
+		press_r_first_in = 0;
+	}
 		
     if(_42mm_shoot.friction_state == NORMAL&&over_heat==0)
     {
 			
-			 _42mm_shoot.shoot_ref_and_fdb.down_poke_speed_ref = POKE_SPEED;
+			
         if(poke_init_flag == 0)
         {
 					//拨盘参数初始化
-            _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_ref = _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_fdb;
+			_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref = general_poke.down_poke.ecd_angle;
+          
             _42mm_shoot.pid_downpoke_speed.max_out = 6000;
             poke_init_flag = 1;
         }
         if(_42mm_shoot.shoot_flag)
         {
-					//如果发射，上拨盘给定累加，积分清零
-            _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_ref+=ONE_POKE_ANGLE_42;
-            _42mm_shoot.pid_uppoke_angle.iout = 0;
+					//如果发射，下拨盘给定累加，积分清零
+			_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref += ONE_POKE_ANGLE_42 * POKE_POLARITY;
+			
         }
+		if(RC_CtrlData.Key_Flag.Key_B_Flag)//强爆发，忽略热量
+		{
+			Burst_count++;
+			if(Burst_count%40==0)
+			{_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref += ONE_POKE_ANGLE_42 * POKE_POLARITY;Burst_count = 0;}
+		
+		}
         if(_42mm_shoot.shoot_flag)
 			_42mm_shoot.pid_downpoke_speed.max_out=POKE_MAX_OUT;
 		else
 		{
-			//检测弹路是否饱满，若饱满则降低电流输出至2000
-			if(_42mm_shoot.pid_downpoke_speed.out<-4200 && abs(general_poke.down_poke.rate_rpm)<20)
-				set_cnt++;
-			else
-				set_cnt = 0;
-			if(set_cnt == 20)
-				_42mm_shoot.pid_downpoke_speed.max_out=2000;
+			Stall_detection++;
+			if(Stall_detection%150 == 0&&RC_CtrlData.Key_Flag.Key_Z_Flag==0)
+			{
+				if(general_poke.down_poke.filter_rate == 0&&general_poke.down_poke.Torque<-6750)//拨盘堵转检测
+				{
+					bullet_lock_flag = 1;//拨盘堵转
+					bullet_locked_flag = 1;//拨盘堵转UI标志位
+					_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref = general_poke.down_poke.ecd_angle;//堵转之后拨盘参数初始化
+				}
+			
+			}
+		}
+		if(bullet_lock_flag == 1)//堵转后反转一个弹丸
+		{
+			_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref -= ONE_POKE_ANGLE_42 * POKE_POLARITY * 2;
+			bullet_lock_flag = 0;
+		
+		}
+		if(_42mm_shoot.inverse_flag == 1)//右键反转一个弹丸
+		{
+			_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref -= ONE_POKE_ANGLE_42 * POKE_POLARITY;
+		}
+		if(general_poke.down_poke.filter_rate <-50)
+		{
+			bullet_locked_flag = 0;//更新堵转UI标志位
 		}
 
-        _42mm_shoot.shoot_ref_and_fdb.up_poke_motor_input = pid_double_loop_cal(&_42mm_shoot.pid_uppoke_angle,
-                                                                                &_42mm_shoot.pid_uppoke_speed,
-                                                                                _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_ref,
-                                                                                _42mm_shoot.shoot_ref_and_fdb.up_poke_angle_fdb,
-                                                                                &_42mm_shoot.shoot_ref_and_fdb.up_poke_speed_ref,
-                                                                                _42mm_shoot.shoot_ref_and_fdb.up_poke_speed_fdb,
-                                                                                0);
-        _42mm_shoot.shoot_ref_and_fdb.down_poke_motor_input = pid_calc(&_42mm_shoot.pid_downpoke_speed,_42mm_shoot.shoot_ref_and_fdb.down_poke_speed_fdb,_42mm_shoot.shoot_ref_and_fdb.down_poke_speed_ref);
+
+		_42mm_shoot.shoot_ref_and_fdb.down_poke_angle_fdb = general_poke.down_poke.ecd_angle;
+	    _42mm_shoot.shoot_ref_and_fdb.down_poke_angle_ref = _42mm_shoot.shoot_ref_and_fdb.down_poke_angle_dynamic_ref;
+	    _42mm_shoot.shoot_ref_and_fdb.down_poke_motor_input = pid_double_loop_cal(&_42mm_shoot.pid_downpoke_angle,
+																			  &_42mm_shoot.pid_downpoke_speed,
+																			  _42mm_shoot.shoot_ref_and_fdb.down_poke_angle_ref,
+																			  _42mm_shoot.shoot_ref_and_fdb.down_poke_angle_fdb,
+																			  &_42mm_shoot.shoot_ref_and_fdb.down_poke_speed_ref,
+																			  _42mm_shoot.shoot_ref_and_fdb.down_poke_speed_fdb,
+	                                                                          0);
     }else if(_42mm_shoot.friction_state == BACK)
 		{
 			_42mm_shoot.shoot_ref_and_fdb.up_poke_angle_ref-=0.5f;
@@ -333,8 +345,7 @@ void shoot_bullet_handle_42(void)
                                                                                 0);
 		}else
     {
-        poke_init_flag = 0;
-        _42mm_shoot.shoot_ref_and_fdb.up_poke_motor_input = 0;
+         poke_init_flag = 0;
          _42mm_shoot.shoot_ref_and_fdb.down_poke_motor_input = 0;
     }
 }

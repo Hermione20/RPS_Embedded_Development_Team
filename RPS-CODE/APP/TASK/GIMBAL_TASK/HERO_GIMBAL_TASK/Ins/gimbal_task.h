@@ -8,11 +8,11 @@
 //摄像头和枪管中心的距离
 #define HEIGHT_BETWEEN_GUN_CAMERA 	4.89f
 //相机焦距mm
-#define FOCAL_LENGTH                8.0F
+#define FOCAL_LENGTH                6.0F
 //靶面长mm
-#define TARGET_SURFACE_LENGTH      4.96e-3F
+#define TARGET_SURFACE_LENGTH      3.45e-3F
 //靶面宽mm
-#define TARGET_SURFACE_WIDTH        4.96e-3F
+#define TARGET_SURFACE_WIDTH        3.45e-3F
 
 
 
@@ -90,7 +90,6 @@ typedef struct
   gim_dynamic_ref_t gim_dynamic_ref;
 	
 	u8 if_finish_Init;
-	u8 if_auto_shoot;
 	
   pid_t pid_init_yaw_Angle; 
   pid_t pid_init_pit_Angle; 
@@ -108,23 +107,12 @@ typedef struct
   pid_t pid_auto_yaw_speed; 
   pid_t pid_auto_pit_speed; 
 
-  // 小符下的PID参数
-  pid_t pid_yaw_small_buff;
-  pid_t pid_pit_small_buff;
-  pid_t pid_pit_speed_small_buff;
-  pid_t pid_yaw_speed_small_buff;
-
   // 自瞄模式外环的参数
   pid_t pid_yaw_follow;
   pid_t pid_pit_follow;
   pid_t pid_pit_speed_follow;
   pid_t pid_yaw_speed_follow;
 
-  // 大符下的PID参数
-  pid_t pid_yaw_big_buff;
-  pid_t pid_pit_big_buff;
-  pid_t pid_pit_speed_big_buff;
-  pid_t pid_yaw_speed_big_buff;
 
 } gimbal_t;
 
@@ -136,11 +124,7 @@ float gimbal_pit_loop_task(pid_t *Outer_loop_pid,pid_t *Inner_loop_pid,float ang
 void gimbal_task(void);
 void gimbal_init_handle	( void );
 void gimbal_follow_gyro_handle(void);
-void auto_small_buff_handle(void);
-void auto_big_buff_handle(void);
-void security_gimbal_handle(void);
 void gimbal_auto_angle_handle(void);
-float raw_data_to_pitch_angle(float ecd_angle_pit);
 
 extern gimbal_t gimbal_data;
 extern float yaw_angle_ref_aim,pit_angle_ref_aim;

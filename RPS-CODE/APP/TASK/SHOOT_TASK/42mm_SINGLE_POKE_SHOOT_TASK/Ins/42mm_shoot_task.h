@@ -34,6 +34,10 @@ typedef struct
 
    float down_poke_speed_ref;
    float down_poke_speed_fdb;
+   float down_poke_angle_ref;
+   float down_poke_angle_fdb;
+   float down_poke_angle_dynamic_ref;
+   float down_poke_speed_dynamic_ref;
 
    float left_friction_speed_ref;
    float left_friction_speed_fdb;
@@ -57,11 +61,13 @@ typedef struct
     shoot_ref_and_fdb_t shoot_ref_and_fdb;
     friction_state_t friction_state;
     u8 shoot_flag; //开火标志位
+	u8 inverse_flag;//拨盘反转标志位
 
     pid_t pid_uppoke_angle;
     pid_t pid_uppoke_speed;
 
     pid_t pid_downpoke_speed;
+	pid_t pid_downpoke_angle;
     
     pid_t pid_left_friction_speed;
     pid_t pid_right_friction_speed;
@@ -79,7 +85,8 @@ void shoot_param_init(void);
 
 
 extern _42mm_shoot_t _42mm_shoot;
-
+extern int bullet_lock_flag;
+extern int bullet_locked_flag;
 
 
 

@@ -2,19 +2,19 @@
 
 /* Variables_definination-----------------------------------------------------------------------------------------------*/
   shoot_t shoot;
-	pid_t pid_trigger_angle[4] ={0};
+	pid_t pid_trigger_angle ={0};
 	pid_t pid_trigger_angle_buf={0};
 	pid_t pid_trigger_speed_buf={0};
-		pid_t pid_trigger_speed[2]={0};
+		pid_t pid_trigger_speed={0};
+		pid_t pid_rotate[2]     = {0};
 /*----------------------------------------------------------------------------------------------------------------------*/
 
-#if SHOOT_TYPE == 3//发射参数初始化
 void shot_param_init()
 {
 
-  PID_struct_init(&pid_trigger_angle[0], POSITION_PID, 6000, 1000,20,0.2,0);//5 0.2 15
-	PID_struct_init(&pid_trigger_speed[0],POSITION_PID,19000,10000,30,0,0);//100 0.1 4
-	PID_struct_init(&pid_trigger_speed[1],POSITION_PID,19000,10000,50,0.1,4);
+  PID_struct_init(&pid_trigger_angle, POSITION_PID, 6000, 1000,20,0.2,0);//5 0.2 15
+	PID_struct_init(&pid_trigger_speed,POSITION_PID,19000,10000,30,0,0);//100 0.1 4
+
 	
 	PID_struct_init(&pid_trigger_angle_buf,POSITION_PID, 4000 , 0    ,  130, 5  , 10);
 	PID_struct_init(&pid_trigger_speed_buf,POSITION_PID,12000 , 5500 ,  30 , 0  , 0 );
@@ -27,33 +27,10 @@ void shot_param_init()
   shoot.ctrl_mode=1;
   shoot.limit_heart0=80;
 }
-#elif SHOOT_TYPE == 6 || SHOOT_TYPE == 7
-void shot_param_init(void)
-{
-	for(int i=0;i<2;i++)
-	{
-	PID_struct_init(&pid_trigger_angle[i],
-		              POSITION_PID,								
-                  25000,
-                  25000,
-									70,
-                  0.5,
-                  0);
-		
-	}
-	for(int i=0;i<4;i++)
-	{
-		PID_struct_init(&pid_rotate[i], POSITION_PID,15500,11500,50,0,0);
-	}
-
-	shoot.ctrl_mode = REMOTE_CTRL_SHOT;
-	shoot.limit_heart0=120;
-}
-
-#endif
 
 
-#if SHOOT_TYPE == 3//步兵发射模式选择
+
+
 
 
 void heat_switch()
@@ -74,18 +51,16 @@ void heat_switch()
 		else
 			shoot.shoot_frequency=10;
 				
-#if STANDARD == 3				
+		
 				if(shoot.bulletspead_level==1)
 				{
 					shoot.shoot_frequency=1.5*shoot.shoot_frequency;
 				}
-//				shoot_frequency=24; 
 
-#endif							
+
+						
 }
-#endif
 
-#if SHOOT_TYPE == 3//发射热量限制
 void heat_shoot_frequency_limit()//步兵射频限制部分
 {
 
@@ -126,7 +101,7 @@ void bullets_spilling()//步兵射频限制部分
 	{
 		fric_run_time=0;
 		if(shoot.shoot_frequency!=0)
-		{pid_trigger_angle[0].set=pid_trigger_angle[0].get;}//松手立即停     
+		{pid_trigger_angle.set=pid_trigger_angle.get;}//松手立即停     
 		shoot.shoot_frequency=0;
 	}	
 
@@ -140,32 +115,10 @@ void heat0_limit(void)           //热量限制
     {
      shoot.ctrl_mode=0;
     }
-}//无人机
-#elif SHOOT_TYPE == 6
-//哨兵
-#elif SHOOT_TYPE == 7
-void heat0_limit(void)
-{
-		shoot.max_heart0 = 240;
-		shoot.cooling_ratio = 80;
-		shoot.limit_heart0 = shoot.max_heart0 - judge_rece_mesg.power_heat_data.shooter_id2_17mm_cooling_heat + 0.002 * shoot.cooling_ratio;
-		shoot.limit_heart1 = shoot.max_heart0 - judge_rece_mesg.power_heat_data.shooter_id1_17mm_cooling_heat + 0.002 * shoot.cooling_ratio;
-		shoot.total_speed = 0;
-
-		if ( (shoot.limit_heart0 < 35)|(shoot.limit_heart1 < 35) )
-		{
-				shoot.poke_current[0]=0;
-				shoot.poke_current[1]=0;
-				shoot.ctrl_mode = SHOT_DISABLE;//0
-		}else
-		{
-				shoot.ctrl_mode = REMOTE_CTRL_SHOT;//1
-		}
 }
-#endif
 
 
-#if SHOOT_TYPE == 3//拨盘 trigger poke
+//拨盘 trigger poke
 void shoot_bullet_handle(void)
 {	
 	static uint32_t start_shooting_count = 0;//正转计时
@@ -212,20 +165,20 @@ void shoot_bullet_handle(void)
 //			if((shoot.fric_wheel_run)&&(lock_rotor1 == 0))
 			{	
 /**/
-			shoot.poke_pid.angle_ref[0]=shoot.poke_pid.angle_fdb[0]-shoot.shoot_frequency*45*36/500;		//一秒shoot_frequency发，一发拨盘转45°，减速比是1：36。每两毫秒执行一次故除以500。	
-			shoot.poke_pid.angle_fdb[0]=general_poke.poke.ecd_angle;
-			shoot.poke_pid.speed_fdb[0]=general_poke.poke.filter_rate;
-			shoot.poke_current[0]=pid_double_loop_cal(&pid_trigger_angle[0],&pid_trigger_speed[0],
-																								  shoot.poke_pid.angle_ref[0],
-																								  shoot.poke_pid.angle_fdb[0],
-																								 &shoot.poke_pid.speed_ref[0],
-																									shoot.poke_pid.speed_fdb[0],0);
+			shoot.poke_pid.angle_ref=shoot.poke_pid.angle_fdb-shoot.shoot_frequency*45*36/500;		//一秒shoot_frequency发，一发拨盘转45°，减速比是1：36。每两毫秒执行一次故除以500。	
+			shoot.poke_pid.angle_fdb=general_poke.poke.ecd_angle;
+			shoot.poke_pid.speed_fdb=general_poke.poke.filter_rate;
+			shoot.poke_current=pid_double_loop_cal(&pid_trigger_angle,&pid_trigger_speed,
+																								  shoot.poke_pid.angle_ref,
+																								  shoot.poke_pid.angle_fdb,
+																								 &shoot.poke_pid.speed_ref,
+																									shoot.poke_pid.speed_fdb,0);
 			}
 		}
 		else
 		{
-		pid_trigger_angle[0].set = pid_trigger_angle[0].get;//松手必须停
-		shoot.poke_current[0]=0;
+		pid_trigger_angle.set = pid_trigger_angle.get;//松手必须停
+		shoot.poke_current=0;
 		start_shooting_count = 0;//清零正转计时
     start_reversal_count1 = 0;//清零反转计时
 		}		
@@ -251,96 +204,26 @@ void shoot_bullet_handle(void)
 			
 
 			if(shoot.poke_run==1)
-				shoot.poke_pid.angle_ref[0]-=shoot.single_angle;
+				shoot.poke_pid.angle_ref-=shoot.single_angle;
 				
 			
-			shoot.poke_pid.angle_fdb[0]=general_poke.poke.ecd_angle/36.109f;
-			shoot.poke_pid.speed_fdb[0]=general_poke.poke.rate_rpm;
-			shoot.poke_current[0]=pid_double_loop_cal(&pid_trigger_angle_buf,&pid_trigger_speed_buf,
-													 shoot.poke_pid.angle_ref[0],
-													 shoot.poke_pid.angle_fdb[0],
-													&shoot.poke_pid.speed_ref[0],
-													 shoot.poke_pid.speed_fdb[0],0);	
+			shoot.poke_pid.angle_fdb=general_poke.poke.ecd_angle/36.109f;
+			shoot.poke_pid.speed_fdb=general_poke.poke.rate_rpm;
+			shoot.poke_current=pid_double_loop_cal(&pid_trigger_angle_buf,&pid_trigger_speed_buf,
+													 shoot.poke_pid.angle_ref,
+													 shoot.poke_pid.angle_fdb,
+													&shoot.poke_pid.speed_ref,
+													 shoot.poke_pid.speed_fdb,0);	
 		}
 		else
-		{shoot.poke_pid.angle_ref[0]=shoot.poke_pid.angle_fdb[0];
-		shoot.poke_current[0]=0;}
+		{shoot.poke_pid.angle_ref=shoot.poke_pid.angle_fdb;
+		shoot.poke_current=0;}
 	}
 }
 
-#elif SHOOT_TYPE == 7 || SHOOT_TYPE == 6
-void shoot_bullet_handle(void)
-{
-	static uint32_t start_shooting_count = 0;//正转计时
-	static uint32_t start_reversal_count1 = 0;//反转计时
-	static uint32_t start_reversal_count2 = 0;
-	static uint8_t lock_rotor1 = 0;//堵转标志位
-	static uint8_t lock_rotor2 = 0;
-	
-	if(shoot.ctrl_mode != SHOT_DISABLE)
-	{
-		if(shoot.poke_run)
-		{
-			start_shooting_count++;
-			if((start_shooting_count >= 25)&&(abs(general_poke.left_poke.filter_rate) < 20))
-			{
-				lock_rotor1 = 1;
-				start_shooting_count = 0;
-			}
-			if((start_shooting_count >= 25)&&(abs(general_poke.right_poke.filter_rate) < 20))
-			{
-				lock_rotor2 = 1;
-				start_shooting_count = 0;
-			}
-			if(lock_rotor1 == 1)
-			{
-				start_reversal_count1++;
-				if(start_reversal_count1 > 20)
-				{
-					lock_rotor1 = 0;
-					start_reversal_count1 = 0;
-				}
-				shoot.poke_pid.speed_ref[0] = SHOOT_MOTOR_SPEED;
-			}
-			if(lock_rotor2 == 1)
-			{
-				start_reversal_count2++;
-				if(start_reversal_count2 > 20)
-				{
-					lock_rotor2 = 0;
-					start_reversal_count2 = 0;
-				}
-				shoot.poke_pid.speed_ref[1] = SHOOT_MOTOR_SPEED;
-			}
-			if((shoot.fric_wheel_run)&&(lock_rotor1 == 0))
-			shoot.poke_pid.speed_ref[0] = -SHOOT_MOTOR_SPEED;
-			if(shoot.fric_wheel_run&&(lock_rotor2 == 0))
-			shoot.poke_pid.speed_ref[1] = -SHOOT_MOTOR_SPEED;
-		}else
-		{
-			shoot.poke_pid.speed_ref[0] = 0;
-			shoot.poke_pid.speed_ref[1] = 0;
-			start_shooting_count = 0;//清零正转计时
-      start_reversal_count1 = 0;//清零反转计时
-			start_reversal_count2 = 0;//清零反转计时
-		}
-	}else
-	{
-		shoot.poke_current[0]=0;
-		shoot.poke_current[1]=0;
-		start_shooting_count = 0;//清零正转计时
-    start_reversal_count1 = 0;//清零反转计时
-		start_reversal_count2 = 0;//清零反转计时
-	}
-	shoot.poke_pid.speed_fdb[0] = general_poke.left_poke.filter_rate;
-	shoot.poke_pid.speed_fdb[1] = general_poke.right_poke.filter_rate;
-	
-	shoot.poke_current[0] = pid_calc(&pid_trigger_speed[0],shoot.poke_pid.speed_ref[0],shoot.poke_pid.speed_fdb[0]); 
-	shoot.poke_current[1] = pid_calc(&pid_trigger_speed[1],shoot.poke_pid.speed_ref[1],shoot.poke_pid.speed_fdb[1]); 
-}
-#endif
 
-#if SHOOT_TYPE == 3//摩擦轮 friction
+
+//摩擦轮 friction
 void shoot_friction_handle()
 {  
 	if(shoot.fric_wheel_run==1)
@@ -360,34 +243,8 @@ void shoot_friction_handle()
   shoot.fric_current[1]=pid_calc(& pid_rotate[1],pid_rotate[1].get, pid_rotate[1].set);
 }	
 
-#elif SHOOT_TYPE == 7||SHOOT_TYPE == 6
-void shoot_friction_handle(void)
-{
-	if ( shoot.fric_wheel_run == 1 )			//摩擦轮转动
-	{
-		shoot.friction_pid.speed_ref[0] = -( FRICTION_SPEED );
-		shoot.friction_pid.speed_ref[1] = ( FRICTION_SPEED );
-		shoot.friction_pid.speed_ref[2] = ( FRICTION_SPEED );
-		shoot.friction_pid.speed_ref[3] = -( FRICTION_SPEED );
-	}
-	else
-	{
-		shoot.friction_pid.speed_ref[0] = 0;
-		shoot.friction_pid.speed_ref[1] = 0;
-		shoot.friction_pid.speed_ref[2] = 0;
-	  shoot.friction_pid.speed_ref[3] = 0;	
-	}
-	shoot.friction_pid.speed_fdb[0] = general_friction.left_up_motor.filter_rate;
-	shoot.friction_pid.speed_fdb[1] = general_friction.right_up_motor.filter_rate;
-	shoot.friction_pid.speed_fdb[2] = general_friction.left_down_motor.filter_rate;
-	shoot.friction_pid.speed_fdb[3] = general_friction.right_down_motor.filter_rate;
-	
-	for(int i=0;i<4;i++)
-	{
-    shoot.fric_current[i] = pid_calc(&pid_rotate[i], shoot.friction_pid.speed_fdb[i], shoot.friction_pid.speed_ref[i]);            
-	}
-}
-#endif
+
+
 
 /**
 ************************************************************************************************************************
@@ -481,7 +338,5 @@ void shoot_task()
 	shoot_bullet_handle();
 	shoot_friction_handle();
 
-#if SHOOT_TYPE != 6//飞机没热量
-	heat0_limit();
-#endif
+
 }
